@@ -387,7 +387,7 @@ class S3O(object):
 						piece.parent=piecedict[parentname]
 					else:
 						print 'parent name',parentname,'not in piece dict!',piecedict,'adding it to the root piece'
-						newroot.children.appen(piece)
+						newroot.children.append(piece)
 			print newroot
 			self.root_piece=newroot
 			#now that we have the hiearchy set up right, its time to calculate offsets!

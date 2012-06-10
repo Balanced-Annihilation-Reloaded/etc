@@ -6,6 +6,7 @@ import sys
 from Tkinter import *
 import tkFileDialog
 import math
+import os
 
 howtoemit=('''const unsigned int count = piece->GetVertexCount();
 
@@ -103,20 +104,32 @@ def sizeof_fmt(num):
 class App:
 
 	def __init__(self, master):
+		self.initialdir=os.getcwd()
 		master.title('OBJ <--> S3O - By Beherith - Thanks to Muon\'s wonderful s3o library!')
 		frame = Frame(master)
 		objtos3oframe = Frame(master, bd=1, relief = SUNKEN)
 		s3otoobjframe = Frame(master, bd=3, relief = SUNKEN)
 		opts3oframe   = Frame(master, bd=3, relief = SUNKEN)
+		swaptexframe   = Frame(master, bd=3, relief = SUNKEN)
 		frame.pack()
 		objtos3oframe.pack(side=TOP,fill=X)
 		s3otoobjframe.pack(side=TOP,fill=X)
 		opts3oframe.pack(side=TOP,fill=X)
+		swaptexframe.pack(side=TOP,fill=X)
 		Button(frame, text="QUIT", fg="red", command=frame.quit).pack(side=TOP)
 		
 		self.prompts3ofilename=IntVar()
 		Button(opts3oframe , text='Optimize s3o', command=self.optimizes3o).pack(side=LEFT)
 		Label(opts3oframe,text='Removes redundant vertices and performs vertex cache optimization').pack(side=LEFT)
+		
+		Button(swaptexframe , text='Override texture', command=self.swaptex).pack(side=LEFT)
+		Label(swaptexframe,text='Tex1:').pack(side=LEFT)
+		self.tex1=StringVar()
+		Entry(swaptexframe,width=20,textvariable=self.tex1).pack(side=LEFT)
+		Label(swaptexframe,text='Tex2:').pack(side=LEFT)
+		self.tex2=StringVar()
+		Entry(swaptexframe,width=20,textvariable=self.tex2).pack(side=LEFT)
+		
 		Button(objtos3oframe , text='Convert OBJ to S3O', command=self.openobj).pack(side=LEFT)
 		Checkbutton(objtos3oframe,text='Prompt output filename', variable=self.prompts3ofilename).pack(side=LEFT)
 		
@@ -151,11 +164,11 @@ class App:
 		Label(frame,wraplength=600, justify=LEFT, text ='Instructions and notes:\n1. Converting S3O to OBJ:\n Open an s3o file, and the obj file will be saved with the same name and an .obj extension\n The name of each object in the .obj file will reflect the naming and pieces of the s3o file. All s3o data is retained, and is listed as a series of parameters in the object\'s name.\nExample:\no base,ox=-0.00,oy=0.00,oz=0.00,p=,mx=-0.00,my=4.00,mz=0.00,r=17.50,h=21.00,t1=tex1.png,t2=tex2.png\n ALL s3o info is retained, including piece hierarchy, piece origins, smoothing groups, vertex normals, and even degenerate pieces with no geometry used as emit points and vectors. These emit pieces will be shown as triangles with their correct vertex ordering.\n2. Converting OBJ to S3O:\n The opened .obj file will be converted into s3o. If the piece names contain the information as specified in the above example, the entire model hierarchy will be correctly converted. If it doesnt, then the program will convert each object as a child piece of an empty base object.').pack(side=BOTTOM)
 
 	def openobj(self):
-		self.objfile = tkFileDialog.askopenfilename(filetypes = [('Object file','*.obj'),('Any file','*')])
+		self.objfile = tkFileDialog.askopenfilename(initialdir= self.initialdir, filetypes = [('Object file','*.obj'),('Any file','*')])
 		if 'obj' in self.objfile.lower():
-			
+			self.initialdir=self.objfile.rpartition('/')[0]
 			if self.prompts3ofilename.get()==1:
-				outputfilename=tkFileDialog.asksaveasfilename(filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
+				outputfilename=tkFileDialog.asksaveasfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
 				if '.s3o' not in outputfilename.lower():
 					outputfilename+='.s3o'
 			else:
@@ -174,20 +187,35 @@ class App:
 					transform=0
 			OBJtoS3O(self.objfile, transform,outputfilename,a,b,c,d)
 	def opens3o(self):
-		self.s3ofile = tkFileDialog.askopenfilename(filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
+		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
 		if 's3o' in self.s3ofile.lower():
+			self.initialdir=self.s3ofile.rpartition('/')[0]
 			if self.promptobjfilename.get()==1:
-				outputfilename=tkFileDialog.asksaveasfilename(filetypes = [('Object file','*.obj'),('Any file','*')])
+				outputfilename=tkFileDialog.asksaveasfilename(initialdir= self.initialdir,filetypes = [('Object file','*.obj'),('Any file','*')])
 				if '.obj' not in outputfilename.lower():
 					outputfilename+='.obj'
 			else:
 				outputfilename=self.s3ofile.lower().replace('.s3o','.obj')
 			S3OtoOBJ(self.s3ofile,outputfilename)
 	def optimizes3o(self):
-		self.s3ofile = tkFileDialog.askopenfilename(filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
-		if 's3o' in self.s3ofile.lower():
-			optimizeS3O(self.s3ofile)
-		
+		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)
+		self.s3ofile = string2list(self.s3ofile) 
+		for file in self.s3ofile:
+			if 's3o' in file.lower():
+				self.initialdir=file.rpartition('/')[0]
+				optimizeS3O(file)
+	def swaptex(self):
+		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)
+		self.s3ofile = string2list(self.s3ofile) 
+		for file in self.s3ofile:
+			if 's3o' in file.lower():
+				self.initialdir=file.rpartition('/')[0]
+				swaptex(file,self.tex1.get(),self.tex2.get())
+def string2list(input_string):
+	input_string = input_string.lstrip('{')
+	input_string = input_string.rstrip('}')
+	output = input_string.split('} {')
+	return output
 def S3OtoOBJ(filename,outputfilename):
 	if '.s3o' in filename.lower():
 		data=open(filename,'rb').read()
@@ -211,6 +239,17 @@ def OBJtoS3O(objfile,transform,outputfilename,a,b,c,d):
 		output_file.close()
 		print "Succesfully converted", objfile,'to',outputfilename
 		
+def swaptex(filename,tex1,tex2):
+	datafile=open(filename,'rb')
+	data=datafile.read()
+	model=S3O(data)
+	model.texture_paths=[tex1,tex2]
+	datafile.close()
+	print 'Changed texture to',tex1,tex2
+	output_file=open(filename,'wb')
+	output_file.write(model.serialize())
+	output_file.close()
+	print "Succesfully optimized", filename
 def optimizeS3O(filename):
 	datafile=open(filename,'rb')
 	data=datafile.read()

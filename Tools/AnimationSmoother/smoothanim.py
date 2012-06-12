@@ -188,6 +188,7 @@ for line in inputfile:
 						smanim=False
 					if sleep=='currentSpeed':
 						sleep=animspeed
+						smanim=True
 					sleep=(int(sleep)/33+1)*33
 					print sleep
 					speed=dist/(float(sleep)/990)
@@ -198,7 +199,7 @@ for line in inputfile:
 						else:
 							s='speed [%f]'%(speed)
 						if smanim:
-							s+=' * 100 / currentSpeed'
+							s+=' *  currentSpeed / 100'
 						inputfile[i]=line.replace('now',s)
 				
 					

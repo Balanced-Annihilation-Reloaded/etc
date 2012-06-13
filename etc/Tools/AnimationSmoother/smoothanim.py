@@ -1,9 +1,19 @@
 import sys
 import os
-print 'usage: smoothanim.py [input.bos] [minsleep] [maxsleep] [output.bos] [animspeed] [smooth]'
-minsleep=33
-maxsleep=400
-animspeed=65
+
+import os
+from optparse import OptionParser
+usage = "usage: %prog -i inputbos -o outputbos -n minsleep -x maxsleep -a animspeeddefault -f forcesmooth, use -h for detailed help"
+parser = OptionParser(usage=usage, version="%prog 1.0")
+parser.add_option("-i", "--input", action="store", type="string", dest="infile",help="Input BOS file to be optimized")
+parser.add_option("-o", "--output", action="store",type="string", dest="outfile", help="Output BOS file, defaults to overwrite!")
+parser.add_option("-f", "--forcesmooth", action="store_true",default = False,dest="force", help="Force sleep [x]/currentspeed syntax")
+parser.add_option("-n", "--minsleep", action="store", type="int",dest="minsleep", help="minimum sleep length to smooth", default=33 )
+parser.add_option("-x", "--maxsleep", action="store", type="int",dest="maxsleep", help="maximum sleep length to smooth",default = 400)
+parser.add_option("-a", "--animspeed", action="store", type="int",dest="animspeed", help="default anim speed for wonky things",default = 65)
+(options, args) = parser.parse_args()
+print 'options:',options
+
 class Piece:
 	rx=0
 	ry=0
@@ -11,22 +21,21 @@ class Piece:
 	mx=0
 	mz=0
 	my=0
-
-inputfile=[]
-if len(sys.argv)>=2:
-	inputfile=open(sys.argv[1]).readlines()
-if len(sys.argv)>=3:
-	minsleep=int(sys.argv[2])
-if len(sys.argv)>=4:
-	minsleep=int(sys.argv[3])
-if len(sys.argv)>=6:
-	animspeed=int(sys.argv[5])
-if len(sys.argv)>=5:
-	output=sys.argv[4]
+if not options.infile:
+	print 'smoother needs at least a bos script specified! (-i)'
+	exit(1)
+infile=options.infile
+if options.outfile:
+	output=options.outfile
 else:
-	output=sys.argv[1]#.partition('.')[0]+'_smoothanim.bos'
+	output=options.infile
+minsleep=options.minsleep
+maxsleep=options.maxsleep
+animspeed=options.animspeed
+forcesmooth=options.force
 pieces={}
 #process the bos file
+inputfile=open(infile).readlines()
 wholefile=''.join([line.strip().partition('//')[0] for line in inputfile])
 piecenames=[pname.strip(' ,;') for pname in wholefile.partition('piece')[2].partition(';')[0].lower().strip().split(',')]
 print piecenames
@@ -46,6 +55,7 @@ def parsebos(line,verbose=True):
 		if verbose:
 			print 'line split is less than 5, not a proper move/turn command!', line,l
 		return False
+	
 	if line[0]!='turn' and line[0]!='move':
 		if verbose:
 			print 'line[0] is not turn or move',l
@@ -71,8 +81,6 @@ def parsebos(line,verbose=True):
 		return False
 	else:
 		axis=line[3][0]
-		if verbose:
-			print axis
 		if axis not in 'xyz':
 			if verbose:
 				print 'axis fail!', l,line[3],line[3][0]
@@ -140,44 +148,50 @@ for line in inputfile:
 	i+=1
 	if ('move' in line or 'turn' in line) and 'now' in line: # search ahead and find a sleep before a bracket-close
 		sleep=-1
-		for k in range(i+1,len(inputfile)):
+		sleepline=-1
+		for k in range(i+1,min(i+20,len(inputfile))): #search at most 20 lines ahead, unlikely there will a sleep that far ahead
 			#if there is another move-now after it, then we ignore that.
 			if parsebos(line,False) and parsebos(inputfile[k],False):
 				orig=parsebos(line,False)
+				if 'wait-for-'+orig['c'] in inputfile[k] and orig['p'] in inputfile[k] and orig['a']+'-axis' in inputfile[k]:
+					print 'There is a wait-for command referring to this piece on this axis, skipping',inputfile[k]
+					break
 				next=parsebos(inputfile[k],False)
 				if orig['c']==next['c'] and orig['p']==next['p'] and orig['a']==next['a']:
 					print 'There is an identical move order ',k-i,'lines after, we just need to update the piece pos!'
 					pieces[orig['p']][orig['c']][orig['a']]=orig['pos']
 					break
+				
 			if 'sleep' in inputfile[k].partition('//')[0]: # .partition('//')[0] is the remove comment operator :D
 				if 'animSpeed' in inputfile[k].partition('//')[0]:
 					sleep='animSpeed'
 					break
-				else:
-					if 'currentSpeed' in inputfile[k].partition('//')[0]:
-						sleep='currentSpeed'
-						try:
-							animspeed=int(inputfile[k].partition('sleep')[2].partition('/')[0])/100
-							break
-						except ValueError:
-							print 'failed to parse sleep in line',inputfile[k],'skipping'
-							continue
+				elif'currentSpeed' in inputfile[k].partition('//')[0]:
+					sleep='currentSpeed'
+					try:
+						animspeed=int(inputfile[k].partition('sleep')[2].partition('/')[0])/100
+						break
+					except ValueError:
+						print 'failed to parse sleep in line',inputfile[k],'skipping'
+						continue
 
-					else:
-						try:
-							sleep=float(inputfile[k].partition('sleep')[2].partition(';')[0])
-							break
-						except ValueError:
-							print 'failed to parse sleep in line',inputfile[k],'skipping'
-							continue
+				else:
+					try:
+						sleep=float(inputfile[k].partition('sleep')[2].partition(';')[0])
+						sleepline=k
+						break
+					except ValueError:
+						print 'failed to parse sleep in line',inputfile[k],'skipping'
+						continue
 			if '}' in inputfile[k].partition('//')[0]:
 				print 'no sleep after now'
 				break
+			
 		if sleep=='animSpeed' or sleep=='currentSpeed' or (sleep>minsleep and sleep < maxsleep): # we have the sleep value, time to find the last position the piece was at before this new NOW command!
 			#important thing about sleep: #of frames= CEILING(sleep/33) (which means sleep 33 sleeps 2 frames!)
 			if parsebos(line):
 				bos=parsebos(line)
-				print bos
+				#print bos
 				oldpos=pieces[bos['p']][bos['c']][bos['a']]
 				if bos['s']=='now':
 					dist=abs(oldpos-bos['pos'])
@@ -190,7 +204,7 @@ for line in inputfile:
 						sleep=animspeed
 						smanim=True
 					sleep=(int(sleep)/33+1)*33
-					print sleep
+					#print sleep
 					speed=dist/(float(sleep)/990)
 					if dist!=0:
 						if bos['c']=='turn':
@@ -198,10 +212,11 @@ for line in inputfile:
 							s='speed <%f>'%(speed)
 						else:
 							s='speed [%f]'%(speed)
-						if smanim:
+						if smanim or forcesmooth:
 							s+=' *  currentSpeed / 100'
 						inputfile[i]=line.replace('now',s)
-				
+						if forcesmooth and sleepline>0:
+							inputfile[sleepline]=inputfile[sleepline].partition('sleep')[0]+'sleep '+str(sleep*100)+' / currentspeed;\n'
 					
 				pieces[bos['p']][bos['c']][bos['a']]=bos['pos']
 			else:

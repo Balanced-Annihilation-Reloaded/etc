@@ -55,7 +55,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="25">DeltaSiegeDry</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="26">Balanced Annihilation V7.68 Remake v3</ModName>
+  <ModName z:Id="26">Balanced Annihilation Reloaded $VERSION</ModName>
   <Name z:Id="27">New Mission</Name>
   <Players z:Id="28">
     <items z:Id="29" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
@@ -1122,9 +1122,9 @@
                 <TriggerLogic z:Id="264" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="235" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="265" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">It's important to use the right kind ot unit. To destory defensive towers, tanks will work better than artillery or missile trucks.</Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">4.9499999999999886</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">325.71</Y>
+                  <Text z:Id="265" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">It's important to use the right kind of unit. </Text>
+                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">31.680000000000007</X>
+                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">291.06</Y>
                 </TriggerLogic>
                 <TriggerLogic z:Id="266" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="235" i:nil="true" />
@@ -1144,35 +1144,41 @@
                   <Name z:Id="271">Marker</Name>
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
                   <Text z:Id="272" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">In this mission, you'll be using vehicles instead of kbots.</Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">8.9099999999999966</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">320.76</Y>
+                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">30.690000000000055</X>
+                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">279.18</Y>
+                </TriggerLogic>
+                <TriggerLogic z:Id="273" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="274">Marker</Name>
+                  <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
+                  <Text z:Id="275" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">To destroy defensive towers, tanks will work better than artillery or missile trucks.</Text>
+                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">27.720000000000027</X>
+                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">307.89</Y>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
-                <TriggerLogic i:nil="true" />
               </_items>
-              <_size>14</_size>
-              <_version>14</_version>
+              <_size>15</_size>
+              <_version>15</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="273">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="276">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="274">Trigger</Name>
+          <Name z:Id="277">Trigger</Name>
           <Probability>1</Probability>
         </Trigger>
-        <Trigger z:Id="275">
+        <Trigger z:Id="278">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
           <IsExpanded>true</IsExpanded>
-          <Logic z:Id="276">
-            <items z:Id="277" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="278" z:Size="4">
-                <TriggerLogic z:Id="279" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="280">Unit Destroyed</Name>
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="281" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
-                    <d10p1:items z:Id="282" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="283" z:Size="4">
+          <Logic z:Id="279">
+            <items z:Id="280" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+              <_items z:Id="281" z:Size="4">
+                <TriggerLogic z:Id="282" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="283">Unit Destroyed</Name>
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="284" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
+                    <d10p1:items z:Id="285" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="286" z:Size="4">
                         <d10p1:string z:Ref="77" i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -1181,13 +1187,13 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>1</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="284">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="287">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
                 </TriggerLogic>
-                <TriggerLogic z:Id="285" z:Type="CMissionLib.VictoryAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="286">Victory</Name>
+                <TriggerLogic z:Id="288" z:Type="CMissionLib.VictoryAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="289">Victory</Name>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
                 <TriggerLogic i:nil="true" />
@@ -1195,27 +1201,27 @@
               <_size>2</_size>
               <_version>2</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="287">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="290">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="288">Trigger 1</Name>
+          <Name z:Id="291">Trigger 1</Name>
           <Probability>1</Probability>
         </Trigger>
-        <Trigger z:Id="289">
+        <Trigger z:Id="292">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
           <IsExpanded>true</IsExpanded>
-          <Logic z:Id="290">
-            <items z:Id="291" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="292" z:Size="4">
-                <TriggerLogic z:Id="293" z:Type="CMissionLib.Conditions.CountdownEndedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="294">Countdown Ended</Name>
+          <Logic z:Id="293">
+            <items z:Id="294" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+              <_items z:Id="295" z:Size="4">
+                <TriggerLogic z:Id="296" z:Type="CMissionLib.Conditions.CountdownEndedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="297">Countdown Ended</Name>
                   <Countdown z:Ref="263" i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions" />
                 </TriggerLogic>
-                <TriggerLogic z:Id="295" z:Type="CMissionLib.Actions.DefeatAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="296">Defeat</Name>
+                <TriggerLogic z:Id="298" z:Type="CMissionLib.Actions.DefeatAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="299">Defeat</Name>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
                 <TriggerLogic i:nil="true" />
@@ -1223,12 +1229,12 @@
               <_size>2</_size>
               <_version>2</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="297">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="300">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="298">Trigger 2</Name>
+          <Name z:Id="301">Trigger 2</Name>
           <Probability>1</Probability>
         </Trigger>
         <Trigger i:nil="true" />
@@ -1236,7 +1242,7 @@
       <_size>3</_size>
       <_version>5</_version>
     </items>
-    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="299">
+    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="302">
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </_monitor>
   </Triggers>

@@ -55,7 +55,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="25">Cooper_Hill_TNM02-V1</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="26">Balanced Annihilation V7.68 Remake v3</ModName>
+  <ModName z:Id="26">Balanced Annihilation Reloaded $VERSION</ModName>
   <Name z:Id="27">New Mission</Name>
   <Players z:Id="28">
     <items z:Id="29" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
@@ -850,39 +850,102 @@
                           <d10p1:Player z:Ref="31" i:nil="true" />
                           <d10p1:UnitDefName z:Ref="145" i:nil="true" />
                         </d10p1:UnitStartInfo>
-                        <d10p1:UnitStartInfo i:nil="true" />
-                        <d10p1:UnitStartInfo i:nil="true" />
-                        <d10p1:UnitStartInfo i:nil="true" />
+                        <d10p1:UnitStartInfo z:Id="203">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>96</d14p1:_x>
+                            <d14p1:_y>356</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>96</d10p1:X>
+                          <d10p1:Y>356</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="204">
+                            <d14p1:items z:Id="205" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Id="206" z:Size="0" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="207">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="31" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="82" i:nil="true" />
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo z:Id="208">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>88</d14p1:_x>
+                            <d14p1:_y>372</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>88</d10p1:X>
+                          <d10p1:Y>372</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="209">
+                            <d14p1:items z:Id="210" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="206" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="211">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="31" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="82" i:nil="true" />
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo z:Id="212">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>68</d14p1:_x>
+                            <d14p1:_y>352</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>68</d10p1:X>
+                          <d10p1:Y>352</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="213">
+                            <d14p1:items z:Id="214" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="206" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="215">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="31" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="183" i:nil="true" />
+                        </d10p1:UnitStartInfo>
                       </d10p1:_items>
-                      <d10p1:_size>29</d10p1:_size>
-                      <d10p1:_version>89</d10p1:_version>
+                      <d10p1:_size>32</d10p1:_size>
+                      <d10p1:_version>92</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="203">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="216">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Units>
                 </TriggerLogic>
-                <TriggerLogic z:Id="204" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="205">GUI Message</Name>
+                <TriggerLogic z:Id="217" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="218">GUI Message</Name>
                   <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
                   <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
                   <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
-                  <Message z:Id="206" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">In this mission your objective is to make a tech 2 lab and some tech 2 eco. Then you'll have to kill a big monster who is waiting for you in the east. </Message>
+                  <Message z:Id="219" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">In this mission your objective is to make a tech 2 lab and some tech 2 eco. Then you'll have to kill a big monster who is waiting for you in the east. </Message>
                   <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
                   <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
                 </TriggerLogic>
-                <TriggerLogic z:Id="207" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="208">Marker</Name>
+                <TriggerLogic z:Id="220" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="221">Marker</Name>
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="209" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Use the metal you reclaim to build a t2 kbot lab here.</Text>
+                  <Text z:Id="222" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Use the metal you reclaim to build a t2 kbot lab here.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">259.38</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">484.11</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="210" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="211">Give Orders</Name>
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="212" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="213" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="214" z:Size="4">
+                <TriggerLogic z:Id="223" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="224">Give Orders</Name>
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="225" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="226" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="227" z:Size="4">
                         <d10p1:string z:Ref="100" i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -891,14 +954,14 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>1</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="215">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="228">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
-                  <Orders xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="216" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="217" z:Type="System.Collections.Generic.List`1[[CMissionLib.IOrder, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-                      <d10p1:_items z:Id="218" z:Size="4">
-                        <d10p1:anyType z:Id="219" z:Type="CMissionLib.PatrolOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Orders xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="229" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="230" z:Type="System.Collections.Generic.List`1[[CMissionLib.IOrder, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+                      <d10p1:_items z:Id="231" z:Size="4">
+                        <d10p1:anyType z:Id="232" z:Type="CMissionLib.PatrolOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>880</d14p1:_x>
                             <d14p1:_y>400</d14p1:_y>
@@ -913,46 +976,46 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>1</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="220">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="233">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
                 </TriggerLogic>
-                <TriggerLogic z:Id="221" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="208" i:nil="true" />
+                <TriggerLogic z:Id="234" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="221" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="222" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">You can reclaim rocks, bushes, tree etc. to gain extra resources.</Text>
+                  <Text z:Id="235" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">You can reclaim rocks, bushes, tree etc. to gain extra resources.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">95.04000000000002</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">567.27</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="223" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="208" i:nil="true" />
+                <TriggerLogic z:Id="236" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="221" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="224" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Select the units, click reclaim and then drag and hold the left mouse to reclaim everything within a fixed area.</Text>
+                  <Text z:Id="237" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Select the units, click reclaim and then drag and hold the left mouse to reclaim everything within a fixed area.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">114.83999999999998</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">581.13</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="225" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="208" i:nil="true" />
+                <TriggerLogic z:Id="238" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="221" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="226" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">This is a moho energy converter. It converts excess energy into metal.</Text>
+                  <Text z:Id="239" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">This is a moho energy converter. It converts excess energy into metal.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">82.170000000000016</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">511.83000000000004</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="227" z:Type="CMissionLib.Actions.LockUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="228">Lock Units</Name>
-                  <Units xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="229" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="230" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="231" z:Size="4">
-                        <d10p1:string z:Id="232">corgant</d10p1:string>
-                        <d10p1:string z:Id="233">cormex</d10p1:string>
+                <TriggerLogic z:Id="240" z:Type="CMissionLib.Actions.LockUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="241">Lock Units</Name>
+                  <Units xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="242" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="243" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="244" z:Size="4">
+                        <d10p1:string z:Id="245">corgant</d10p1:string>
+                        <d10p1:string z:Id="246">cormex</d10p1:string>
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
                       </d10p1:_items>
                       <d10p1:_size>2</d10p1:_size>
                       <d10p1:_version>2</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="234">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="247">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Units>
@@ -968,27 +1031,27 @@
               <_size>9</_size>
               <_version>23</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="235">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="248">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="236">Trigger</Name>
+          <Name z:Id="249">Trigger</Name>
           <Probability>1</Probability>
         </Trigger>
-        <Trigger z:Id="237">
+        <Trigger z:Id="250">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
           <IsExpanded>true</IsExpanded>
-          <Logic z:Id="238">
-            <items z:Id="239" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="240" z:Size="4">
-                <TriggerLogic z:Id="241" z:Type="CMissionLib.Conditions.UnitBuiltOnGhostCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="242">Unit Built On Ghost</Name>
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="243" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
-                    <d10p1:items z:Id="244" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="245" z:Size="4">
-                        <d10p1:string z:Id="246">veh</d10p1:string>
+          <Logic z:Id="251">
+            <items z:Id="252" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+              <_items z:Id="253" z:Size="4">
+                <TriggerLogic z:Id="254" z:Type="CMissionLib.Conditions.UnitBuiltOnGhostCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="255">Unit Built On Ghost</Name>
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="256" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
+                    <d10p1:items z:Id="257" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="258" z:Size="4">
+                        <d10p1:string z:Id="259">veh</d10p1:string>
                         <d10p1:string z:Ref="196" i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -996,22 +1059,22 @@
                       <d10p1:_size>2</d10p1:_size>
                       <d10p1:_version>2</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="247">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="260">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
                 </TriggerLogic>
-                <TriggerLogic z:Id="248" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="208" i:nil="true" />
+                <TriggerLogic z:Id="261" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="221" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="249" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Next make an advanced construction kbot and build moho mexes where indicated.</Text>
+                  <Text z:Id="262" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Next make an advanced construction kbot and build moho mexes where indicated.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">212.85000000000002</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">390.06</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="250" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="208" i:nil="true" />
+                <TriggerLogic z:Id="263" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="221" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="251" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Once you have enough metal income, use your t2 con vehicle to build a fusion here.</Text>
+                  <Text z:Id="264" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Once you have enough metal income, use your t2 con vehicle to build a fusion here.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">91.079999999999984</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">455.4</Y>
                 </TriggerLogic>
@@ -1020,60 +1083,12 @@
               <_size>3</_size>
               <_version>11</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="252">
-              <d7p1:_busyCount>0</d7p1:_busyCount>
-            </_monitor>
-          </Logic>
-          <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="253">Trigger 1</Name>
-          <Probability>1</Probability>
-        </Trigger>
-        <Trigger z:Id="254">
-          <Enabled>true</Enabled>
-          <Folder i:nil="true" />
-          <IsExpanded>true</IsExpanded>
-          <Logic z:Id="255">
-            <items z:Id="256" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="257" z:Size="4">
-                <TriggerLogic z:Id="258" z:Type="CMissionLib.Conditions.UnitBuiltOnGhostCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="242" i:nil="true" />
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="259" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
-                    <d10p1:items z:Id="260" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="261" z:Size="4">
-                        <d10p1:string z:Ref="107" i:nil="true" />
-                        <d10p1:string i:nil="true" />
-                        <d10p1:string i:nil="true" />
-                        <d10p1:string i:nil="true" />
-                      </d10p1:_items>
-                      <d10p1:_size>1</d10p1:_size>
-                      <d10p1:_version>1</d10p1:_version>
-                    </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="262">
-                      <d11p1:_busyCount>0</d11p1:_busyCount>
-                    </d10p1:_monitor>
-                  </Groups>
-                </TriggerLogic>
-                <TriggerLogic z:Id="263" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="205" i:nil="true" />
-                  <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
-                  <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
-                  <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
-                  <Message z:Id="264" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Now make some t2 units and see if you can kill the monster!</Message>
-                  <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
-                  <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
-                </TriggerLogic>
-                <TriggerLogic i:nil="true" />
-                <TriggerLogic i:nil="true" />
-              </_items>
-              <_size>2</_size>
-              <_version>4</_version>
-            </items>
             <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="265">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="266">Trigger 2</Name>
+          <Name z:Id="266">Trigger 1</Name>
           <Probability>1</Probability>
         </Trigger>
         <Trigger z:Id="267">
@@ -1083,11 +1098,59 @@
           <Logic z:Id="268">
             <items z:Id="269" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
               <_items z:Id="270" z:Size="4">
-                <TriggerLogic z:Id="271" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="272">Unit Destroyed</Name>
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="273" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
-                    <d10p1:items z:Id="274" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="275" z:Size="4">
+                <TriggerLogic z:Id="271" z:Type="CMissionLib.Conditions.UnitBuiltOnGhostCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="255" i:nil="true" />
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="272" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
+                    <d10p1:items z:Id="273" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="274" z:Size="4">
+                        <d10p1:string z:Ref="107" i:nil="true" />
+                        <d10p1:string i:nil="true" />
+                        <d10p1:string i:nil="true" />
+                        <d10p1:string i:nil="true" />
+                      </d10p1:_items>
+                      <d10p1:_size>1</d10p1:_size>
+                      <d10p1:_version>1</d10p1:_version>
+                    </d10p1:items>
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="275">
+                      <d11p1:_busyCount>0</d11p1:_busyCount>
+                    </d10p1:_monitor>
+                  </Groups>
+                </TriggerLogic>
+                <TriggerLogic z:Id="276" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="218" i:nil="true" />
+                  <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
+                  <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
+                  <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
+                  <Message z:Id="277" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Now make some t2 units and see if you can kill the monster!</Message>
+                  <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
+                  <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
+                </TriggerLogic>
+                <TriggerLogic i:nil="true" />
+                <TriggerLogic i:nil="true" />
+              </_items>
+              <_size>2</_size>
+              <_version>4</_version>
+            </items>
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="278">
+              <d7p1:_busyCount>0</d7p1:_busyCount>
+            </_monitor>
+          </Logic>
+          <MaxOccurrences>1</MaxOccurrences>
+          <Name z:Id="279">Trigger 2</Name>
+          <Probability>1</Probability>
+        </Trigger>
+        <Trigger z:Id="280">
+          <Enabled>true</Enabled>
+          <Folder i:nil="true" />
+          <IsExpanded>true</IsExpanded>
+          <Logic z:Id="281">
+            <items z:Id="282" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+              <_items z:Id="283" z:Size="4">
+                <TriggerLogic z:Id="284" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="285">Unit Destroyed</Name>
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="286" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
+                    <d10p1:items z:Id="287" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="288" z:Size="4">
                         <d10p1:string z:Ref="100" i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -1096,36 +1159,36 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>1</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="276">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="289">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
                 </TriggerLogic>
-                <TriggerLogic z:Id="277" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="205" i:nil="true" />
+                <TriggerLogic z:Id="290" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="218" i:nil="true" />
                   <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
                   <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
                   <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
-                  <Message z:Id="278" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Good work. A second monster awaits in the south east corner :).</Message>
+                  <Message z:Id="291" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Good work. A second monster awaits in the south east corner :).</Message>
                   <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
                   <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
                 </TriggerLogic>
-                <TriggerLogic z:Id="279" z:Type="CMissionLib.Actions.CreateUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <TriggerLogic z:Id="292" z:Type="CMissionLib.Actions.CreateUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="64" i:nil="true" />
-                  <Units xmlns:d10p1="http://schemas.datacontract.org/2004/07/CMissionLib" z:Id="280" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="281" z:Type="System.Collections.Generic.List`1[[CMissionLib.UnitStartInfo, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-                      <d10p1:_items z:Id="282" z:Size="4">
-                        <d10p1:UnitStartInfo z:Id="283">
+                  <Units xmlns:d10p1="http://schemas.datacontract.org/2004/07/CMissionLib" z:Id="293" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="294" z:Type="System.Collections.Generic.List`1[[CMissionLib.UnitStartInfo, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+                      <d10p1:_items z:Id="295" z:Size="4">
+                        <d10p1:UnitStartInfo z:Id="296">
                           <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
                             <d14p1:_x>956</d14p1:_x>
                             <d14p1:_y>720</d14p1:_y>
                           </d10p1:Point>
                           <d10p1:X>956</d10p1:X>
                           <d10p1:Y>720</d10p1:Y>
-                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="284">
-                            <d14p1:items z:Id="285" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                              <d14p1:_items z:Id="286" z:Size="4">
-                                <d14p1:string z:Id="287">razor</d14p1:string>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="297">
+                            <d14p1:items z:Id="298" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Id="299" z:Size="4">
+                                <d14p1:string z:Id="300">razor</d14p1:string>
                                 <d14p1:string i:nil="true" />
                                 <d14p1:string i:nil="true" />
                                 <d14p1:string i:nil="true" />
@@ -1133,14 +1196,14 @@
                               <d14p1:_size>1</d14p1:_size>
                               <d14p1:_version>1</d14p1:_version>
                             </d14p1:items>
-                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="288">
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="301">
                               <d15p1:_busyCount>0</d15p1:_busyCount>
                             </d14p1:_monitor>
                           </d10p1:Groups>
                           <d10p1:Heading>0</d10p1:Heading>
                           <d10p1:IsGhost>false</d10p1:IsGhost>
                           <d10p1:Player z:Ref="38" i:nil="true" />
-                          <d10p1:UnitDefName z:Id="289">armraz</d10p1:UnitDefName>
+                          <d10p1:UnitDefName z:Id="302">armraz</d10p1:UnitDefName>
                         </d10p1:UnitStartInfo>
                         <d10p1:UnitStartInfo i:nil="true" />
                         <d10p1:UnitStartInfo i:nil="true" />
@@ -1149,27 +1212,27 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>1</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="290">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="303">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Units>
                 </TriggerLogic>
-                <TriggerLogic z:Id="291" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="211" i:nil="true" />
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="292" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="293" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                <TriggerLogic z:Id="304" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="224" i:nil="true" />
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="305" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="306" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
                       <d10p1:_items z:Ref="5" i:nil="true" />
                       <d10p1:_size>0</d10p1:_size>
                       <d10p1:_version>0</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="294">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="307">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
-                  <Orders xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="295" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="296" z:Type="System.Collections.Generic.List`1[[CMissionLib.IOrder, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-                      <d10p1:_items z:Id="297" z:Size="16">
-                        <d10p1:anyType z:Id="298" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Orders xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="308" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="309" z:Type="System.Collections.Generic.List`1[[CMissionLib.IOrder, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+                      <d10p1:_items z:Id="310" z:Size="16">
+                        <d10p1:anyType z:Id="311" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>912.13017751479288</d14p1:_x>
                             <d14p1:_y>714.63905325443784</d14p1:_y>
@@ -1177,7 +1240,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">912.13017751479288</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">714.63905325443784</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="299" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="312" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>960.6508875739645</d14p1:_x>
                             <d14p1:_y>689.78698224852064</d14p1:_y>
@@ -1185,7 +1248,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">960.6508875739645</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">689.78698224852064</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="300" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="313" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>921.5976331360946</d14p1:_x>
                             <d14p1:_y>686.23668639053255</d14p1:_y>
@@ -1193,7 +1256,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">921.5976331360946</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">686.23668639053255</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="301" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="314" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>926.33136094674558</d14p1:_x>
                             <d14p1:_y>743.04142011834324</d14p1:_y>
@@ -1201,7 +1264,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">926.33136094674558</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">743.04142011834324</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="302" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="315" z:Type="CMissionLib.MoveOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>978.4023668639054</d14p1:_x>
                             <d14p1:_y>715.8224852071005</d14p1:_y>
@@ -1209,7 +1272,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">978.4023668639054</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">715.8224852071005</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="303" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="316" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>855.32544378698219</d14p1:_x>
                             <d14p1:_y>393.92899408284029</d14p1:_y>
@@ -1217,7 +1280,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">855.32544378698219</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">393.92899408284029</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="304" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="317" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>611.53846153846155</d14p1:_x>
                             <d14p1:_y>427.06508875739644</d14p1:_y>
@@ -1225,7 +1288,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">611.53846153846155</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">427.06508875739644</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="305" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="318" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>548.81656804733723</d14p1:_x>
                             <d14p1:_y>703.98816568047334</d14p1:_y>
@@ -1233,7 +1296,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">548.81656804733723</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">703.98816568047334</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="306" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="319" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>765.38461538461536</d14p1:_x>
                             <d14p1:_y>509.905325443787</d14p1:_y>
@@ -1241,7 +1304,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">765.38461538461536</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">509.905325443787</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="307" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="320" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>778.15384615384608</d14p1:_x>
                             <d14p1:_y>628.41420118343194</d14p1:_y>
@@ -1249,7 +1312,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">778.15384615384608</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">628.41420118343194</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="308" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="321" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>982.15384615384608</d14p1:_x>
                             <d14p1:_y>420.41420118343189</d14p1:_y>
@@ -1257,7 +1320,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">982.15384615384608</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">420.41420118343189</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="309" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="322" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>792.15384615384608</d14p1:_x>
                             <d14p1:_y>246.41420118343189</d14p1:_y>
@@ -1265,7 +1328,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">792.15384615384608</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">246.41420118343189</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="310" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="323" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>580.15384615384608</d14p1:_x>
                             <d14p1:_y>222.41420118343189</d14p1:_y>
@@ -1273,7 +1336,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">580.15384615384608</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">222.41420118343189</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="311" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="324" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>642.15384615384608</d14p1:_x>
                             <d14p1:_y>352.41420118343189</d14p1:_y>
@@ -1281,7 +1344,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">642.15384615384608</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">352.41420118343189</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="312" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="325" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>760.15384615384608</d14p1:_x>
                             <d14p1:_y>152.41420118343189</d14p1:_y>
@@ -1289,7 +1352,7 @@
                           <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">760.15384615384608</X>
                           <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">152.41420118343189</Y>
                         </d10p1:anyType>
-                        <d10p1:anyType z:Id="313" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                        <d10p1:anyType z:Id="326" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <d14p1:_x>186.15384615384608</d14p1:_x>
                             <d14p1:_y>416.41420118343189</d14p1:_y>
@@ -1301,7 +1364,7 @@
                       <d10p1:_size>16</d10p1:_size>
                       <d10p1:_version>18</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="314">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="327">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
@@ -1310,27 +1373,27 @@
               <_size>4</_size>
               <_version>6</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="315">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="328">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="316">Trigger 3</Name>
+          <Name z:Id="329">Trigger 3</Name>
           <Probability>1</Probability>
         </Trigger>
-        <Trigger z:Id="317">
+        <Trigger z:Id="330">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
           <IsExpanded>true</IsExpanded>
-          <Logic z:Id="318">
-            <items z:Id="319" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="320" z:Size="4">
-                <TriggerLogic z:Id="321" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="272" i:nil="true" />
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="322" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
-                    <d10p1:items z:Id="323" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="324" z:Size="4">
-                        <d10p1:string z:Ref="287" i:nil="true" />
+          <Logic z:Id="331">
+            <items z:Id="332" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+              <_items z:Id="333" z:Size="4">
+                <TriggerLogic z:Id="334" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Ref="285" i:nil="true" />
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="335" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
+                    <d10p1:items z:Id="336" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="337" z:Size="4">
+                        <d10p1:string z:Ref="300" i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -1338,26 +1401,181 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>3</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="325">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="338">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
                 </TriggerLogic>
-                <TriggerLogic z:Id="326" z:Type="CMissionLib.VictoryAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="327">Victory</Name>
+                <TriggerLogic z:Id="339" z:Type="CMissionLib.Actions.CreateUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="340">Create Units</Name>
+                  <Units xmlns:d10p1="http://schemas.datacontract.org/2004/07/CMissionLib" z:Id="341" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="342" z:Type="System.Collections.Generic.List`1[[CMissionLib.UnitStartInfo, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+                      <d10p1:_items z:Id="343" z:Size="4">
+                        <d10p1:UnitStartInfo z:Id="344">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>580</d14p1:_x>
+                            <d14p1:_y>32</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>580</d10p1:X>
+                          <d10p1:Y>32</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="345">
+                            <d14p1:items z:Id="346" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="206" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="347">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="38" i:nil="true" />
+                          <d10p1:UnitDefName z:Id="348">armbanth</d10p1:UnitDefName>
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo i:nil="true" />
+                        <d10p1:UnitStartInfo i:nil="true" />
+                        <d10p1:UnitStartInfo i:nil="true" />
+                      </d10p1:_items>
+                      <d10p1:_size>1</d10p1:_size>
+                      <d10p1:_version>1</d10p1:_version>
+                    </d10p1:items>
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="349">
+                      <d11p1:_busyCount>0</d11p1:_busyCount>
+                    </d10p1:_monitor>
+                  </Units>
                 </TriggerLogic>
-                <TriggerLogic i:nil="true" />
-                <TriggerLogic i:nil="true" />
+                <TriggerLogic z:Id="350" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="351">Give Orders</Name>
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="352" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="353" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Ref="206" i:nil="true" />
+                      <d10p1:_size>0</d10p1:_size>
+                      <d10p1:_version>0</d10p1:_version>
+                    </d10p1:items>
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="354">
+                      <d11p1:_busyCount>0</d11p1:_busyCount>
+                    </d10p1:_monitor>
+                  </Groups>
+                  <Orders xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="355" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="356" z:Type="System.Collections.Generic.List`1[[CMissionLib.IOrder, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+                      <d10p1:_items z:Id="357" z:Size="16">
+                        <d10p1:anyType z:Id="358" z:Type="CMissionLib.RepeatOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Mode xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">1</Mode>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="359" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>708</d14p1:_x>
+                            <d14p1:_y>84</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">708</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">84</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="360" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>854</d14p1:_x>
+                            <d14p1:_y>204</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">854</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">204</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="361" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>750</d14p1:_x>
+                            <d14p1:_y>388</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">750</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">388</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="362" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>852</d14p1:_x>
+                            <d14p1:_y>590</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">852</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">590</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="363" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>952</d14p1:_x>
+                            <d14p1:_y>662</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">952</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">662</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="364" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>934</d14p1:_x>
+                            <d14p1:_y>482</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">934</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">482</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="365" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>956</d14p1:_x>
+                            <d14p1:_y>190</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">956</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">190</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="366" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>806</d14p1:_x>
+                            <d14p1:_y>76</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">806</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">76</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="367" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>738</d14p1:_x>
+                            <d14p1:_y>254</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">738</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">254</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType z:Id="368" z:Type="CMissionLib.FightOrder" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                          <Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
+                            <d14p1:_x>776</d14p1:_x>
+                            <d14p1:_y>694</d14p1:_y>
+                          </Point>
+                          <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">776</X>
+                          <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">694</Y>
+                        </d10p1:anyType>
+                        <d10p1:anyType i:nil="true" />
+                        <d10p1:anyType i:nil="true" />
+                        <d10p1:anyType i:nil="true" />
+                        <d10p1:anyType i:nil="true" />
+                        <d10p1:anyType i:nil="true" />
+                      </d10p1:_items>
+                      <d10p1:_size>11</d10p1:_size>
+                      <d10p1:_version>11</d10p1:_version>
+                    </d10p1:items>
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="369">
+                      <d11p1:_busyCount>0</d11p1:_busyCount>
+                    </d10p1:_monitor>
+                  </Orders>
+                </TriggerLogic>
+                <TriggerLogic z:Id="370" z:Type="CMissionLib.Actions.GuiMessageAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="371">GUI Message</Name>
+                  <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
+                  <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
+                  <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
+                  <Message z:Id="372" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">... and a final monster is waiting somewhere on the map :)</Message>
+                  <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
+                  <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
+                </TriggerLogic>
               </_items>
-              <_size>2</_size>
-              <_version>6</_version>
+              <_size>4</_size>
+              <_version>10</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="328">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="373">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="329">Trigger 4</Name>
+          <Name z:Id="374">Trigger 4</Name>
           <Probability>1</Probability>
         </Trigger>
         <Trigger i:nil="true" />
@@ -1367,7 +1585,7 @@
       <_size>5</_size>
       <_version>5</_version>
     </items>
-    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="330">
+    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="375">
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </_monitor>
   </Triggers>

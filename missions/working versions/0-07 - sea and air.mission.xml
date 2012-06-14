@@ -55,7 +55,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="25">Tabula_Flooded_v04</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="26">Balanced Annihilation V7.68 Remake v3</ModName>
+  <ModName z:Id="26">Balanced Annihilation Reloaded $VERSION</ModName>
   <Name z:Id="27">New Mission</Name>
   <Players z:Id="28">
     <items z:Id="29" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">

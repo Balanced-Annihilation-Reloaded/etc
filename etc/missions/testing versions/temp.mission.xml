@@ -53,9 +53,9 @@
     </d2p1:_monitor>
   </DisabledWidgets>
   <ImagePath i:nil="true" />
-  <MapName z:Id="25">Cooper_Hill_TNM02-V1</MapName>
+  <MapName z:Id="25">AlienDesert</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="26">Balanced Annihilation V7.68 Remake v3</ModName>
+  <ModName z:Id="26">Balanced Annihilation Reloaded $VERSION</ModName>
   <Name z:Id="27">New Mission</Name>
   <Players z:Id="28">
     <items z:Id="29" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
@@ -199,11 +199,11 @@
                       <d10p1:_items z:Id="66" z:Size="8">
                         <d10p1:UnitStartInfo z:Id="67">
                           <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
-                            <d14p1:_x>308</d14p1:_x>
-                            <d14p1:_y>332</d14p1:_y>
+                            <d14p1:_x>100</d14p1:_x>
+                            <d14p1:_y>200</d14p1:_y>
                           </d10p1:Point>
-                          <d10p1:X>308</d10p1:X>
-                          <d10p1:Y>332</d10p1:Y>
+                          <d10p1:X>100</d10p1:X>
+                          <d10p1:Y>200</d10p1:Y>
                           <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="68">
                             <d14p1:items z:Id="69" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
                               <d14p1:_items z:Ref="5" i:nil="true" />
@@ -217,20 +217,104 @@
                           <d10p1:Heading>0</d10p1:Heading>
                           <d10p1:IsGhost>false</d10p1:IsGhost>
                           <d10p1:Player z:Ref="31" i:nil="true" />
-                          <d10p1:UnitDefName z:Id="71">corkarg</d10p1:UnitDefName>
+                          <d10p1:UnitDefName z:Id="71">aafus</d10p1:UnitDefName>
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo z:Id="72">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>200</d14p1:_x>
+                            <d14p1:_y>300</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>200</d10p1:X>
+                          <d10p1:Y>300</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="73">
+                            <d14p1:items z:Id="74" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="5" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="75">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="31" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="71" i:nil="true" />
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo z:Id="76">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>140</d14p1:_x>
+                            <d14p1:_y>220</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>140</d10p1:X>
+                          <d10p1:Y>220</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="77">
+                            <d14p1:items z:Id="78" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="5" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="79">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="31" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="71" i:nil="true" />
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo z:Id="80">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>162</d14p1:_x>
+                            <d14p1:_y>121</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>162</d10p1:X>
+                          <d10p1:Y>121</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="81">
+                            <d14p1:items z:Id="82" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="5" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="83">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="37" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="71" i:nil="true" />
+                        </d10p1:UnitStartInfo>
+                        <d10p1:UnitStartInfo z:Id="84">
+                          <d10p1:Point xmlns:d14p1="http://schemas.datacontract.org/2004/07/System.Windows">
+                            <d14p1:_x>223</d14p1:_x>
+                            <d14p1:_y>142</d14p1:_y>
+                          </d10p1:Point>
+                          <d10p1:X>223</d10p1:X>
+                          <d10p1:Y>142</d10p1:Y>
+                          <d10p1:Groups xmlns:d14p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="85">
+                            <d14p1:items z:Id="86" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                              <d14p1:_items z:Ref="5" i:nil="true" />
+                              <d14p1:_size>0</d14p1:_size>
+                              <d14p1:_version>0</d14p1:_version>
+                            </d14p1:items>
+                            <d14p1:_monitor xmlns:d15p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="87">
+                              <d15p1:_busyCount>0</d15p1:_busyCount>
+                            </d14p1:_monitor>
+                          </d10p1:Groups>
+                          <d10p1:Heading>0</d10p1:Heading>
+                          <d10p1:IsGhost>false</d10p1:IsGhost>
+                          <d10p1:Player z:Ref="37" i:nil="true" />
+                          <d10p1:UnitDefName z:Ref="71" i:nil="true" />
                         </d10p1:UnitStartInfo>
                         <d10p1:UnitStartInfo i:nil="true" />
                         <d10p1:UnitStartInfo i:nil="true" />
                         <d10p1:UnitStartInfo i:nil="true" />
-                        <d10p1:UnitStartInfo i:nil="true" />
-                        <d10p1:UnitStartInfo i:nil="true" />
-                        <d10p1:UnitStartInfo i:nil="true" />
-                        <d10p1:UnitStartInfo i:nil="true" />
                       </d10p1:_items>
-                      <d10p1:_size>1</d10p1:_size>
-                      <d10p1:_version>11</d10p1:_version>
+                      <d10p1:_size>5</d10p1:_size>
+                      <d10p1:_version>5</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="72">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="88">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Units>
@@ -241,12 +325,12 @@
               <_size>2</_size>
               <_version>2</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="73">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="89">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="74">Trigger</Name>
+          <Name z:Id="90">Trigger</Name>
           <Probability>1</Probability>
         </Trigger>
         <Trigger i:nil="true" />
@@ -256,7 +340,7 @@
       <_size>1</_size>
       <_version>1</_version>
     </items>
-    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="75">
+    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="91">
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </_monitor>
   </Triggers>

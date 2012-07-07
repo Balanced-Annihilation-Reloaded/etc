@@ -421,7 +421,7 @@
                   <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
                   <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
                   <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
-                  <Message z:Id="114" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Camera controls: Move your mouse to the edge of the screen to scroll/left/right/up/down. Use the mousewheel to zoom in and out. </Message>
+                  <Message z:Id="114" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Camera controls: Move your mouse to the edge of the screen to scroll/left/right/up/down. Use the mousewheel to zoom in and out. Start the mission by clicking on this textbox.</Message>
                   <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
                   <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
                 </TriggerLogic>
@@ -511,7 +511,7 @@
                 <TriggerLogic z:Id="146" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="116" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</CenterCamera>
-                  <Text z:Id="147" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Click and drag to control multiple units at once.</Text>
+                  <Text z:Id="147" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Click and then drag with the right mouse to control multiple units at once.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">248.49</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">445.5</Y>
                 </TriggerLogic>

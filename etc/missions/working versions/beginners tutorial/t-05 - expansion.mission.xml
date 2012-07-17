@@ -1041,60 +1041,39 @@
                   <FontSize xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">14</FontSize>
                   <Height xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Height>
                   <ImagePath i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions" />
-                  <Message z:Id="233" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Intelligence confirms that the enemy has left behind a vast energy production facility on the southern plane. We believe it is deserted but guarded by strong defensive towers. Find the facility and destory it! You have 10 minutes.</Message>
+                  <Message z:Id="233" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Intelligence confirms that the enemy has left behind a vast energy production facility on the southern plane. We believe it is deserted but guarded by strong defensive towers. Find the facility and destory it! </Message>
                   <Pause xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Pause>
                   <Width xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">400</Width>
                 </TriggerLogic>
                 <TriggerLogic z:Id="234" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="235">Marker</Name>
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="236" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">You'll need a big army of tanks to destroy the enemy defence.</Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">170.27999999999997</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">228.69</Y>
+                  <Text z:Id="236" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">This is a nanolathe. Set it to patrol and it will help nearby construction/factories.</Text>
+                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">46.53000000000003</X>
+                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">475.19999999999993</Y>
                 </TriggerLogic>
                 <TriggerLogic z:Id="237" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="235" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="238" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Expand your base as fast as you can and cap all nearby metal spots. </Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">167.31</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">240.57</Y>
-                </TriggerLogic>
-                <TriggerLogic z:Id="239" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="235" i:nil="true" />
-                  <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="240" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Once you are producing lots of resources, then make a lab and produce units quickly.</Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">167.31</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">263.34</Y>
-                </TriggerLogic>
-                <TriggerLogic z:Id="241" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="235" i:nil="true" />
-                  <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="242" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">This is a nanolathe. Set it to patrol and it will help nearby construction/factories.</Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">46.53000000000003</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">475.19999999999993</Y>
-                </TriggerLogic>
-                <TriggerLogic z:Id="243" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="235" i:nil="true" />
-                  <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="244" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">You can build nanolathes with any tech 1 constructor.</Text>
+                  <Text z:Id="238" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">You can build nanolathes with any tech 1 constructor.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">37.620000000000005</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">489.05999999999995</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="245" z:Type="CMissionLib.Actions.LockUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="246">Lock Units</Name>
-                  <Units xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="247" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
-                    <d10p1:items z:Id="248" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="249" z:Size="16">
-                        <d10p1:string z:Id="250">corap</d10p1:string>
-                        <d10p1:string z:Id="251">corlab</d10p1:string>
-                        <d10p1:string z:Id="252">coravp</d10p1:string>
-                        <d10p1:string z:Id="253">coralab</d10p1:string>
-                        <d10p1:string z:Id="254">coreyes</d10p1:string>
-                        <d10p1:string z:Id="255">corhp</d10p1:string>
-                        <d10p1:string z:Id="256">corhlt</d10p1:string>
-                        <d10p1:string z:Id="257">cormaw</d10p1:string>
-                        <d10p1:string z:Id="258">corpun</d10p1:string>
-                        <d10p1:string z:Id="259">corrl</d10p1:string>
+                <TriggerLogic z:Id="239" z:Type="CMissionLib.Actions.LockUnitsAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="240">Lock Units</Name>
+                  <Units xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="241" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">
+                    <d10p1:items z:Id="242" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="243" z:Size="16">
+                        <d10p1:string z:Id="244">corap</d10p1:string>
+                        <d10p1:string z:Id="245">corlab</d10p1:string>
+                        <d10p1:string z:Id="246">coravp</d10p1:string>
+                        <d10p1:string z:Id="247">coralab</d10p1:string>
+                        <d10p1:string z:Id="248">coreyes</d10p1:string>
+                        <d10p1:string z:Id="249">corhp</d10p1:string>
+                        <d10p1:string z:Id="250">corhlt</d10p1:string>
+                        <d10p1:string z:Id="251">cormaw</d10p1:string>
+                        <d10p1:string z:Id="252">corpun</d10p1:string>
+                        <d10p1:string z:Id="253">corrl</d10p1:string>
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -1105,80 +1084,69 @@
                       <d10p1:_size>10</d10p1:_size>
                       <d10p1:_version>10</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="260">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="254">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Units>
                 </TriggerLogic>
-                <TriggerLogic z:Id="261" z:Type="CMissionLib.Actions.StartCountdownAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="262">Start Countdown</Name>
-                  <Countdown z:Id="263" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Time Remaining</Countdown>
-                  <Display xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Display>
-                  <Frames xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">18000</Frames>
-                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">10</Minutes>
-                  <Seconds xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">600</Seconds>
-                  <Time xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">PT10M</Time>
-                </TriggerLogic>
-                <TriggerLogic z:Id="264" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <TriggerLogic z:Id="255" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="235" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="265" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">It's important to use the right kind of unit. </Text>
-                  <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">31.680000000000007</X>
-                  <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">291.06</Y>
-                </TriggerLogic>
-                <TriggerLogic z:Id="266" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Ref="235" i:nil="true" />
-                  <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="267" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">This is an advanced solar collector. It produces lots of energy but also costs lots of energy to build.</Text>
+                  <Text z:Id="256" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">This is an advanced solar collector. It produces lots of energy but also costs lots of energy to build.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">117.81</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">445.5</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="268" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                <TriggerLogic z:Id="257" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="235" i:nil="true" />
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="269" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Adv solar collectors can be built by any tech 1 constructor.</Text>
+                  <Text z:Id="258" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">Adv solar collectors can be built by any tech 1 constructor.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">142.56</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">459.36</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="270" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="271">Marker</Name>
+                <TriggerLogic z:Id="259" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="260">Marker</Name>
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="272" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">In this mission, you'll be using vehicles instead of kbots.</Text>
+                  <Text z:Id="261" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">In this mission, you'll be using vehicles instead of kbots.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">30.690000000000055</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">279.18</Y>
                 </TriggerLogic>
-                <TriggerLogic z:Id="273" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="274">Marker</Name>
+                <TriggerLogic z:Id="262" z:Type="CMissionLib.Actions.MarkerPointAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="263">Marker</Name>
                   <CenterCamera xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</CenterCamera>
-                  <Text z:Id="275" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">To destroy defensive towers, tanks will work better than artillery or missile trucks.</Text>
+                  <Text z:Id="264" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">You'll need a  big army of tanks to destroy the enemy defence.</Text>
                   <X xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">27.720000000000027</X>
                   <Y xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">307.89</Y>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
+                <TriggerLogic i:nil="true" />
+                <TriggerLogic i:nil="true" />
+                <TriggerLogic i:nil="true" />
+                <TriggerLogic i:nil="true" />
+                <TriggerLogic i:nil="true" />
               </_items>
-              <_size>15</_size>
-              <_version>15</_version>
+              <_size>10</_size>
+              <_version>20</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="276">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="265">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="277">Trigger</Name>
+          <Name z:Id="266">Trigger</Name>
           <Probability>1</Probability>
         </Trigger>
-        <Trigger z:Id="278">
+        <Trigger z:Id="267">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
           <IsExpanded>true</IsExpanded>
-          <Logic z:Id="279">
-            <items z:Id="280" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="281" z:Size="4">
-                <TriggerLogic z:Id="282" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="283">Unit Destroyed</Name>
-                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="284" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
-                    <d10p1:items z:Id="285" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-                      <d10p1:_items z:Id="286" z:Size="4">
+          <Logic z:Id="268">
+            <items z:Id="269" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
+              <_items z:Id="270" z:Size="4">
+                <TriggerLogic z:Id="271" z:Type="CMissionLib.Conditions.UnitDestroyedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="272">Unit Destroyed</Name>
+                  <Groups xmlns:d10p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="273" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions">
+                    <d10p1:items z:Id="274" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+                      <d10p1:_items z:Id="275" z:Size="4">
                         <d10p1:string z:Ref="77" i:nil="true" />
                         <d10p1:string i:nil="true" />
                         <d10p1:string i:nil="true" />
@@ -1187,13 +1155,13 @@
                       <d10p1:_size>1</d10p1:_size>
                       <d10p1:_version>1</d10p1:_version>
                     </d10p1:items>
-                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="287">
+                    <d10p1:_monitor xmlns:d11p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="276">
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Groups>
                 </TriggerLogic>
-                <TriggerLogic z:Id="288" z:Type="CMissionLib.VictoryAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="289">Victory</Name>
+                <TriggerLogic z:Id="277" z:Type="CMissionLib.VictoryAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+                  <Name z:Id="278">Victory</Name>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
                 <TriggerLogic i:nil="true" />
@@ -1201,48 +1169,21 @@
               <_size>2</_size>
               <_version>2</_version>
             </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="290">
+            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="279">
               <d7p1:_busyCount>0</d7p1:_busyCount>
             </_monitor>
           </Logic>
           <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="291">Trigger 1</Name>
-          <Probability>1</Probability>
-        </Trigger>
-        <Trigger z:Id="292">
-          <Enabled>true</Enabled>
-          <Folder i:nil="true" />
-          <IsExpanded>true</IsExpanded>
-          <Logic z:Id="293">
-            <items z:Id="294" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
-              <_items z:Id="295" z:Size="4">
-                <TriggerLogic z:Id="296" z:Type="CMissionLib.Conditions.CountdownEndedCondition" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="297">Countdown Ended</Name>
-                  <Countdown z:Ref="263" i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Conditions" />
-                </TriggerLogic>
-                <TriggerLogic z:Id="298" z:Type="CMissionLib.Actions.DefeatAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-                  <Name z:Id="299">Defeat</Name>
-                </TriggerLogic>
-                <TriggerLogic i:nil="true" />
-                <TriggerLogic i:nil="true" />
-              </_items>
-              <_size>2</_size>
-              <_version>2</_version>
-            </items>
-            <_monitor xmlns:d7p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="300">
-              <d7p1:_busyCount>0</d7p1:_busyCount>
-            </_monitor>
-          </Logic>
-          <MaxOccurrences>1</MaxOccurrences>
-          <Name z:Id="301">Trigger 2</Name>
+          <Name z:Id="280">Trigger 1</Name>
           <Probability>1</Probability>
         </Trigger>
         <Trigger i:nil="true" />
+        <Trigger i:nil="true" />
       </_items>
-      <_size>3</_size>
-      <_version>5</_version>
+      <_size>2</_size>
+      <_version>6</_version>
     </items>
-    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="302">
+    <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="281">
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </_monitor>
   </Triggers>

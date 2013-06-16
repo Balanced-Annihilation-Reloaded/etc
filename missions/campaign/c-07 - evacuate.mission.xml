@@ -4568,7 +4568,7 @@
         <Trigger z:Id="1016">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
-          <IsExpanded>false</IsExpanded>
+          <IsExpanded>true</IsExpanded>
           <Logic z:Id="1017">
             <items z:Id="1018" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
               <_items z:Id="1019" z:Size="4">
@@ -5224,7 +5224,7 @@
         <Trigger z:Id="1174">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
-          <IsExpanded>false</IsExpanded>
+          <IsExpanded>true</IsExpanded>
           <Logic z:Id="1175">
             <items z:Id="1176" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
               <_items z:Id="1177" z:Size="4">
@@ -5236,10 +5236,10 @@
                   <Name z:Ref="697" i:nil="true" />
                   <Countdown z:Id="1180" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">t1 kbot movement</Countdown>
                   <Display xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Display>
-                  <Frames xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0</Frames>
-                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0</Minutes>
-                  <Seconds xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0</Seconds>
-                  <Time xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">PT0S</Time>
+                  <Frames xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">2700</Frames>
+                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">1.5</Minutes>
+                  <Seconds xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">90</Seconds>
+                  <Time xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">PT1M30S</Time>
                 </TriggerLogic>
                 <TriggerLogic z:Id="1181" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="702" i:nil="true" />
@@ -5582,7 +5582,7 @@
         <Trigger z:Id="1255">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
-          <IsExpanded>false</IsExpanded>
+          <IsExpanded>true</IsExpanded>
           <Logic z:Id="1256">
             <items z:Id="1257" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
               <_items z:Id="1258" z:Size="16">

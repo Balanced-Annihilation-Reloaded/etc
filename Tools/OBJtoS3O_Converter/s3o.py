@@ -251,7 +251,7 @@ class S3O(object):
 			self.collision_radius=0
 			self.height=0
 			self.midpoint=[0,0,0]
-			self.texture_paths=['Arm_color.tif'+b'\x00','Arm_other.tif'+b'\x00']
+			self.texture_paths=['Arm_color.dds'+b'\x00','Arm_other.dds'+b'\x00']
 			self.root_piece=S3OPiece('',(0,0,0))
 			self.root_piece.parent = None
 			self.root_piece.name = 'empty_root_piece'+b'\x00'
@@ -323,6 +323,12 @@ class S3O(object):
 							verts.append((v[0],v[1],v[2]))
 						elif part[0]=='vn':# and len(verts)<emittype:
 							vn=map(float,part[2].split(' '))
+							lensqr=vn[0]**2+vn[1]**2+vn[2]**2
+							if lensqr>0.0002 and math.fabs(lensqr-1.0) > 0.001:
+								sqr=math.sqrt(lensqr)
+								vn[0]/=sqr
+								vn[1]/=sqr
+								vn[2]/=sqr
 							normals.append((vn[0],vn[1],vn[2]))
 						elif part[0]=='vt':# and len(verts)<emittype:
 							vt=map(float,part[2].split(' '))

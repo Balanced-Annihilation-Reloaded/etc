@@ -164,39 +164,43 @@ class App:
 		Label(frame,wraplength=600, justify=LEFT, text ='Instructions and notes:\n1. Converting S3O to OBJ:\n Open an s3o file, and the obj file will be saved with the same name and an .obj extension\n The name of each object in the .obj file will reflect the naming and pieces of the s3o file. All s3o data is retained, and is listed as a series of parameters in the object\'s name.\nExample:\no base,ox=-0.00,oy=0.00,oz=0.00,p=,mx=-0.00,my=4.00,mz=0.00,r=17.50,h=21.00,t1=tex1.png,t2=tex2.png\n ALL s3o info is retained, including piece hierarchy, piece origins, smoothing groups, vertex normals, and even degenerate pieces with no geometry used as emit points and vectors. These emit pieces will be shown as triangles with their correct vertex ordering.\n2. Converting OBJ to S3O:\n The opened .obj file will be converted into s3o. If the piece names contain the information as specified in the above example, the entire model hierarchy will be correctly converted. If it doesnt, then the program will convert each object as a child piece of an empty base object.').pack(side=BOTTOM)
 
 	def openobj(self):
-		self.objfile = tkFileDialog.askopenfilename(initialdir= self.initialdir, filetypes = [('Object file','*.obj'),('Any file','*')])
-		if 'obj' in self.objfile.lower():
-			self.initialdir=self.objfile.rpartition('/')[0]
-			if self.prompts3ofilename.get()==1:
-				outputfilename=tkFileDialog.asksaveasfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
-				if '.s3o' not in outputfilename.lower():
-					outputfilename+='.s3o'
-			else:
-				outputfilename=self.objfile.lower().replace('.obj','.s3o')
-			transform=self.transform.get()
-			a=b=c=d=0
-			if transform==1:
-				try:
-					a=float(self.transformA.get())
-					b=float(self.transformB.get())
-					c=float(self.transformC.get())
-					d=float(self.transformD.get())
-					print 'Using an UV space transform U=%.3f * U + %.3f  V=%.3f * V + %.3f'%(a,b,c,d)
-				except ValueError:
-					print 'Failed to parse transformation parameters, ignoring transformation!'
-					transform=0
-			OBJtoS3O(self.objfile, transform,outputfilename,a,b,c,d)
+		self.objfile = tkFileDialog.askopenfilename(initialdir= self.initialdir, filetypes = [('Object file','*.obj'),('Any file','*')],multiple = True)
+		self.objfile = string2list(self.objfile) 
+		for file in self.objfile:
+			if 'obj' in file.lower():
+				self.initialdir=file.rpartition('/')[0]
+				if self.prompts3ofilename.get()==1:
+					outputfilename=tkFileDialog.asksaveasfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
+					if '.s3o' not in outputfilename.lower():
+						outputfilename+='.s3o'
+				else:
+					outputfilename=file.lower().replace('.obj','.s3o')
+				transform=self.transform.get()
+				a=b=c=d=0
+				if transform==1:
+					try:
+						a=float(self.transformA.get())
+						b=float(self.transformB.get())
+						c=float(self.transformC.get())
+						d=float(self.transformD.get())
+						print 'Using an UV space transform U=%.3f * U + %.3f  V=%.3f * V + %.3f'%(a,b,c,d)
+					except ValueError:
+						print 'Failed to parse transformation parameters, ignoring transformation!'
+						transform=0
+				OBJtoS3O(file, transform,outputfilename,a,b,c,d)
 	def opens3o(self):
-		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')])
-		if 's3o' in self.s3ofile.lower():
-			self.initialdir=self.s3ofile.rpartition('/')[0]
-			if self.promptobjfilename.get()==1:
-				outputfilename=tkFileDialog.asksaveasfilename(initialdir= self.initialdir,filetypes = [('Object file','*.obj'),('Any file','*')])
-				if '.obj' not in outputfilename.lower():
-					outputfilename+='.obj'
-			else:
-				outputfilename=self.s3ofile.lower().replace('.s3o','.obj')
-			S3OtoOBJ(self.s3ofile,outputfilename)
+		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)
+		self.s3ofile = string2list(self.s3ofile) 
+		for file in self.s3ofile:
+			if 's3o' in file.lower():
+				self.initialdir=file.rpartition('/')[0]
+				if self.promptobjfilename.get()==1:
+					outputfilename=tkFileDialog.asksaveasfilename(initialdir= self.initialdir,filetypes = [('Object file','*.obj'),('Any file','*')])
+					if '.obj' not in outputfilename.lower():
+						outputfilename+='.obj'
+				else:
+					outputfilename=file.lower().replace('.s3o','.obj')
+				S3OtoOBJ(file,outputfilename)
 	def optimizes3o(self):
 		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)
 		self.s3ofile = string2list(self.s3ofile) 
@@ -237,6 +241,8 @@ def OBJtoS3O(objfile,transform,outputfilename,a,b,c,d):
 		output_file=open(outputfilename,'wb')
 		output_file.write(optimized_data)
 		output_file.close()
+	#	if (self.tex1.get()!='' and self.tex2.get()!=''):
+	#		swaptex(outputfilename, self.tex1.get(),self.tex2.get())
 		print "Succesfully converted", objfile,'to',outputfilename
 		
 def swaptex(filename,tex1,tex2):

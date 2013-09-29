@@ -308,7 +308,7 @@ class S3O(object):
 								print kv
 							except ValueError:
 								print 'Failed to parse parameter',p,'in',objfile[i]
-					piece.name=objfile[i].partition(' ')[2].strip().partition(',')[0][0:10]+b'\x00'
+					piece.name=objfile[i].partition(' ')[2].strip().partition(',')[0][0:20]+b'\x00' #why was I limiting piece names to 10 length?
 					piece.primitive_type='triangles' #tris
 					
 					piece.children=[]

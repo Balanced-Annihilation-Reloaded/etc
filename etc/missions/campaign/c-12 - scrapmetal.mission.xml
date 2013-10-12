@@ -1808,7 +1808,7 @@
                         <d10p1:anyType z:Id="407" z:Type="CMissionLib.Trigger" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                           <Enabled xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">true</Enabled>
                           <Folder i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib" />
-                          <IsExpanded xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">true</IsExpanded>
+                          <IsExpanded xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">false</IsExpanded>
                           <Logic z:Id="408" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib">
                             <items z:Id="409" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
                               <_items z:Id="410" z:Size="8">

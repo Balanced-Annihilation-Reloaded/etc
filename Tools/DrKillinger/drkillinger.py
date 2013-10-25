@@ -9,66 +9,78 @@ import tkFont
 # severities: wreck, heap, destroy
 
 class VerticalScrolledFrame(Frame):
-    """A pure Tkinter scrollable frame that actually works!
-    * Use the 'interior' attribute to place widgets inside the scrollable frame
-    * Construct and pack/place/grid normally
-    * This frame only allows vertical scrolling
+	"""A pure Tkinter scrollable frame that actually works!
+	* Use the 'interior' attribute to place widgets inside the scrollable frame
+	* Construct and pack/place/grid normally
+	* This frame only allows vertical scrolling
 
-    """
-    def __init__(self, parent, *args, **kw):
-        Frame.__init__(self, parent, *args, **kw)            
+	"""
+	def __init__(self, parent, *args, **kw):
+		Frame.__init__(self, parent, *args, **kw)			
 
-        # create a canvas object and a vertical scrollbar for scrolling it
-        vscrollbar = Scrollbar(self, orient=VERTICAL)
-        vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
-        canvas = Canvas(self, bd=0, highlightthickness=0,
-                        yscrollcommand=vscrollbar.set)
-        canvas.pack(side=LEFT, fill=BOTH, expand=TRUE)
-        vscrollbar.config(command=canvas.yview)
+		# create a canvas object and a vertical scrollbar for scrolling it
+		vscrollbar = Scrollbar(self, orient=VERTICAL)
+		vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
+		canvas = Canvas(self, bd=0, highlightthickness=0,
+						yscrollcommand=vscrollbar.set)
+		canvas.pack(side=LEFT, fill=BOTH, expand=TRUE)
+		vscrollbar.config(command=canvas.yview)
+		self.vscrollbar=vscrollbar
+		# reset the view
+		canvas.xview_moveto(0)
+		canvas.yview_moveto(0)
+		self.canvas=canvas
 
-        # reset the view
-        canvas.xview_moveto(0)
-        canvas.yview_moveto(0)
+		# create a frame inside the canvas which will be scrolled with it
+		self.interior = interior = Frame(canvas,bg='red', bd=5)
+		interior_id = canvas.create_window(0, 0, window=interior,
+										   anchor=NW)
 
-        # create a frame inside the canvas which will be scrolled with it
-        self.interior = interior = Frame(canvas)
-        interior_id = canvas.create_window(0, 0, window=interior,
-                                           anchor=NW)
+		# track changes to the canvas and frame width and sync them,
+		# also updating the scrollbar
+		def _configure_interior(event):
+			# update the scrollbars to match the size of the inner frame
+			size = (interior.winfo_reqwidth(), interior.winfo_reqheight())
+			canvas.config(scrollregion="0 0 %s %s" % size)
+			print '_configure_interior', size, interior.winfo_reqwidth(),interior.winfo_reqheight()
+			if interior.winfo_reqwidth() != canvas.winfo_width():
+				# update the canvas's width to fit the inner frame
+				canvas.config(width=interior.winfo_reqwidth())
+			if interior.winfo_reqheight() != canvas.winfo_height(): #uncommenting this makes it expand to full, but scrolling still does not work
+				# update the canvas's width to fit the inner frame
+				canvas.config(height=min(interior.winfo_reqheight(),900))
+			
+		interior.bind('<Configure>', _configure_interior)
 
-        # track changes to the canvas and frame width and sync them,
-        # also updating the scrollbar
-        def _configure_interior(event):
-            # update the scrollbars to match the size of the inner frame
-            size = (interior.winfo_reqwidth(), interior.winfo_reqheight())
-            canvas.config(scrollregion="0 0 %s %s" % size)
-            if interior.winfo_reqwidth() != canvas.winfo_width():
-                # update the canvas's width to fit the inner frame
-                canvas.config(width=interior.winfo_reqwidth())
-        interior.bind('<Configure>', _configure_interior)
-
-        def _configure_canvas(event):
-            if interior.winfo_reqwidth() != canvas.winfo_width():
-                # update the inner frame's width to fill the canvas
-                canvas.itemconfigure(interior_id, width=canvas.winfo_width())
-        canvas.bind('<Configure>', _configure_canvas)
+		def _configure_canvas(event):
+			if interior.winfo_reqwidth() != canvas.winfo_width():
+				# update the inner frame's width to fill the canvas
+				canvas.itemconfigure(interior_id, width=canvas.winfo_width())#, height=canvas.winfo_height())
+			print '_configure_canvas', interior.winfo_reqwidth(),canvas.winfo_width(),interior.winfo_reqheight(),canvas.winfo_width()
+		canvas.bind('<Configure>', _configure_canvas)
 
 class App:
 
 	def __init__(self, master):
-		
+		# root = Tk.__init__(self, *args, **kwargs)
 		self.initialdir=os.getcwd()
 		master.title('Dr. Killinger - By Beherith - Thanks to Muon\'s wonderful s3o library!')
-		self.frame = Frame(master)
+		self.frame = Frame(master, bg='yellow', bd=10)
 		self.topframe = Frame(self.frame, bd=1, relief = SUNKEN)
-		self.severitiesframe = VerticalScrolledFrame(self.frame)
-		self.frame.pack(fill=Y)
-		self.topframe.pack(side=TOP,fill=X)
-		self.severitiesframe.pack(side=TOP,fill=X)
+		self.bottomframe = Frame(self.frame, bd=5, bg='green', relief = SUNKEN)
+		self.bottomframe.pack(side=RIGHT, fill=BOTH,expand=1)
+		self.VSF = VerticalScrolledFrame(self.bottomframe)
+		self.severitiesframe =Frame(self.VSF.interior, bg='blue',bd=10)
+		#self.VSF.interior.pack(side=TOP)#,fill=BOTH,expand=1) #THIS MAKES IT ALL GO TO SHIT DO NOT UNCOMMENT
+		self.VSF.pack(fill=Y)
+		self.frame.pack(side=TOP,fill=BOTH, expand = 1)
+		self.topframe.pack(side=LEFT,fill=BOTH)
+		self.severitiesframe.pack(side=BOTTOM,fill=BOTH,expand=1)
 		self.validflags=['SHATTER','EXPLODE','FALL','SMOKE','FIRE','NONE','NO_CEG_TRAIL','NO_HEATCLOUD']
 		self.menuframe=Frame(self.topframe,bd=3,relief=SUNKEN)
 		self.treeframe=Frame(self.topframe,bd=2,relief=SUNKEN)
-		self.menuframe.pack(side=LEFT,fill=Y)
-		self.treeframe.pack(side=LEFT,fill=Y)
+		self.menuframe.pack(side=TOP,fill=Y)
+		self.treeframe.pack(side=TOP,fill=Y)
 		#=========MENUFRAME STUFF:
 		Button(self.menuframe, text="QUIT", fg="red", command=self.frame.quit).pack(side=TOP)
 		Button(self.menuframe, text="Load mod",  command=self.loadmod).pack(side=TOP)
@@ -107,7 +119,7 @@ class App:
 		
 		self.annihilateframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN)
 		self.annihilateframe.pack(side=TOP,fill=X)
-		Label(self.annihilateframe, text='annihilate').pack(side=LEFT)
+		Label(self.annihilateframe, text='Asnnihilate').pack(side=LEFT)
 		#======
 		
 		#==== common objects:
@@ -124,10 +136,16 @@ class App:
 		self.uiframes=[self.wreckframe,self.heapframe,self.destroyframe,self.annihilateframe]
 		self.severitylevels=[25,50,99,-1]
 		#=====
+		self.loadunit('D:/spring/ETC/Tools/DrKillinger/units/ajuno.lua')
 	def loadmod(self):
+		print 'vscrollbar.get',self.VSF.vscrollbar.get()
+		self.VSF.canvas.yview_moveto(20)
 		return
-	def loadunit(self):
-		self.unitdefpath=tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model def (Lua)','*.lua'),('Any file','*')], multiple = False)
+	def loadunit(self, default=''):
+		if default=='':
+			self.unitdefpath=tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model def (Lua)','*.lua'),('Any file','*')], multiple = False)
+		else:
+			self.unitdefpath=default
 		print 'loading',self.unitdefpath
 		if '.lua' in self.unitdefpath:
 			self.modpath=self.unitdefpath.partition('units')[0]
@@ -149,7 +167,7 @@ class App:
 		return
 	def updatetree(self,model,pl):
 		namejust=20
-		treestr='NAME                        volume (elmos) #tris  ox   oy   oz\n'+recursepiecetree(model.root_piece,0,(0,0,0),pl)
+		treestr='NAME          volume (elmos) #tris  ox   oy   oz\n'+recursepiecetree(model.root_piece,0,(0,0,0),pl)
 		self.treelabeltext.set(treestr)
 	def createui(self,killtable):
 		
@@ -263,7 +281,7 @@ def uncomment(l):
 	return l.partition('//')[0].strip()
 def recursepiecetree(piece, depth,offset,pl): # we need the name offset by depth, the volume, the #triangles and the pos
 	namejust=20
-	s='%s %10.1f %5i %4.2f %4.2f %4.2f\n'%(('  '*depth+piece.name).ljust(30),piecevolume(piece), len(piece.indices), piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2])
+	s='%s %10.1f %5i %4.2f %4.2f %4.2f\n'%((' '*depth+piece.name).ljust(17),piecevolume(piece), len(piece.indices), piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2])
 	print s
 	pl.append(piece.name.lower())
 	for child in piece.children:

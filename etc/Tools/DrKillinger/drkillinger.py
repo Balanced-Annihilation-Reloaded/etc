@@ -19,11 +19,11 @@ class VerticalScrolledFrame(Frame):
 		Frame.__init__(self, parent, *args, **kw)			
 
 		# create a canvas object and a vertical scrollbar for scrolling it
-		vscrollbar = Scrollbar(self, orient=VERTICAL)
+		vscrollbar = Scrollbar(self, orient=VERTICAL, width=24)
 		vscrollbar.pack(fill=Y, side=RIGHT, expand=FALSE)
 		canvas = Canvas(self, bd=0, highlightthickness=0,
 						yscrollcommand=vscrollbar.set)
-		canvas.pack(side=LEFT, fill=BOTH, expand=TRUE)
+		canvas.pack(side=LEFT)#, fill=BOTH, expand=TRUE)
 		vscrollbar.config(command=canvas.yview)
 		self.vscrollbar=vscrollbar
 		# reset the view
@@ -72,7 +72,7 @@ class App:
 		self.VSF = VerticalScrolledFrame(self.bottomframe)
 		self.severitiesframe =Frame(self.VSF.interior, bg='blue',bd=10)
 		#self.VSF.interior.pack(side=TOP)#,fill=BOTH,expand=1) #THIS MAKES IT ALL GO TO SHIT DO NOT UNCOMMENT
-		self.VSF.pack(fill=Y)
+		self.VSF.pack(fill=BOTH)
 		self.frame.pack(side=TOP,fill=BOTH, expand = 1)
 		self.topframe.pack(side=LEFT,fill=BOTH)
 		self.severitiesframe.pack(side=BOTTOM,fill=BOTH,expand=1)
@@ -95,7 +95,7 @@ class App:
 		##========================
 		
 		##TREEFRAME:
-		self.treefont=tkFont.Font(family='Courier New',size=10)
+		self.treefont=tkFont.Font(family='Courier New',size=8)
 		self.treelabeltext=StringVar()
 		
 		self.treelabeltext.set('Tree goes here')
@@ -119,7 +119,7 @@ class App:
 		
 		self.annihilateframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN)
 		self.annihilateframe.pack(side=TOP,fill=X)
-		Label(self.annihilateframe, text='Asnnihilate').pack(side=LEFT)
+		Label(self.annihilateframe, text='SelfD').pack(side=LEFT)
 		#======
 		
 		#==== common objects:
@@ -136,7 +136,7 @@ class App:
 		self.uiframes=[self.wreckframe,self.heapframe,self.destroyframe,self.annihilateframe]
 		self.severitylevels=[25,50,99,-1]
 		#=====
-		self.loadunit('D:/spring/ETC/Tools/DrKillinger/units/ajuno.lua')
+		self.loadunit('D:/spring/ETC/Tools/DrKillinger/units/aseadragon.lua')
 	def loadmod(self):
 		print 'vscrollbar.get',self.VSF.vscrollbar.get()
 		self.VSF.canvas.yview_moveto(20)
@@ -321,6 +321,15 @@ validflags=['SHATTER','EXPLODE','FALL','SMOKE','FIRE','NONE','NO_CEG_TRAIL','NO_
 ##DRAW:
 # if NOCEGTRAIL and SMOKE: default smoke drawn
 # if FIRE: draw projectileDrawer->explofadetex
+
+#EXTENSIONS:
+# if we dont want to explode all stuff at once, we can add a delay to it, even explode some pieces multiple times...
+# pieces that get exploded and fall off MUST be hidden in the same frame as they are exploded, or else it looks funny
+# bugs: units that dont finish their killscripts are put on a 'pause'
+# they seem to be paralyzed, and somehow health bars are messing up
+# units that are waiting on killscript stop dead in their tracks, and they wreck continues sliding after they finish the script
+# units seem to return a corpsetype of 1 no matter what, if there are sleeps in the killscript...
+# attacking units seem to retain their targets of dying units while the killscript executes, they do not fire, just target them like neutral units (and move to acquire target)
 '''
 	LuaPushNamedNumber(L, "SHATTER", PF_Shatter);
 	LuaPushNamedNumber(L, "EXPLODE", PF_Explode);

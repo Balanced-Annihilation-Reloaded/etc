@@ -32,7 +32,7 @@ class VerticalScrolledFrame(Frame):
 		self.canvas=canvas
 
 		# create a frame inside the canvas which will be scrolled with it
-		self.interior = interior = Frame(canvas,bg='red', bd=5)
+		self.interior = interior = Frame(canvas)#,bg='red', bd=5)
 		interior_id = canvas.create_window(0, 0, window=interior,
 										   anchor=NW)
 
@@ -42,7 +42,7 @@ class VerticalScrolledFrame(Frame):
 			# update the scrollbars to match the size of the inner frame
 			size = (interior.winfo_reqwidth(), interior.winfo_reqheight())
 			canvas.config(scrollregion="0 0 %s %s" % size)
-			print '_configure_interior', size, interior.winfo_reqwidth(),interior.winfo_reqheight()
+			#print '_configure_interior', size, interior.winfo_reqwidth(),interior.winfo_reqheight()
 			if interior.winfo_reqwidth() != canvas.winfo_width():
 				# update the canvas's width to fit the inner frame
 				canvas.config(width=interior.winfo_reqwidth())
@@ -56,7 +56,7 @@ class VerticalScrolledFrame(Frame):
 			if interior.winfo_reqwidth() != canvas.winfo_width():
 				# update the inner frame's width to fill the canvas
 				canvas.itemconfigure(interior_id, width=canvas.winfo_width())#, height=canvas.winfo_height())
-			print '_configure_canvas', interior.winfo_reqwidth(),canvas.winfo_width(),interior.winfo_reqheight(),canvas.winfo_width()
+			#print '_configure_canvas', interior.winfo_reqwidth(),canvas.winfo_width(),interior.winfo_reqheight(),canvas.winfo_width()
 		canvas.bind('<Configure>', _configure_canvas)
 
 class App:
@@ -65,18 +65,20 @@ class App:
 		# root = Tk.__init__(self, *args, **kwargs)
 		self.initialdir=os.getcwd()
 		master.title('Dr. Killinger - By Beherith - Thanks to Muon\'s wonderful s3o library!')
-		self.frame = Frame(master, bg='yellow', bd=10)
+		self.frame = Frame(master)#, bg='yellow', bd=10)
 		self.topframe = Frame(self.frame, bd=1, relief = SUNKEN)
-		self.bottomframe = Frame(self.frame, bd=5, bg='green', relief = SUNKEN)
+		self.bottomframe = Frame(self.frame)#, bd=5, bg='green', relief = SUNKEN)
 		self.bottomframe.pack(side=RIGHT, fill=BOTH,expand=1)
 		self.VSF = VerticalScrolledFrame(self.bottomframe)
-		self.severitiesframe =Frame(self.VSF.interior, bg='blue',bd=10)
+		self.severitiesframe =Frame(self.VSF.interior)#, bg='blue',bd=10)
 		#self.VSF.interior.pack(side=TOP)#,fill=BOTH,expand=1) #THIS MAKES IT ALL GO TO SHIT DO NOT UNCOMMENT
 		self.VSF.pack(fill=BOTH)
 		self.frame.pack(side=TOP,fill=BOTH, expand = 1)
 		self.topframe.pack(side=LEFT,fill=BOTH)
 		self.severitiesframe.pack(side=BOTTOM,fill=BOTH,expand=1)
-		self.validflags=['SHATTER','EXPLODE','FALL','SMOKE','FIRE','NONE','NO_CEG_TRAIL','NO_HEATCLOUD']
+		
+		self.validflags=['SHATTER','EXPLODE_ON_HIT','FALL','SMOKE','FIRE','BITMAPONLY','NO_CEG_TRAIL','NO_HEATCLOUD']
+		#self.validflags=['SHATTER','EXPLODE','FALL','SMOKE','FIRE','NONE','NO_CEG_TRAIL','NO_HEATCLOUD']
 		self.menuframe=Frame(self.topframe,bd=3,relief=SUNKEN)
 		self.treeframe=Frame(self.topframe,bd=2,relief=SUNKEN)
 		self.menuframe.pack(side=TOP,fill=Y)
@@ -85,7 +87,7 @@ class App:
 		Button(self.menuframe, text="QUIT", fg="red", command=self.frame.quit).pack(side=TOP)
 		Button(self.menuframe, text="Load mod",  command=self.loadmod).pack(side=TOP)
 		Button(self.menuframe, text="Load unit", command=self.loadunit).pack(side=TOP)
-		Button(self.menuframe, text="Write unit", command=self.saveunit).pack(side=TOP)
+		Button(self.menuframe, text="Write bos", command=self.writebos).pack(side=TOP)
 		Button(self.menuframe, text="Next unit", command=self.nextunit).pack(side=TOP)
 		Button(self.menuframe, text="Prev unit", command=self.prevunit).pack(side=TOP)
 		Button(self.menuframe, text="Wreck unit", command=self.wreckunit).pack(side=TOP)
@@ -191,20 +193,59 @@ class App:
 				else:
 					self.makerow(i,piece,[])
 			i+=1
+	def writebos(self):
+		print 'Writing BOS file'
+		wholebos=''.join(self.bos)
+		nokilledbos=''
+		if 'Killed(severity' in wholebos:
+			nokilledbos=wholebos.partition('Killed(severity')[0]
+		else:
+			print 'WARNING! Killed(severity not in bos file!', wholebos
+			return 
+		nokilledbos+='Killed(severity, corpsetype)\n{\n'
+		i=0
+		for sevlevel in self.killscript:
+			if int(sevlevel['severity'].get())>-1:
+				nokilledbos+='	if( severity <= %i )\n	{\n		corpsetype = %i ;\n'%(int(sevlevel['severity'].get()),min(i+1,3))
+				nokilledbos+=self.writebospieces(sevlevel)+'		return(0);\n	}\n'
+			else:
+				
+				nokilledbos+='	corpsetype = 3 ;\n'
+				nokilledbos+=self.writebospieces(sevlevel)
+			i+=1
+		nokilledbos+='}\n'
+		print nokilledbos
+	
+	def writebospieces(self,sevlevel):
+		s=''
+		for piece in self.piecelist:
+			flags=[]
+			for flag in sevlevel[piece].iterkeys():
+				if flag in self.validflags and sevlevel[piece][flag].get()==1:
+					flags.append(flag)
+			if sevlevel[piece]['explode'].get()==1:
+				s+='		explode '+piece+' type '+' | '.join(flags)+';\n'
+		return s
+		
 	def makerow(self, sevlevel, piece, flags):
-		print sevlevel
+		#print sevlevel
 		rowframe=Frame(self.uiframes[sevlevel])
 		rowframe.pack(side=TOP,fill=X)
+		explode=IntVar()
+		if flags!=[]:
+			explode.set(1)
+		self.killscript[sevlevel][piece]={}
+		self.killscript[sevlevel][piece]['explode']=explode
+		Checkbutton(rowframe, variable=explode).pack(side=LEFT)
 		Label(rowframe,text=piece.ljust(12),font=self.treefont).pack(side=LEFT)
 		
-		self.killscript[sevlevel][piece]={}
-	
+		
 		for flag in self.validflags:
 			val=IntVar()
 			val.set(0)
 			if flag in flags:
 				val.set(1)
-				print flag,piece,'should be set'
+				#print flag,piece,'should be set'
 			self.killscript[sevlevel][piece][flag]=val
 			Checkbutton(rowframe,text=flag, variable=val).pack(side=LEFT)
 		
@@ -236,9 +277,9 @@ class App:
 						p=delimit(line,'explode','type')
 						flags=[x.strip() for x in delimit(line,'type',';').split('|')]
 						print p,killedindex, flags
-						if 'EXPLODE_ON_HIT' in flags and 'EXPLODE' not in flags:
-							del flags[flags.index('EXPLODE_ON_HIT')]
-							flags.append('EXPLODE')
+						# if 'EXPLODE_ON_HIT' in flags and 'EXPLODE' not in flags:
+							# del flags[flags.index('EXPLODE_ON_HIT')]
+							# flags.append('EXPLODE')
 						for flag in flags:
 							if flag not in self.validflags:
 								del flags[flags.index(flag)]
@@ -252,8 +293,7 @@ class App:
 			print 'WARNING: the bos piece list does not match the s3o piece list!', bospiecelist, self.piecelist
 			
 		return killtable
-	def writebos(self):
-		return
+
 	def saveunit(self):
 		return
 	def nextunit(self):
@@ -297,23 +337,70 @@ def piecevolume(piece):
 		return (max(xs)-min(xs))* (max(ys)-min(ys))* (max(zs)-min(zs))
 	else:
 		return 0
+def destroy(self, twist, shear, deform,shearang):
+	#global base
+	self.base=0
+	self.base=S3oPiece()
+	self.base.numchilds=0
+	self.base.vertices=[]
+	self.base.vertexTable=[]
+	self.base.numvertices=0
+	self.base.vertexTableSize=0
+	self.base.primitivetype=0
+	self.grab(copy.deepcopy(self.rootPiece),self.base,twist, shear, deform,(0,0,0),shearang)
+	self.rootPiece=self.base
+	self.base=0
+	# self.rootPiece=0
+def grab(self, piece, base, twist, shear, deform,offsets,shearang):
+	print 'grabbing', piece.name
+	if piece.primitivetype!=0 and piece.vertexTableSize!=0:
+		print 'Piece cant be grabbed, as its not empty and has non triangles!'
+	else:		
+		if base.numvertices!=len(base.vertices):
+		
+			print 'index error in grab at numverts'
+
+		for vi in piece.vertexTable:
+			base.vertexTable.append(base.numvertices+vi)
+			if base.vertexTableSize+vi>len(base.vertexTable)+piece.vertexTableSize	:
+				print 'index error in grab'
+		base.numvertices+=piece.numvertices	
+		base.vertexTableSize+=piece.vertexTableSize
+		size=piece.dimensions()
+		offsets=(offsets[0]+piece.xoffset,offsets[1]+piece.yoffset,offsets[2]+piece.zoffset)
+		for v in piece.vertices:
+			v.v.x+=offsets[0]
+			v.v.y+=offsets[1]
+			v.v.z+=offsets[2]
+			v.v.x+=deform*(math.sin(v.v.x)+math.cos(v.v.z)+math.sin(v.v.y+2.3))
+			v.v.y+=min( 1 ,max(0,v.v.y/10))*deform*(math.sin(v.v.x+4)+math.cos(v.v.z+7)+math.sin(v.v.y+1))
+			v.v.z+=deform*(math.sin(v.v.x+2)+math.cos(v.v.z+3)+math.sin(v.v.y-11))
+			v.v.x+=shear*(v.v.y)*math.sin(shearang)
+			v.v.x+=shear*(v.v.y)*math.cos(shearang)
+			#print v.uv.u,v.uv.v,'|',
+			base.vertices.append(copy.deepcopy(v))
+	for c in piece.childs:
+		self.grab(c,base,twist, shear, deform,offsets,shearang)
 root = Tk()
 app = App(root)
 root.mainloop()
-validflags=['SHATTER','EXPLODE','FALL','SMOKE','FIRE','NONE','NO_CEG_TRAIL','NO_HEATCLOUD']
+validflags=['SHATTER','EXPLODE_ON_HIT','FALL','SMOKE','FIRE','BITMAPONLY','NO_CEG_TRAIL','NO_HEATCLOUD']
+#				1		2			4		8	16		32		64	128
+
 #flagrules:
-# EXPLODE=EXPLODE_ON_HIT  
+# EXPLODE(engine)=EXPLODE_ON_HIT(BOS)  
 # EXPLODE causes it to do 50 damage on impact!
 #all pieces bounce with p=0.66
 #void CUnitScript::Explode(int piece, int flags)
 #flag processing order
 #1. noheatcloud = obvious no heatcloud at site of explosion, heatcloudtex is bitmaps/explo.tga
-#2. NONE: no stuff falls off, return
+#2. NONE: no stuff falls off, return NONE(engine) = BITMAPONLY(BOS)
 #3. SHATTER: shatters, return
 #4. !! at this point, FALL IS TURNED ON!
 #5. SMOKE is smoke, checked for particle saturation, uses projectileDrawer->smoketrailtex
 #6. fire is fire, checked for particle saturation
 #7. nocegtrail is passed, does not seem to be mutually exclusive with fire or smoke...
+	#if a unit has no custom ceg trails defined, such as: unitDef->pieceCEGTags is empty, then NO_CEG_TRAIL is flagged on.
 #UPDATE:
 #if FIRE and hasvertices: rotate it and translate it (obvious since there is no need to rotate if it has no vertices)
 # if nocegtrail and age%8!=0 and SMOKE: make a new smoke instance (gotta test this out)
@@ -330,6 +417,17 @@ validflags=['SHATTER','EXPLODE','FALL','SMOKE','FIRE','NONE','NO_CEG_TRAIL','NO_
 # units that are waiting on killscript stop dead in their tracks, and they wreck continues sliding after they finish the script
 # units seem to return a corpsetype of 1 no matter what, if there are sleeps in the killscript...
 # attacking units seem to retain their targets of dying units while the killscript executes, they do not fire, just target them like neutral units (and move to acquire target)
+
+#wierd glowy bug:
+# changes on zoom level!
+# caused by: 	explode lfire type FALL | SMOKE | FIRE | BITMAP3;
+#not caused by FALL|SMOKE;
+#caused by FIRE;
+#CAUSED BY 0 tags!;
+#IT IS CAUSED BY EMPTY (0 geometry) PIECES BEING EXPLODED!
+#solution? NO FIRE ON EMPTY!
+
+#SCRIPTOR WILL NOT EAT AN explode piece type ; with NO FLAGS
 '''
 	LuaPushNamedNumber(L, "SHATTER", PF_Shatter);
 	LuaPushNamedNumber(L, "EXPLODE", PF_Explode);

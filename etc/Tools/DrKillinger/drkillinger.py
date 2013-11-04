@@ -1,11 +1,16 @@
 import sys
 import os
-from s3o import S3O
+import copy
+import math
+from s3o import S3O,S3OPiece
 
 from Tkinter import *
 # from ttk import *
 import tkFileDialog
 import tkFont
+import collections
+import random
+PieceInfo = collections.namedtuple('Pieceinfo', 'name pname vol verts children emptychildren d')
 # severities: wreck, heap, destroy
 
 class VerticalScrolledFrame(Frame):
@@ -83,6 +88,7 @@ class App:
 		self.treeframe=Frame(self.topframe,bd=2,relief=SUNKEN)
 		self.menuframe.pack(side=TOP,fill=Y)
 		self.treeframe.pack(side=TOP,fill=Y)
+		self.outputdir='output'
 		#=========MENUFRAME STUFF:
 		Button(self.menuframe, text="QUIT", fg="red", command=self.frame.quit).pack(side=TOP)
 		Button(self.menuframe, text="Load mod",  command=self.loadmod).pack(side=TOP)
@@ -91,6 +97,7 @@ class App:
 		Button(self.menuframe, text="Next unit", command=self.nextunit).pack(side=TOP)
 		Button(self.menuframe, text="Prev unit", command=self.prevunit).pack(side=TOP)
 		Button(self.menuframe, text="Wreck unit", command=self.wreckunit).pack(side=TOP)
+		Button(self.menuframe, text="AUTO CONFIG", command=self.autoconf).pack(side=TOP)
 		
 		Label(self.menuframe,text='This is my magic murder bag').pack(side=LEFT)
 		
@@ -134,11 +141,13 @@ class App:
 		self.bos=0
 		self.unitdef=0
 		self.piecelist=[]
-		self.killscript={}
+		self.killscript=[]
+		self.keeplist=[]
 		self.uiframes=[self.wreckframe,self.heapframe,self.destroyframe,self.annihilateframe]
 		self.severitylevels=[25,50,99,-1]
+		self.piecetree=[]#((piece.name, parentname, piecevol, indices, len(piece.children)), #emptychildren,depth)'name pname vol indices children emptychildren depth'
 		#=====
-		self.loadunit('D:/spring/ETC/Tools/DrKillinger/units/aseadragon.lua')
+		self.loadunit('s:/baremake/ETC/Tools/DrKillinger/units/ajuno.lua')
 	def loadmod(self):
 		print 'vscrollbar.get',self.VSF.vscrollbar.get()
 		self.VSF.canvas.yview_moveto(20)
@@ -154,6 +163,7 @@ class App:
 			self.unitname=self.unitdefpath.rpartition('/')[2].partition('.')[0]
 			self.bospath=self.modpath+'scripts/'+self.unitname+'.bos'
 			self.s3opath=self.modpath+'objects3d/'+self.unitname+'.s3o'
+			self.outputdir=self.modpath+self.outputdir
 			try:
 				self.s3o=S3O(open(self.s3opath,'rb').read())
 				self.bos=open(self.bospath,'r').readlines()
@@ -166,10 +176,11 @@ class App:
 			self.killscript=self.loadbos(self.bos)
 			print self.killscript
 			self.createui(self.killscript)
+			self.keeplist=copy.deepcopy(self.piecelist)
 		return
 	def updatetree(self,model,pl):
 		namejust=20
-		treestr='NAME          volume (elmos) #tris  ox   oy   oz\n'+recursepiecetree(model.root_piece,0,(0,0,0),pl)
+		treestr='NAME          volume (elmos) #tris  ox   oy   oz\n'+self.recursepiecetree(model.root_piece,0,(0,0,0),pl,'root')
 		self.treelabeltext.set(treestr)
 	def createui(self,killtable):
 		
@@ -214,7 +225,11 @@ class App:
 				nokilledbos+=self.writebospieces(sevlevel)
 			i+=1
 		nokilledbos+='}\n'
-		print nokilledbos
+		#print nokilledbos
+		outf=open(self.outputdir+'/'+self.unitname+'.bos','w')
+		outf.write(nokilledbos)
+		outf.close()
+		
 	
 	def writebospieces(self,sevlevel):
 		s=''
@@ -300,8 +315,6 @@ class App:
 		return
 	def prevunit(self):
 		return
-	def wreckunit(self):
-		return
 	def opens3o(self):
 		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)
 		self.s3ofile = string2list(self.s3ofile) 
@@ -315,19 +328,205 @@ class App:
 				else:
 					outputfilename=file.lower().replace('.s3o','.obj')
 				S3OtoOBJ(file,outputfilename)
+	####################################################
+	# RULES:
+	# Wreck:
+		# only 1 piece may fly off, and that piece is the leaf-est non-empty piece. and only if it has 2 or more pieces.
+		# everything else is bitmaponly
+	#heap:
+		#the base is the only thing that does not fall off, 50% (the smallest 50%) of the pieces fall, with random smoke and fire.
+	#destroyed:
+		# all but the base falls off, with random smoke and fire, 50% of the pieces explode on hit
+	#selfd:
+		#everything falls off, with random smoke and fire, everything explodes on hit		
+		#stuff with 60 indices or less may shatter 
+	#######################################
+	
+	def autoconf(self):
+		global PieceInfo #'name pname vol verts children emptychildren d'
+		self.keeplist=[]
+		
+		leafest=self.getleafname()
+		
+		#sevlevel WRECK
+		for piece in self.piecetree: #'name pname vol indices children emptychildren depth'
+			if piece.name==leafest:
+				self.clearpiece(0,piece.name)
+				self.setflags(0,piece.name,['FALL','SMOKE','FIRE'])
+			else:
+				self.clearpiece(0,piece.name)
+				self.setflags(0,piece.name,['BITMAPONLY'])
+				self.keeplist.append(piece.name)
+		#sevlevel HEAP
+		for piece in self.piecetree:# 'name pname vol indices children emptychildren depth'
+			if piece.pname=='root' and piece.vol >8*8*8:
+				self.clearpiece(1,piece.name)
+				self.setflags(1,piece.name,['BITMAPONLY'])
+			else:
+				self.clearpiece(1,piece.name)
+				if piece.vol<32*32*32:
+					if len(self.piecetree)>3:
+						r=random.random()
+						if r>0.33:
+							self.setflags(1,piece.name,['FALL','SMOKE','FIRE'])
+						elif r>0.66:
+							self.setflags(1,piece.name,['FALL','SMOKE'])
+						else:
+							self.setflags(1,piece.name,['FALL'])
+					else:
+						self.setflags(1,piece.name,['FALL','SMOKE','FIRE'])
+				else:
+					self.setflags(0,piece.name,['BITMAPONLY'])
+
+		#sevlevel DESTROY
+		for piece in self.piecetree:# 'name pname vol indices children emptychildren depth'
+			r=random.random()
+			self.clearpiece(2,piece.name)
+			if piece.verts!=0 and piece.verts<60:
+				
+				if piece.vol<32*32*32:
+					self.setflags(2,piece.name,['SHATTER'])
+				else:
+					self.setflags(2,piece.name,['BITMAPONLY'])
+			elif piece.pname=='root':
+				if piece.vol<32*32*32:
+					self.setflags(2,piece.name,['FALL','SMOKE','FIRE'])
+				else:
+					self.setflags(2,piece.name,['BITMAPONLY'])
+			else:
+				if piece.vol<32*32*32:
+					if r<0.25:
+						self.setflags(2,piece.name,['FALL','SMOKE'])
+					elif r<0.5:
+						self.setflags(2,piece.name,['FALL','SMOKE','FIRE','EXPLODE_ON_HIT'])
+					elif r<0.75:
+						self.setflags(2,piece.name,['FALL','FIRE','SMOKE'])
+					else:
+						self.setflags(2,piece.name,['FALL','SMOKE','EXPLODE_ON_HIT'])
+				else:
+					self.setflags(2,piece.name,['BITMAPONLY'])
+		#sevlevel SELFD
+		for piece in self.piecetree: # 'name pname vol indices children emptychildren depth'
+			r=random.random()
+			self.clearpiece(3,piece.name)
+			if piece.verts!=0 and piece.verts<60:
+				
+				if piece.vol<32*32*32:
+					self.setflags(3,piece.name,['SHATTER'])
+				else:
+					self.setflags(3,piece.name,['BITMAPONLY'])
+			elif piece.pname=='root':
+				if piece.vol<32*32*32:
+					self.setflags(3,piece.name,['FALL','SMOKE','FIRE','EXPLODE_ON_HIT'])
+				else:
+					self.setflags(3,piece.name,['BITMAPONLY'])
+			else:	
+				if r<0.5:
+					self.setflags(3,piece.name,['FALL','SMOKE','FIRE','EXPLODE_ON_HIT'])
+				else:
+					self.setflags(3,piece.name,['FALL','FIRE','EXPLODE_ON_HIT'])
+
+		
+
+	def getleafname(self):
+		leafest=''
+		maxdepth=0
+		if len(self.piecetree)<=2:
+			return ''
+		for piece in self.piecetree:
+			if piece.d>maxdepth and piece.emptychildren==piece.children and piece.verts!=0:
+				leafest=piece.name
+				maxdepth=piece.d
+		return leafest
+	def clearpiece(self,sevlevel,piece):	
+		self.killscript[sevlevel][piece]['explode'].set(0)
+		for flag in self.validflags:
+			self.killscript[sevlevel][piece][flag].set(0)
+	def setflags(self,sevlevel,piece,flags):
+		self.killscript[sevlevel][piece]['explode'].set(1)
+		for flag in flags:
+			self.killscript[sevlevel][piece][flag].set(1)
+	
+	def wreckunit(self):
+		self.destroy(0,0.05+random.random()/10,0.5,random.random()*100)
+		self.writebos()
+		optimized_data = self.wreckeds3o.serialize()
+		output_file=open(self.outputdir+'/'+self.unitname+'_dead.s3o','wb')
+		output_file.write(optimized_data)
+		output_file.close()
+		for i in range(len(self.unitdef)):
+			if 'object' in self.unitdef[i] and self.unitname.lower()+'_dead' in self.unitdef[i].lower():
+				self.unitdef[i]= self.unitdef[i].lower().replace('_dead', '_dead.s3o')
+		luaf=open(self.outputdir+'/'+self.unitname+'.lua','w')
+		luaf.write(''.join(self.unitdef))
+		luaf.close() 
+		print 'Successfully written, validating S30'
+		valid=S3O(open(self.outputdir+'/'+self.unitname+'_dead.s3o','rb').read())
+		valid.S3OtoOBJ(self.outputdir+'/'+self.unitname+'_dead.obj')
+		print 'validation OK!'
+		return
+	def destroy(self, twist, shear, deform,shearang): #destroy(0,0.05+random.random()/10,0.5,random.random()*100)
+		#global base
+		self.wreckeds3o=copy.deepcopy(self.s3o)
+		self.wreckeds3o.root_piece.vertices=[]
+		self.wreckeds3o.root_piece.indices=[]
+		self.wreckeds3o.root_piece.children=[]
+		self.wreckeds3o.root_piece.primitive_type='triangles'
+		self.grab(copy.deepcopy(self.s3o.root_piece),self.wreckeds3o.root_piece,twist, shear, deform,(0,0,0),shearang)
+
+		# self.rootPiece=0
+	def grab(self, piece, base, twist, shear, deform,offsets,shearang):
+		print 'grabbing', piece.name,'#verts',len(piece.vertices),'#index',len(piece.indices)
+		if piece.primitive_type!='triangles' and len(piece.vertices)!=0:
+			print 'Piece cant be grabbed, as its not empty and has non triangles!',piece.primitive_type,len(piece.vertices)
+		else:		
+			if len(self.keeplist)>0 and piece.name in self.keeplist:
+				vert_cnt=len(base.vertices)
+				for vi in piece.indices:
+					base.indices.append(vert_cnt+vi)
+					if vert_cnt+vi>len(base.vertices)+len(piece.vertices)	:
+						print 'index error in grab','#baseindex',len(base.indices),'vi',vi,'vcnt',vert_cnt,'#basevertex',len(base.vertices),'#pvertex',len(piece.vertices)
+					# base.numvertices+=piece.numvertices	
+				# base.vertexTableSize+=piece.vertexTableSize
+				offsets=(offsets[0]+piece.parent_offset[0],offsets[1]+piece.parent_offset[1],offsets[2]+piece.parent_offset[2])
+				for vt in piece.vertices:
+					v=[[vt[0][0],vt[0][1],vt[0][2]],[vt[1][0],vt[1][1],vt[1][2]],[vt[2][0],vt[2][1]]]
+					v[0][0]+=offsets[0]
+					v[0][1]+=offsets[1]
+					v[0][2]+=offsets[2]
+					v[0][0]+=deform*(math.sin(v[0][0])+math.cos(v[0][2])+math.sin(v[0][1]+2.3))
+					v[0][1]+=min( 1 ,max(0,v[0][1]/10))*deform*(math.sin(v[0][0]+4)+math.cos(v[0][2]+7)+math.sin(v[0][1]+1))
+					v[0][2]+=deform*(math.sin(v[0][0]+2)+math.cos(v[0][2]+3)+math.sin(v[0][1]-11))
+					v[0][0]+=shear*(v[0][0])*math.sin(shearang)
+					v[0][1]+=shear*(v[0][1])*math.cos(shearang)
+					#print v.uv.u,v.uv.v,'|',
+					base.vertices.append(copy.deepcopy(v))
+					#print vt, v
+		for c in piece.children:
+			print len(base.vertices)
+			self.grab(c,base,twist, shear, deform,offsets,shearang)
+	def recursepiecetree(self, piece, depth,offset,pl,parentname): # we need the name offset by depth, the volume, the #triangles and the pos
+		global PieceInfo
+		namejust=20
+		piecevol=piecevolume(piece)
+		indices=len(piece.indices)
+		s='%s %10.1f %5i %4.2f %4.2f %4.2f\n'%((' '*depth+piece.name).ljust(17),piecevol, indices, piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2])
+		emptyChildren=0
+		for child in piece.children:
+			if len(child.indices)==0:
+				emptyChildren+=1
+		self.piecetree.append(PieceInfo(name=piece.name, pname=parentname, vol=piecevol, verts=indices, children=len(piece.children), emptychildren=emptyChildren,d=depth))
+		print s
+		pl.append(piece.name.lower())
+		for child in piece.children:
+			s+=self.recursepiecetree(child, depth+1, (piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2]),pl,piece.name)
+		return s
+		
 def delimit(s,l,r):
 	return s.partition(l)[2].partition(r)[0].strip()
 def uncomment(l):
 	return l.partition('//')[0].strip()
-def recursepiecetree(piece, depth,offset,pl): # we need the name offset by depth, the volume, the #triangles and the pos
-	namejust=20
-	s='%s %10.1f %5i %4.2f %4.2f %4.2f\n'%((' '*depth+piece.name).ljust(17),piecevolume(piece), len(piece.indices), piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2])
-	print s
-	pl.append(piece.name.lower())
-	for child in piece.children:
-		s+=recursepiecetree(child, depth+1, (piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2]),pl)
-	return s
-		
+
 def piecevolume(piece):
 	if len(piece.vertices)>0:
 		xs=[x[0][0] for x in piece.vertices]
@@ -337,55 +536,12 @@ def piecevolume(piece):
 		return (max(xs)-min(xs))* (max(ys)-min(ys))* (max(zs)-min(zs))
 	else:
 		return 0
-def destroy(self, twist, shear, deform,shearang):
-	#global base
-	self.base=0
-	self.base=S3oPiece()
-	self.base.numchilds=0
-	self.base.vertices=[]
-	self.base.vertexTable=[]
-	self.base.numvertices=0
-	self.base.vertexTableSize=0
-	self.base.primitivetype=0
-	self.grab(copy.deepcopy(self.rootPiece),self.base,twist, shear, deform,(0,0,0),shearang)
-	self.rootPiece=self.base
-	self.base=0
-	# self.rootPiece=0
-def grab(self, piece, base, twist, shear, deform,offsets,shearang):
-	print 'grabbing', piece.name
-	if piece.primitivetype!=0 and piece.vertexTableSize!=0:
-		print 'Piece cant be grabbed, as its not empty and has non triangles!'
-	else:		
-		if base.numvertices!=len(base.vertices):
-		
-			print 'index error in grab at numverts'
 
-		for vi in piece.vertexTable:
-			base.vertexTable.append(base.numvertices+vi)
-			if base.vertexTableSize+vi>len(base.vertexTable)+piece.vertexTableSize	:
-				print 'index error in grab'
-		base.numvertices+=piece.numvertices	
-		base.vertexTableSize+=piece.vertexTableSize
-		size=piece.dimensions()
-		offsets=(offsets[0]+piece.xoffset,offsets[1]+piece.yoffset,offsets[2]+piece.zoffset)
-		for v in piece.vertices:
-			v.v.x+=offsets[0]
-			v.v.y+=offsets[1]
-			v.v.z+=offsets[2]
-			v.v.x+=deform*(math.sin(v.v.x)+math.cos(v.v.z)+math.sin(v.v.y+2.3))
-			v.v.y+=min( 1 ,max(0,v.v.y/10))*deform*(math.sin(v.v.x+4)+math.cos(v.v.z+7)+math.sin(v.v.y+1))
-			v.v.z+=deform*(math.sin(v.v.x+2)+math.cos(v.v.z+3)+math.sin(v.v.y-11))
-			v.v.x+=shear*(v.v.y)*math.sin(shearang)
-			v.v.x+=shear*(v.v.y)*math.cos(shearang)
-			#print v.uv.u,v.uv.v,'|',
-			base.vertices.append(copy.deepcopy(v))
-	for c in piece.childs:
-		self.grab(c,base,twist, shear, deform,offsets,shearang)
 root = Tk()
 app = App(root)
 root.mainloop()
 validflags=['SHATTER','EXPLODE_ON_HIT','FALL','SMOKE','FIRE','BITMAPONLY','NO_CEG_TRAIL','NO_HEATCLOUD']
-#				1		2			4		8	16		32		64	128
+#				1			2			4		8		16		32				64			128
 
 #flagrules:
 # EXPLODE(engine)=EXPLODE_ON_HIT(BOS)  
@@ -400,9 +556,10 @@ validflags=['SHATTER','EXPLODE_ON_HIT','FALL','SMOKE','FIRE','BITMAPONLY','NO_CE
 #5. SMOKE is smoke, checked for particle saturation, uses projectileDrawer->smoketrailtex
 #6. fire is fire, checked for particle saturation
 #7. nocegtrail is passed, does not seem to be mutually exclusive with fire or smoke...
-	#if a unit has no custom ceg trails defined, such as: unitDef->pieceCEGTags is empty, then NO_CEG_TRAIL is flagged on.
+	#if a unit has no custom ceg trails defined, such as: unitDef->pieceCEGTags is empty, then NO_CEG_TRAIL is flagged on, which means NO_CEG_TRAIL will always be on!
 #UPDATE:
 #if FIRE and hasvertices: rotate it and translate it (obvious since there is no need to rotate if it has no vertices)
+	#FIRE does nothing on empty pieces
 # if nocegtrail and age%8!=0 and SMOKE: make a new smoke instance (gotta test this out)
 
 ##DRAW:
@@ -417,6 +574,20 @@ validflags=['SHATTER','EXPLODE_ON_HIT','FALL','SMOKE','FIRE','BITMAPONLY','NO_CE
 # units that are waiting on killscript stop dead in their tracks, and they wreck continues sliding after they finish the script
 # units seem to return a corpsetype of 1 no matter what, if there are sleeps in the killscript...
 # attacking units seem to retain their targets of dying units while the killscript executes, they do not fire, just target them like neutral units (and move to acquire target)
+
+#classes we will use:
+# BITMAPONLY - this class is for EVERYTHING that doesnt fall or otherwise do stuff
+# EXPLODE_ON_HIT
+# FALL
+# FALL|SMOKE
+# FALL|FIRE|SMOKE
+# FALL|EXPLODE_ON_HIT|SMOKE|
+# FALL|EXPLODE_ON_HIT|FIRE|SMOKE
+# 
+
+#SEVERITY:
+#selfd severity is at least 200.
+
 
 #wierd glowy bug:
 # changes on zoom level!

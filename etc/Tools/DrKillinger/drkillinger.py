@@ -50,7 +50,8 @@ class VerticalScrolledFrame(Frame):
 			#print '_configure_interior', size, interior.winfo_reqwidth(),interior.winfo_reqheight()
 			if interior.winfo_reqwidth() != canvas.winfo_width():
 				# update the canvas's width to fit the inner frame
-				canvas.config(width=interior.winfo_reqwidth())
+				# canvas.config(width=interior.winfo_reqwidth())
+				canvas.config(width=800)
 			if interior.winfo_reqheight() != canvas.winfo_height(): #uncommenting this makes it expand to full, but scrolling still does not work
 				# update the canvas's width to fit the inner frame
 				canvas.config(height=min(interior.winfo_reqheight(),900))
@@ -75,7 +76,7 @@ class App:
 		self.bottomframe = Frame(self.frame)#, bd=5, bg='green', relief = SUNKEN)
 		self.bottomframe.pack(side=RIGHT, fill=BOTH,expand=1)
 		self.VSF = VerticalScrolledFrame(self.bottomframe)
-		self.severitiesframe =Frame(self.VSF.interior)#, bg='blue',bd=10)
+		self.severitiesframe =Frame(self.VSF.interior,width=750)#, bg='blue',bd=10)
 		#self.VSF.interior.pack(side=TOP)#,fill=BOTH,expand=1) #THIS MAKES IT ALL GO TO SHIT DO NOT UNCOMMENT
 		self.VSF.pack(fill=BOTH)
 		self.frame.pack(side=TOP,fill=BOTH, expand = 1)
@@ -88,7 +89,7 @@ class App:
 		self.treeframe=Frame(self.topframe,bd=2,relief=SUNKEN)
 		self.menuframe.pack(side=TOP,fill=Y)
 		self.treeframe.pack(side=TOP,fill=Y)
-		self.outputdir='output'
+		self.outputbasedir='output'
 		#=========MENUFRAME STUFF:
 		Button(self.menuframe, text="QUIT", fg="red", command=self.frame.quit).pack(side=TOP)
 		Button(self.menuframe, text="Load mod",  command=self.loadmod).pack(side=TOP)
@@ -98,8 +99,13 @@ class App:
 		Button(self.menuframe, text="Prev unit", command=self.prevunit).pack(side=TOP)
 		Button(self.menuframe, text="Wreck unit", command=self.wreckunit).pack(side=TOP)
 		Button(self.menuframe, text="AUTO CONFIG", command=self.autoconf).pack(side=TOP)
-		
-		Label(self.menuframe,text='This is my magic murder bag').pack(side=LEFT)
+		self.tex1=StringVar()
+		self.tex2=StringVar()
+		Entry(self.menuframe,width=25,textvariable=self.tex1).pack(side=TOP)
+		Entry(self.menuframe,width=25,textvariable=self.tex2).pack(side=TOP)
+		self.labelvar=StringVar()
+		Label(self.menuframe,textvariable=self.labelvar).pack(side=TOP)
+		self.labelvar.set('This is my magic murder bag')
 		
 		##========================
 		
@@ -114,21 +120,7 @@ class App:
 		##============================
 		
 		##==severityframe;
-		self.wreckframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN)
-		self.wreckframe.pack(side=TOP,fill=X)
-		Label(self.wreckframe, text='Wreck').pack(side=LEFT)		
-		
-		self.heapframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN)
-		self.heapframe.pack(side=TOP,fill=X)
-		Label(self.heapframe, text='Heap').pack(side=LEFT)		
-		
-		self.destroyframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN)
-		self.destroyframe.pack(side=TOP,fill=X)
-		Label(self.destroyframe, text='Destroy').pack(side=LEFT)
-		
-		self.annihilateframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN)
-		self.annihilateframe.pack(side=TOP,fill=X)
-		Label(self.annihilateframe, text='SelfD').pack(side=LEFT)
+		self.makeseverityframes()
 		#======
 		
 		#==== common objects:
@@ -143,16 +135,53 @@ class App:
 		self.piecelist=[]
 		self.killscript=[]
 		self.keeplist=[]
-		self.uiframes=[self.wreckframe,self.heapframe,self.destroyframe,self.annihilateframe]
+		
 		self.severitylevels=[25,50,99,-1]
 		self.piecetree=[]#((piece.name, parentname, piecevol, indices, len(piece.children)), #emptychildren,depth)'name pname vol indices children emptychildren depth'
 		#=====
 		self.loadunit('s:/baremake/ETC/Tools/DrKillinger/units/ajuno.lua')
+	def makeseverityframes(self):
+		self.wreckframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN,width=750)
+		self.wreckframe.pack(side=TOP,fill=X)
+		Label(self.wreckframe, text='Wreck').pack(side=LEFT)		
+		
+		self.heapframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN,width=750)
+		self.heapframe.pack(side=TOP,fill=X)
+		Label(self.heapframe, text='Heap').pack(side=LEFT)		
+		
+		self.destroyframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN,width=750)
+		self.destroyframe.pack(side=TOP,fill=X)
+		Label(self.destroyframe, text='Destroy').pack(side=LEFT)
+		
+		self.annihilateframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN,width=750)
+		self.annihilateframe.pack(side=TOP,fill=X)
+		Label(self.annihilateframe, text='SelfD').pack(side=LEFT)
+		self.uiframes=[self.wreckframe,self.heapframe,self.destroyframe,self.annihilateframe]
+		
+		self.severitiesframe.pack(side=BOTTOM,fill=BOTH,expand=1)
+	def deleteseverityframes(self):
+		self.wreckframe.pack_forget()
+		self.wreckframe.destroy()
+		self.heapframe.pack_forget()
+		self.heapframe.destroy()
+		self.destroyframe.pack_forget()
+		self.destroyframe.destroy()
+		self.annihilateframe.pack_forget()
+		self.annihilateframe.destroy()
 	def loadmod(self):
 		print 'vscrollbar.get',self.VSF.vscrollbar.get()
 		self.VSF.canvas.yview_moveto(20)
 		return
 	def loadunit(self, default=''):
+		self.deleteseverityframes()
+		self.makeseverityframes()
+		self.piecelist=[]
+		self.killscript=[]
+		self.keeplist=[]
+		self.piecetree=[]
+		self.severitylevels=[25,50,99,-1]
+		self.bos=0
+		self.s3o=0
 		if default=='':
 			self.unitdefpath=tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model def (Lua)','*.lua'),('Any file','*')], multiple = False)
 		else:
@@ -161,13 +190,20 @@ class App:
 		if '.lua' in self.unitdefpath:
 			self.modpath=self.unitdefpath.partition('units')[0]
 			self.unitname=self.unitdefpath.rpartition('/')[2].partition('.')[0]
+			self.labelvar.set(self.unitname.upper())
 			self.bospath=self.modpath+'scripts/'+self.unitname+'.bos'
 			self.s3opath=self.modpath+'objects3d/'+self.unitname+'.s3o'
-			self.outputdir=self.modpath+self.outputdir
+			self.outputdir=self.modpath+self.outputbasedir
 			try:
 				self.s3o=S3O(open(self.s3opath,'rb').read())
 				self.bos=open(self.bospath,'r').readlines()
 				self.unitdef=open(self.unitdefpath,'r').readlines()
+				if 'Arm' in self.s3o.texture_paths[0]:
+					self.tex1.set("Arm_wreck_color.dds")
+					self.tex2.set("Arm_wreck_other.dds")
+				else:
+					self.tex1.set("Core_color_wreck.dds")
+					self.tex2.set("Core_other_wreck.dds")
 			except:
 				raise
 			print 'loaded',self.unitname,'successfully'
@@ -244,7 +280,7 @@ class App:
 		
 	def makerow(self, sevlevel, piece, flags):
 		#print sevlevel
-		rowframe=Frame(self.uiframes[sevlevel])
+		rowframe=Frame(self.uiframes[sevlevel],width=700)
 		rowframe.pack(side=TOP,fill=X)
 		explode=IntVar()
 		if flags!=[]:
@@ -435,7 +471,7 @@ class App:
 			return ''
 		for piece in self.piecetree:
 			if piece.d>maxdepth and piece.emptychildren==piece.children and piece.verts!=0:
-				leafest=piece.name
+				leafest=piece.name.lower()
 				maxdepth=piece.d
 		return leafest
 	def clearpiece(self,sevlevel,piece):	
@@ -450,6 +486,7 @@ class App:
 	def wreckunit(self):
 		self.destroy(0,0.05+random.random()/10,0.5,random.random()*100)
 		self.writebos()
+		self.wreckeds3o.texture_paths=(self.tex1.get(),self.tex2.get())
 		optimized_data = self.wreckeds3o.serialize()
 		output_file=open(self.outputdir+'/'+self.unitname+'_dead.s3o','wb')
 		output_file.write(optimized_data)
@@ -462,8 +499,8 @@ class App:
 		luaf.close() 
 		print 'Successfully written, validating S30'
 		valid=S3O(open(self.outputdir+'/'+self.unitname+'_dead.s3o','rb').read())
-		valid.S3OtoOBJ(self.outputdir+'/'+self.unitname+'_dead.obj')
-		print 'validation OK!'
+		#valid.S3OtoOBJ(self.outputdir+'/'+self.unitname+'_dead.obj')
+		#print 'validation OK!'
 		return
 	def destroy(self, twist, shear, deform,shearang): #destroy(0,0.05+random.random()/10,0.5,random.random()*100)
 		#global base
@@ -480,7 +517,7 @@ class App:
 		if piece.primitive_type!='triangles' and len(piece.vertices)!=0:
 			print 'Piece cant be grabbed, as its not empty and has non triangles!',piece.primitive_type,len(piece.vertices)
 		else:		
-			if len(self.keeplist)>0 and piece.name in self.keeplist:
+			if len(self.keeplist)>0 and piece.name.lower() in self.keeplist:
 				vert_cnt=len(base.vertices)
 				for vi in piece.indices:
 					base.indices.append(vert_cnt+vi)
@@ -510,16 +547,16 @@ class App:
 		namejust=20
 		piecevol=piecevolume(piece)
 		indices=len(piece.indices)
-		s='%s %10.1f %5i %4.2f %4.2f %4.2f\n'%((' '*depth+piece.name).ljust(17),piecevol, indices, piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2])
+		s='%s %10.1f %5i %4.2f %4.2f %4.2f\n'%((' '*depth+piece.name.lower()).ljust(17),piecevol, indices, piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2])
 		emptyChildren=0
 		for child in piece.children:
 			if len(child.indices)==0:
 				emptyChildren+=1
-		self.piecetree.append(PieceInfo(name=piece.name, pname=parentname, vol=piecevol, verts=indices, children=len(piece.children), emptychildren=emptyChildren,d=depth))
+		self.piecetree.append(PieceInfo(name=piece.name.lower(), pname=parentname, vol=piecevol, verts=indices, children=len(piece.children), emptychildren=emptyChildren,d=depth))
 		print s
 		pl.append(piece.name.lower())
 		for child in piece.children:
-			s+=self.recursepiecetree(child, depth+1, (piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2]),pl,piece.name)
+			s+=self.recursepiecetree(child, depth+1, (piece.parent_offset[0]+offset[0], piece.parent_offset[1]+offset[1], piece.parent_offset[2]+offset[2]),pl,piece.name.lower())
 		return s
 		
 def delimit(s,l,r):

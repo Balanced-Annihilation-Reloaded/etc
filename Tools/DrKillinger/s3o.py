@@ -101,7 +101,11 @@ class S3O(object):
 			for k in range(0,len(piece.indices),step): #iterate over faces
 				facestr='f'
 				for i in range(step):
-					v=piece.vertices[piece.indices[k+i]]
+					try:
+						v=piece.vertices[piece.indices[k+i]]
+					except:
+						print 'k',k,'i',i,'#index',len(piece.indices),'#vert',len(piece.vertices),'vert[index]',piece.indices[k+i]
+						raise
 					closest=self.closest_vertex(piece.vertices,piece.indices[k+i],0.1)
 					vertexmap[piece.indices[k+i]]=closest
 					

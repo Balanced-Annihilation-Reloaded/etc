@@ -1,0 +1,1980 @@
+Name(address)	Exclusive_time	Inclusive_time	Exclusive%	Inclusive%	module	source_file	source_line	source_link
+WaitForMultipleObjects	683.990723	684.042728	45.076498	45.079925	kernel32	[unknown]	0
+RtlInitializeExceptionChain	202.319970	1499.667591	13.333332	98.831403	ntdll	[unknown]	0
+Sleep	141.470063	141.678066	9.323189	9.336897	KERNELBASE	[unknown]	0
+MsgWaitForMultipleObjects	101.159985	101.159985	6.666666	6.666666	USER32	[unknown]	0
+MsgWaitForMultipleObjectsEx	101.159985	101.159985	6.666666	6.666666	USER32	[unknown]	0
+skirmishAiCallback_Cheats_setEnabled	28.915577	544.342792	1.905600	35.873391	spring	[unknown]	0
+ZwSetEvent	28.712300	28.712300	1.892204	1.892204	ntdll	[unknown]	0
+NtQueryInformationThread	25.638542	25.638542	1.689636	1.689636	ntdll	[unknown]	0
+DrvCopyContext	22.001053	208.146205	1.449918	13.717294	nvoglv32	[unknown]	0
+ZwYieldExecution	14.407664	14.407664	0.949497	0.949497	ntdll	[unknown]	0
+alcCloseDevice	12.586477	101.159987	0.829477	6.666666	OpenAL32	[unknown]	0
+SpringTime.cpp	11.910564	11.910564	0.784932	0.784932	spring	build/default/../../rts/System/Misc/SpringTime.cpp	213	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L213
+DrvPresentBuffers	11.233505	23.405071	0.740313	1.542446	nvoglv32	[unknown]	0
+alldiv	9.829499	9.829499	0.647786	0.647786	ntdll	[unknown]	0
+SpringTime.h	8.113245	8.113245	0.534681	0.534681	spring	build/default/../../rts/System/Misc/SpringTime.h	75	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L75
+stl_iterator_base_funcs.h	3.588183	3.588183	0.236469	0.236469	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_iterator_base_funcs.h	83	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_iterator_base_funcs.h#L83
+RtlQueryPerformanceCounter	3.016067	3.016067	0.198765	0.198765	ntdll	[unknown]	0
+TlsSetValue	2.389326	2.389326	0.157462	0.157462	KERNELBASE	[unknown]	0
+SpringTime.h	2.082099	2.082099	0.137215	0.137215	spring	build/default/../../rts/System/Misc/SpringTime.h	40	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L40
+timeGetTime	2.081058	3.797139	0.137146	0.250240	WINMM	[unknown]	0
+RtlIntegerToUnicodeString	1.822049	1.822049	0.120077	0.120077	ntdll	[unknown]	0
+malloc	1.822028	1.822028	0.120076	0.120076	msvcrt	[unknown]	0
+free	1.609420	1.609420	0.106064	0.106064	msvcrt	[unknown]	0
+TlsSetValue	1.405031	1.405031	0.092595	0.092595	kernel32	[unknown]	0
+RtlTryEnterCriticalSection	1.353064	1.353064	0.089170	0.089170	ntdll	[unknown]	0
+SpringTime.cpp	1.300089	1.300089	0.085679	0.085679	spring	build/default/../../rts/System/Misc/SpringTime.cpp	152	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L152
+D3DKMTRender	1.249037	1.249037	0.082314	0.082314	GDI32	[unknown]	0
+RtlLeaveCriticalSection	1.248070	1.248070	0.082251	0.082251	ntdll	[unknown]	0
+SpringTime.cpp	1.196054	1.196054	0.078823	0.078823	spring	build/default/../../rts/System/Misc/SpringTime.cpp	76	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L76
+TlsGetValue	1.196041	1.196041	0.078822	0.078822	KERNELBASE	[unknown]	0
+SwitchToThread	1.040043	1.040043	0.068541	0.068541	KERNELBASE	[unknown]	0
+QueryPerformanceCounter	0.936019	0.936019	0.061686	0.061686	kernel32	[unknown]	0
+RtlSetLastWin32Error	0.884032	0.884032	0.058260	0.058260	ntdll	[unknown]	0
+[69817E36]	0.832051	0.832051	0.054834	0.054834	nvoglv32		0
+SpringTime.cpp	0.780050	0.780050	0.051407	0.051407	spring	build/default/../../rts/System/Misc/SpringTime.cpp	223	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L223
+[69817F42]	0.780037	0.780037	0.051406	0.051406	nvoglv32		0
+DirectSoundCreate	0.780030	101.940015	0.051406	6.718072	dsound	[unknown]	0
+SpringTime.cpp	0.780030	0.780030	0.051406	0.051406	spring	build/default/../../rts/System/Misc/SpringTime.cpp	76	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L76
+TlsGetValue	0.780017	0.780017	0.051405	0.051405	kernel32	[unknown]	0
+D3DKMTPresent	0.780002	0.780002	0.051404	0.051404	GDI32	[unknown]	0
+SpringTime.cpp	0.676036	0.676036	0.044552	0.044552	spring	build/default/../../rts/System/Misc/SpringTime.cpp	214	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L214
+aullshr	0.676016	0.676016	0.044551	0.044551	ntdll	[unknown]	0
+3DModel.cpp	0.624047	0.624047	0.041126	0.041126	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	249	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L249
+3DModel.cpp	0.624042	0.624042	0.041126	0.041126	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	226	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L226
+SetEvent	0.624031	0.624031	0.041125	0.041125	KERNELBASE	[unknown]	0
+3DModel.cpp	0.573034	0.573034	0.037764	0.037764	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	240	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L240
+GetLastError	0.572026	0.572026	0.037698	0.037698	KERNELBASE	[unknown]	0
+IsNLSDefinedString	0.520019	0.520019	0.034270	0.034270	KERNELBASE	[unknown]	0
+GetExitCodeThread	0.468032	0.468032	0.030844	0.030844	KERNELBASE	[unknown]	0
+SpringTime.cpp	0.468021	0.468021	0.030844	0.030844	spring	build/default/../../rts/System/Misc/SpringTime.cpp	152	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L152
+SpringTime.h	0.468019	0.468019	0.030843	0.030843	spring	build/default/../../rts/System/Misc/SpringTime.h	75	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L75
+ProjectileHandler.cpp	0.468018	0.468018	0.030843	0.030843	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	470	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L470
+SetLastError	0.468012	0.468012	0.030843	0.030843	kernel32	[unknown]	0
+SpringTime.cpp	0.468007	0.468007	0.030843	0.030843	spring	build/default/../../rts/System/Misc/SpringTime.cpp	143	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L143
+SpringTime.cpp	0.416054	0.416054	0.027419	0.027419	spring	build/default/../../rts/System/Misc/SpringTime.cpp	213	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L213
+PeekMessageA	0.416025	0.416025	0.027417	0.027417	USER32	[unknown]	0
+[69817EB4]	0.416017	1.924073	0.027416	0.126801	nvoglv32		0
+stl_tree.h	0.416013	0.416013	0.027416	0.027416	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h	703	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h#L703
+memset	0.364027	0.364027	0.023990	0.023990	msvcrt	[unknown]	0
+SpringTime.cpp	0.364026	0.364026	0.023990	0.023990	spring	build/default/../../rts/System/Misc/SpringTime.cpp	213	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L213
+realloc	0.364025	0.364025	0.023990	0.023990	msvcrt	[unknown]	0
+QuadField.cpp	0.364023	0.364023	0.023990	0.023990	spring	build/default/../../rts/Sim/Misc/QuadField.cpp	236	http://github.com/spring/spring/tree/master/rts/Sim/Misc/QuadField.cpp#L236
+[69817F14]	0.364008	0.364008	0.023989	0.023989	nvoglv32		0
+[69817EB7]	0.312021	0.312021	0.020563	0.020563	nvoglv32		0
+UnitHandler.cpp	0.312018	0.312018	0.020563	0.020563	spring	build/default/../../rts/Sim/Units/UnitHandler.cpp	280	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.cpp#L280
+UnitScript.cpp	0.312017	0.312017	0.020563	0.020563	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	238	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L238
+UnitHandler.cpp	0.312015	0.312015	0.020562	0.020562	spring	build/default/../../rts/Sim/Units/UnitHandler.cpp	242	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.cpp#L242
+[719726D3]	0.312015	0.312015	0.020562	0.020562	WINMM		0
+UnitHandler.cpp	0.312014	0.312014	0.020562	0.020562	spring	build/default/../../rts/Sim/Units/UnitHandler.cpp	290	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.cpp#L290
+SpringTime.cpp	0.312013	0.312013	0.020562	0.020562	spring	build/default/../../rts/System/Misc/SpringTime.cpp	76	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L76
+[6979C1FB]	0.312013	0.312013	0.020562	0.020562	nvoglv32		0
+MoveMath.cpp	0.312010	0.312010	0.020562	0.020562	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	268	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L268
+SpringTime.cpp	0.312010	0.312010	0.020562	0.020562	spring	build/default/../../rts/System/Misc/SpringTime.cpp	79	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L79
+CpuSuspendLocalThread	0.312009	0.312009	0.020562	0.020562	wow64cpu	[unknown]	0
+CloseHandle	0.312008	0.312008	0.020562	0.020562	kernel32	[unknown]	0
+QuadField.cpp	0.312008	0.312008	0.020562	0.020562	spring	build/default/../../rts/Sim/Misc/QuadField.cpp	774	http://github.com/spring/spring/tree/master/rts/Sim/Misc/QuadField.cpp#L774
+PathFinder.cpp	0.312006	0.312006	0.020562	0.020562	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	322	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L322
+Sleep	0.312000	0.312000	0.020561	0.020561	kernel32	[unknown]	0
+memcpy	0.311991	0.311991	0.020561	0.020561	msvcrt	[unknown]	0
+GetLastError	0.262016	0.262016	0.017267	0.017267	kernel32	[unknown]	0
+LosMap.cpp	0.261033	0.261033	0.017203	0.017203	spring	build/default/../../rts/Sim/Misc/LosMap.cpp	117	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosMap.cpp#L117
+SpringTime.h	0.260020	0.260020	0.017136	0.017136	spring	build/default/../../rts/System/Misc/SpringTime.h	40	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L40
+[697EE785]	0.260015	0.260015	0.017136	0.017136	nvoglv32		0
+[69817E69]	0.260015	29.024326	0.017136	1.912767	nvoglv32		0
+gmtime32	0.260014	0.260014	0.017135	0.017135	msvcrt	[unknown]	0
+LosMap.cpp	0.260011	0.260011	0.017135	0.017135	spring	build/default/../../rts/Sim/Misc/LosMap.cpp	119	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosMap.cpp#L119
+float3.h	0.260011	0.260011	0.017135	0.017135	spring	build/default/../../rts/System/float3.h	132	http://github.com/spring/spring/tree/master/rts/System/float3.h#L132
+SpringTime.h	0.260010	0.260010	0.017135	0.017135	spring	build/default/../../rts/System/Misc/SpringTime.h	40	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L40
+PathFinder.cpp	0.260009	0.260009	0.017135	0.017135	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	369	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L369
+MoveMath.cpp	0.260002	0.260002	0.017135	0.017135	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	120	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L120
+[69682E93]	0.259998	0.259998	0.017134	0.017134	nvoglv32		0
+UnitScript.cpp	0.259998	0.259998	0.017134	0.017134	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	252	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L252
+PathFinderDef.cpp	0.209008	0.209008	0.013774	0.013774	spring	build/default/../../rts/Sim/Path/Default/PathFinderDef.cpp	31	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinderDef.cpp#L31
+stl_vector.h	0.208029	0.208029	0.013710	0.013710	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	786	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L786
+[69817E3B]	0.208022	0.208022	0.013709	0.013709	nvoglv32		0
+Ground.cpp	0.208022	0.208022	0.013709	0.013709	spring	build/default/../../rts/Map/Ground.cpp	52	http://github.com/spring/spring/tree/master/rts/Map/Ground.cpp#L52
+[6907109A]	0.208020	0.208020	0.013709	0.013709	nvoglv32		0
+ProjectileHandler.cpp	0.208018	0.208018	0.013709	0.013709	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	221	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L221
+TeamHandler.h	0.208016	0.208016	0.013709	0.013709	spring	build/default/../../rts/Sim/Misc/TeamHandler.h	105	http://github.com/spring/spring/tree/master/rts/Sim/Misc/TeamHandler.h#L105
+GroundMoveMath.cpp	0.208015	0.208015	0.013709	0.013709	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/GroundMoveMath.cpp	25	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/GroundMoveMath.cpp#L25
+[691445E9]	0.208013	0.208013	0.013709	0.013709	nvoglv32		0
+LosMap.cpp	0.208012	0.208012	0.013708	0.013708	spring	build/default/../../rts/Sim/Misc/LosMap.cpp	116	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosMap.cpp#L116
+MoveMath.cpp	0.208010	0.208010	0.013708	0.013708	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	257	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L257
+MoveMath.cpp	0.208009	0.208009	0.013708	0.013708	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	257	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L257
+SleepEx	0.208009	0.208009	0.013708	0.013708	KERNELBASE	[unknown]	0
+GroundMoveMath.cpp	0.208008	0.208008	0.013708	0.013708	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/GroundMoveMath.cpp	21	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/GroundMoveMath.cpp#L21
+memcmp	0.208006	0.208006	0.013708	0.013708	msvcrt	[unknown]	0
+3DModel.cpp	0.208005	0.208005	0.013708	0.013708	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	133	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L133
+SpringTime.h	0.208004	0.208004	0.013708	0.013708	spring	build/default/../../rts/System/Misc/SpringTime.h	50	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L50
+LosMap.cpp	0.208003	0.208003	0.013708	0.013708	spring	build/default/../../rts/Sim/Misc/LosMap.cpp	70	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosMap.cpp#L70
+[697EE7BB]	0.208002	0.208002	0.013708	0.013708	nvoglv32		0
+UnitScript.cpp	0.208001	0.208001	0.013708	0.013708	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	238	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L238
+SwitchToThread	0.207997	0.207997	0.013707	0.013707	kernel32	[unknown]	0
+SpringTime.cpp	0.207997	0.207997	0.013707	0.013707	spring	build/default/../../rts/System/Misc/SpringTime.cpp	76	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L76
+ReadMap.h	0.157012	0.157012	0.010347	0.010347	spring	build/default/../../rts/Map/ReadMap.h	125	http://github.com/spring/spring/tree/master/rts/Map/ReadMap.h#L125
+SpringTime.cpp	0.156014	0.156014	0.010282	0.010282	spring	build/default/../../rts/System/Misc/SpringTime.cpp	145	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L145
+MoveMath.cpp	0.156013	0.156013	0.010282	0.010282	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	54	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L54
+UnitHandler.cpp	0.156013	0.156013	0.010282	0.010282	spring	build/default/../../rts/Sim/Units/UnitHandler.cpp	290	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.cpp#L290
+SpringTime.h	0.156012	0.156012	0.010282	0.010282	spring	build/default/../../rts/System/Misc/SpringTime.h	40	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.h#L40
+stl_vector.h	0.156012	0.156012	0.010282	0.010282	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	771	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L771
+UnitScript.cpp	0.156012	0.156012	0.010282	0.010282	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	252	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L252
+SpringTime.cpp	0.156011	6.917245	0.010281	0.455862	spring	build/default/../../rts/System/Misc/SpringTime.cpp	213	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L213
+RtlAllocateHeap	0.156010	1.300093	0.010281	0.085679	ntdll	[unknown]	0
+[6916593A]	0.156010	0.156010	0.010281	0.010281	nvoglv32		0
+UnitDrawer.cpp	0.156009	0.156009	0.010281	0.010281	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	2074	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L2074
+GroundMoveType.cpp	0.156009	0.156009	0.010281	0.010281	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	260	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L260
+UnitHandler.h	0.156009	0.156009	0.010281	0.010281	spring	build/default/../../rts/Sim/Units/UnitHandler.h	53	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.h#L53
+GroundMoveMath.cpp	0.156008	0.156008	0.010281	0.010281	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/GroundMoveMath.cpp	54	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/GroundMoveMath.cpp#L54
+stl_heap.h	0.156007	0.156007	0.010281	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_heap.h	190	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_heap.h#L190
+MoveMath.cpp	0.156007	0.156007	0.010281	0.010281	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	101	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L101
+stl_vector.h	0.156007	0.156007	0.010281	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	646	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L646
+[69817EDB]	0.156006	0.156006	0.010281	0.010281	nvoglv32		0
+[69817E6E]	0.156006	0.156006	0.010281	0.010281	nvoglv32		0
+UnitDrawer.cpp	0.156006	0.156006	0.010281	0.010281	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	1852	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L1852
+[69817E87]	0.156006	0.156006	0.010281	0.010281	nvoglv32		0
+xmmintrin.h	0.156006	0.156006	0.010281	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/xmmintrin.h	869	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/xmmintrin.h#L869
+gmtime	0.156005	0.156005	0.010281	0.010281	msvcrt	[unknown]	0
+[69817F44]	0.156005	0.156005	0.010281	0.010281	nvoglv32		0
+CreateSemaphoreA	0.156005	0.156005	0.010281	0.010281	kernel32	[unknown]	0
+lock_types.hpp	0.156005	0.156005	0.010281	0.010281	spring	/slave/mingwlibs/include/boost/thread/lock_types.hpp	134	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/thread/lock_types.hpp#L134
+float3.h	0.156004	0.156004	0.010281	0.010281	spring	build/default/../../rts/System/float3.h	339	http://github.com/spring/spring/tree/master/rts/System/float3.h#L339
+MoveDefHandler.cpp	0.156004	0.156004	0.010281	0.010281	spring	build/default/../../rts/Sim/MoveTypes/MoveDefHandler.cpp	376	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveDefHandler.cpp#L376
+SolidObject.h	0.156004	0.156004	0.010281	0.010281	spring	build/default/../../rts/Sim/Objects/SolidObject.h	184	http://github.com/spring/spring/tree/master/rts/Sim/Objects/SolidObject.h#L184
+MoveMath.cpp	0.156003	0.156003	0.010281	0.010281	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	67	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L67
+??	0.156002	0.156002	0.010281	0.010281	spring	??	0	http://github.com/spring/spring/tree/master/??#L0
+SpringTime.cpp	0.156002	0.156002	0.010281	0.010281	spring	build/default/../../rts/System/Misc/SpringTime.cpp	76	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L76
+UnitHandler.cpp	0.156002	0.156002	0.010281	0.010281	spring	build/default/../../rts/Sim/Units/UnitHandler.cpp	237	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.cpp#L237
+[69211046]	0.156002	0.156002	0.010281	0.010281	nvoglv32		0
+ProjectileHandler.cpp	0.156001	0.156001	0.010281	0.010281	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	185	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L185
+SetEvent	0.156001	0.156001	0.010281	0.010281	kernel32	[unknown]	0
+PathFinder.cpp	0.156001	0.156001	0.010281	0.010281	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	345	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L345
+[69817E8F]	0.155999	0.155999	0.010281	0.010281	nvoglv32		0
+LosMap.cpp	0.155998	0.155998	0.010281	0.010281	spring	build/default/../../rts/Sim/Misc/LosMap.cpp	378	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosMap.cpp#L378
+SpringTime.cpp	0.155996	0.155996	0.010280	0.010280	spring	build/default/../../rts/System/Misc/SpringTime.cpp	222	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L222
+ThreadPool.cpp	0.155993	0.155993	0.010280	0.010280	spring	build/default/../../rts/System/ThreadPool.cpp	165	http://github.com/spring/spring/tree/master/rts/System/ThreadPool.cpp#L165
+stl_tree.h	0.155993	0.155993	0.010280	0.010280	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h	1208	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h#L1208
+Ground.cpp	0.155992	0.155992	0.010280	0.010280	spring	build/default/../../rts/Map/Ground.cpp	52	http://github.com/spring/spring/tree/master/rts/Map/Ground.cpp#L52
+SpringTime.cpp	0.105008	5.410290	0.006920	0.356550	spring	build/default/../../rts/System/Misc/SpringTime.cpp	222	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L222
+[6982A71B]	0.105003	0.105003	0.006920	0.006920	nvoglv32		0
+[697EE830]	0.104018	0.104018	0.006855	0.006855	nvoglv32		0
+[008A0F40]	0.104017	0.104017	0.006855	0.006855	spring		0
+DwmDefWindowProc	0.104015	0.104015	0.006855	0.006855	dwmapi	[unknown]	0
+[0068C55A]	0.104015	0.104015	0.006855	0.006855	spring		0
+[691445E2]	0.104014	0.104014	0.006855	0.006855	nvoglv32		0
+[6914EFE7]	0.104013	0.104013	0.006855	0.006855	nvoglv32		0
+[00764B38]	0.104012	0.104012	0.006855	0.006855	spring		0
+[00774293]	0.104012	0.104012	0.006855	0.006855	spring		0
+[006D5502]	0.104011	0.104011	0.006855	0.006855	spring		0
+[0081BB32]	0.104011	0.104011	0.006855	0.006855	spring		0
+[69817E3D]	0.104011	0.104011	0.006855	0.006855	nvoglv32		0
+glMultMatrixf	0.104011	0.104011	0.006855	0.006855	OPENGL32	[unknown]	0
+[00768262]	0.104011	0.104011	0.006855	0.006855	spring		0
+strcmp	0.104011	0.104011	0.006855	0.006855	msvcrt	[unknown]	0
+[007019B3]	0.104010	0.104010	0.006854	0.006854	spring		0
+[004330F6]	0.104009	0.104009	0.006854	0.006854	spring		0
+[697EE83F]	0.104009	0.104009	0.006854	0.006854	nvoglv32		0
+[007FF87F]	0.104009	0.104009	0.006854	0.006854	spring		0
+[69166A30]	0.104008	0.104008	0.006854	0.006854	nvoglv32		0
+[6979C1F9]	0.104008	13.835688	0.006854	0.911802	nvoglv32		0
+[006FD786]	0.104008	0.104008	0.006854	0.006854	spring		0
+[008719C4]	0.104008	0.104008	0.006854	0.006854	spring		0
+[0325ECD2]	0.104008	0.104008	0.006854	0.006854	spring		0
+[008077D9]	0.104008	0.104008	0.006854	0.006854	spring		0
+[007687AC]	0.104008	0.104008	0.006854	0.006854	spring		0
+memmove	0.104008	0.104008	0.006854	0.006854	msvcrt	[unknown]	0
+[0079B7D8]	0.104008	0.104008	0.006854	0.006854	spring		0
+[007FF772]	0.104007	0.104007	0.006854	0.006854	spring		0
+[6982A706]	0.104007	0.104007	0.006854	0.006854	nvoglv32		0
+[007FF663]	0.104007	0.104007	0.006854	0.006854	spring		0
+[00735A2E]	0.104007	0.104007	0.006854	0.006854	spring		0
+GetConsoleMode	0.104006	0.104006	0.006854	0.006854	kernel32	[unknown]	0
+[007FF534]	0.104006	0.104006	0.006854	0.006854	spring		0
+[00767C57]	0.104006	0.104006	0.006854	0.006854	spring		0
+[00768063]	0.104006	0.104006	0.006854	0.006854	spring		0
+[007FF603]	0.104006	0.104006	0.006854	0.006854	spring		0
+[6920B381]	0.104006	0.104006	0.006854	0.006854	nvoglv32		0
+[6916B5C1]	0.104006	0.104006	0.006854	0.006854	nvoglv32		0
+MoveMath.cpp	0.104006	0.364024	0.006854	0.023990	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	179	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L179
+[007FF654]	0.104006	0.104006	0.006854	0.006854	spring		0
+[007743B1]	0.104006	0.104006	0.006854	0.006854	spring		0
+[6916591F]	0.104005	0.104005	0.006854	0.006854	nvoglv32		0
+[69817F07]	0.104005	6.449261	0.006854	0.425021	nvoglv32		0
+SpringTime.cpp	0.104005	1.040053	0.006854	0.068542	spring	build/default/../../rts/System/Misc/SpringTime.cpp	145	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L145
+[0081B97F]	0.104005	0.104005	0.006854	0.006854	spring		0
+[0081BA42]	0.104005	0.104005	0.006854	0.006854	spring		0
+[008076FF]	0.104005	0.104005	0.006854	0.006854	spring		0
+[691BA472]	0.104005	0.104005	0.006854	0.006854	nvoglv32		0
+[008724F0]	0.104005	0.104005	0.006854	0.006854	spring		0
+[0077A35F]	0.104005	0.104005	0.006854	0.006854	spring		0
+[69817F36]	0.104005	0.104005	0.006854	0.006854	nvoglv32		0
+[00768476]	0.104005	0.104005	0.006854	0.006854	spring		0
+[0081BA6D]	0.104005	0.104005	0.006854	0.006854	spring		0
+[0080A1C8]	0.104005	0.104005	0.006854	0.006854	spring		0
+[00827085]	0.104005	0.104005	0.006854	0.006854	spring		0
+[007645CB]	0.104005	0.104005	0.006854	0.006854	spring		0
+WaitForSingleObject	0.104005	0.104005	0.006854	0.006854	kernel32	[unknown]	0
+[69817DF3]	0.104005	2.340084	0.006854	0.154217	nvoglv32		0
+[69817E0F]	0.104005	0.104005	0.006854	0.006854	nvoglv32		0
+[6982B221]	0.104005	0.104005	0.006854	0.006854	nvoglv32		0
+[0325ECE3]	0.104005	0.104005	0.006854	0.006854	spring		0
+[0076825D]	0.104005	0.104005	0.006854	0.006854	spring		0
+[00871254]	0.104004	0.104004	0.006854	0.006854	spring		0
+[00870E2C]	0.104004	0.104004	0.006854	0.006854	spring		0
+[00734400]	0.104004	0.104004	0.006854	0.006854	spring		0
+[0076832E]	0.104004	0.104004	0.006854	0.006854	spring		0
+[0077A518]	0.104004	0.104004	0.006854	0.006854	spring		0
+[006FF402]	0.104004	0.104004	0.006854	0.006854	spring		0
+[0077A4C9]	0.104004	0.104004	0.006854	0.006854	spring		0
+[697EE8A0]	0.104004	0.104004	0.006854	0.006854	nvoglv32		0
+[691445A1]	0.104004	0.104004	0.006854	0.006854	nvoglv32		0
+[006B7A82]	0.104004	0.104004	0.006854	0.006854	spring		0
+[00768646]	0.104003	0.104003	0.006854	0.006854	spring		0
+[697EE8A1]	0.104003	0.104003	0.006854	0.006854	nvoglv32		0
+[00768173]	0.104003	0.104003	0.006854	0.006854	spring		0
+[007FF77E]	0.104003	0.104003	0.006854	0.006854	spring		0
+[0076861D]	0.104003	0.104003	0.006854	0.006854	spring		0
+[6968BE26]	0.104003	0.104003	0.006854	0.006854	nvoglv32		0
+ZwReleaseSemaphore	0.104003	0.104003	0.006854	0.006854	ntdll	[unknown]	0
+[0325ED17]	0.104003	0.104003	0.006854	0.006854	spring		0
+[008A2BCB]	0.104003	0.104003	0.006854	0.006854	spring		0
+[007359DF]	0.104002	0.104002	0.006854	0.006854	spring		0
+[0077A333]	0.104002	0.104002	0.006854	0.006854	spring		0
+[008A0ED9]	0.104002	0.104002	0.006854	0.006854	spring		0
+[0060BB24]	0.104002	0.104002	0.006854	0.006854	spring		0
+ThreadPool.cpp	0.104002	0.260006	0.006854	0.017135	spring	build/default/../../rts/System/ThreadPool.cpp	165	http://github.com/spring/spring/tree/master/rts/System/ThreadPool.cpp#L165
+[007511CC]	0.104002	0.104002	0.006854	0.006854	spring		0
+[0076879D]	0.104002	0.104002	0.006854	0.006854	spring		0
+[691445F5]	0.104002	2.184125	0.006854	0.143939	nvoglv32		0
+[008A0ED0]	0.104002	0.104002	0.006854	0.006854	spring		0
+CIsqrt	0.104002	0.104002	0.006854	0.006854	msvcrt	[unknown]	0
+[69817DFE]	0.104002	6.761321	0.006854	0.445586	nvoglv32		0
+[00870DF0]	0.104002	0.104002	0.006854	0.006854	spring		0
+PathEstimator.cpp	0.104002	0.156005	0.006854	0.010281	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	296	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L296
+lseeki64	0.104002	0.156005	0.006854	0.010281	msvcrt	[unknown]	0
+[008A4D3A]	0.104002	0.104002	0.006854	0.006854	spring		0
+DllMain	0.104001	2.705091	0.006854	0.178271	nvoglv32	[unknown]	0
+[00735360]	0.104001	0.104001	0.006854	0.006854	spring		0
+[00768191]	0.104001	0.104001	0.006854	0.006854	spring		0
+[00735321]	0.104001	0.104001	0.006854	0.006854	spring		0
+[0325ED19]	0.104000	0.104000	0.006854	0.006854	spring		0
+[007682F6]	0.104000	0.104000	0.006854	0.006854	spring		0
+[008A2BC6]	0.104000	0.104000	0.006854	0.006854	spring		0
+[008A0E56]	0.104000	0.104000	0.006854	0.006854	spring		0
+[0077EB87]	0.103999	0.103999	0.006854	0.006854	spring		0
+[0076726A]	0.103999	0.103999	0.006854	0.006854	spring		0
+[719726C0]	0.103999	0.103999	0.006854	0.006854	WINMM		0
+[00768744]	0.103999	0.103999	0.006854	0.006854	spring		0
+[0077A1F8]	0.103999	0.103999	0.006854	0.006854	spring		0
+[69817E99]	0.103999	0.103999	0.006854	0.006854	nvoglv32		0
+[0076829A]	0.103999	0.103999	0.006854	0.006854	spring		0
+[0060BCE8]	0.103998	0.103998	0.006854	0.006854	spring		0
+[006D33A5]	0.103998	0.103998	0.006854	0.006854	spring		0
+[0077A39E]	0.103997	0.103997	0.006854	0.006854	spring		0
+[007511D9]	0.103996	0.103996	0.006854	0.006854	spring		0
+[007764F7]	0.103996	0.103996	0.006854	0.006854	spring		0
+[0076865C]	0.103995	0.103995	0.006853	0.006853	spring		0
+[0073DCAF]	0.103994	0.103994	0.006853	0.006853	spring		0
+[007682C2]	0.103994	0.103994	0.006853	0.006853	spring		0
+[0060C1B0]	0.103991	0.103991	0.006853	0.006853	spring		0
+[007FFC06]	0.103983	0.103983	0.006853	0.006853	spring		0
+[006257B3]	0.103956	0.103956	0.006851	0.006851	spring		0
+[007764C1]	0.053010	0.053010	0.003493	0.003493	spring		0
+[0086F422]	0.053003	0.053003	0.003493	0.003493	spring		0
+[0075E9B2]	0.053003	0.053003	0.003493	0.003493	spring		0
+[69078E8B]	0.053003	0.053003	0.003493	0.003493	nvoglv32		0
+[007CBF25]	0.052034	0.052034	0.003429	0.003429	spring		0
+[6982B23A]	0.052023	0.052023	0.003428	0.003428	nvoglv32		0
+[006FD78C]	0.052016	0.052016	0.003428	0.003428	spring		0
+[0077A01A]	0.052015	0.052015	0.003428	0.003428	spring		0
+[007F6514]	0.052014	0.052014	0.003428	0.003428	spring		0
+[00774EF4]	0.052014	0.052014	0.003428	0.003428	spring		0
+[6982A733]	0.052013	0.052013	0.003428	0.003428	nvoglv32		0
+[69135A29]	0.052012	0.052012	0.003428	0.003428	nvoglv32		0
+[697EE8A6]	0.052011	0.052011	0.003428	0.003428	nvoglv32		0
+[007342D9]	0.052011	0.052011	0.003428	0.003428	spring		0
+[007F7C56]	0.052011	0.052011	0.003428	0.003428	spring		0
+[00779FE8]	0.052010	0.052010	0.003428	0.003428	spring		0
+[690756F6]	0.052010	0.052010	0.003428	0.003428	nvoglv32		0
+[0073542B]	0.052010	0.052010	0.003428	0.003428	spring		0
+[00776639]	0.052010	0.052010	0.003428	0.003428	spring		0
+[734F290C]	0.052010	0.052010	0.003428	0.003428	dsound		0
+[007FF5FA]	0.052010	0.052010	0.003428	0.003428	spring		0
+LdrUnlockLoaderLock	0.052010	0.052010	0.003428	0.003428	ntdll	[unknown]	0
+[00735998]	0.052010	0.052010	0.003428	0.003428	spring		0
+[0077B55F]	0.052009	0.052009	0.003428	0.003428	spring		0
+[0086FBF7]	0.052009	0.052009	0.003428	0.003428	spring		0
+[69817F18]	0.052009	0.052009	0.003428	0.003428	nvoglv32		0
+[00767D38]	0.052009	0.052009	0.003428	0.003428	spring		0
+[007FF63E]	0.052008	0.052008	0.003427	0.003427	spring		0
+[00768350]	0.052008	0.052008	0.003427	0.003427	spring		0
+[0077A2E2]	0.052008	0.052008	0.003427	0.003427	spring		0
+[0081BA48]	0.052008	0.052008	0.003427	0.003427	spring		0
+[008A4D49]	0.052008	0.052008	0.003427	0.003427	spring		0
+[0076854B]	0.052008	0.104018	0.003427	0.006855	spring		0
+[006FF0F4]	0.052008	0.052008	0.003427	0.003427	spring		0
+[0073C3C8]	0.052007	0.052007	0.003427	0.003427	spring		0
+[00596816]	0.052007	0.052007	0.003427	0.003427	spring		0
+RtlGetCurrentProcessorNumberEx	0.052007	0.052007	0.003427	0.003427	ntdll	[unknown]	0
+[00562E22]	0.052007	0.052007	0.003427	0.003427	spring		0
+[00768507]	0.052007	0.052007	0.003427	0.003427	spring		0
+[0087128E]	0.052007	0.052007	0.003427	0.003427	spring		0
+[006B7C62]	0.052007	0.052007	0.003427	0.003427	spring		0
+[697FDC4B]	0.052007	0.052007	0.003427	0.003427	nvoglv32		0
+[6982F634]	0.052007	0.052007	0.003427	0.003427	nvoglv32		0
+[005EAE81]	0.052007	0.052007	0.003427	0.003427	spring		0
+[6920AC51]	0.052007	0.052007	0.003427	0.003427	nvoglv32		0
+[6914EFEE]	0.052006	0.052006	0.003427	0.003427	nvoglv32		0
+[0063A6C1]	0.052006	0.052006	0.003427	0.003427	spring		0
+[007F862F]	0.052006	0.052006	0.003427	0.003427	spring		0
+[00768089]	0.052006	0.052006	0.003427	0.003427	spring		0
+[0077DCF8]	0.052006	0.052006	0.003427	0.003427	spring		0
+[007AC3A7]	0.052006	0.052006	0.003427	0.003427	spring		0
+[008A12D9]	0.052006	0.052006	0.003427	0.003427	spring		0
+[691556F0]	0.052006	0.052006	0.003427	0.003427	nvoglv32		0
+[696E852D]	0.052006	0.052006	0.003427	0.003427	nvoglv32		0
+[6916DF27]	0.052006	0.052006	0.003427	0.003427	nvoglv32		0
+[697C8683]	0.052006	0.052006	0.003427	0.003427	nvoglv32		0
+[6913E18A]	0.052006	0.052006	0.003427	0.003427	nvoglv32		0
+[007AAC97]	0.052006	0.052006	0.003427	0.003427	spring		0
+[00768666]	0.052006	0.052006	0.003427	0.003427	spring		0
+[0068B860]	0.052005	0.052005	0.003427	0.003427	spring		0
+[006B7D46]	0.052005	0.052005	0.003427	0.003427	spring		0
+[0079B7C1]	0.052005	0.052005	0.003427	0.003427	spring		0
+[007709C3]	0.052005	0.052005	0.003427	0.003427	spring		0
+[00735A79]	0.052005	0.052005	0.003427	0.003427	spring		0
+[008076F0]	0.052005	0.052005	0.003427	0.003427	spring		0
+[008075A2]	0.052005	0.052005	0.003427	0.003427	spring		0
+[008A2BB6]	0.052005	0.052005	0.003427	0.003427	spring		0
+[697F0FDE]	0.052005	0.052005	0.003427	0.003427	nvoglv32		0
+[0075BAD7]	0.052005	0.052005	0.003427	0.003427	spring		0
+[007A6AD6]	0.052005	0.052005	0.003427	0.003427	spring		0
+[006DE8F0]	0.052005	0.052005	0.003427	0.003427	spring		0
+[00748180]	0.052005	0.052005	0.003427	0.003427	spring		0
+[69071098]	0.052005	0.052005	0.003427	0.003427	nvoglv32		0
+[007BCA61]	0.052005	0.052005	0.003427	0.003427	spring		0
+[0076856A]	0.052005	0.052005	0.003427	0.003427	spring		0
+[691E480F]	0.052005	0.052005	0.003427	0.003427	nvoglv32		0
+[007FF762]	0.052005	0.052005	0.003427	0.003427	spring		0
+[00538541]	0.052005	0.052005	0.003427	0.003427	spring		0
+[006D5290]	0.052005	0.052005	0.003427	0.003427	spring		0
+[0060BC50]	0.052005	0.052005	0.003427	0.003427	spring		0
+[0073DC9E]	0.052005	0.052005	0.003427	0.003427	spring		0
+[00767DBF]	0.052005	0.052005	0.003427	0.003427	spring		0
+[6978B416]	0.052005	0.052005	0.003427	0.003427	nvoglv32		0
+[0073BB33]	0.052005	0.052005	0.003427	0.003427	spring		0
+alListener3f	0.052005	0.469016	0.003427	0.030909	OpenAL32	[unknown]	0
+[734F12A7]	0.052005	0.052005	0.003427	0.003427	dsound		0
+[0073AC8F]	0.052005	0.052005	0.003427	0.003427	spring		0
+[0080B32E]	0.052005	0.052005	0.003427	0.003427	spring		0
+[69166F30]	0.052005	0.052005	0.003427	0.003427	nvoglv32		0
+[00863FF1]	0.052005	0.052005	0.003427	0.003427	spring		0
+[007F838E]	0.052005	0.052005	0.003427	0.003427	spring		0
+[00735A44]	0.052005	0.052005	0.003427	0.003427	spring		0
+[00768142]	0.052005	0.052005	0.003427	0.003427	spring		0
+[006B32C9]	0.052005	0.052005	0.003427	0.003427	spring		0
+[691BA34D]	0.052005	0.052005	0.003427	0.003427	nvoglv32		0
+[007358FD]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00433166]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00735437]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0079ACB9]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0060BD4F]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697ECABE]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0077645B]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0050108F]	0.052004	0.052004	0.003427	0.003427	spring		0
+[008076D0]	0.052004	0.052004	0.003427	0.003427	spring		0
+[69078EF6]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[00701F69]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697ECDD1]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[69078F25]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[00596722]	0.052004	0.052004	0.003427	0.003427	spring		0
+[690792CC]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0077DCE7]	0.052004	0.052004	0.003427	0.003427	spring		0
+[696A4366]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[00768536]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0077A54F]	0.052004	0.052004	0.003427	0.003427	spring		0
+glColor3ubv	0.052004	0.052004	0.003427	0.003427	OPENGL32	[unknown]	0
+[008077D4]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00807C18]	0.052004	0.052004	0.003427	0.003427	spring		0
+[007E7C1F]	0.052004	0.052004	0.003427	0.003427	spring		0
+[69656E13]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[697EE83D]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[00767CD0]	0.052004	0.052004	0.003427	0.003427	spring		0
+alGetError	0.052004	1.300046	0.003427	0.085676	OpenAL32	[unknown]	0
+[69071001]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[69144609]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[004EFD8C]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0077A389]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697EE8B3]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[691BADE7]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[008725C0]	0.052004	0.052004	0.003427	0.003427	spring		0
+[6968FF36]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0074E672]	0.052004	0.052004	0.003427	0.003427	spring		0
+[691445E4]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0077E830]	0.052004	0.052004	0.003427	0.003427	spring		0
+[6969E996]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[007A3533]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00871292]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0081EA62]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00767C46]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0077EB74]	0.052004	0.052004	0.003427	0.003427	spring		0
+strnlen	0.052004	0.052004	0.003427	0.003427	msvcrt	[unknown]	0
+[0077A322]	0.052004	0.052004	0.003427	0.003427	spring		0
+GroundMoveType.cpp	0.052004	0.312012	0.003427	0.020562	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	285	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L285
+mbsrchr_l	0.052004	0.052004	0.003427	0.003427	msvcrt	[unknown]	0
+[0076462F]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697FFB70]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[007FF66F]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00727D17]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0077A2EE]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0076877A]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00735341]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00768187]	0.052004	0.052004	0.003427	0.003427	spring		0
+[007629B7]	0.052004	0.052004	0.003427	0.003427	spring		0
+[69817E03]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[6920AC50]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[6913C581]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0063A745]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697C8899]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0073DC9B]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0076256B]	0.052004	0.052004	0.003427	0.003427	spring		0
+[691CC8EB]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[00697EA5]	0.052004	0.052004	0.003427	0.003427	spring		0
+[69835001]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[69817EA3]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0325ED1C]	0.052004	0.052004	0.003427	0.003427	spring		0
+[690725D5]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0073ADC7]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0086FB27]	0.052004	0.052004	0.003427	0.003427	spring		0
+[007682FE]	0.052004	0.052004	0.003427	0.003427	spring		0
+[007AB296]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0086EB45]	0.052004	0.052004	0.003427	0.003427	spring		0
+[0086E9F4]	0.052004	0.052004	0.003427	0.003427	spring		0
+[007F76FC]	0.052004	0.052004	0.003427	0.003427	spring		0
+[00701B8E]	0.052004	0.052004	0.003427	0.003427	spring		0
+[69166FA7]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0077A1D4]	0.052004	0.052004	0.003427	0.003427	spring		0
+[69817F20]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0073C0E9]	0.052004	0.052004	0.003427	0.003427	spring		0
+[007F6753]	0.052004	0.052004	0.003427	0.003427	spring		0
+[6982F5FF]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[6982EAD1]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0073C3C0]	0.052004	0.052004	0.003427	0.003427	spring		0
+[6982B514]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[0073591B]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697A6C70]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[00704379]	0.052004	0.052004	0.003427	0.003427	spring		0
+[006FF0ED]	0.052004	0.052004	0.003427	0.003427	spring		0
+[697C85C6]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[69785EF1]	0.052004	0.052004	0.003427	0.003427	nvoglv32		0
+[007681D4]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007FF86B]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007FF858]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007FF6CC]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007FF66A]	0.052003	0.052003	0.003427	0.003427	spring		0
+[006910A0]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007F770C]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007F7301]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0068DD92]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0068DBCF]	0.052003	0.052003	0.003427	0.003427	spring		0
+clearfp	0.052003	0.052003	0.003427	0.003427	msvcrt	[unknown]	0
+[0060BD35]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0060BCF2]	0.052003	0.052003	0.003427	0.003427	spring		0
+WaitForMultipleObjectsEx	0.052003	0.104008	0.003427	0.006854	kernel32	[unknown]	0
+[0060BCB8]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0060BB0E]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69834F00]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0068B81E]	0.052003	0.052003	0.003427	0.003427	spring		0
+[005E303D]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00768727]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00768799]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007687EF]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007747A4]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00768810]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00768847]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69145C41]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0055B6D5]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69839C21]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[00404BC0]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0043252E]	0.052003	0.052003	0.003427	0.003427	spring		0
+[008A59F3]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00773AB1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00774F2F]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00557251]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0043254A]	0.052003	0.052003	0.003427	0.003427	spring		0
+[005563F1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[004326BE]	0.052003	0.052003	0.003427	0.003427	spring		0
+[690896C2]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[004330EB]	0.052003	0.052003	0.003427	0.003427	spring		0
+[008A3E70]	0.052003	0.052003	0.003427	0.003427	spring		0
+[006F2CEA]	0.052003	0.052003	0.003427	0.003427	spring		0
+[006F2E50]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00538745]	0.052003	0.052003	0.003427	0.003427	spring		0
+[005385CE]	0.052003	0.052003	0.003427	0.003427	spring		0
+[006FF0B1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0060BCD1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073129C]	0.052003	0.052003	0.003427	0.003427	spring		0
+GetTickCount64	0.052003	0.052003	0.003427	0.003427	KERNELBASE	[unknown]	0
+[008A2BD4]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007312A5]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073134C]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007342B0]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007344A3]	0.052003	0.052003	0.003427	0.003427	spring		0
+[004A2F23]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073532D]	0.052003	0.052003	0.003427	0.003427	spring		0
+[008A1386]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00735365]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00735424]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077DA70]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007354A1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077B493]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007359A2]	0.052003	0.052003	0.003427	0.003427	spring		0
+[008A1140]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00735A33]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077A55B]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077A528]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077A42E]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073C0BE]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077DD04]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0077A396]	0.052003	0.052003	0.003427	0.003427	spring		0
+glVertex3f	0.052003	0.052003	0.003427	0.003427	OPENGL32	[unknown]	0
+[0077A2F7]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00780A10]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007742DC]	0.052003	0.052003	0.003427	0.003427	spring		0
+PathEstimator.cpp	0.052003	0.728036	0.003427	0.047979	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	294	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L294
+[00779FFF]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00779FE1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6915B1D0]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[69165910]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0079BB04]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0079DC08]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007A3582]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69165929]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[007A9DDD]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69165D23]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[007A9FB1]	0.052003	0.052003	0.003427	0.003427	spring		0
+GetExitCodeThread	0.052003	0.052003	0.003427	0.003427	kernel32	[unknown]	0
+[007AB246]	0.052003	0.052003	0.003427	0.003427	spring		0
+CreateProcessA	0.052003	0.052003	0.003427	0.003427	kernel32	[unknown]	0
+[007AB8F1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[697C8505]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0073DA9B]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007AD101]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6979C1F7]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0073DC85]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007CC91E]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6978B429]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[007F28BA]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69200A0A]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[692009D0]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[69817DB0]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[69817CC3]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0074BEA1]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69682E73]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[697F1011]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[69682F38]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[691CDC47]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[691CDC27]	0.052003	0.104007	0.003427	0.006854	nvoglv32		0
+[691CD183]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[691B69AF]	0.052003	0.260020	0.003427	0.017136	nvoglv32		0
+[00750BAB]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6968365F]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0063A740]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0075B858]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69683685]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[697ECDD0]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[00870A6D]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0075EE3C]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0075EF25]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00760B1F]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00762957]	0.052003	0.052003	0.003427	0.003427	spring		0
+ZwWaitForMultipleObjects	0.052003	0.052003	0.003427	0.003427	ntdll	[unknown]	0
+[0076383B]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0086F25F]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0076394F]	0.052003	0.052003	0.003427	0.003427	spring		0
+[007649DF]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00764C4E]	0.052003	0.052003	0.003427	0.003427	spring		0
+[69166D93]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0081EAD9]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0081EA54]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0081BABF]	0.052003	0.052003	0.003427	0.003427	spring		0
+[006B7E0D]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0081BA54]	0.052003	0.052003	0.003427	0.003427	spring		0
+[008545D7]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0081BA31]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6982F6A5]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0081B8C6]	0.052003	0.052003	0.003427	0.003427	spring		0
+UnitHandler.cpp	0.052003	10.869468	0.003427	0.716322	spring	build/default/../../rts/Sim/Units/UnitHandler.cpp	242	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitHandler.cpp#L242
+[006B7CFB]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073C3B7]	0.052003	0.052003	0.003427	0.003427	spring		0
+[696E7020]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[006B78C3]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6982B283]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0073C3C4]	0.052003	0.052003	0.003427	0.003427	spring		0
+[006B7820]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00767C61]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00767CE9]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00767D0C]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00767D25]	0.052003	0.052003	0.003427	0.003427	spring		0
+[6982A714]	0.052003	0.052003	0.003427	0.003427	nvoglv32		0
+[0080700D]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073C3E6]	0.052003	0.052003	0.003427	0.003427	spring		0
+[0073C40F]	0.052003	0.052003	0.003427	0.003427	spring		0
+[00749F37]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0059D95D]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007767D3]	0.052002	0.052002	0.003427	0.003427	spring		0
+[008A4D34]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0076858A]	0.052002	0.052002	0.003427	0.003427	spring		0
+[691D8DA0]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[007765D7]	0.052002	0.052002	0.003427	0.003427	spring		0
+[697F9DB1]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[691E3BC9]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[008A3F31]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0073DD80]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0073DCE5]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0073DCDD]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00488D71]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007AA5D8]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69200A3A]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[008A3334]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69733629]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[69817E75]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[6977C960]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[69785D44]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[006FF203]	0.052002	0.052002	0.003427	0.003427	spring		0
+[6978B3ED]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[6979C1F3]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[00735410]	0.052002	0.052002	0.003427	0.003427	spring		0
+GlobalAlloc	0.052002	0.052002	0.003427	0.003427	KERNELBASE	[unknown]	0
+[008A1828]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0061E388]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0068BFBF]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69817EFC]	0.052002	1.404010	0.003427	0.092527	nvoglv32		0
+[0060C510]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0073D61B]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0060BBDF]	0.052002	0.052002	0.003427	0.003427	spring		0
+[006FD8F3]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69078E42]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0060C2AD]	0.052002	0.052002	0.003427	0.003427	spring		0
+MoveMath.cpp	0.052002	0.728035	0.003427	0.047979	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	101	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L101
+[007314C2]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007CBF32]	0.052002	0.052002	0.003427	0.003427	spring		0
+[008A0F56]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007358B3]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007D4107]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0068DB59]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00768343]	0.052002	0.052002	0.003427	0.003427	spring		0
+[008A0EAE]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007F336F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[697EE791]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0076833E]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007F7C69]	0.052002	0.052002	0.003427	0.003427	spring		0
+glTexCoordPointer	0.052002	0.052002	0.003427	0.003427	OPENGL32	[unknown]	0
+[6907104B]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[007331E1]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007359AC]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007F8412]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0062A9A3]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0077B38C]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69144604]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0077B357]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007F8C27]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007FF75F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69165925]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[007FF785]	0.052002	0.052002	0.003427	0.003427	spring		0
+[004EFB4F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007FF85D]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00768103]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00805531]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0070AC05]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00767F60]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00767F5A]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007342C8]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0073C0B9]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69144601]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[00871275]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0087126F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00871269]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00767CB9]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00767C7B]	0.052002	0.052002	0.003427	0.003427	spring		0
+[691445E7]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[69166D64]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[00767C5A]	0.052002	0.052002	0.003427	0.003427	spring		0
+[691445A9]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0077417D]	0.052002	0.052002	0.003427	0.003427	spring		0
+3DModel.cpp	0.052002	0.884064	0.003427	0.058262	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	254	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L254
+3DModel.cpp	0.052002	14.094710	0.003427	0.928872	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	256	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L256
+[006B7F1E]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0081EAE2]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00767C3B]	0.052002	0.052002	0.003427	0.003427	spring		0
+[006D2ABE]	0.052002	0.052002	0.003427	0.003427	spring		0
+[006D33A7]	0.052002	0.052002	0.003427	0.003427	spring		0
+[6913E187]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[00763937]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00827213]	0.052002	0.052002	0.003427	0.003427	spring		0
+SpringTime.cpp	0.052002	2.496145	0.003427	0.164501	spring	build/default/../../rts/System/Misc/SpringTime.cpp	152	http://github.com/spring/spring/tree/master/rts/System/Misc/SpringTime.cpp#L152
+[0077A2E7]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00762AEA]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0077EB7F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0077A27A]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0077A22C]	0.052002	0.052002	0.003427	0.003427	spring		0
+[006D536C]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0077F513]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007623D8]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00761E7F]	0.052002	0.052002	0.003427	0.003427	spring		0
+ProjectileDrawer.cpp	0.052002	0.936053	0.003427	0.061688	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	430	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L430
+[69832030]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[00760313]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0086FC67]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0077A1CD]	0.052002	0.052002	0.003427	0.003427	spring		0
+[6913C62C]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0076FEE0]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00774314]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00727641]	0.052002	0.052002	0.003427	0.003427	spring		0
+[008305F0]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007351A0]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0075EF14]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0075E9AE]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0075E00F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0059682C]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69167047]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0077435C]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0075DC98]	0.052002	0.052002	0.003427	0.003427	spring		0
+[698360A1]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0325F8CA]	0.052002	0.052002	0.003427	0.003427	spring		0
+[697ECDDF]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[697ECE44]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0075B3EB]	0.052002	0.052002	0.003427	0.003427	spring		0
+[697EE772]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[6982E681]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0325ED02]	0.052002	0.052002	0.003427	0.003427	spring		0
+[69071F84]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[697F07E2]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[691CD1FA]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0079DBF4]	0.052002	0.052002	0.003427	0.003427	spring		0
+[6982B253]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[0325051F]	0.052002	0.052002	0.003427	0.003427	spring		0
+[0325033C]	0.052002	0.052002	0.003427	0.003427	spring		0
+[00735326]	0.052002	0.052002	0.003427	0.003427	spring		0
+[007A3291]	0.052002	0.052002	0.003427	0.003427	spring		0
+[691CD1FB]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[690718D5]	0.052002	0.052002	0.003427	0.003427	nvoglv32		0
+[00432535]	0.052002	0.052002	0.003427	0.003427	spring		0
+[008A4DA4]	0.052002	0.052002	0.003427	0.003427	spring		0
+[008A4D5E]	0.052002	0.052002	0.003427	0.003427	spring		0
+[697C858A]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[00768840]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00768770]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00768577]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007682F3]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0076828A]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0076804F]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00768038]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00767D3E]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00767D28]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00767C4F]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0076299B]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00761E84]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0075ECBC]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00827172]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007F62EE]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0075EA84]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0075EA60]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0075E893]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0074EADA]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0060BEAB]	0.052001	0.052001	0.003427	0.003427	spring		0
+[69752BEF]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[0060B1F1]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0073DC8A]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0073DC6D]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0073C0CA]	0.052001	0.052001	0.003427	0.003427	spring		0
+[005E71DE]	0.052001	0.052001	0.003427	0.003427	spring		0
+[6916592B]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[698CBA29]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69839059]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[696E8529]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69682F5A]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69682F32]	0.052001	14.303707	0.003427	0.942646	nvoglv32		0
+[69226B3D]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[007F30A6]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007F2FA1]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007ACE46]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0079DC0D]	0.052001	0.052001	0.003427	0.003427	spring		0
+[005A2D21]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0077EBE3]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0073C0B7]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007359B6]	0.052001	0.052001	0.003427	0.003427	spring		0
+[005988B4]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007354E0]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00731595]	0.052001	0.052001	0.003427	0.003427	spring		0
+[006FD903]	0.052001	0.052001	0.003427	0.003427	spring		0
+[690792C1]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69078F1E]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69071EC7]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69071C42]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69135003]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[0055B66C]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0077A38C]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0077A209]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0077A190]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0077A084]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0077A077]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00779FDA]	0.052001	0.052001	0.003427	0.003427	spring		0
+[734F62C2]	0.052001	0.052001	0.003427	0.003427	dsound		0
+btowc	0.052001	0.052001	0.003427	0.003427	msvcrt	[unknown]	0
+[0325ED05]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0325ECE1]	0.052001	0.052001	0.003427	0.003427	spring		0
+[008A4D3C]	0.052001	0.052001	0.003427	0.003427	spring		0
+[008A2BEB]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0087213A]	0.052001	0.052001	0.003427	0.003427	spring		0
+[69817F46]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69817ED4]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[69817E17]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[697EE809]	0.052001	0.052001	0.003427	0.003427	nvoglv32		0
+[008050E1]	0.052001	0.052001	0.003427	0.003427	spring		0
+[006D3790]	0.052001	0.052001	0.003427	0.003427	spring		0
+[006B3580]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00690BE5]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0075B758]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0060C2D1]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00774317]	0.052001	0.052001	0.003427	0.003427	spring		0
+[00774310]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007742BF]	0.052001	0.052001	0.003427	0.003427	spring		0
+[0076F99B]	0.052001	0.052001	0.003427	0.003427	spring		0
+[007FF8C2]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00763AED]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00768638]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00854499]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0073DD22]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00432570]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0043253E]	0.052000	0.052000	0.003427	0.003427	spring		0
+[6920B396]	0.052000	0.052000	0.003427	0.003427	nvoglv32		0
+[007680A9]	0.052000	0.052000	0.003427	0.003427	spring		0
+[007AB287]	0.052000	0.052000	0.003427	0.003427	spring		0
+[007F78B4]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00766FCD]	0.052000	0.052000	0.003427	0.003427	spring		0
+[006D52B4]	0.052000	0.052000	0.003427	0.003427	spring		0
+GetSystemTimeAsFileTime	0.052000	0.052000	0.003427	0.003427	kernel32	[unknown]	0
+[004360FD]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00779FE5]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0077A19B]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0077A21D]	0.052000	0.052000	0.003427	0.003427	spring		0
+[007684F0]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00768030]	0.052000	0.052000	0.003427	0.003427	spring		0
+PathFinder.cpp	0.052000	0.988029	0.003427	0.065113	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	330	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L330
+[0077EB7D]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00870E53]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0077E85A]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0077A370]	0.052000	0.052000	0.003427	0.003427	spring		0
+[006D35CC]	0.052000	0.052000	0.003427	0.003427	spring		0
+[6915B190]	0.052000	0.052000	0.003427	0.003427	nvoglv32		0
+[697EE764]	0.052000	0.052000	0.003427	0.003427	nvoglv32		0
+[0073ADD8]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0077A53F]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0077A5C9]	0.052000	0.052000	0.003427	0.003427	spring		0
+PathFinder.cpp	0.052000	1.768051	0.003427	0.116518	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	259	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L259
+[0073593F]	0.052000	0.052000	0.003427	0.003427	spring		0
+BitwiseEnum.h	0.052000	0.260011	0.003427	0.017135	spring	build/default/../../rts/System/Misc/BitwiseEnum.h	67	http://github.com/spring/spring/tree/master/rts/System/Misc/BitwiseEnum.h#L67
+[0075B3D4]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0075B1C5]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00735351]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0045D20A]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00807737]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00703F99]	0.052000	0.052000	0.003427	0.003427	spring		0
+[690774D7]	0.052000	0.052000	0.003427	0.003427	nvoglv32		0
+[007682A5]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0055B698]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00767CA1]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0073DAA3]	0.052000	0.052000	0.003427	0.003427	spring		0
+[006B7731]	0.052000	0.052000	0.003427	0.003427	spring		0
+[007686A3]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00586048]	0.052000	0.052000	0.003427	0.003427	spring		0
+[0073C3A3]	0.052000	0.052000	0.003427	0.003427	spring		0
+[690FEBE1]	0.052000	0.052000	0.003427	0.003427	nvoglv32		0
+[007AAD20]	0.052000	0.052000	0.003427	0.003427	spring		0
+[00768182]	0.052000	0.052000	0.003427	0.003427	spring		0
+[6981C5AC]	0.051999	0.051999	0.003427	0.003427	nvoglv32		0
+[69166FA1]	0.051999	0.051999	0.003427	0.003427	nvoglv32		0
+DuplicateHandle	0.051999	0.051999	0.003427	0.003427	kernel32	[unknown]	0
+[0077A589]	0.051999	0.051999	0.003427	0.003427	spring		0
+PathFinder.cpp	0.051999	1.144045	0.003427	0.075395	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	258	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L258
+[00768786]	0.051999	0.051999	0.003427	0.003427	spring		0
+[69071516]	0.051999	0.051999	0.003427	0.003427	nvoglv32		0
+[69168CED]	0.051998	0.051998	0.003427	0.003427	nvoglv32		0
+[007602E4]	0.051998	0.051998	0.003427	0.003427	spring		0
+[69072583]	0.051998	0.051998	0.003427	0.003427	nvoglv32		0
+[0080EF21]	0.051998	0.051998	0.003427	0.003427	spring		0
+[0071BA64]	0.051998	0.051998	0.003427	0.003427	spring		0
+stl_vector.h	0.051998	0.208001	0.003427	0.013708	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	920	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L920
+[697EE776]	0.051998	0.051998	0.003427	0.003427	nvoglv32		0
+[006E4480]	0.051998	0.051998	0.003427	0.003427	spring		0
+[69072BD1]	0.051998	0.051998	0.003427	0.003427	nvoglv32		0
+gapfnScSendMessage	0.051997	0.051997	0.003427	0.003427	USER32	[unknown]	0
+[0082AA3F]	0.051997	0.051997	0.003427	0.003427	spring		0
+[00768311]	0.051997	0.051997	0.003427	0.003427	spring		0
+[69682E5D]	0.051997	0.051997	0.003427	0.003427	nvoglv32		0
+[008A3328]	0.051997	0.051997	0.003427	0.003427	spring		0
+[006FEF95]	0.051997	0.051997	0.003427	0.003427	spring		0
+[0077A3BA]	0.051997	0.051997	0.003427	0.003427	spring		0
+[008A121F]	0.051996	0.051996	0.003427	0.003427	spring		0
+[6915B1DB]	0.051996	0.051996	0.003427	0.003427	nvoglv32		0
+[69200A34]	0.051996	0.051996	0.003427	0.003427	nvoglv32		0
+[69787A21]	0.051996	0.051996	0.003427	0.003427	nvoglv32		0
+[6907107D]	0.051996	0.051996	0.003427	0.003427	nvoglv32		0
+mbsicmp_l	0.051995	0.051995	0.003427	0.003427	msvcrt	[unknown]	0
+[00735973]	0.051995	0.051995	0.003427	0.003427	spring		0
+[00768570]	0.051995	0.051995	0.003427	0.003427	spring		0
+[00762383]	0.051995	0.051995	0.003427	0.003427	spring		0
+[0055E49D]	0.051995	0.051995	0.003427	0.003427	spring		0
+[0077A41D]	0.051995	0.051995	0.003427	0.003427	spring		0
+[697F1656]	0.051994	0.051994	0.003427	0.003427	nvoglv32		0
+[007682B5]	0.051994	0.051994	0.003427	0.003427	spring		0
+[69071874]	0.051994	0.051994	0.003427	0.003427	nvoglv32		0
+[6969FA50]	0.051994	0.051994	0.003427	0.003427	nvoglv32		0
+[69817EAA]	0.051993	0.051993	0.003426	0.003426	nvoglv32		0
+[0070C0E5]	0.051993	0.051993	0.003426	0.003426	spring		0
+[00735B35]	0.051993	0.051993	0.003426	0.003426	spring		0
+[0077A40F]	0.051993	0.051993	0.003426	0.003426	spring		0
+[698CBF61]	0.051993	0.051993	0.003426	0.003426	nvoglv32		0
+[0077B380]	0.051992	0.051992	0.003426	0.003426	spring		0
+[008541B1]	0.051992	0.051992	0.003426	0.003426	spring		0
+[00555CF1]	0.051991	0.051991	0.003426	0.003426	spring		0
+[005A2E43]	0.051989	0.051989	0.003426	0.003426	spring		0
+[0076831C]	0.051988	0.051988	0.003426	0.003426	spring		0
+[0077A422]	0.049273	0.049273	0.003247	0.003247	spring		0
+[691B750F]	0.000000	0.156014	0.000000	0.010282	nvoglv32		0
+[691B6B4F]	0.000000	0.156010	0.000000	0.010281	nvoglv32		0
+[691B680F]	0.000000	0.104007	0.000000	0.006854	nvoglv32		0
+[691B1E4F]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+[691A2C3F]	0.000000	0.052007	0.000000	0.003427	nvoglv32		0
+[691A268B]	0.000000	0.103998	0.000000	0.006854	nvoglv32		0
+[0085441B]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0085411A]	0.000000	0.052001	0.000000	0.003427	spring		0
+[008368D2]	0.000000	0.052005	0.000000	0.003427	spring		0
+[008368CB]	0.000000	0.052002	0.000000	0.003427	spring		0
+Weapon.cpp	0.000000	0.521021	0.000000	0.034336	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	542	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L542
+Weapon.cpp	0.000000	0.313003	0.000000	0.020628	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	1295	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L1295
+Weapon.cpp	0.000000	0.208018	0.000000	0.013709	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	1292	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L1292
+Weapon.cpp	0.000000	1.560112	0.000000	0.102815	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	809	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L809
+Weapon.cpp	0.000000	1.040063	0.000000	0.068542	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	890	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L890
+Weapon.cpp	0.000000	0.520049	0.000000	0.034272	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	819	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L819
+[00835925]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00835858]	0.000000	0.052003	0.000000	0.003427	spring		0
+Weapon.cpp	0.000000	0.936058	0.000000	0.061688	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	745	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L745
+[00834D6A]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0083400A]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00833912]	0.000000	0.052005	0.000000	0.003427	spring		0
+[008334F7]	0.000000	0.052004	0.000000	0.003427	spring		0
+Weapon.cpp	0.000000	0.416031	0.000000	0.027417	spring	build/default/../../rts/Sim/Weapons/Weapon.cpp	251	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/Weapon.cpp#L251
+[00831D0B]	0.000000	0.052004	0.000000	0.003427	spring		0
+[00831C82]	0.000000	0.052014	0.000000	0.003428	spring		0
+[00830516]	0.000000	0.052000	0.000000	0.003427	spring		0
+[0082E354]	0.000000	0.104002	0.000000	0.006854	spring		0
+[0082ACB3]	0.000000	0.104003	0.000000	0.006854	spring		0
+[0082A2A4]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0082A1E5]	0.000000	0.104006	0.000000	0.006854	spring		0
+BeamLaser.cpp	0.000000	0.313018	0.000000	0.020629	spring	build/default/../../rts/Sim/Weapons/BeamLaser.cpp	203	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/BeamLaser.cpp#L203
+BeamLaser.cpp	0.000000	0.208008	0.000000	0.013708	spring	build/default/../../rts/Sim/Weapons/BeamLaser.cpp	199	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/BeamLaser.cpp#L199
+BeamLaser.cpp	0.000000	0.208018	0.000000	0.013709	spring	build/default/../../rts/Sim/Weapons/BeamLaser.cpp	266	http://github.com/spring/spring/tree/master/rts/Sim/Weapons/BeamLaser.cpp#L266
+[0082865F]	0.000000	0.104002	0.000000	0.006854	spring		0
+[00828597]	0.000000	0.052003	0.000000	0.003427	spring		0
+[00828188]	0.000000	0.052013	0.000000	0.003428	spring		0
+[00824993]	0.000000	0.052003	0.000000	0.003427	spring		0
+[008244B7]	0.000000	0.104021	0.000000	0.006855	spring		0
+Factory.cpp	0.000000	0.260004	0.000000	0.017135	spring	build/default/../../rts/Sim/Units/UnitTypes/Factory.cpp	148	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitTypes/Factory.cpp#L148
+[008241B0]	0.000000	0.104021	0.000000	0.006855	spring		0
+[00823D5D]	0.000000	0.104021	0.000000	0.006855	spring		0
+[00822D8D]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00822D74]	0.000000	0.104000	0.000000	0.006854	spring		0
+[008228D9]	0.000000	0.104002	0.000000	0.006854	spring		0
+[0082288E]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00820EFA]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00820A77]	0.000000	0.052007	0.000000	0.003427	spring		0
+Builder.cpp	0.000000	0.572012	0.000000	0.037697	spring	build/default/../../rts/Sim/Units/UnitTypes/Builder.cpp	525	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitTypes/Builder.cpp#L525
+[0082060A]	0.000000	0.052001	0.000000	0.003427	spring		0
+Builder.cpp	0.000000	0.624019	0.000000	0.041124	spring	build/default/../../rts/Sim/Units/UnitTypes/Builder.cpp	815	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitTypes/Builder.cpp#L815
+Builder.cpp	0.000000	0.312011	0.000000	0.020562	spring	build/default/../../rts/Sim/Units/UnitTypes/Builder.cpp	339	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitTypes/Builder.cpp#L339
+Builder.cpp	0.000000	0.520028	0.000000	0.034271	spring	build/default/../../rts/Sim/Units/UnitTypes/Builder.cpp	338	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitTypes/Builder.cpp#L338
+stl_vector.h	0.000000	0.208006	0.000000	0.013708	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	1126	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L1126
+SafeVector.h	0.000000	0.208019	0.000000	0.013709	spring	build/default/../../rts/System/SafeVector.h	14	http://github.com/spring/spring/tree/master/rts/System/SafeVector.h#L14
+Builder.cpp	0.000000	0.260009	0.000000	0.017135	spring	build/default/../../rts/Sim/Units/UnitTypes/Builder.cpp	853	http://github.com/spring/spring/tree/master/rts/Sim/Units/UnitTypes/Builder.cpp#L853
+[0081E23B]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0081BB90]	0.000000	0.052001	0.000000	0.003427	spring		0
+stl_list.h	0.000000	8.113411	0.000000	0.534692	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h	155	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h#L155
+stl_list.h	0.000000	4.109202	0.000000	0.270805	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h	155	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h#L155
+3DModel.h	0.000000	2.393141	0.000000	0.157713	spring	build/default/../../rts/Rendering/Models/3DModel.h	327	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.h#L327
+EventHandler.h	0.000000	0.156004	0.000000	0.010281	spring	build/default/../../rts/System/EventHandler.h	434	http://github.com/spring/spring/tree/master/rts/System/EventHandler.h#L434
+[0081B713]	0.000000	0.052001	0.000000	0.003427	spring		0
+basic_string.h	0.000000	0.208003	0.000000	0.013708	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h	245	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h#L245
+[0080F9BF]	0.000000	0.052004	0.000000	0.003427	spring		0
+[0080F266]	0.000000	0.104005	0.000000	0.006854	spring		0
+[0080F15C]	0.000000	0.052003	0.000000	0.003427	spring		0
+SolidObject.h	0.000000	0.520015	0.000000	0.034270	spring	build/default/../../rts/Sim/Objects/SolidObject.h	171	http://github.com/spring/spring/tree/master/rts/Sim/Objects/SolidObject.h#L171
+[0080D844]	0.000000	0.052001	0.000000	0.003427	spring		0
+Unit.cpp	0.000000	1.560112	0.000000	0.102815	spring	build/default/../../rts/Sim/Units/Unit.cpp	989	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L989
+Unit.cpp	0.000000	4.005130	0.000000	0.263947	spring	build/default/../../rts/Sim/Units/Unit.cpp	911	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L911
+Unit.cpp	0.000000	2.184143	0.000000	0.143940	spring	build/default/../../rts/Sim/Units/Unit.cpp	908	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L908
+[0080AFB6]	0.000000	0.104007	0.000000	0.006854	spring		0
+[0080A806]	0.000000	0.104005	0.000000	0.006854	spring		0
+[0080A41F]	0.000000	0.104005	0.000000	0.006854	spring		0
+Unit.cpp	0.000000	0.416018	0.000000	0.027417	spring	build/default/../../rts/Sim/Units/Unit.cpp	1778	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L1778
+[00809FFF]	0.000000	0.052001	0.000000	0.003427	spring		0
+[008099DD]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00809636]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00809135]	0.000000	0.052004	0.000000	0.003427	spring		0
+[00808065]	0.000000	0.052005	0.000000	0.003427	spring		0
+[00807F55]	0.000000	0.052002	0.000000	0.003427	spring		0
+Unit.cpp	0.000000	0.260000	0.000000	0.017135	spring	build/default/../../rts/Sim/Units/Unit.cpp	704	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L704
+Unit.cpp	0.000000	0.312016	0.000000	0.020563	spring	build/default/../../rts/Sim/Units/Unit.cpp	676	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L676
+Unit.cpp	0.000000	0.676019	0.000000	0.044551	spring	build/default/../../rts/Sim/Units/Unit.cpp	676	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L676
+SyncedFloat3.h	0.000000	0.207994	0.000000	0.013707	spring	build/default/../../rts/System/Sync/SyncedFloat3.h	43	http://github.com/spring/spring/tree/master/rts/System/Sync/SyncedFloat3.h#L43
+Unit.cpp	0.000000	1.560112	0.000000	0.102815	spring	build/default/../../rts/Sim/Units/Unit.cpp	1018	http://github.com/spring/spring/tree/master/rts/Sim/Units/Unit.cpp#L1018
+UnitScriptEngine.cpp	0.000000	2.496133	0.000000	0.164501	spring	build/default/../../rts/Sim/Units/Scripts/UnitScriptEngine.cpp	85	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScriptEngine.cpp#L85
+[00801FF1]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00800302]	0.000000	0.052004	0.000000	0.003427	spring		0
+UnitScript.cpp	0.000000	0.156012	0.000000	0.010282	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	464	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L464
+UnitScript.cpp	0.000000	0.468005	0.000000	0.030843	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	458	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L458
+[007FFBE4]	0.000000	0.104012	0.000000	0.006855	spring		0
+[007FFA52]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007FF9CD]	0.000000	0.052007	0.000000	0.003427	spring		0
+UnitScript.cpp	0.000000	2.340119	0.000000	0.154219	spring	build/default/../../rts/Sim/Units/Scripts/UnitScript.cpp	282	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/UnitScript.cpp#L282
+[007FF943]	0.000000	0.052004	0.000000	0.003427	spring		0
+[007FF2D1]	0.000000	0.052007	0.000000	0.003427	spring		0
+[007F92CD]	0.000000	0.052004	0.000000	0.003427	spring		0
+[007F8A0F]	0.000000	0.052004	0.000000	0.003427	spring		0
+[007F888B]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007F87F6]	0.000000	0.052001	0.000000	0.003427	spring		0
+CobInstance.h	0.000000	0.156012	0.000000	0.010282	spring	build/default/../../rts/Sim/Units/Scripts/CobInstance.h	100	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobInstance.h#L100
+CobInstance.h	0.000000	0.468005	0.000000	0.030843	spring	build/default/../../rts/Sim/Units/Scripts/CobInstance.h	94	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobInstance.h#L94
+CobThread.cpp	0.000000	0.260026	0.000000	0.017136	spring	build/default/../../rts/Sim/Units/Scripts/CobThread.cpp	31	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobThread.cpp#L31
+[007F6467]	0.000000	0.052007	0.000000	0.003427	spring		0
+CobThread.cpp	0.000000	0.208012	0.000000	0.013708	spring	build/default/../../rts/Sim/Units/Scripts/CobThread.cpp	44	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobThread.cpp#L44
+[007F6397]	0.000000	0.104006	0.000000	0.006854	spring		0
+[007F4191]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007F4048]	0.000000	0.052001	0.000000	0.003427	spring		0
+[007F3AF0]	0.000000	0.052001	0.000000	0.003427	spring		0
+[007F386A]	0.000000	0.052004	0.000000	0.003427	spring		0
+[0060734E]	0.000000	0.052005	0.000000	0.003427	spring		0
+[00600120]	0.000000	0.104006	0.000000	0.006854	spring		0
+[005ED4F4]	0.000000	0.052004	0.000000	0.003427	spring		0
+[005E71A2]	0.000000	0.052002	0.000000	0.003427	spring		0
+[005E302A]	0.000000	0.052001	0.000000	0.003427	spring		0
+[005E0138]	0.000000	0.104004	0.000000	0.006854	spring		0
+[005E006B]	0.000000	0.104006	0.000000	0.006854	spring		0
+[005D414F]	0.000000	0.104002	0.000000	0.006854	spring		0
+[005C2632]	0.000000	0.052003	0.000000	0.003427	spring		0
+[005C001D]	0.000000	0.052003	0.000000	0.003427	spring		0
+[005B0007]	0.000000	0.052001	0.000000	0.003427	spring		0
+[005A798A]	0.000000	0.052000	0.000000	0.003427	spring		0
+[005A7426]	0.000000	0.052000	0.000000	0.003427	spring		0
+stl_vector.h	0.000000	0.156005	0.000000	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	646	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L646
+[0059DE20]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0059A366]	0.000000	0.051995	0.000000	0.003427	spring		0
+[00596854]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0059684C]	0.000000	0.104011	0.000000	0.006855	spring		0
+[0059683C]	0.000000	0.104002	0.000000	0.006854	spring		0
+[00596826]	0.000000	0.052002	0.000000	0.003427	spring		0
+LuaSyncedRead.cpp	0.000000	0.156015	0.000000	0.010282	spring	build/default/../../rts/Lua/LuaSyncedRead.cpp	1429	http://github.com/spring/spring/tree/master/rts/Lua/LuaSyncedRead.cpp#L1429
+[00590082]	0.000000	0.052002	0.000000	0.003427	spring		0
+[005813E4]	0.000000	0.052006	0.000000	0.003427	spring		0
+RoamMeshDrawer.cpp	0.000000	0.156013	0.000000	0.010282	spring	build/default/../../rts/Map/SMF/ROAM/RoamMeshDrawer.cpp	347	http://github.com/spring/spring/tree/master/rts/Map/SMF/ROAM/RoamMeshDrawer.cpp#L347
+[007741B2]	0.000000	0.051998	0.000000	0.003427	spring		0
+[0063C75B]	0.000000	0.052000	0.000000	0.003427	spring		0
+[00774160]	0.000000	0.104002	0.000000	0.006854	spring		0
+ThreadPool.h	0.000000	0.158011	0.000000	0.010413	spring	build/default/../../rts/System/ThreadPool.h	308	http://github.com/spring/spring/tree/master/rts/System/ThreadPool.h#L308
+[007736F7]	0.000000	0.104016	0.000000	0.006855	spring		0
+[0077351C]	0.000000	0.104016	0.000000	0.006855	spring		0
+[00772930]	0.000000	0.052001	0.000000	0.003427	spring		0
+SolidObject.cpp	0.000000	0.207994	0.000000	0.013707	spring	build/default/../../rts/Sim/Objects/SolidObject.cpp	342	http://github.com/spring/spring/tree/master/rts/Sim/Objects/SolidObject.cpp#L342
+SolidObject.cpp	0.000000	0.207995	0.000000	0.013707	spring	build/default/../../rts/Sim/Objects/SolidObject.cpp	199	http://github.com/spring/spring/tree/master/rts/Sim/Objects/SolidObject.cpp#L199
+SolidObject.cpp	0.000000	0.467956	0.000000	0.030839	spring	build/default/../../rts/Sim/Objects/SolidObject.cpp	214	http://github.com/spring/spring/tree/master/rts/Sim/Objects/SolidObject.cpp#L214
+[00770A84]	0.000000	0.052001	0.000000	0.003427	spring		0
+shared_ptr_base.h	0.000000	0.260008	0.000000	0.017135	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h	552	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h#L552
+[0077050F]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00770276]	0.000000	0.104003	0.000000	0.006854	spring		0
+[007700D4]	0.000000	0.104005	0.000000	0.006854	spring		0
+[0063DE16]	0.000000	0.052004	0.000000	0.003427	spring		0
+[00630174]	0.000000	0.104004	0.000000	0.006854	spring		0
+[0076F995]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0076BB98]	0.000000	0.104003	0.000000	0.006854	spring		0
+[0076B5FA]	0.000000	0.052003	0.000000	0.003427	spring		0
+MoveType.cpp	0.000000	0.519952	0.000000	0.034266	spring	build/default/../../rts/Sim/MoveTypes/MoveType.cpp	85	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveType.cpp#L85
+MoveType.cpp	0.000000	0.833053	0.000000	0.054900	spring	build/default/../../rts/Sim/MoveTypes/MoveType.cpp	93	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveType.cpp#L93
+MoveType.cpp	0.000000	2.600111	0.000000	0.171353	spring	build/default/../../rts/Sim/MoveTypes/MoveType.cpp	90	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveType.cpp#L90
+functional	0.000000	0.314015	0.000000	0.020694	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/functional	2029	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/functional#L2029
+[0062A0DF]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0076882D]	0.000000	0.104003	0.000000	0.006854	spring		0
+[0063E440]	0.000000	0.104004	0.000000	0.006854	spring		0
+[0063E4CD]	0.000000	0.052001	0.000000	0.003427	spring		0
+[006400A7]	0.000000	0.052003	0.000000	0.003427	spring		0
+[00650B73]	0.000000	0.052005	0.000000	0.003427	spring		0
+AdvTreeDrawer.cpp	0.000000	0.156011	0.000000	0.010281	spring	build/default/../../rts/Rendering/Env/AdvTreeDrawer.cpp	911	http://github.com/spring/spring/tree/master/rts/Rendering/Env/AdvTreeDrawer.cpp#L911
+[0065369F]	0.000000	0.052005	0.000000	0.003427	spring		0
+[00653DE8]	0.000000	0.104009	0.000000	0.006854	spring		0
+SMFGroundTextures.cpp	0.000000	0.467951	0.000000	0.030839	spring	build/default/../../rts/Map/SMF/SMFGroundTextures.cpp	380	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundTextures.cpp#L380
+[0066380C]	0.000000	0.052005	0.000000	0.003427	spring		0
+BasicSky.cpp	0.000000	0.156013	0.000000	0.010282	spring	build/default/../../rts/Rendering/Env/BasicSky.cpp	242	http://github.com/spring/spring/tree/master/rts/Rendering/Env/BasicSky.cpp#L242
+MoveMath.cpp	0.000000	0.624052	0.000000	0.041126	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	268	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L268
+[00678D85]	0.000000	0.104006	0.000000	0.006854	spring		0
+MoveMath.cpp	0.000000	0.417021	0.000000	0.027483	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	265	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L265
+CubeMapHandler.cpp	0.000000	0.312014	0.000000	0.020562	spring	build/default/../../rts/Rendering/Env/CubeMapHandler.cpp	210	http://github.com/spring/spring/tree/master/rts/Rendering/Env/CubeMapHandler.cpp#L210
+[00679469]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0067956F]	0.000000	0.104004	0.000000	0.006854	spring		0
+CubeMapHandler.cpp	0.000000	0.156010	0.000000	0.010281	spring	build/default/../../rts/Rendering/Env/CubeMapHandler.cpp	136	http://github.com/spring/spring/tree/master/rts/Rendering/Env/CubeMapHandler.cpp#L136
+[006796D2]	0.000000	0.104003	0.000000	0.006854	spring		0
+[0067FF90]	0.000000	0.104005	0.000000	0.006854	spring		0
+[00680043]	0.000000	0.104006	0.000000	0.006854	spring		0
+[00680135]	0.000000	0.104002	0.000000	0.006854	spring		0
+GrassDrawer.cpp	0.000000	0.208015	0.000000	0.013709	spring	build/default/../../rts/Rendering/Env/GrassDrawer.cpp	630	http://github.com/spring/spring/tree/master/rts/Rendering/Env/GrassDrawer.cpp#L630
+[00625B65]	0.000000	0.052004	0.000000	0.003427	spring		0
+[006864B3]	0.000000	0.052003	0.000000	0.003427	spring		0
+GrassDrawer.cpp	0.000000	0.208015	0.000000	0.013709	spring	build/default/../../rts/Rendering/Env/GrassDrawer.cpp	695	http://github.com/spring/spring/tree/master/rts/Rendering/Env/GrassDrawer.cpp#L695
+stl_list.h	0.000000	0.156010	0.000000	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h	155	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h#L155
+[0068C24D]	0.000000	0.052002	0.000000	0.003427	spring		0
+GroundDecalHandler.cpp	0.000000	1.768073	0.000000	0.116520	spring	build/default/../../rts/Rendering/Env/Decals/GroundDecalHandler.cpp	499	http://github.com/spring/spring/tree/master/rts/Rendering/Env/Decals/GroundDecalHandler.cpp#L499
+[0068D9C8]	0.000000	0.051998	0.000000	0.003427	spring		0
+GroundDecalHandler.cpp	0.000000	0.156005	0.000000	0.010281	spring	build/default/../../rts/Rendering/Env/Decals/GroundDecalHandler.cpp	568	http://github.com/spring/spring/tree/master/rts/Rendering/Env/Decals/GroundDecalHandler.cpp#L568
+[0076842B]	0.000000	0.104007	0.000000	0.006854	spring		0
+GroundDecalHandler.cpp	0.000000	1.820075	0.000000	0.119947	spring	build/default/../../rts/Rendering/Env/Decals/GroundDecalHandler.cpp	784	http://github.com/spring/spring/tree/master/rts/Rendering/Env/Decals/GroundDecalHandler.cpp#L784
+GroundDecalHandler.cpp	0.000000	0.364011	0.000000	0.023989	spring	build/default/../../rts/Rendering/Env/Decals/GroundDecalHandler.cpp	805	http://github.com/spring/spring/tree/master/rts/Rendering/Env/Decals/GroundDecalHandler.cpp#L805
+[0068E125]	0.000000	0.104015	0.000000	0.006855	spring		0
+GroundDecalHandler.cpp	0.000000	0.260018	0.000000	0.017136	spring	build/default/../../rts/Rendering/Env/Decals/GroundDecalHandler.cpp	813	http://github.com/spring/spring/tree/master/rts/Rendering/Env/Decals/GroundDecalHandler.cpp#L813
+[0068E33F]	0.000000	0.052004	0.000000	0.003427	spring		0
+[00697EEB]	0.000000	0.104006	0.000000	0.006854	spring		0
+SMFGroundTextures.cpp	0.000000	0.415947	0.000000	0.027412	spring	build/default/../../rts/Map/SMF/SMFGroundTextures.cpp	493	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundTextures.cpp#L493
+FeatureDrawer.cpp	0.000000	0.468005	0.000000	0.030843	spring	build/default/../../rts/Rendering/FeatureDrawer.cpp	340	http://github.com/spring/spring/tree/master/rts/Rendering/FeatureDrawer.cpp#L340
+FeatureDrawer.cpp	0.000000	0.416004	0.000000	0.027416	spring	build/default/../../rts/Rendering/FeatureDrawer.cpp	260	http://github.com/spring/spring/tree/master/rts/Rendering/FeatureDrawer.cpp#L260
+SMFGroundTextures.cpp	0.000000	0.311991	0.000000	0.020561	spring	build/default/../../rts/Map/SMF/SMFGroundTextures.cpp	474	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundTextures.cpp#L474
+FeatureDrawer.cpp	0.000000	0.208011	0.000000	0.013708	spring	build/default/../../rts/Rendering/FeatureDrawer.cpp	421	http://github.com/spring/spring/tree/master/rts/Rendering/FeatureDrawer.cpp#L421
+FeatureDrawer.cpp	0.000000	0.260013	0.000000	0.017135	spring	build/default/../../rts/Rendering/FeatureDrawer.cpp	403	http://github.com/spring/spring/tree/master/rts/Rendering/FeatureDrawer.cpp#L403
+[006981A5]	0.000000	0.052005	0.000000	0.003427	spring		0
+[006981FB]	0.000000	0.052003	0.000000	0.003427	spring		0
+FeatureDrawer.cpp	0.000000	0.260013	0.000000	0.017135	spring	build/default/../../rts/Rendering/FeatureDrawer.cpp	376	http://github.com/spring/spring/tree/master/rts/Rendering/FeatureDrawer.cpp#L376
+MoveMath.cpp	0.000000	2.185125	0.000000	0.144005	spring	build/default/../../rts/Sim/MoveTypes/MoveMath/MoveMath.cpp	60	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveMath/MoveMath.cpp#L60
+FeatureDrawer.cpp	0.000000	0.311996	0.000000	0.020561	spring	build/default/../../rts/Rendering/FeatureDrawer.cpp	467	http://github.com/spring/spring/tree/master/rts/Rendering/FeatureDrawer.cpp#L467
+[00698380]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00698461]	0.000000	0.052002	0.000000	0.003427	spring		0
+[006984C5]	0.000000	0.052002	0.000000	0.003427	spring		0
+[006984DD]	0.000000	0.104008	0.000000	0.006854	spring		0
+VertexArray.cpp	0.000000	1.664083	0.000000	0.109667	spring	build/default/../../rts/Rendering/GL/VertexArray.cpp	136	http://github.com/spring/spring/tree/master/rts/Rendering/GL/VertexArray.cpp#L136
+[0069D6AF]	0.000000	0.052002	0.000000	0.003427	spring		0
+VertexArray.cpp	0.000000	0.208015	0.000000	0.013709	spring	build/default/../../rts/Rendering/GL/VertexArray.cpp	275	http://github.com/spring/spring/tree/master/rts/Rendering/GL/VertexArray.cpp#L275
+[0063A72F]	0.000000	0.104007	0.000000	0.006854	spring		0
+SMFGroundDrawer.cpp	0.000000	0.522024	0.000000	0.034403	spring	build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp	432	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundDrawer.cpp#L432
+[0069DA73]	0.000000	0.052002	0.000000	0.003427	spring		0
+VertexArray.cpp	0.000000	0.156013	0.000000	0.010282	spring	build/default/../../rts/Rendering/GL/VertexArray.cpp	354	http://github.com/spring/spring/tree/master/rts/Rendering/GL/VertexArray.cpp#L354
+VertexArray.cpp	0.000000	1.196051	0.000000	0.078822	spring	build/default/../../rts/Rendering/GL/VertexArray.cpp	413	http://github.com/spring/spring/tree/master/rts/Rendering/GL/VertexArray.cpp#L413
+SMFGroundDrawer.cpp	0.000000	0.467951	0.000000	0.030839	spring	build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp	430	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundDrawer.cpp#L430
+[006A0089]	0.000000	0.104006	0.000000	0.006854	spring		0
+SMFGroundDrawer.cpp	0.000000	0.624019	0.000000	0.041124	spring	build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp	281	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundDrawer.cpp#L281
+[006A5F71]	0.000000	0.052008	0.000000	0.003427	spring		0
+[006B0028]	0.000000	0.104013	0.000000	0.006855	spring		0
+IconHandler.cpp	0.000000	0.208005	0.000000	0.013708	spring	build/default/../../rts/Rendering/IconHandler.cpp	349	http://github.com/spring/spring/tree/master/rts/Rendering/IconHandler.cpp#L349
+IconHandler.cpp	0.000000	1.197032	0.000000	0.078887	spring	build/default/../../rts/Rendering/IconHandler.cpp	350	http://github.com/spring/spring/tree/master/rts/Rendering/IconHandler.cpp#L350
+[006B55C8]	0.000000	0.103998	0.000000	0.006854	spring		0
+[006B72B0]	0.000000	0.051996	0.000000	0.003427	spring		0
+3DModel.cpp	0.000000	0.572016	0.000000	0.037697	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	116	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L116
+3DModel.cpp	0.000000	0.884048	0.000000	0.058261	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	228	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L228
+3DModel.cpp	0.000000	2.081111	0.000000	0.137150	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	241	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L241
+3DModel.cpp	0.000000	15.810831	0.000000	1.041969	spring	build/default/../../rts/Rendering/Models/3DModel.cpp	134	http://github.com/spring/spring/tree/master/rts/Rendering/Models/3DModel.cpp#L134
+[00622D4A]	0.000000	0.052002	0.000000	0.003427	spring		0
+[006BB9FF]	0.000000	0.052001	0.000000	0.003427	spring		0
+[006BC1BD]	0.000000	0.052001	0.000000	0.003427	spring		0
+[006C00B6]	0.000000	0.104007	0.000000	0.006854	spring		0
+[006C69DD]	0.000000	0.052001	0.000000	0.003427	spring		0
+[006D132D]	0.000000	0.052003	0.000000	0.003427	spring		0
+MoveDefHandler.cpp	0.000000	1.197082	0.000000	0.078890	spring	build/default/../../rts/Sim/MoveTypes/MoveDefHandler.cpp	345	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/MoveDefHandler.cpp#L345
+[006D1F34]	0.000000	0.052001	0.000000	0.003427	spring		0
+GroundMoveType.cpp	0.000000	0.260009	0.000000	0.017135	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	293	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L293
+GroundMoveType.cpp	0.000000	3.953152	0.000000	0.260521	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	293	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L293
+[006D34B6]	0.000000	0.053003	0.000000	0.003493	spring		0
+GroundMoveType.cpp	0.000000	0.312007	0.000000	0.020562	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	284	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L284
+GroundMoveType.cpp	0.000000	4.628226	0.000000	0.305010	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	284	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L284
+ProjectileDrawer.cpp	0.000000	0.156007	0.000000	0.010281	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	764	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L764
+[006D3678]	0.000000	0.052004	0.000000	0.003427	spring		0
+GroundMoveType.cpp	0.000000	0.208006	0.000000	0.013708	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	486	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L486
+GroundMoveType.cpp	0.000000	1.768132	0.000000	0.116524	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	457	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L457
+GroundMoveType.cpp	0.000000	0.208010	0.000000	0.013708	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	483	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L483
+GroundMoveType.cpp	0.000000	0.207999	0.000000	0.013708	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	483	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L483
+GroundMoveType.cpp	0.000000	2.028067	0.000000	0.133654	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	482	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L482
+[006D36A2]	0.000000	0.105008	0.000000	0.006920	spring		0
+[006D3743]	0.000000	0.052008	0.000000	0.003427	spring		0
+GroundMoveType.cpp	0.000000	0.989068	0.000000	0.065182	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	393	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L393
+SyncedFloat3.h	0.000000	1.456118	0.000000	0.095961	spring	build/default/../../rts/System/Sync/SyncedFloat3.h	43	http://github.com/spring/spring/tree/master/rts/System/Sync/SyncedFloat3.h#L43
+[00764072]	0.000000	0.104006	0.000000	0.006854	spring		0
+GroundMoveType.cpp	0.000000	0.208008	0.000000	0.013708	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1322	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1322
+ProjectileDrawer.cpp	0.000000	0.209010	0.000000	0.013774	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	504	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L504
+ProjectileDrawer.cpp	0.000000	0.521025	0.000000	0.034337	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	491	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L491
+ProjectileDrawer.cpp	0.000000	0.157010	0.000000	0.010347	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	484	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L484
+[007634E1]	0.000000	0.052001	0.000000	0.003427	spring		0
+ProjectileDrawer.cpp	0.000000	0.157010	0.000000	0.010347	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	720	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L720
+GroundMoveType.cpp	0.000000	0.156009	0.000000	0.010281	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1027	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1027
+GroundMoveType.cpp	0.000000	1.508042	0.000000	0.099383	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1022	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1022
+ProjectileDrawer.cpp	0.000000	0.677025	0.000000	0.044617	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	724	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L724
+SMFGroundDrawer.cpp	0.000000	0.364034	0.000000	0.023991	spring	build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp	297	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundDrawer.cpp#L297
+[006D3BD6]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007628DD]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007624A6]	0.000000	0.052004	0.000000	0.003427	spring		0
+ProjectileDrawer.cpp	0.000000	0.260019	0.000000	0.017136	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	470	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L470
+GroundMoveType.cpp	0.000000	0.156003	0.000000	0.010281	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	2198	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L2198
+[00761EBF]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00622A30]	0.000000	0.104004	0.000000	0.006854	spring		0
+stl_set.h	0.000000	0.416017	0.000000	0.027416	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_set.h	463	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_set.h#L463
+ProjectileDrawer.cpp	0.000000	0.260019	0.000000	0.017136	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	421	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L421
+GroundMoveType.cpp	0.000000	0.156006	0.000000	0.010281	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	2056	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L2056
+GroundMoveType.cpp	0.000000	0.311997	0.000000	0.020561	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1506	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1506
+GroundMoveType.cpp	0.000000	0.468038	0.000000	0.030845	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1505	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1505
+GroundMoveType.cpp	0.000000	0.520024	0.000000	0.034271	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1504	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1504
+[006D55C3]	0.000000	0.053003	0.000000	0.003493	spring		0
+GroundMoveType.cpp	0.000000	2.185079	0.000000	0.144002	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1504	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1504
+GroundMoveType.cpp	0.000000	0.260015	0.000000	0.017136	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1479	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1479
+[00760228]	0.000000	0.103999	0.000000	0.006854	spring		0
+stl_iterator.h	0.000000	0.260016	0.000000	0.017136	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_iterator.h	748	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_iterator.h#L748
+myMath.h	0.000000	0.260008	0.000000	0.017135	spring	build/default/../../rts/System/myMath.h	113	http://github.com/spring/spring/tree/master/rts/System/myMath.h#L113
+GroundMoveType.cpp	0.000000	0.572024	0.000000	0.037698	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1815	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1815
+[006D5630]	0.000000	0.104010	0.000000	0.006854	spring		0
+ProjectileDrawer.cpp	0.000000	0.313022	0.000000	0.020629	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	649	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L649
+[006D56FA]	0.000000	0.052010	0.000000	0.003428	spring		0
+SMFGroundDrawer.cpp	0.000000	0.260014	0.000000	0.017135	spring	build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp	245	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundDrawer.cpp#L245
+[0075EB3A]	0.000000	0.103994	0.000000	0.006853	spring		0
+[0062286C]	0.000000	0.103996	0.000000	0.006854	spring		0
+SMFGroundDrawer.cpp	0.000000	0.156009	0.000000	0.010281	spring	build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp	235	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFGroundDrawer.cpp#L235
+ProjectileDrawer.cpp	0.000000	1.248060	0.000000	0.082250	spring	build/default/../../rts/Rendering/ProjectileDrawer.cpp	657	http://github.com/spring/spring/tree/master/rts/Rendering/ProjectileDrawer.cpp#L657
+[006D5758]	0.000000	0.052003	0.000000	0.003427	spring		0
+myMath.h	0.000000	1.144047	0.000000	0.075395	spring	build/default/../../rts/System/myMath.h	113	http://github.com/spring/spring/tree/master/rts/System/myMath.h#L113
+[00622807]	0.000000	0.104000	0.000000	0.006854	spring		0
+GroundMoveType.cpp	0.000000	1.300078	0.000000	0.085678	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1520	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1520
+GroundMoveType.cpp	0.000000	1.871991	0.000000	0.123368	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	358	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L358
+[006D595F]	0.000000	0.052002	0.000000	0.003427	spring		0
+GroundMoveType.cpp	0.000000	0.936058	0.000000	0.061688	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1680	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1680
+[006D59B3]	0.000000	0.052001	0.000000	0.003427	spring		0
+GroundMoveType.cpp	0.000000	2.029132	0.000000	0.133724	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1205	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1205
+GroundMoveType.cpp	0.000000	2.029132	0.000000	0.133724	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1388	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1388
+[0075D834]	0.000000	0.052002	0.000000	0.003427	spring		0
+GroundMoveType.cpp	0.000000	1.977130	0.000000	0.130297	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	1181	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L1181
+GroundMoveType.cpp	0.000000	0.155994	0.000000	0.010280	spring	build/default/../../rts/Sim/MoveTypes/GroundMoveType.cpp	607	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/GroundMoveType.cpp#L607
+[006D59D4]	0.000000	0.052002	0.000000	0.003427	spring		0
+[697ECEEC]	0.000000	0.260017	0.000000	0.017136	nvoglv32		0
+[0062F49E]	0.000000	0.051995	0.000000	0.003427	spring		0
+[0075B5BD]	0.000000	0.104006	0.000000	0.006854	spring		0
+StrafeAirMoveType.cpp	0.000000	0.260012	0.000000	0.017135	spring	build/default/../../rts/Sim/MoveTypes/StrafeAirMoveType.cpp	786	http://github.com/spring/spring/tree/master/rts/Sim/MoveTypes/StrafeAirMoveType.cpp#L786
+[697EE7AC]	0.000000	0.260018	0.000000	0.017136	nvoglv32		0
+[00750E16]	0.000000	0.052003	0.000000	0.003427	spring		0
+[697EE851]	0.000000	0.676023	0.000000	0.044551	nvoglv32		0
+[00750BA5]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0074EC79]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0062013B]	0.000000	0.052001	0.000000	0.003427	spring		0
+[697EE8B8]	0.000000	0.312015	0.000000	0.020562	nvoglv32		0
+[697F1131]	0.000000	0.104008	0.000000	0.006854	nvoglv32		0
+[697F1CD3]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+[0074019C]	0.000000	0.104004	0.000000	0.006854	spring		0
+[007400D8]	0.000000	0.104006	0.000000	0.006854	spring		0
+[007400BA]	0.000000	0.104004	0.000000	0.006854	spring		0
+RadarHandler.cpp	0.000000	0.157028	0.000000	0.010348	spring	build/default/../../rts/Sim/Misc/RadarHandler.cpp	117	http://github.com/spring/spring/tree/master/rts/Sim/Misc/RadarHandler.cpp#L117
+stl_vector.h	0.000000	0.364010	0.000000	0.023989	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	771	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L771
+RadarHandler.cpp	0.000000	0.156006	0.000000	0.010281	spring	build/default/../../rts/Sim/Misc/RadarHandler.cpp	114	http://github.com/spring/spring/tree/master/rts/Sim/Misc/RadarHandler.cpp#L114
+[0073E442]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0073E2F9]	0.000000	0.104007	0.000000	0.006854	spring		0
+[0073E1CA]	0.000000	0.052005	0.000000	0.003427	spring		0
+[0073E190]	0.000000	0.052002	0.000000	0.003427	spring		0
+[6980A53A]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6980A94B]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6980B5A2]	0.000000	0.156002	0.000000	0.010281	nvoglv32		0
+[6980BA2C]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[69817E77]	0.000000	0.728037	0.000000	0.047979	nvoglv32		0
+[69817E84]	0.000000	26.159576	0.000000	1.723974	nvoglv32		0
+Patch.cpp	0.000000	0.156013	0.000000	0.010282	spring	build/default/../../rts/Map/SMF/ROAM/Patch.cpp	361	http://github.com/spring/spring/tree/master/rts/Map/SMF/ROAM/Patch.cpp#L361
+[0061D302]	0.000000	0.052000	0.000000	0.003427	spring		0
+QuadField.cpp	0.000000	0.260016	0.000000	0.017136	spring	build/default/../../rts/Sim/Misc/QuadField.cpp	760	http://github.com/spring/spring/tree/master/rts/Sim/Misc/QuadField.cpp#L760
+[69817EE7]	0.000000	6.188380	0.000000	0.407828	nvoglv32		0
+[0073DA67]	0.000000	0.052002	0.000000	0.003427	spring		0
+[698198CC]	0.000000	101.107982	0.000000	6.663239	nvoglv32		0
+QuadField.cpp	0.000000	0.208006	0.000000	0.013708	spring	build/default/../../rts/Sim/Misc/QuadField.cpp	618	http://github.com/spring/spring/tree/master/rts/Sim/Misc/QuadField.cpp#L618
+[0073C3F2]	0.000000	0.052002	0.000000	0.003427	spring		0
+[6982813A]	0.000000	0.104004	0.000000	0.006854	nvoglv32		0
+[6982A92D]	0.000000	0.260018	0.000000	0.017136	nvoglv32		0
+[6982B25B]	0.000000	0.468024	0.000000	0.030844	nvoglv32		0
+[6982CCC2]	0.000000	0.104002	0.000000	0.006854	nvoglv32		0
+[6982DF73]	0.000000	0.051998	0.000000	0.003427	nvoglv32		0
+[0073C318]	0.000000	0.051992	0.000000	0.003426	spring		0
+[0073C19E]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0073C17B]	0.000000	0.052002	0.000000	0.003427	spring		0
+[008544AE]	0.000000	0.052001	0.000000	0.003427	spring		0
+EventHandler.cpp	0.000000	0.988066	0.000000	0.065116	spring	build/default/../../rts/System/EventHandler.cpp	280	http://github.com/spring/spring/tree/master/rts/System/EventHandler.cpp#L280
+[0061D28A]	0.000000	0.052002	0.000000	0.003427	spring		0
+[6916D67F]	0.000000	0.052006	0.000000	0.003427	nvoglv32		0
+[6916D3FE]	0.000000	0.156004	0.000000	0.010281	nvoglv32		0
+[6916D3D4]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[6916C2F3]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[00855E1E]	0.000000	0.104017	0.000000	0.006855	spring		0
+[69168CE8]	0.000000	0.052027	0.000000	0.003429	nvoglv32		0
+[69167F69]	0.000000	1.561041	0.000000	0.102876	nvoglv32		0
+[69167F4B]	0.000000	0.156009	0.000000	0.010281	nvoglv32		0
+[6916798E]	0.000000	0.104005	0.000000	0.006854	nvoglv32		0
+[6916765D]	0.000000	0.155996	0.000000	0.010280	nvoglv32		0
+lwm_win32_cs.hpp	0.000000	0.208017	0.000000	0.013709	spring	/slave/mingwlibs/include/boost/signals2/detail/lwm_win32_cs.hpp	101	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/signals2/detail/lwm_win32_cs.hpp#L101
+[00863FDB]	0.000000	0.104006	0.000000	0.006854	spring		0
+Main.cpp	0.000000	84.101096	0.000000	5.542448	spring	build/default/../../rts/System/Main.cpp	64	http://github.com/spring/spring/tree/master/rts/System/Main.cpp#L64
+[69166DCF]	0.000000	0.208010	0.000000	0.013708	nvoglv32		0
+Main.cpp	0.000000	84.101096	0.000000	5.542448	spring	build/default/../../rts/System/Main.cpp	132	http://github.com/spring/spring/tree/master/rts/System/Main.cpp#L132
+[69166A56]	0.000000	0.104005	0.000000	0.006854	nvoglv32		0
+[0087220D]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0087221B]	0.000000	0.052005	0.000000	0.003427	spring		0
+[00872237]	0.000000	0.103994	0.000000	0.006853	spring		0
+[006101B7]	0.000000	0.052005	0.000000	0.003427	spring		0
+[008724D4]	0.000000	0.104008	0.000000	0.006854	spring		0
+[008725AC]	0.000000	0.052013	0.000000	0.003428	spring		0
+[0088009C]	0.000000	0.104008	0.000000	0.006854	spring		0
+optional.hpp	0.000000	48.885465	0.000000	3.221660	spring	/slave/mingwlibs/include/boost/optional/optional.hpp	438	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/optional/optional.hpp#L438
+[69165719]	0.000000	0.051998	0.000000	0.003427	nvoglv32		0
+[69163407]	0.000000	0.936015	0.000000	0.061685	nvoglv32		0
+[691631F9]	0.000000	0.884017	0.000000	0.058259	nvoglv32		0
+[69162FBB]	0.000000	0.051998	0.000000	0.003427	nvoglv32		0
+[691606E5]	0.000000	0.936015	0.000000	0.061685	nvoglv32		0
+[6915E36E]	0.000000	0.156019	0.000000	0.010282	nvoglv32		0
+[6915E357]	0.000000	1.561052	0.000000	0.102877	nvoglv32		0
+[6915DE60]	0.000000	0.103996	0.000000	0.006854	nvoglv32		0
+[6915C090]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6915C078]	0.000000	0.104002	0.000000	0.006854	nvoglv32		0
+[6915BCBA]	0.000000	0.052003	0.000000	0.003427	nvoglv32		0
+[6915BCA8]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[6915B1D5]	0.000000	0.156017	0.000000	0.010282	nvoglv32		0
+SpringApp.cpp	0.000000	34.019607	0.000000	2.241967	spring	build/default/../../rts/System/SpringApp.cpp	966	http://github.com/spring/spring/tree/master/rts/System/SpringApp.cpp#L966
+[69159BE8]	0.000000	0.156002	0.000000	0.010281	nvoglv32		0
+[69157FC4]	0.000000	0.051998	0.000000	0.003427	nvoglv32		0
+[6915592D]	0.000000	0.052003	0.000000	0.003427	nvoglv32		0
+[008900E7]	0.000000	0.104005	0.000000	0.006854	spring		0
+[008900EE]	0.000000	0.052005	0.000000	0.003427	spring		0
+SpringApp.cpp	0.000000	84.049091	0.000000	5.539021	spring	build/default/../../rts/System/SpringApp.cpp	1041	http://github.com/spring/spring/tree/master/rts/System/SpringApp.cpp#L1041
+SDL_LoadWAV_RW	0.000000	1.196024	0.000000	0.078821	SDL	[unknown]	0
+alcCaptureOpenDevice	0.000000	1.822057	0.000000	0.120078	OpenAL32	[unknown]	0
+[0089FB53]	0.000000	0.052002	0.000000	0.003427	spring		0
+alSourcef	0.000000	0.051997	0.000000	0.003427	OpenAL32	[unknown]	0
+alSourceStopv	0.000000	0.052996	0.000000	0.003493	OpenAL32	[unknown]	0
+alSourceStop	0.000000	0.052996	0.000000	0.003493	OpenAL32	[unknown]	0
+exception.hpp	0.000000	0.208013	0.000000	0.013709	spring	/slave/mingwlibs/include/boost/exception/exception.hpp	208	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/exception/exception.hpp#L208
+alIsSource	0.000000	0.052011	0.000000	0.003428	OpenAL32	[unknown]	0
+alGetSourcei	0.000000	0.052011	0.000000	0.003428	OpenAL32	[unknown]	0
+[008A0589]	0.000000	0.052002	0.000000	0.003427	spring		0
+wglSwapLayerBuffers	0.000000	0.051997	0.000000	0.003427	OPENGL32	[unknown]	0
+alEnable	0.000000	1.874060	0.000000	0.123505	OpenAL32	[unknown]	0
+wglGetProcAddress	0.000000	1.144027	0.000000	0.075394	OPENGL32	[unknown]	0
+wglSwapBuffers	0.000000	1.196024	0.000000	0.078821	OPENGL32	[unknown]	0
+[008A05A3]	0.000000	0.103997	0.000000	0.006854	spring		0
+lock_types.hpp	0.000000	0.156004	0.000000	0.010281	spring	/slave/mingwlibs/include/boost/thread/lock_types.hpp	327	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/thread/lock_types.hpp#L327
+[008A0E98]	0.000000	0.052004	0.000000	0.003427	spring		0
+c_time.hpp	0.000000	0.416019	0.000000	0.027417	spring	/slave/mingwlibs/include/boost/date_time/c_time.hpp	111	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/date_time/c_time.hpp#L111
+[FFEEFFEE]	0.000000	0.052002	0.000000	0.003427	MSVCR71		0
+DllGetClassObject	0.000000	101.159985	0.000000	6.666666	MMDevApi	[unknown]	0
+WaitForSingleObjectEx	0.000000	0.052002	0.000000	0.003427	KERNELBASE	[unknown]	0
+Ordinal14	0.000000	101.159985	0.000000	6.666666	MMDevApi	[unknown]	0
+intrusive_ptr.hpp	0.000000	0.416015	0.000000	0.027416	spring	/slave/mingwlibs/include/boost/smart_ptr/intrusive_ptr.hpp	90	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/smart_ptr/intrusive_ptr.hpp#L90
+[008A1256]	0.000000	0.103993	0.000000	0.006853	spring		0
+lock_types.hpp	0.000000	0.156019	0.000000	0.010282	spring	/slave/mingwlibs/include/boost/thread/lock_types.hpp	450	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/thread/lock_types.hpp#L450
+condition_variable.hpp	0.000000	0.520029	0.000000	0.034271	spring	/slave/mingwlibs/include/boost/thread/win32/condition_variable.hpp	160	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/thread/win32/condition_variable.hpp#L160
+[008A138B]	0.000000	0.052001	0.000000	0.003427	spring		0
+shared_ptr_base.h	0.000000	0.208006	0.000000	0.013708	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h	553	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h#L553
+ReleaseMutex	0.000000	0.052003	0.000000	0.003427	KERNELBASE	[unknown]	0
+greg_date.hpp	0.000000	0.208006	0.000000	0.013708	spring	/slave/mingwlibs/include/boost/date_time/gregorian/greg_date.hpp	59	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/date_time/gregorian/greg_date.hpp#L59
+basic_string.h	0.000000	0.312004	0.000000	0.020562	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h	409	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h#L409
+TimeProfiler.cpp	0.000000	0.156009	0.000000	0.010281	spring	build/default/../../rts/System/TimeProfiler.cpp	36	http://github.com/spring/spring/tree/master/rts/System/TimeProfiler.cpp#L36
+SwapBuffers	0.000000	1.196024	0.000000	0.078821	GDI32	[unknown]	0
+[008A3357]	0.000000	0.104002	0.000000	0.006854	spring		0
+[008A3397]	0.000000	0.052016	0.000000	0.003428	spring		0
+[3AC4286C]	0.000000	0.052002	0.000000	0.003427	DevIL		0
+[004A0E38]	0.000000	0.103996	0.000000	0.006854	spring		0
+MiniMap.cpp	0.000000	0.520011	0.000000	0.034270	spring	build/default/../../rts/Game/UI/MiniMap.cpp	1164	http://github.com/spring/spring/tree/master/rts/Game/UI/MiniMap.cpp#L1164
+MiniMap.cpp	0.000000	0.468033	0.000000	0.030844	spring	build/default/../../rts/Game/UI/MiniMap.cpp	1144	http://github.com/spring/spring/tree/master/rts/Game/UI/MiniMap.cpp#L1144
+[0049F326]	0.000000	0.052008	0.000000	0.003427	spring		0
+[004900BD]	0.000000	0.104005	0.000000	0.006854	spring		0
+[00490060]	0.000000	0.104000	0.000000	0.006854	spring		0
+[0048C389]	0.000000	0.104017	0.000000	0.006855	spring		0
+[00489622]	0.000000	0.052002	0.000000	0.003427	spring		0
+[008A3458]	0.000000	0.052002	0.000000	0.003427	spring		0
+[004879AE]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00480EFA]	0.000000	0.052016	0.000000	0.003428	spring		0
+[004800D4]	0.000000	0.052004	0.000000	0.003427	spring		0
+[0047A317]	0.000000	0.104003	0.000000	0.006854	spring		0
+[00475616]	0.000000	0.052001	0.000000	0.003427	spring		0
+[004750C2]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00474FFD]	0.000000	0.104003	0.000000	0.006854	spring		0
+[0045E03B]	0.000000	0.052004	0.000000	0.003427	spring		0
+[0045CBC0]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0045C5A6]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0045C2D8]	0.000000	0.052003	0.000000	0.003427	spring		0
+SelectedUnitsAI.cpp	0.000000	0.157012	0.000000	0.010347	spring	build/default/../../rts/Game/SelectedUnitsAI.cpp	84	http://github.com/spring/spring/tree/master/rts/Game/SelectedUnitsAI.cpp#L84
+[00450C48]	0.000000	0.052004	0.000000	0.003427	spring		0
+[00450064]	0.000000	0.052006	0.000000	0.003427	spring		0
+SelectedUnitsHandler.cpp	0.000000	0.260000	0.000000	0.017135	spring	build/default/../../rts/Game/SelectedUnitsHandler.cpp	634	http://github.com/spring/spring/tree/master/rts/Game/SelectedUnitsHandler.cpp#L634
+stl_vector.h	0.000000	0.157012	0.000000	0.010347	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	771	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L771
+[00440073]	0.000000	0.104004	0.000000	0.006854	spring		0
+[6980B7B0]	0.000000	0.156002	0.000000	0.010281	nvoglv32		0
+[004360D4]	0.000000	0.104002	0.000000	0.006854	spring		0
+GameHelper.cpp	0.000000	0.156008	0.000000	0.010281	spring	build/default/../../rts/Game/GameHelper.cpp	329	http://github.com/spring/spring/tree/master/rts/Game/GameHelper.cpp#L329
+[00435F36]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00434E2C]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00434DB8]	0.000000	0.052001	0.000000	0.003427	spring		0
+[004339B0]	0.000000	0.052003	0.000000	0.003427	spring		0
+TimeProfiler.cpp	0.000000	0.520038	0.000000	0.034272	spring	build/default/../../rts/System/TimeProfiler.cpp	93	http://github.com/spring/spring/tree/master/rts/System/TimeProfiler.cpp#L93
+stl_tree.h	0.000000	0.520015	0.000000	0.034270	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h	1792	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h#L1792
+[008A3F6D]	0.000000	0.103989	0.000000	0.006853	spring		0
+[008A3F85]	0.000000	0.052003	0.000000	0.003427	spring		0
+TimeProfiler.cpp	0.000000	0.520019	0.000000	0.034270	spring	build/default/../../rts/System/TimeProfiler.cpp	108	http://github.com/spring/spring/tree/master/rts/System/TimeProfiler.cpp#L108
+[697BEDBA]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[008A4031]	0.000000	0.052001	0.000000	0.003427	spring		0
+[008A408D]	0.000000	0.051996	0.000000	0.003427	spring		0
+[697A55CA]	0.000000	0.104000	0.000000	0.006854	nvoglv32		0
+[008A54ED]	0.000000	0.052004	0.000000	0.003427	spring		0
+[008B008A]	0.000000	0.104005	0.000000	0.006854	spring		0
+GameHelper.cpp	0.000000	0.208002	0.000000	0.013708	spring	build/default/../../rts/Game/GameHelper.cpp	657	http://github.com/spring/spring/tree/master/rts/Game/GameHelper.cpp#L657
+[00432342]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00431EC4]	0.000000	0.104003	0.000000	0.006854	spring		0
+Util.h	0.000000	0.208008	0.000000	0.013708	spring	build/default/../../rts/System/Util.h	168	http://github.com/spring/spring/tree/master/rts/System/Util.h#L168
+[00430016]	0.000000	0.052001	0.000000	0.003427	spring		0
+Game.cpp	0.000000	47.845397	0.000000	3.153117	spring	build/default/../../rts/Game/Game.cpp	975	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L975
+Game.cpp	0.000000	1.040068	0.000000	0.068543	spring	build/default/../../rts/Game/Game.cpp	280	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L280
+Game.cpp	0.000000	0.208016	0.000000	0.013709	spring	build/default/../../rts/Game/Game.cpp	1297	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1297
+Game.h	0.000000	8.064402	0.000000	0.531462	spring	build/default/../../rts/Game/Game.h	103	http://github.com/spring/spring/tree/master/rts/Game/Game.h#L103
+Game.cpp	0.000000	20.960085	0.000000	1.381316	spring	build/default/../../rts/Game/Game.cpp	1275	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1275
+Game.cpp	0.000000	0.156002	0.000000	0.010281	spring	build/default/../../rts/Game/Game.cpp	1414	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1414
+[0042A8CD]	0.000000	0.052003	0.000000	0.003427	spring		0
+Game.cpp	0.000000	0.416020	0.000000	0.027417	spring	build/default/../../rts/Game/Game.cpp	1227	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1227
+Game.cpp	0.000000	1.352023	0.000000	0.089101	spring	build/default/../../rts/Game/Game.cpp	1217	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1217
+Game.cpp	0.000000	2.811056	0.000000	0.185255	spring	build/default/../../rts/Game/Game.cpp	1167	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1167
+Game.cpp	0.000000	1.093977	0.000000	0.072095	spring	build/default/../../rts/Game/Game.cpp	1084	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1084
+Game.cpp	0.000000	0.469016	0.000000	0.030909	spring	build/default/../../rts/Game/Game.cpp	1109	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1109
+[0042A138]	0.000000	0.052001	0.000000	0.003427	spring		0
+Game.cpp	0.000000	1.144059	0.000000	0.075396	spring	build/default/../../rts/Game/Game.cpp	1081	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1081
+Game.cpp	0.000000	2.548134	0.000000	0.167928	spring	build/default/../../rts/Game/Game.cpp	1594	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1594
+Game.cpp	0.000000	1.456084	0.000000	0.095959	spring	build/default/../../rts/Game/Game.cpp	1593	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1593
+[004262CD]	0.000000	0.104000	0.000000	0.006854	spring		0
+Game.cpp	0.000000	1.976101	0.000000	0.130229	spring	build/default/../../rts/Game/Game.cpp	1592	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1592
+Game.cpp	0.000000	27.773341	0.000000	1.830324	spring	build/default/../../rts/Game/Game.cpp	1591	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1591
+Game.cpp	0.000000	13.466718	0.000000	0.887486	spring	build/default/../../rts/Game/Game.cpp	1590	http://github.com/spring/spring/tree/master/rts/Game/Game.cpp#L1590
+[004200B1]	0.000000	0.104003	0.000000	0.006854	spring		0
+[00420002]	0.000000	0.104003	0.000000	0.006854	spring		0
+[00410034]	0.000000	0.103999	0.000000	0.006854	spring		0
+[00410024]	0.000000	0.104003	0.000000	0.006854	spring		0
+[004059A5]	0.000000	0.104000	0.000000	0.006854	spring		0
+FileHandler.cpp	0.000000	0.156008	0.000000	0.010281	spring	build/default/../../rts/System/FileSystem/FileHandler.cpp	265	http://github.com/spring/spring/tree/master/rts/System/FileSystem/FileHandler.cpp#L265
+crtexe.c	0.000000	84.101096	0.000000	5.542448	spring	crtexe.c	0	http://github.com/spring/spring/tree/master/crtexe.c#L0
+[698CC3EE]	0.000000	0.051993	0.000000	0.003426	nvoglv32		0
+[697A54AA]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+[006100CC]	0.000000	0.104004	0.000000	0.006854	spring		0
+[69859953]	0.000000	0.051995	0.000000	0.003427	nvoglv32		0
+??	0.000000	0.364034	0.000000	0.023991	spring	??	0	http://github.com/spring/spring/tree/master/??#L0
+[69839A68]	0.000000	0.052001	0.000000	0.003427	nvoglv32		0
+[0061009F]	0.000000	0.104007	0.000000	0.006854	spring		0
+??	0.000000	0.832029	0.000000	0.054833	spring	??	0	http://github.com/spring/spring/tree/master/??#L0
+[09B84C98]	0.000000	0.052003	0.000000	0.003427	spring		0
+skirmishAiCallback_WeaponDef_getSize	0.000000	0.103996	0.000000	0.006854	spring	[unknown]	0
+[698346E3]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[697A48E1]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+[6982F833]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6982F719]	0.000000	0.104011	0.000000	0.006855	nvoglv32		0
+[696E8533]	0.000000	0.104007	0.000000	0.006854	nvoglv32		0
+RtlEncodePointer	0.000000	0.676050	0.000000	0.044553	ntdll	[unknown]	0
+Patch.cpp	0.000000	0.156013	0.000000	0.010282	spring	build/default/../../rts/Map/SMF/ROAM/Patch.cpp	367	http://github.com/spring/spring/tree/master/rts/Map/SMF/ROAM/Patch.cpp#L367
+[696E7C43]	0.000000	0.052007	0.000000	0.003427	nvoglv32		0
+RtlFreeHeap	0.000000	0.988043	0.000000	0.065114	ntdll	[unknown]	0
+[696E6A71]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+RtlUnlockHeap	0.000000	0.052002	0.000000	0.003427	ntdll	[unknown]	0
+[697A47AC]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+RtlInitUnicodeString	0.000000	7.124368	0.000000	0.469512	ntdll	[unknown]	0
+RtlInterlockedFlushSList	0.000000	0.104002	0.000000	0.006854	ntdll	[unknown]	0
+DrvDeleteContext	0.000000	0.052005	0.000000	0.003427	nvoglv32	[unknown]	0
+DrvSwapBuffers	0.000000	1.144027	0.000000	0.075394	nvoglv32	[unknown]	0
+DrvSwapLayerBuffers	0.000000	1.144027	0.000000	0.075394	nvoglv32	[unknown]	0
+[69682F8E]	0.000000	0.676024	0.000000	0.044551	nvoglv32		0
+[69682F6B]	0.000000	0.988050	0.000000	0.065115	nvoglv32		0
+[69682F63]	0.000000	0.104006	0.000000	0.006854	nvoglv32		0
+SMFRenderState.cpp	0.000000	0.156005	0.000000	0.010281	spring	build/default/../../rts/Map/SMF/SMFRenderState.cpp	449	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFRenderState.cpp#L449
+[734F12BA]	0.000000	0.104005	0.000000	0.006854	dsound		0
+Patch.cpp	0.000000	0.156013	0.000000	0.010282	spring	build/default/../../rts/Map/SMF/ROAM/Patch.cpp	367	http://github.com/spring/spring/tree/master/rts/Map/SMF/ROAM/Patch.cpp#L367
+[69682EEB]	0.000000	0.416027	0.000000	0.027417	nvoglv32		0
+[734F12DA]	0.000000	202.423964	0.000000	13.340186	dsound		0
+[734F28CD]	0.000000	0.052003	0.000000	0.003427	dsound		0
+[697A462B]	0.000000	0.104000	0.000000	0.006854	nvoglv32		0
+[734F28DC]	0.000000	0.156010	0.000000	0.010281	dsound		0
+[69246276]	0.000000	0.052005	0.000000	0.003427	nvoglv32		0
+[69242BCE]	0.000000	0.052006	0.000000	0.003427	nvoglv32		0
+[6924281C]	0.000000	0.052008	0.000000	0.003427	nvoglv32		0
+[6923BA7F]	0.000000	1.821060	0.000000	0.120012	nvoglv32		0
+[0063AE1F]	0.000000	0.104009	0.000000	0.006854	spring		0
+[6921B939]	0.000000	0.156006	0.000000	0.010281	nvoglv32		0
+[6921B91E]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[6921AB77]	0.000000	0.156016	0.000000	0.010282	nvoglv32		0
+[6921A467]	0.000000	0.052001	0.000000	0.003427	nvoglv32		0
+[692183F5]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[69217E0D]	0.000000	0.208008	0.000000	0.013708	nvoglv32		0
+[69217793]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[69217474]	0.000000	0.104006	0.000000	0.006854	nvoglv32		0
+[6921734F]	0.000000	0.051999	0.000000	0.003427	nvoglv32		0
+[69212AC9]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[69211DC1]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+[734F29AE]	0.000000	101.159974	0.000000	6.666665	dsound		0
+[69210BDB]	0.000000	0.156010	0.000000	0.010281	nvoglv32		0
+[697A3549]	0.000000	0.103996	0.000000	0.006854	nvoglv32		0
+[734F2D94]	0.000000	101.159974	0.000000	6.666665	dsound		0
+[6920B084]	0.000000	0.260011	0.000000	0.017135	nvoglv32		0
+[734F2E13]	0.000000	202.319959	0.000000	13.333332	dsound		0
+[007F35EA]	0.000000	0.052004	0.000000	0.003427	spring		0
+[734F37FA]	0.000000	0.052010	0.000000	0.003428	dsound		0
+CobInstance.cpp	0.000000	0.416034	0.000000	0.027418	spring	build/default/../../rts/Sim/Units/Scripts/CobInstance.cpp	408	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobInstance.cpp#L408
+[007F3212]	0.000000	0.052014	0.000000	0.003428	spring		0
+[0063AE67]	0.000000	0.052004	0.000000	0.003427	spring		0
+CobInstance.cpp	0.000000	0.468048	0.000000	0.030845	spring	build/default/../../rts/Sim/Units/Scripts/CobInstance.cpp	582	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobInstance.cpp#L582
+[0063AF37]	0.000000	0.052001	0.000000	0.003427	spring		0
+[007F2EF2]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007F2D87]	0.000000	0.104008	0.000000	0.006854	spring		0
+[007F2A31]	0.000000	0.052001	0.000000	0.003427	spring		0
+CobInstance.cpp	0.000000	0.208010	0.000000	0.013708	spring	build/default/../../rts/Sim/Units/Scripts/CobInstance.cpp	500	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobInstance.cpp#L500
+[007F2923]	0.000000	0.052003	0.000000	0.003427	spring		0
+CobInstance.cpp	0.000000	0.312040	0.000000	0.020564	spring	build/default/../../rts/Sim/Units/Scripts/CobInstance.cpp	492	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobInstance.cpp#L492
+[734F398B]	0.000000	0.052010	0.000000	0.003428	dsound		0
+stl_heap.h	0.000000	0.260024	0.000000	0.017136	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_heap.h	341	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_heap.h#L341
+CobEngine.cpp	0.000000	1.092054	0.000000	0.071969	spring	build/default/../../rts/Sim/Units/Scripts/CobEngine.cpp	91	http://github.com/spring/spring/tree/master/rts/Sim/Units/Scripts/CobEngine.cpp#L91
+MobileCAI.cpp	0.000000	0.416030	0.000000	0.027417	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	402	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L402
+MobileCAI.cpp	0.000000	0.417035	0.000000	0.027484	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	400	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L400
+[007E9D62]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007E7FEC]	0.000000	0.104008	0.000000	0.006854	spring		0
+[007E7C6D]	0.000000	0.052004	0.000000	0.003427	spring		0
+[734F39E9]	0.000000	0.052010	0.000000	0.003428	dsound		0
+[007E73F9]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007E7194]	0.000000	0.052005	0.000000	0.003427	spring		0
+MobileCAI.cpp	0.000000	0.156012	0.000000	0.010282	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	566	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L566
+[007E6EC4]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007E6211]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007E5179]	0.000000	0.052003	0.000000	0.003427	spring		0
+MobileCAI.cpp	0.000000	0.417026	0.000000	0.027483	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	272	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L272
+CommandAI.h	0.000000	0.208017	0.000000	0.013709	spring	build/default/../../rts/Sim/Units/CommandAI/CommandAI.h	150	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/CommandAI.h#L150
+[007E3956]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007E330B]	0.000000	0.052002	0.000000	0.003427	spring		0
+MobileCAI.cpp	0.000000	0.156014	0.000000	0.010282	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	441	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L441
+MobileCAI.cpp	0.000000	0.417035	0.000000	0.027484	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	434	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L434
+MobileCAI.cpp	0.000000	0.989068	0.000000	0.065182	spring	build/default/../../rts/Sim/Units/CommandAI/MobileCAI.cpp	958	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/MobileCAI.cpp#L958
+CommandAI.cpp	0.000000	0.417026	0.000000	0.027483	spring	build/default/../../rts/Sim/Units/CommandAI/CommandAI.cpp	843	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/CommandAI.cpp#L843
+CommandAI.cpp	0.000000	0.728044	0.000000	0.047980	spring	build/default/../../rts/Sim/Units/CommandAI/CommandAI.cpp	1462	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/CommandAI.cpp#L1462
+[007D750E]	0.000000	0.104004	0.000000	0.006854	spring		0
+CommandAI.cpp	0.000000	0.364025	0.000000	0.023990	spring	build/default/../../rts/Sim/Units/CommandAI/CommandAI.cpp	1343	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/CommandAI.cpp#L1343
+[734F4248]	0.000000	0.780030	0.000000	0.051406	dsound		0
+[007D3B41]	0.000000	0.104007	0.000000	0.006854	spring		0
+[007D146F]	0.000000	0.052007	0.000000	0.003427	spring		0
+[007D1436]	0.000000	0.104006	0.000000	0.006854	spring		0
+BuilderCAI.cpp	0.000000	0.572012	0.000000	0.037697	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	1251	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L1251
+BuilderCAI.cpp	0.000000	0.156004	0.000000	0.010281	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	1211	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L1211
+[007D0B67]	0.000000	0.052034	0.000000	0.003429	spring		0
+BuilderCAI.cpp	0.000000	0.572012	0.000000	0.037697	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	729	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L729
+BuilderCAI.cpp	0.000000	0.260002	0.000000	0.017135	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	728	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L728
+BuilderCAI.cpp	0.000000	0.572019	0.000000	0.037697	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	752	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L752
+[007D088E]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007CFEAC]	0.000000	0.052001	0.000000	0.003427	spring		0
+BuilderCAI.cpp	0.000000	1.092056	0.000000	0.071969	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	487	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L487
+[007CEC7E]	0.000000	0.052001	0.000000	0.003427	spring		0
+BuilderCAI.cpp	0.000000	0.156023	0.000000	0.010282	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	490	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L490
+BuilderCAI.cpp	0.000000	0.884029	0.000000	0.058259	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	493	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L493
+[007CE84A]	0.000000	0.052001	0.000000	0.003427	spring		0
+[007CDEA8]	0.000000	0.052013	0.000000	0.003428	spring		0
+[007CDE6E]	0.000000	0.052013	0.000000	0.003428	spring		0
+[007CDD6F]	0.000000	0.052007	0.000000	0.003427	spring		0
+[007CDCFE]	0.000000	0.052013	0.000000	0.003428	spring		0
+[007CD9A1]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007CD3E3]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007CD3AC]	0.000000	0.052004	0.000000	0.003427	spring		0
+[734F4280]	0.000000	100.379956	0.000000	6.615261	dsound		0
+[007CC5CF]	0.000000	0.052002	0.000000	0.003427	spring		0
+[734F49EA]	0.000000	0.780030	0.000000	0.051406	dsound		0
+[734F4B0A]	0.000000	0.780030	0.000000	0.051406	dsound		0
+BuilderCAI.cpp	0.000000	0.156004	0.000000	0.010281	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	460	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L460
+[007CB611]	0.000000	0.052007	0.000000	0.003427	spring		0
+[007CB5DB]	0.000000	0.052013	0.000000	0.003428	spring		0
+[007CAFA4]	0.000000	0.052003	0.000000	0.003427	spring		0
+BuilderCAI.cpp	0.000000	0.260012	0.000000	0.017135	spring	build/default/../../rts/Sim/Units/CommandAI/BuilderCAI.cpp	274	http://github.com/spring/spring/tree/master/rts/Sim/Units/CommandAI/BuilderCAI.cpp#L274
+[007C9916]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007C982A]	0.000000	0.052004	0.000000	0.003427	spring		0
+[007C97EF]	0.000000	0.052004	0.000000	0.003427	spring		0
+[007C6F38]	0.000000	0.052004	0.000000	0.003427	spring		0
+[007C5FCA]	0.000000	0.052013	0.000000	0.003428	spring		0
+WeaponProjectile.cpp	0.000000	0.208009	0.000000	0.013708	spring	build/default/../../rts/Sim/Projectiles/WeaponProjectiles/WeaponProjectile.cpp	187	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/WeaponProjectiles/WeaponProjectile.cpp#L187
+[007C55FF]	0.000000	0.052013	0.000000	0.003428	spring		0
+WeaponProjectile.cpp	0.000000	0.156009	0.000000	0.010281	spring	build/default/../../rts/Sim/Projectiles/WeaponProjectiles/WeaponProjectile.cpp	220	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/WeaponProjectiles/WeaponProjectile.cpp#L220
+[007C4C84]	0.000000	0.052000	0.000000	0.003427	spring		0
+[007C4BF2]	0.000000	0.104008	0.000000	0.006854	spring		0
+[734F4FC3]	0.000000	101.159986	0.000000	6.666666	dsound		0
+[007BB93B]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007BB7CB]	0.000000	0.052000	0.000000	0.003427	spring		0
+[007BB665]	0.000000	0.052002	0.000000	0.003427	spring		0
+[007B127D]	0.000000	0.052013	0.000000	0.003428	spring		0
+[734F620F]	0.000000	0.052003	0.000000	0.003427	dsound		0
+PathEstimator.cpp	0.000000	8.682495	0.000000	0.572196	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	372	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L372
+[734F695F]	0.000000	0.780030	0.000000	0.051406	dsound		0
+[734F6C4B]	0.000000	0.780030	0.000000	0.051406	dsound		0
+BaseThreadInitThunk	0.000000	792.426259	0.000000	52.222639	kernel32	[unknown]	0
+[697A2F7B]	0.000000	0.155996	0.000000	0.010280	nvoglv32		0
+[697A2F66]	0.000000	0.104006	0.000000	0.006854	nvoglv32		0
+[697A2EF1]	0.000000	0.052006	0.000000	0.003427	nvoglv32		0
+[697A261F]	0.000000	0.052006	0.000000	0.003427	nvoglv32		0
+SetThreadAffinityMask	0.000000	0.257279	0.000000	0.016955	kernel32	[unknown]	0
+stl_list.h	0.000000	0.208011	0.000000	0.013708	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h	1016	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_list.h#L1016
+[00776B66]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00776B90]	0.000000	0.052003	0.000000	0.003427	spring		0
+GfxProjectile.cpp	0.000000	0.260006	0.000000	0.017135	spring	build/default/../../rts/Sim/Projectiles/Unsynced/GfxProjectile.cpp	39	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/Unsynced/GfxProjectile.cpp#L39
+[00776BE4]	0.000000	0.051999	0.000000	0.003427	spring		0
+[00776C0E]	0.000000	0.105020	0.000000	0.006921	spring		0
+PathEstimator.cpp	0.000000	0.156011	0.000000	0.010281	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	705	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L705
+[007A0ED3]	0.000000	0.053003	0.000000	0.003493	spring		0
+[0063AF88]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00776C62]	0.000000	0.052005	0.000000	0.003427	spring		0
+stl_vector.h	0.000000	0.155997	0.000000	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	771	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L771
+[0079DB4D]	0.000000	0.051992	0.000000	0.003426	spring		0
+[0079DA8B]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0079D98B]	0.000000	0.052013	0.000000	0.003428	spring		0
+ProjectileHandler.cpp	0.000000	0.572029	0.000000	0.037698	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	256	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L256
+ProjectileHandler.cpp	0.000000	0.208012	0.000000	0.013708	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	242	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L242
+ProjectileHandler.cpp	0.000000	1.144058	0.000000	0.075396	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	239	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L239
+ProjectileHandler.cpp	0.000000	0.208012	0.000000	0.013708	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	222	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L222
+PathEstimator.cpp	0.000000	0.677041	0.000000	0.044618	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	660	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L660
+PathEstimator.cpp	0.000000	0.833108	0.000000	0.054904	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	588	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L588
+ProjectileHandler.cpp	0.000000	0.208004	0.000000	0.013708	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	624	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L624
+[0079BFD1]	0.000000	0.052005	0.000000	0.003427	spring		0
+[0079BF51]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0079BC57]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0079BC46]	0.000000	0.104008	0.000000	0.006854	spring		0
+ProjectileHandler.cpp	0.000000	0.572029	0.000000	0.037698	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	524	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L524
+ProjectileHandler.cpp	0.000000	0.416018	0.000000	0.027417	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	522	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L522
+[0079BB78]	0.000000	0.104008	0.000000	0.006854	spring		0
+[007770D2]	0.000000	0.104016	0.000000	0.006855	spring		0
+[0079B8C9]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0079B8A2]	0.000000	0.104001	0.000000	0.006854	spring		0
+ProjectileHandler.cpp	0.000000	0.208014	0.000000	0.013709	spring	build/default/../../rts/Sim/Projectiles/ProjectileHandler.cpp	480	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/ProjectileHandler.cpp#L480
+PathEstimator.cpp	0.000000	8.786501	0.000000	0.579050	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	320	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L320
+[00779BE6]	0.000000	0.052002	0.000000	0.003427	spring		0
+shared_ptr_base.h	0.000000	0.156004	0.000000	0.010281	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h	552	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h#L552
+[0079B72E]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0079B5D1]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0079B5A2]	0.000000	0.052000	0.000000	0.003427	spring		0
+shared_ptr_base.h	0.000000	0.884028	0.000000	0.058259	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h	552	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/shared_ptr_base.h#L552
+[697A1FAE]	0.000000	0.104006	0.000000	0.006854	nvoglv32		0
+[0079AC66]	0.000000	0.104004	0.000000	0.006854	spring		0
+Projectile.cpp	0.000000	0.155998	0.000000	0.010281	spring	build/default/../../rts/Sim/Projectiles/Projectile.cpp	103	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/Projectile.cpp#L103
+[0079AAD0]	0.000000	0.104008	0.000000	0.006854	spring		0
+Projectile.cpp	0.000000	0.155998	0.000000	0.010281	spring	build/default/../../rts/Sim/Projectiles/Projectile.cpp	133	http://github.com/spring/spring/tree/master/rts/Sim/Projectiles/Projectile.cpp#L133
+[0079A6F8]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0079A27C]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00799A3F]	0.000000	0.104005	0.000000	0.006854	spring		0
+[00799760]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0079507F]	0.000000	0.104008	0.000000	0.006854	spring		0
+[00790639]	0.000000	0.052006	0.000000	0.003427	spring		0
+[0079008C]	0.000000	0.104006	0.000000	0.006854	spring		0
+[0079003F]	0.000000	0.052005	0.000000	0.003427	spring		0
+PathManager.cpp	0.000000	1.977130	0.000000	0.130297	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	76	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L76
+[007813CE]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00781212]	0.000000	0.052003	0.000000	0.003427	spring		0
+[007811B3]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00781097]	0.000000	0.052010	0.000000	0.003428	spring		0
+[00781005]	0.000000	0.104016	0.000000	0.006855	spring		0
+PathManager.cpp	0.000000	0.155999	0.000000	0.010281	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	199	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L199
+PathManager.cpp	0.000000	0.988068	0.000000	0.065116	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	174	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L174
+PathManager.cpp	0.000000	0.313020	0.000000	0.020629	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	174	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L174
+[00780D96]	0.000000	0.104008	0.000000	0.006854	spring		0
+[00780C57]	0.000000	0.052001	0.000000	0.003427	spring		0
+[697A1DA4]	0.000000	0.103996	0.000000	0.006854	nvoglv32		0
+[007800F0]	0.000000	0.104004	0.000000	0.006854	spring		0
+PathManager.cpp	0.000000	0.988040	0.000000	0.065114	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	356	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L356
+PathManager.cpp	0.000000	0.364069	0.000000	0.023993	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	347	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L347
+[0077F648]	0.000000	0.052005	0.000000	0.003427	spring		0
+[69797B86]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+PathManager.cpp	0.000000	0.625087	0.000000	0.041195	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	300	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L300
+PathManager.cpp	0.000000	1.976108	0.000000	0.130230	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	254	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L254
+PathManager.cpp	0.000000	8.993494	0.000000	0.592691	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	428	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L428
+PathManager.cpp	0.000000	4.473224	0.000000	0.294795	spring	build/default/../../rts/Sim/Path/Default/PathManager.cpp	428	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathManager.cpp#L428
+PathHeatMap.cpp	0.000000	0.156003	0.000000	0.010281	spring	build/default/../../rts/Sim/Path/Default/PathHeatMap.cpp	18	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathHeatMap.cpp#L18
+PathHeatMap.cpp	0.000000	0.312026	0.000000	0.020563	spring	build/default/../../rts/Sim/Path/Default/PathHeatMap.cpp	10	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathHeatMap.cpp#L10
+[007746BD]	0.000000	0.052003	0.000000	0.003427	spring		0
+[697974C5]	0.000000	0.207998	0.000000	0.013708	nvoglv32		0
+PathFinder.cpp	0.000000	2.132058	0.000000	0.140507	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	343	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L343
+[6978FE4A]	0.000000	0.104001	0.000000	0.006854	nvoglv32		0
+PathFinder.cpp	0.000000	0.468029	0.000000	0.030844	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	361	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L361
+PathFlowMap.cpp	0.000000	0.676019	0.000000	0.044551	spring	build/default/../../rts/Sim/Path/Default/PathFlowMap.cpp	24	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFlowMap.cpp#L24
+PathFlowMap.cpp	0.000000	0.572015	0.000000	0.037697	spring	build/default/../../rts/Sim/Path/Default/PathFlowMap.cpp	16	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFlowMap.cpp#L16
+[6978C800]	0.000000	0.051999	0.000000	0.003427	nvoglv32		0
+PathFinder.cpp	0.000000	1.092032	0.000000	0.071967	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	362	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L362
+[0077DE00]	0.000000	0.052005	0.000000	0.003427	spring		0
+[6977AD52]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6976CF19]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[69751DCD]	0.000000	0.156016	0.000000	0.010282	nvoglv32		0
+[697484B0]	0.000000	0.156016	0.000000	0.010282	nvoglv32		0
+[69733A10]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+PathEstimator.cpp	0.000000	1.612071	0.000000	0.106239	spring	build/default/../../rts/Sim/Path/Default/PathEstimator.cpp	502	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathEstimator.cpp#L502
+[0073C02D]	0.000000	0.052002	0.000000	0.003427	spring		0
+[0073BFCC]	0.000000	0.104004	0.000000	0.006854	spring		0
+PathFinder.cpp	0.000000	0.208022	0.000000	0.013709	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	402	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L402
+QuadField.cpp	0.000000	0.156009	0.000000	0.010281	spring	build/default/../../rts/Sim/Misc/QuadField.cpp	873	http://github.com/spring/spring/tree/master/rts/Sim/Misc/QuadField.cpp#L873
+[697335BA]	0.000000	0.104004	0.000000	0.006854	nvoglv32		0
+[69733023]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[696E8E23]	0.000000	0.156014	0.000000	0.010282	nvoglv32		0
+[00735C1D]	0.000000	0.052004	0.000000	0.003427	spring		0
+[696E85F3]	0.000000	0.156010	0.000000	0.010281	nvoglv32		0
+[696E8593]	0.000000	0.312024	0.000000	0.020563	nvoglv32		0
+stl_heap.h	0.000000	0.364009	0.000000	0.023989	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_heap.h	341	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_heap.h#L341
+[692009F7]	0.000000	0.728057	0.000000	0.047981	nvoglv32		0
+PathFinder.cpp	0.000000	1.561054	0.000000	0.102877	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	257	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L257
+[691FBF6E]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[0063B834]	0.000000	0.052002	0.000000	0.003427	spring		0
+PathFinder.cpp	0.000000	2.025342	0.000000	0.133475	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	259	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L259
+[691EA7CE]	0.000000	0.104007	0.000000	0.006854	nvoglv32		0
+PathFinder.cpp	0.000000	1.404031	0.000000	0.092529	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	265	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L265
+[691E7E59]	0.000000	0.208006	0.000000	0.013708	nvoglv32		0
+[691E7D91]	0.000000	0.104003	0.000000	0.006854	nvoglv32		0
+stl_vector.h	0.000000	0.676021	0.000000	0.044551	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h	771	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_vector.h#L771
+PathFinder.cpp	0.000000	0.832014	0.000000	0.054832	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	264	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L264
+PathFinder.cpp	0.000000	0.312012	0.000000	0.020562	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	268	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L268
+[0063B9B0]	0.000000	0.052001	0.000000	0.003427	spring		0
+PathFinder.cpp	0.000000	10.398590	0.000000	0.685290	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	216	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L216
+[0077B888]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0077D778]	0.000000	0.104004	0.000000	0.006854	spring		0
+PathFinder.cpp	0.000000	10.606598	0.000000	0.698998	spring	build/default/../../rts/Sim/Path/Default/PathFinder.cpp	128	http://github.com/spring/spring/tree/master/rts/Sim/Path/Default/PathFinder.cpp#L128
+[0077DBBB]	0.000000	0.104004	0.000000	0.006854	spring		0
+[004A1237]	0.000000	0.052002	0.000000	0.003427	spring		0
+[004A18C1]	0.000000	0.051988	0.000000	0.003426	spring		0
+MiniMap.cpp	0.000000	1.144043	0.000000	0.075395	spring	build/default/../../rts/Game/UI/MiniMap.cpp	956	http://github.com/spring/spring/tree/master/rts/Game/UI/MiniMap.cpp#L956
+[691E7C76]	0.000000	0.260040	0.000000	0.017137	nvoglv32		0
+[004A1CB9]	0.000000	0.104006	0.000000	0.006854	spring		0
+[004A1CE8]	0.000000	0.052008	0.000000	0.003427	spring		0
+[004A2CD1]	0.000000	0.051999	0.000000	0.003427	spring		0
+[004AB9E9]	0.000000	0.104003	0.000000	0.006854	spring		0
+[004ABB50]	0.000000	0.051999	0.000000	0.003427	spring		0
+[004B0038]	0.000000	0.052004	0.000000	0.003427	spring		0
+[0073448F]	0.000000	0.052002	0.000000	0.003427	spring		0
+[004B0064]	0.000000	0.104006	0.000000	0.006854	spring		0
+[004B00E2]	0.000000	0.104004	0.000000	0.006854	spring		0
+[004B00FF]	0.000000	0.104006	0.000000	0.006854	spring		0
+[004C010B]	0.000000	0.104006	0.000000	0.006854	spring		0
+[004D005A]	0.000000	0.104006	0.000000	0.006854	spring		0
+[004D00D5]	0.000000	0.104018	0.000000	0.006855	spring		0
+[004E00D5]	0.000000	0.104009	0.000000	0.006854	spring		0
+[004E0105]	0.000000	0.104004	0.000000	0.006854	spring		0
+[007337B7]	0.000000	0.104006	0.000000	0.006854	spring		0
+LosHandler.cpp	0.000000	0.416026	0.000000	0.027417	spring	build/default/../../rts/Sim/Misc/LosHandler.cpp	252	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosHandler.cpp#L252
+[00733576]	0.000000	0.104003	0.000000	0.006854	spring		0
+LosHandler.cpp	0.000000	2.028078	0.000000	0.133655	spring	build/default/../../rts/Sim/Misc/LosHandler.cpp	182	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosHandler.cpp#L182
+[0073340C]	0.000000	0.052003	0.000000	0.003427	spring		0
+[0073323F]	0.000000	0.052003	0.000000	0.003427	spring		0
+GameServer.cpp	0.000000	0.156008	0.000000	0.010281	spring	build/default/../../rts/Net/GameServer.cpp	463	http://github.com/spring/spring/tree/master/rts/Net/GameServer.cpp#L463
+LosHandler.cpp	0.000000	0.312021	0.000000	0.020563	spring	build/default/../../rts/Sim/Misc/LosHandler.cpp	206	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosHandler.cpp#L206
+LosHandler.cpp	0.000000	0.312021	0.000000	0.020563	spring	build/default/../../rts/Sim/Misc/LosHandler.cpp	270	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosHandler.cpp#L270
+[0073279A]	0.000000	0.104009	0.000000	0.006854	spring		0
+LosHandler.cpp	0.000000	0.416011	0.000000	0.027416	spring	build/default/../../rts/Sim/Misc/LosHandler.cpp	193	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosHandler.cpp#L193
+LosHandler.cpp	0.000000	1.612064	0.000000	0.106239	spring	build/default/../../rts/Sim/Misc/LosHandler.cpp	193	http://github.com/spring/spring/tree/master/rts/Sim/Misc/LosHandler.cpp#L193
+[0063BC80]	0.000000	0.052000	0.000000	0.003427	spring		0
+[004F289B]	0.000000	0.104006	0.000000	0.006854	spring		0
+GameServer.cpp	0.000000	0.156011	0.000000	0.010281	spring	build/default/../../rts/Net/GameServer.cpp	2314	http://github.com/spring/spring/tree/master/rts/Net/GameServer.cpp#L2314
+GameServer.cpp	0.000000	0.257279	0.000000	0.016955	spring	build/default/../../rts/Net/GameServer.cpp	803	http://github.com/spring/spring/tree/master/rts/Net/GameServer.cpp#L803
+[00731316]	0.000000	0.052002	0.000000	0.003427	spring		0
+GameServer.cpp	0.000000	0.260017	0.000000	0.017136	spring	build/default/../../rts/Net/GameServer.cpp	827	http://github.com/spring/spring/tree/master/rts/Net/GameServer.cpp#L827
+[00500DF0]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0072FEC8]	0.000000	0.104011	0.000000	0.006855	spring		0
+operator_bool.hpp	0.000000	100.486690	0.000000	6.622295	spring	/slave/mingwlibs/include/boost/smart_ptr/detail/operator_bool.hpp	13	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/smart_ptr/detail/operator_bool.hpp#L13
+GameServer.cpp	0.000000	0.156006	0.000000	0.010281	spring	build/default/../../rts/Net/GameServer.cpp	2413	http://github.com/spring/spring/tree/master/rts/Net/GameServer.cpp#L2413
+[00726B5A]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00720BA0]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00720B6C]	0.000000	0.051998	0.000000	0.003427	spring		0
+[007203F8]	0.000000	0.052001	0.000000	0.003427	spring		0
+[0072014D]	0.000000	0.052001	0.000000	0.003427	spring		0
+basic_string.h	0.000000	0.208007	0.000000	0.013708	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h	539	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h#L539
+[0071DF45]	0.000000	0.051998	0.000000	0.003427	spring		0
+[0071D48D]	0.000000	0.051998	0.000000	0.003427	spring		0
+[0071CC25]	0.000000	0.052001	0.000000	0.003427	spring		0
+[691E491B]	0.000000	1.196045	0.000000	0.078822	nvoglv32		0
+[0071A4DD]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00711940]	0.000000	0.052005	0.000000	0.003427	spring		0
+[00711936]	0.000000	0.051993	0.000000	0.003426	spring		0
+[00711727]	0.000000	0.051993	0.000000	0.003426	spring		0
+[007116F7]	0.000000	0.052005	0.000000	0.003427	spring		0
+glFont.cpp	0.000000	0.312030	0.000000	0.020563	spring	build/default/../../rts/Rendering/glFont.cpp	1960	http://github.com/spring/spring/tree/master/rts/Rendering/glFont.cpp#L1960
+[00711454]	0.000000	0.052005	0.000000	0.003427	spring		0
+[0070E95E]	0.000000	0.052005	0.000000	0.003427	spring		0
+glFont.cpp	0.000000	0.260021	0.000000	0.017136	spring	build/default/../../rts/Rendering/glFont.cpp	1678	http://github.com/spring/spring/tree/master/rts/Rendering/glFont.cpp#L1678
+[691E486F]	0.000000	0.052005	0.000000	0.003427	nvoglv32		0
+[0070B62C]	0.000000	0.103998	0.000000	0.006854	spring		0
+[0070B12B]	0.000000	0.052007	0.000000	0.003427	spring		0
+[0070B0E7]	0.000000	0.052005	0.000000	0.003427	spring		0
+WorldDrawer.cpp	0.000000	0.208015	0.000000	0.013709	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	134	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L134
+WorldDrawer.cpp	0.000000	2.600123	0.000000	0.171354	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	129	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L129
+WorldDrawer.cpp	0.000000	0.572014	0.000000	0.037697	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	124	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L124
+[0070AECC]	0.000000	0.052016	0.000000	0.003428	spring		0
+WorldDrawer.cpp	0.000000	2.185133	0.000000	0.144005	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	206	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L206
+[0070ADC0]	0.000000	0.104006	0.000000	0.006854	spring		0
+WorldDrawer.cpp	0.000000	0.260015	0.000000	0.017136	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	175	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L175
+[0070AD19]	0.000000	0.052002	0.000000	0.003427	spring		0
+WorldDrawer.cpp	0.000000	0.156010	0.000000	0.010281	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	157	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L157
+WorldDrawer.cpp	0.000000	14.406733	0.000000	0.949435	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	155	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L155
+[0070AC2A]	0.000000	0.052004	0.000000	0.003427	spring		0
+basic_recursive_mutex.hpp	0.000000	0.260017	0.000000	0.017136	spring	/slave/mingwlibs/include/boost/thread/win32/basic_recursive_mutex.hpp	90	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/thread/win32/basic_recursive_mutex.hpp#L90
+WorldDrawer.cpp	0.000000	0.989975	0.000000	0.065242	spring	build/default/../../rts/Rendering/WorldDrawer.cpp	100	http://github.com/spring/spring/tree/master/rts/Rendering/WorldDrawer.cpp#L100
+[0070AAB1]	0.000000	0.104002	0.000000	0.006854	spring		0
+[00704EB1]	0.000000	0.104009	0.000000	0.006854	spring		0
+[00704E28]	0.000000	0.052004	0.000000	0.003427	spring		0
+UnitDrawerState.cpp	0.000000	0.208021	0.000000	0.013709	spring	build/default/../../rts/Rendering/UnitDrawerState.cpp	447	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawerState.cpp#L447
+[007043CF]	0.000000	0.104006	0.000000	0.006854	spring		0
+thread_primitives.hpp	0.000000	0.257279	0.000000	0.016955	spring	/slave/mingwlibs/include/boost/thread/win32/thread_primitives.hpp	189	http://github.com/spring/spring/tree/master//slave/mingwlibs/include/boost/thread/win32/thread_primitives.hpp#L189
+UnitDrawerState.cpp	0.000000	0.156006	0.000000	0.010281	spring	build/default/../../rts/Rendering/UnitDrawerState.cpp	420	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawerState.cpp#L420
+[00703F9E]	0.000000	0.052004	0.000000	0.003427	spring		0
+[691E4758]	0.000000	0.364028	0.000000	0.023990	nvoglv32		0
+[00703E56]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00701FB4]	0.000000	0.104007	0.000000	0.006854	spring		0
+SyncChecker.h	0.000000	47.428385	0.000000	3.125635	spring	build/default/../../rts/System/Sync/SyncChecker.h	37	http://github.com/spring/spring/tree/master/rts/System/Sync/SyncChecker.h#L37
+[0050FFAC]	0.000000	0.104005	0.000000	0.006854	spring		0
+[00510039]	0.000000	0.104004	0.000000	0.006854	spring		0
+stl_set.h	0.000000	0.312018	0.000000	0.020563	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_set.h	299	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_set.h#L299
+[00701CDE]	0.000000	0.052002	0.000000	0.003427	spring		0
+UnitDrawer.cpp	0.000000	0.364028	0.000000	0.023990	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	2137	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L2137
+NetCommands.cpp	0.000000	0.157012	0.000000	0.010347	spring	build/default/../../rts/Net/NetCommands.cpp	508	http://github.com/spring/spring/tree/master/rts/Net/NetCommands.cpp#L508
+[005112B5]	0.000000	0.104003	0.000000	0.006854	spring		0
+NetCommands.cpp	0.000000	0.155997	0.000000	0.010281	spring	build/default/../../rts/Net/NetCommands.cpp	660	http://github.com/spring/spring/tree/master/rts/Net/NetCommands.cpp#L660
+[00700641]	0.000000	0.052002	0.000000	0.003427	spring		0
+UnitDrawer.cpp	0.000000	6.554357	0.000000	0.431947	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	885	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L885
+UnitDrawer.cpp	0.000000	6.760390	0.000000	0.445525	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	409	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L409
+UnitDrawer.cpp	0.000000	2.393107	0.000000	0.157711	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	435	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L435
+UnitDrawer.cpp	0.000000	5.253236	0.000000	0.346200	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	427	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L427
+UnitDrawer.cpp	0.000000	6.656383	0.000000	0.438670	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	480	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L480
+[007000B2]	0.000000	0.104005	0.000000	0.006854	spring		0
+[0070005D]	0.000000	0.104007	0.000000	0.006854	spring		0
+UnitDrawer.cpp	0.000000	6.190347	0.000000	0.407958	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	824	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L824
+[0051FF8A]	0.000000	0.052004	0.000000	0.003427	spring		0
+UnitDrawer.cpp	0.000000	11.129562	0.000000	0.733463	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	379	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L379
+UnitDrawer.cpp	0.000000	0.208017	0.000000	0.013709	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	379	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L379
+[00527AC0]	0.000000	0.051998	0.000000	0.003427	spring		0
+[0052D7B2]	0.000000	0.051995	0.000000	0.003427	spring		0
+LuaHandle.cpp	0.000000	0.988066	0.000000	0.065116	spring	build/default/../../rts/Lua/LuaHandle.cpp	2889	http://github.com/spring/spring/tree/master/rts/Lua/LuaHandle.cpp#L2889
+LuaHandle.cpp	0.000000	0.988066	0.000000	0.065116	spring	build/default/../../rts/Lua/LuaHandle.cpp	2888	http://github.com/spring/spring/tree/master/rts/Lua/LuaHandle.cpp#L2888
+UnitDrawer.cpp	0.000000	1.924101	0.000000	0.126803	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	1684	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L1684
+[691E0846]	0.000000	0.156002	0.000000	0.010281	nvoglv32		0
+[006FEF8B]	0.000000	0.052003	0.000000	0.003427	spring		0
+[006FEC0F]	0.000000	0.052000	0.000000	0.003427	spring		0
+[006FEBA9]	0.000000	0.104011	0.000000	0.006855	spring		0
+[006FEA85]	0.000000	0.104009	0.000000	0.006854	spring		0
+UnitDrawer.cpp	0.000000	0.156006	0.000000	0.010281	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	1574	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L1574
+[006FE30F]	0.000000	0.104007	0.000000	0.006854	spring		0
+[006FDFF0]	0.000000	0.104006	0.000000	0.006854	spring		0
+[006FDE79]	0.000000	0.052010	0.000000	0.003428	spring		0
+stl_iterator.h	0.000000	0.728051	0.000000	0.047980	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_iterator.h	748	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_iterator.h#L748
+stl_tree.h	0.000000	2.185095	0.000000	0.144003	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h	270	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/stl_tree.h#L270
+LuaHandle.cpp	0.000000	0.156011	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaHandle.cpp	529	http://github.com/spring/spring/tree/master/rts/Lua/LuaHandle.cpp#L529
+[00539150]	0.000000	0.052005	0.000000	0.003427	spring		0
+[0053938F]	0.000000	0.052005	0.000000	0.003427	spring		0
+UnitDrawer.cpp	0.000000	1.561035	0.000000	0.102876	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	971	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L971
+UnitDrawer.cpp	0.000000	0.312028	0.000000	0.020563	spring	build/default/../../rts/Rendering/UnitDrawer.cpp	957	http://github.com/spring/spring/tree/master/rts/Rendering/UnitDrawer.cpp#L957
+[006F2E76]	0.000000	0.052009	0.000000	0.003428	spring		0
+[00540075]	0.000000	0.104005	0.000000	0.006854	spring		0
+[00540095]	0.000000	0.052002	0.000000	0.003427	spring		0
+[006F0024]	0.000000	0.052000	0.000000	0.003427	spring		0
+[006F0019]	0.000000	0.104003	0.000000	0.006854	spring		0
+ShadowHandler.cpp	0.000000	8.012404	0.000000	0.528035	spring	build/default/../../rts/Rendering/ShadowHandler.cpp	494	http://github.com/spring/spring/tree/master/rts/Rendering/ShadowHandler.cpp#L494
+[691DE042]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+ShadowHandler.cpp	0.000000	0.156011	0.000000	0.010281	spring	build/default/../../rts/Rendering/ShadowHandler.cpp	331	http://github.com/spring/spring/tree/master/rts/Rendering/ShadowHandler.cpp#L331
+ShadowHandler.cpp	0.000000	0.886037	0.000000	0.058392	spring	build/default/../../rts/Rendering/ShadowHandler.cpp	335	http://github.com/spring/spring/tree/master/rts/Rendering/ShadowHandler.cpp#L335
+ShadowHandler.cpp	0.000000	0.363998	0.000000	0.023988	spring	build/default/../../rts/Rendering/ShadowHandler.cpp	340	http://github.com/spring/spring/tree/master/rts/Rendering/ShadowHandler.cpp#L340
+ShadowHandler.cpp	0.000000	6.554357	0.000000	0.431947	spring	build/default/../../rts/Rendering/ShadowHandler.cpp	339	http://github.com/spring/spring/tree/master/rts/Rendering/ShadowHandler.cpp#L339
+[006E33BA]	0.000000	0.052001	0.000000	0.003427	spring		0
+[006E20E1]	0.000000	0.052001	0.000000	0.003427	spring		0
+[006E2099]	0.000000	0.052003	0.000000	0.003427	spring		0
+[006E204C]	0.000000	0.052001	0.000000	0.003427	spring		0
+Shader.cpp	0.000000	0.156005	0.000000	0.010281	spring	build/default/../../rts/Rendering/Shaders/Shader.cpp	342	http://github.com/spring/spring/tree/master/rts/Rendering/Shaders/Shader.cpp#L342
+Shader.cpp	0.000000	0.156005	0.000000	0.010281	spring	build/default/../../rts/Rendering/Shaders/Shader.cpp	235	http://github.com/spring/spring/tree/master/rts/Rendering/Shaders/Shader.cpp#L235
+[006E008C]	0.000000	0.104006	0.000000	0.006854	spring		0
+[006E0061]	0.000000	0.104004	0.000000	0.006854	spring		0
+[005400C0]	0.000000	0.104006	0.000000	0.006854	spring		0
+[690C453F]	0.000000	0.052008	0.000000	0.003427	nvoglv32		0
+[69093CA9]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6908A38A]	0.000000	0.052001	0.000000	0.003427	nvoglv32		0
+[6908A211]	0.000000	0.052000	0.000000	0.003427	nvoglv32		0
+[0054085A]	0.000000	0.052000	0.000000	0.003427	spring		0
+[6908963B]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[6908912C]	0.000000	0.051999	0.000000	0.003427	nvoglv32		0
+[69079A12]	0.000000	1.717070	0.000000	0.113159	nvoglv32		0
+[6907991A]	0.000000	0.156008	0.000000	0.010281	nvoglv32		0
+[00544CEF]	0.000000	0.104017	0.000000	0.006855	spring		0
+[0062CFE3]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00550074]	0.000000	0.104075	0.000000	0.006859	spring		0
+[0063C4A5]	0.000000	0.052001	0.000000	0.003427	spring		0
+[00550097]	0.000000	0.104002	0.000000	0.006854	spring		0
+[69078EE1]	0.000000	0.572042	0.000000	0.037699	nvoglv32		0
+[691D925E]	0.000000	0.260000	0.000000	0.017135	nvoglv32		0
+[00556C16]	0.000000	0.052006	0.000000	0.003427	spring		0
+[691D8E1D]	0.000000	16.539814	0.000000	1.090010	nvoglv32		0
+[005589D6]	0.000000	0.052003	0.000000	0.003427	spring		0
+[69073534]	0.000000	0.260014	0.000000	0.017135	nvoglv32		0
+[69072C08]	0.000000	0.104003	0.000000	0.006854	nvoglv32		0
+[69072C00]	0.000000	0.156012	0.000000	0.010282	nvoglv32		0
+[69072BF1]	0.000000	0.052000	0.000000	0.003427	nvoglv32		0
+[691D8C59]	0.000000	0.104001	0.000000	0.006854	nvoglv32		0
+LuaOpenGL.cpp	0.000000	0.208017	0.000000	0.013709	spring	build/default/../../rts/Lua/LuaOpenGL.cpp	2285	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGL.cpp#L2285
+[691D8837]	0.000000	0.103996	0.000000	0.006854	nvoglv32		0
+[690721DA]	0.000000	0.051998	0.000000	0.003427	nvoglv32		0
+[6907205D]	0.000000	0.155996	0.000000	0.010280	nvoglv32		0
+LuaOpenGL.cpp	0.000000	0.156006	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaOpenGL.cpp	2299	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGL.cpp#L2299
+[0062BDCF]	0.000000	0.052002	0.000000	0.003427	spring		0
+[69071E37]	0.000000	0.052003	0.000000	0.003427	nvoglv32		0
+[69071DB5]	0.000000	0.052005	0.000000	0.003427	nvoglv32		0
+[69071C68]	0.000000	0.624045	0.000000	0.041126	nvoglv32		0
+[0063C526]	0.000000	0.052002	0.000000	0.003427	spring		0
+[69071AE5]	0.000000	0.260018	0.000000	0.017136	nvoglv32		0
+[691D5121]	0.000000	0.312008	0.000000	0.020562	nvoglv32		0
+[691CD20F]	0.000000	0.052010	0.000000	0.003428	nvoglv32		0
+[69071800]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[69071753]	0.000000	0.051996	0.000000	0.003427	nvoglv32		0
+[69071718]	0.000000	0.052000	0.000000	0.003427	nvoglv32		0
+[690716FB]	0.000000	1.040060	0.000000	0.068542	nvoglv32		0
+[691CC8AA]	0.000000	0.052003	0.000000	0.003427	nvoglv32		0
+basic_string.h	0.000000	0.364035	0.000000	0.023991	spring	/opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h	293	http://github.com/spring/spring/tree/master//opt/mxe/usr/lib/gcc/i686-w64-mingw32/4.8.1/include/c++/bits/basic_string.h#L293
+LuaOpenGL.cpp	0.000000	0.156002	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaOpenGL.cpp	3247	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGL.cpp#L3247
+[691BADEA]	0.000000	4.057199	0.000000	0.267378	nvoglv32		0
+LuaOpenGL.cpp	0.000000	0.156015	0.000000	0.010282	spring	build/default/../../rts/Lua/LuaOpenGL.cpp	3106	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGL.cpp#L3106
+[691558F3]	0.000000	0.051997	0.000000	0.003427	nvoglv32		0
+[691558A5]	0.000000	0.156019	0.000000	0.010282	nvoglv32		0
+LuaOpenGL.cpp	0.000000	0.156005	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaOpenGL.cpp	3108	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGL.cpp#L3108
+[6914F9AB]	0.000000	1.717050	0.000000	0.113157	nvoglv32		0
+[0055E466]	0.000000	0.052002	0.000000	0.003427	spring		0
+[691BA586]	0.000000	0.156002	0.000000	0.010281	nvoglv32		0
+[6914EF05]	0.000000	0.052006	0.000000	0.003427	nvoglv32		0
+[6914C8A1]	0.000000	0.052000	0.000000	0.003427	nvoglv32		0
+[6914C704]	0.000000	0.156000	0.000000	0.010281	nvoglv32		0
+[691460BB]	0.000000	1.717070	0.000000	0.113159	nvoglv32		0
+[69146094]	0.000000	0.155998	0.000000	0.010281	nvoglv32		0
+[69146082]	0.000000	1.717050	0.000000	0.113157	nvoglv32		0
+[69145F6E]	0.000000	1.873079	0.000000	0.123440	nvoglv32		0
+[00560037]	0.000000	0.104007	0.000000	0.006854	spring		0
+[691446CF]	0.000000	0.156011	0.000000	0.010281	nvoglv32		0
+[00560087]	0.000000	0.051994	0.000000	0.003427	spring		0
+[00560198]	0.000000	0.104008	0.000000	0.006854	spring		0
+[00560A63]	0.000000	0.052003	0.000000	0.003427	spring		0
+[00560D4C]	0.000000	0.052003	0.000000	0.003427	spring		0
+[00561293]	0.000000	0.103996	0.000000	0.006854	spring		0
+LuaOpenGL.cpp	0.000000	1.508054	0.000000	0.099384	spring	build/default/../../rts/Lua/LuaOpenGL.cpp	4043	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGL.cpp#L4043
+[00562FA5]	0.000000	0.052002	0.000000	0.003427	spring		0
+[00563025]	0.000000	0.052005	0.000000	0.003427	spring		0
+LuaOpenGLUtils.cpp	0.000000	0.156015	0.000000	0.010282	spring	build/default/../../rts/Lua/LuaOpenGLUtils.cpp	319	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGLUtils.cpp#L319
+LuaOpenGLUtils.cpp	0.000000	0.156005	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaOpenGLUtils.cpp	503	http://github.com/spring/spring/tree/master/rts/Lua/LuaOpenGLUtils.cpp#L503
+[6914438E]	0.000000	0.103996	0.000000	0.006854	nvoglv32		0
+[69143D77]	0.000000	1.717071	0.000000	0.113159	nvoglv32		0
+[69143D47]	0.000000	0.936015	0.000000	0.061685	nvoglv32		0
+[69143CC2]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[69143C68]	0.000000	0.103996	0.000000	0.006854	nvoglv32		0
+[6913E439]	0.000000	0.156024	0.000000	0.010282	nvoglv32		0
+[6913E42D]	0.000000	0.052002	0.000000	0.003427	nvoglv32		0
+[0056FFBF]	0.000000	0.104007	0.000000	0.006854	spring		0
+[0057006C]	0.000000	0.104006	0.000000	0.006854	spring		0
+LuaRules.cpp	0.000000	0.156004	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaRules.cpp	395	http://github.com/spring/spring/tree/master/rts/Lua/LuaRules.cpp#L395
+[00571B87]	0.000000	0.052001	0.000000	0.003427	spring		0
+[6913AA91]	0.000000	0.052000	0.000000	0.003427	nvoglv32		0
+[69139E2D]	0.000000	0.052001	0.000000	0.003427	nvoglv32		0
+[69139956]	0.000000	0.052001	0.000000	0.003427	nvoglv32		0
+[6913730F]	0.000000	0.052004	0.000000	0.003427	nvoglv32		0
+[69136AAF]	0.000000	0.364039	0.000000	0.023991	nvoglv32		0
+LuaHandle.h	0.000000	0.156011	0.000000	0.010281	spring	build/default/../../rts/Lua/LuaHandle.h	423	http://github.com/spring/spring/tree/master/rts/Lua/LuaHandle.h#L423
+[6913503D]	0.000000	0.156001	0.000000	0.010281	nvoglv32		0
+SMFReadMap.cpp	0.000000	0.260018	0.000000	0.017136	spring	build/default/../../rts/Map/SMF/SMFReadMap.cpp	820	http://github.com/spring/spring/tree/master/rts/Map/SMF/SMFReadMap.cpp#L820
+[691BA56F]	0.000000	1.248062	0.000000	0.082250	nvoglv32		0
+[690D256B]	0.000000	0.104009	0.000000	0.006854	nvoglv32		0

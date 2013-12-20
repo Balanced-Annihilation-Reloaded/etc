@@ -2,6 +2,7 @@ description='This script uses the Very Sleepy profilers .CSV output and the Spri
 
 
 from optparse import OptionParser
+import traceback
 # import datetime, os, re, xmlrpclib
 from xmlrpclib import ServerProxy, Error
 import zipfile
@@ -69,9 +70,13 @@ for sleepyline in sleepyfile:
 				address_count+=1
 	except:
 		print 'Failed to parse line',sleepyline,'in',options.input,sleepyline.strip().split(' ')
+		traceback.print_exc()
 
 		pass
-print 'querying',address_count,'lines with',''.join(infolog)
+print 'querying',address_count,'lines with fakeinfolog.txt',len(infolog)
+fakeinfolog=open('fakeinfolog.txt','w')
+fakeinfolog.write(''.join(infolog))
+fakeinfolog.close()
 
 buildbot=ServerProxy('http://springrts.com:8000')
 try:
@@ -91,6 +96,24 @@ except Error as v:
 print 'Query successful, stacktrace results',len(translated)
 # this will return a 2d list: [['C:\\fake_path\\spring.exe', '0x0062AAB5', 'build/default/../../rts/Map/SMF/SMFReadMap.cpp', 820], ['C:\\fake_path\\spring.exe', '0x00622D4A', 'build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp', 372], ['C:\\fake_path\\spring.exe', '0x00881864', '/slave/mingwlibs/include/boost/optional/optional.hpp', 438], ['C:\\fake_path\\spring.exe', '0x00870AA6', 'build/default/../../rts/System/Misc/SpringTime.cpp', 145], ['C:\\fake_path\\spring.exe','0x0086E146', 'build/default/../../rts/System/Main.cpp', 132], ['C:\\fake_path\\spring.exe', '0x0086D556', 'build/default/../../rts/System/Main.cpp', 64],['C:\\fake_path\\spring.exe', '0x008550CD', 'build/default/../../rts/System/EventHandler.cpp', 280], ['C:\\fake_path\\spring.exe', '0x0079AC66', 'build/def .....
 giturl="http://github.com/spring/spring/tree/master/%s#L%i"
+def getcodeline(path, i): #fetches line i of the code, removes double quotes, replace with singles, max length of 80 chars
+	
+	try:
+		codef=open(path)
+		codelines=codef.readlines()
+		line=codelines[i-1] #because lines are indexed from 1!
+		line=line.strip().replace('\"','\'')
+		if len(line)>75:
+			line=line[0:74]+'...'
+		#print 'got code line:',line
+		if len(line)<1:
+			print 'got suspiciosly short line',path,i,line
+		return line
+	except:
+		#print 'warning, cant fine code line',path,line
+		pass
+		return ''
+	
 if sleepytype=='csv':
 
 	outf=open(options.output,'w')
@@ -126,12 +149,17 @@ for sleepyline in sleepyfile:
 					
 						#shortname='\"['+entry[2].replace('build/default/../../','')+':'+str(entry[3])+']\"'
 						shortname=entry[2].replace('build/default/../../','')+'_'+str(entry[3])
-						shortname= '\"'+shortname+'\"'
 						if options.sourcepath and 'build/default/../../' in entry[2]:
 							path=options.sourcepath+entry[2].replace('build/default/../../','')
-							print path
+							codeline=getcodeline(path, entry[3])
+							if codeline !='':
+								if '/' in shortname:
+									shortname=shortname.rpartition('/')[2] # so we only have the filename like Unit.cpp
+									shortname='<'+shortname+'> '+codeline
+							shortname= '\"'+shortname+'\"'
 							outf.write(' '.join([sym,module,shortname,'\"'+path+'\" '+str(entry[3])+'\n']))
 						else:
+							shortname= '\"'+shortname+'\"'
 							outf.write(' '.join([sym,module,shortname,'\"" 0\n']))
 						found=True
 						break
@@ -142,7 +170,8 @@ for sleepyline in sleepyfile:
 			else:
 				outf.write(sleepyline)
 	except:
-		print 'Failed to parse line',sleepyline,'in',options.input
+		print 'Failed to translate line',sleepyline,'in',options.input
+		traceback.print_exc()
 		outf.write(sleepyline)
 		pass
 

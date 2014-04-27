@@ -62,7 +62,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="30">Grts_Rocky_Glacier_010</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="31">Balanced Annihilation Reloaded Core $VERSION</ModName>
+  <ModName z:Id="31">BAR Mission Base $VERSION</ModName>
   <Name z:Id="32">Glacier</Name>
   <Players z:Id="33">
     <items z:Id="34" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">

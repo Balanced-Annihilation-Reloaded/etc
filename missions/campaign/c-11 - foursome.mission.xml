@@ -62,7 +62,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="26">Grts_Cookedwell_008</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="27">Balanced Annihilation Reloaded Core $VERSION</ModName>
+  <ModName z:Id="27">BAR Mission Base $VERSION</ModName>
   <Name z:Id="28">Foursome</Name>
   <Players z:Id="29">
     <items z:Id="30" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">

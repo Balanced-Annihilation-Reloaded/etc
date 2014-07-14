@@ -4,6 +4,7 @@ import sys
 import struct
 import math
 import operator
+import random
 
 
 
@@ -309,6 +310,7 @@ class S3O(object):
 							except ValueError:
 								print 'Failed to parse parameter',p,'in',objfile[i]
 					piece.name=objfile[i].partition(' ')[2].strip().partition(',')[0][0:20]+b'\x00' #why was I limiting piece names to 10 length?
+					print 'piece name =',piece.name
 					piece.primitive_type='triangles' #tris
 					
 					piece.children=[]
@@ -367,8 +369,14 @@ class S3O(object):
 									#print len(piece.vertices),piece.vertices[-1]
 									piece.indices.append(len(piece.indices))
 						i+=1
+					if piece.name not in piecedict:
+						piecedict[piece.name]=piece
+					else:
+						piece.name=piece.name.strip()+str(random.random())+b'\x00'
+			
+						piecedict[piece.name]=piece
+					print piece.name
 					self.root_piece.children.append(piece)
-					piecedict[piece.name]=piece
 				else:
 					i+=1
 				if self.height==0:
@@ -378,6 +386,7 @@ class S3O(object):
 				#self.midpoint[1]=math.ceil(self.collision_radius-3)
 			#if the parents are specified, we need to rebuild the hierarchy!
 			#we need to rebuild post loading, because we cant be sure that the external modification of the obj file retained the piece order
+			#also, we must check for new pieces that are not part of anything
 			newroot=self.root_piece
 			for pieceindex in range(len(self.root_piece.children)):
 				piece=self.root_piece.children[pieceindex]
@@ -394,11 +403,25 @@ class S3O(object):
 					else:
 						print 'parent name',parentname,'not in piece dict!',piecedict,'adding it to the root piece'
 						newroot.children.append(piece)
+				# elif piece.parent==self.root_piece:
+					# print 'piece',piece.name,'is not in the encoded hierarchy, adding it as a child of root piece:',newroot.name
+					# piecedict[newroot.name].children.append(piece)
+					# piece.parent=piecedict[newroot.name]
+			
+			
+			for pieceindex in range(len(self.root_piece.children)):
+				piece=self.root_piece.children[pieceindex]
+				parentname=piece.parent
+				if piece.parent==self.root_piece:
+					print 'piece',piece.name,'is not in the encoded hierarchy, adding it as a child of root piece:',newroot.name
+					piecedict[newroot.name].children.append(piece)
+					piece.parent=piecedict[newroot.name]
+			#now that we have the hiearchy set up right, its time to calculate offsets!
+						
 			print newroot
 			self.root_piece=newroot
-			#now that we have the hiearchy set up right, its time to calculate offsets!
+			
 			self.adjustobjtos3ooffsets(self.root_piece,0,0,0)
-			#now that we have the hiearchy set up right, its time to calculate offsets!
 			
 			if warn==1:
 				print 'Warning: one or more faces had more than 3 vertices, so triangulation was used. This can produce bad results with concave polygons'

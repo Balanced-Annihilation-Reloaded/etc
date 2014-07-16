@@ -52,8 +52,7 @@ def parsebos(line,verbose=True):
 	
 	#move rleg to y-axis [0.250000] now;
 	if len(line)<5:
-		if verbose:
-			print 'line split is less than 5, not a proper move/turn command!', line,l
+	
 		return False
 	
 	if line[0]!='turn' and line[0]!='move':
@@ -149,9 +148,9 @@ for line in inputfile:
 	if ('move' in line or 'turn' in line) and 'now' in line: # search ahead and find a sleep before a bracket-close
 		sleep=-1
 		sleepline=-1
-		for k in range(i+1,min(i+20,len(inputfile))): #search at most 20 lines ahead, unlikely there will a sleep that far ahead
+		for k in range(i+1,min(i+30,len(inputfile))): #search at most 20 lines ahead, unlikely there will a sleep that far ahead
 			#if there is another move-now after it, then we ignore that.
-			if parsebos(line,False) and parsebos(inputfile[k],False):
+			if parsebos(line,False) and parsebos(inputfile[k],True):
 				orig=parsebos(line,False)
 				if 'wait-for-'+orig['c'] in inputfile[k] and orig['p'] in inputfile[k] and orig['a']+'-axis' in inputfile[k]:
 					print 'There is a wait-for command referring to this piece on this axis, skipping',inputfile[k]
@@ -188,7 +187,7 @@ for line in inputfile:
 				break
 			
 		if sleep=='animSpeed' or sleep=='currentSpeed' or (sleep>minsleep and sleep < maxsleep): # we have the sleep value, time to find the last position the piece was at before this new NOW command!
-			#important thing about sleep: #of frames= CEILING(sleep/33) (which means sleep 33 sleeps 2 frames!)
+			#important thing about sleep: #of frames slept= CEILING(sleep/33) (which means sleep 33 sleeps 2 frames!)
 			if parsebos(line):
 				bos=parsebos(line)
 				#print bos
@@ -215,6 +214,7 @@ for line in inputfile:
 						if smanim or forcesmooth:
 							s+=' *  currentSpeed / 100'
 						inputfile[i]=line.replace('now',s)
+						print line
 						if forcesmooth and sleepline>0:
 							inputfile[sleepline]=inputfile[sleepline].partition('sleep')[0]+'sleep '+str(sleep*100)+' / currentspeed;\n'
 					

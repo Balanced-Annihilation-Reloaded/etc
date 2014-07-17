@@ -103,7 +103,7 @@ class S3O(object):
 				facestr='f'
 				for i in range(step):
 					v=piece.vertices[piece.indices[k+i]]
-					closest=self.closest_vertex(piece.vertices,piece.indices[k+i],0.1)
+					closest=self.closest_vertex(piece.vertices,piece.indices[k+i],0.01)
 					vertexmap[piece.indices[k+i]]=closest
 					
 					if closest not in hash:
@@ -133,7 +133,7 @@ class S3O(object):
 			for face1 in range(0,len(piece.indices),step):
 				#for f2 in range(f1+step,len(piece.indices),step):
 				for face2 in range(0,len(piece.indices),step):
-					if face1!=face2 and self.in_smoothing_group(piece,face1,face2,0.01,step):
+					if face1!=face2 and self.in_smoothing_group(piece,face1,face2,0.001,step):
 						f1=face1/step
 						f2=face2/step
 						if f1 in faces and f2 in faces:
@@ -388,6 +388,7 @@ class S3O(object):
 			#we need to rebuild post loading, because we cant be sure that the external modification of the obj file retained the piece order
 			#also, we must check for new pieces that are not part of anything
 			newroot=self.root_piece
+			hasroot=False
 			for pieceindex in range(len(self.root_piece.children)):
 				piece=self.root_piece.children[pieceindex]
 				parentname=piece.parent
@@ -396,6 +397,7 @@ class S3O(object):
 					if parentname== b'\x00':
 						newroot=piecedict[piece.name]
 						print 'the new root piece is',piece.name
+						hasroot=True
 					elif parentname in piecedict:
 						print 'assigning',piece.name,'to', piece.parent
 						piecedict[parentname].children.append(piece)
@@ -407,7 +409,8 @@ class S3O(object):
 					# print 'piece',piece.name,'is not in the encoded hierarchy, adding it as a child of root piece:',newroot.name
 					# piecedict[newroot.name].children.append(piece)
 					# piece.parent=piecedict[newroot.name]
-			
+			if not hasroot:
+				piecedict[newroot.name]=newroot
 			
 			for pieceindex in range(len(self.root_piece.children)):
 				piece=self.root_piece.children[pieceindex]

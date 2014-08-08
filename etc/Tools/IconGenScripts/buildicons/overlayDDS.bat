@@ -1,3 +1,5 @@
+md %~dp0Units\
+md %~dp0Overlays\
 set black=%~dp0Black__128x128\
 set white=%~dp0White__128x128\
 set overlay=%~dp0Overlays\

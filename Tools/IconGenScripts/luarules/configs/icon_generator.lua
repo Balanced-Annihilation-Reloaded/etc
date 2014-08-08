@@ -38,13 +38,13 @@ factionColors = function(faction)
 		core    = {0, 0, 0},   --// core
 		chicken = {1.0,0.8,0.2},   --// chicken
 		unknown = {0, 0, 0},   --// unknown
-		Black   = {0,0,0}
+		Black   = {0,0,0},
 		White   = {1,1,1}
 	}
 	
 	
 
-	if color[scheme]
+	if color[scheme] then
 		return color[scheme]
 	else
 		return colors[faction]
@@ -52,7 +52,6 @@ factionColors = function(faction)
 
 end
 
-Spring.Echo('[Icon Config] scheme = '..scheme)
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
 
@@ -105,10 +104,20 @@ halo         = IconConfig[selConfig].halo
 -----------------------------------------------------------------------
 
 --// backgrounds
-background = false
+background = true
+local water = "LuaRules/Images/IconGenBkgs/bg_water.png"
+
+local function Greater30(a)     return a>30;  end
+local function GreaterEq15(a)   return a>=15; end
+local function GreaterZero(a)   return a>0;   end
+local function GreaterEqZero(a) return a>=0;  end
+local function GreaterFour(a)   return a>4;   end
+local function LessEqZero(a)    return a<=0;  end
 
 backgrounds = {
-
+  {check={waterline=GreaterEq15,minWaterDepth=GreaterZero},texture=water},
+  {check={floatOnWater=false,minWaterDepth=GreaterFour},texture=water},
+  {check={floatOnWater=true,minWaterDepth=GreaterZero},texture=water},
 }
 
 

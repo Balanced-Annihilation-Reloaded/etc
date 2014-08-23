@@ -196,7 +196,7 @@ WG.MissionName = "Glacier"</CodeStr>
                 </TriggerLogic>
                 <TriggerLogic z:Id="62" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="63">obj</Name>
-                  <CodeStr z:Id="64" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">local text = "Intelligence indicates that the enemy has a control tower on the eastern side of the glacier. Fight your way across the map and destroy it! There are heavy guns on the frozen lakes - avoid wherever you can."
+                  <CodeStr z:Id="64" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">local text = "Intelligence suggests that the enemy has a control tower to the east of the glacier. Fight your way across the map and destroy it! \n\nThere are heavy guns on the frozen lakes - make sure to scout whenever you can."
 
 WG.MissionObjective = text</CodeStr>
                   <Synced xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Synced>
@@ -7000,7 +7000,7 @@ WG.MissionObjective = text</CodeStr>
         <Trigger i:nil="true" />
       </_items>
       <_size>9</_size>
-      <_version>19</_version>
+      <_version>21</_version>
     </items>
     <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="1421">
       <d3p1:_busyCount>0</d3p1:_busyCount>

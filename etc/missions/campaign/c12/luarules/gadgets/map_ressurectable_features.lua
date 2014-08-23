@@ -3,7 +3,7 @@ function gadget:GetInfo()
     name      = "Resurrectabke wreck placer",
     desc      = "Resurrectabke wreck placer",
     author    = "beherith",
-    date      = "2012 july",
+    date      = "July 2012",
     license   = "GNU GPL, v2 or later",
     layer     = 10,
     enabled   = true

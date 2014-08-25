@@ -286,7 +286,8 @@ function BuildRandomThing(cID)
     local x,y,z = Spring.GetUnitPosition(cID)
     local f = RandomFacing()
     local blocking = Spring.TestBuildOrder(buildOptions[id], x,y,z, f)
-    if blocking ~= 0 and not UnitDefs[uDefID].isFactory then
+    local uDef = UnitDefs[uDefID]
+    if blocking ~= 0 and not uDef.isFactory and not (uDef.extractsMetal and uDef.extractsMetal>0) and not (uDef.metalCost>5000) then
         Spring.GiveOrderToUnit(cID, -buildOptions[id], {x,y,z,f}, {})
     end    
 end
@@ -309,16 +310,17 @@ function CreateCons()
     local allyTeams = Spring.GetAllyTeamList()
     for _,aID in ipairs(allyTeams) do
         local teamList = Spring.GetTeamList(aID)
-        local tID = teamList[1]
-        local _, _, _, isAITeam, _, _ = Spring.GetTeamInfo(tID)
-        if isAITeam then
-            -- guess faction based on spawned units
-            local units = Spring.GetTeamUnits(tID)
-            local arm,core = 0,0
-            
-            local faction = "core" --TODO
-            -- record that this team has cons for us to control
-            conTeams[tID] = faction
+        for _,tID in ipairs(teamList) do
+            local _, _, _, isAITeam, _, _ = Spring.GetTeamInfo(tID)
+            if isAITeam then
+                -- guess faction based on spawned units
+                local units = Spring.GetTeamUnits(tID)
+                local arm,core = 0,0
+                
+                local faction = "core" --TODO
+                -- record that this team has cons for us to control
+                conTeams[tID] = faction
+            end
         end
     end
     
@@ -328,7 +330,10 @@ function CreateCons()
         local x,y,z, unitDefID = PickSpawn(tID, faction)
         if unitDefID then
             local unitID = Spring.CreateUnit(unitDefID, x,y,z, RandomFacing(), tID) 
-            cons[unitID] = tID
+            if unitID then 
+                cons[unitID] = tID
+                Procrastinate(unitID)
+            end
         end
     end
     end

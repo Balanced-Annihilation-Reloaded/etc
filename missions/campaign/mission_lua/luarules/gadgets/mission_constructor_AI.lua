@@ -57,6 +57,9 @@ local corConNames = {
     "corfast",
 }
 
+local ARM_NANO = UnitDefNames["armnanotc"].id
+local CORE_NANO = UnitDefNames["cornanotc"].id
+
 function PickSpawnType(faction, x,y,z)
     -- pick a random unitDefID of a constructor of faction suitable for ground at x,y,z
     local conTable
@@ -331,6 +334,16 @@ function CreateCons()
     end
 end
 
+function gadget:UnitCreated(unitID, unitDefID, unitTeam, builderID)
+    -- if we build nanos, make them do stuff
+    if (unitDefID == ARM_NANO or unitDefID==COR_NANO) and conTeams[unitTeam] and Spring.ValidUnitID(unitID) then
+        local x,y,z = Spring.GetUnitPosition(unitID)
+        x,z = x+25,z+25
+        y = Spring.GetGroundHeight(x,z)
+        Spring.GiveOrderToUnit(unitID, CMD.FIGHT, {x,y,z}, {}) 
+    end
+end
+
 
 function gadget:UnitDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)
     -- check if it was one of our cons
@@ -390,16 +403,18 @@ function gadget:GameFrame(n)
     -- give idle cons that are close to enemies los something to do
     -- only rarely give the others something to do very rarely
     for cID,_ in pairs(cons) do
+        if  Spring.GetCommandQueue(cID,-1,false)==0 then
         local eID = Spring.GetUnitNearestEnemy(cID, 1024, true)
-        if eID then
-            local x,y,z = Spring.GetUnitPosition(eID)
-            local cx,cy,cz = Spring.GetUnitPosition(cID)
-            if (x-cx)^2+(y-cy)^2+(z-cz)^2 <= 512^2 and math.random() < 0.5 and Spring.GetCommandQueue(cID, -1, false)==0 then
-                DoAction(cID)
-            end
-        else
-            if math.random() < (1/60) then
-                Procrastinate(cID)
+            if eID then
+                local x,y,z = Spring.GetUnitPosition(eID)
+                local cx,cy,cz = Spring.GetUnitPosition(cID)
+                if (x-cx)^2+(y-cy)^2+(z-cz)^2 <= 512^2 and math.random() < 0.5 then
+                    DoAction(cID)
+                end
+            else
+                if math.random() < (1/60) then
+                    Procrastinate(cID)
+                end
             end
         end
     end

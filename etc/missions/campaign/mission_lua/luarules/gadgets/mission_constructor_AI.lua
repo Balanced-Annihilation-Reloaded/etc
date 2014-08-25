@@ -16,14 +16,17 @@ if (gadgetHandler:IsSyncedCode()) then
 
 
 local cons = {}
-
-local nCons = 5 --number of cons per AI team, not replaced when they die
 local conTeams = {}
 
 local to_reclaim = {}
 local to_repair = {}
 local to_rebuild = {}
 
+local nCons = 0 --number of cons per AI team, not replaced when they die
+function gadget:GamePreload()
+    nCons = GG.MissionExtraCons or 0
+    Spring.Echo("Moo", nCons)
+end
 
 
 -- SPAWNING --

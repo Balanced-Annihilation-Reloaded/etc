@@ -312,11 +312,22 @@ function CreateCons()
         for _,tID in ipairs(teamList) do
             local _, _, _, isAITeam, _, _ = Spring.GetTeamInfo(tID)
             if isAITeam then
-                -- guess faction based on spawned units
+                -- infer faction from on majority vote of spawned units
                 local units = Spring.GetTeamUnits(tID)
                 local arm,core = 0,0
+                for _,uID in pairs(units) do
+                    local uDefName = UnitDefs[Spring.GetUnitDefID(uID)].name
+                    if string.find(uDefName, "arm") then
+                        arm = arm + 1
+                    elseif string.find(uDefName, "cor") then
+                        core = core + 1
+                    end
+                end
                 
-                local faction = "core" --TODO
+                local faction
+                if arm>0 and arm>=core then faction = "arm" end
+                if core>0 and core>arm then faction = "core" end
+                
                 -- record that this team has cons for us to control
                 conTeams[tID] = faction
             end

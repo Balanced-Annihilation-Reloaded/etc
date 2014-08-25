@@ -25,7 +25,6 @@ local to_rebuild = {}
 local nCons = 0 --number of cons per AI team, not replaced when they die
 function gadget:GamePreload()
     nCons = GG.MissionExtraCons or 0
-    Spring.Echo("Moo", nCons)
 end
 
 

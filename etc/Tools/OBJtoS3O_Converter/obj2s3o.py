@@ -134,7 +134,12 @@ class App:
 		Checkbutton(objtos3oframe,text='Prompt output filename', variable=self.prompts3ofilename).pack(side=LEFT)
 		
 		
-		Button(s3otoobjframe , text='Convert S3O to OBJ', command=self.opens3o).pack(side=LEFT)
+		Button(s3otoobjframe , text='Convert S3O to OBJ', command=self.opens3o).pack(side=LEFT)		
+		self.optimize_for_wings3d=IntVar()
+		self.optimize_for_wings3d.set(1)
+		
+		Checkbutton(s3otoobjframe,text='Optimize for Wings3d', variable=self.optimize_for_wings3d).pack(side=LEFT)
+
 		self.promptobjfilename=IntVar()
 
 		Checkbutton(s3otoobjframe,text='Prompt output filename', variable=self.promptobjfilename).pack(side=LEFT)
@@ -200,7 +205,7 @@ class App:
 						outputfilename+='.obj'
 				else:
 					outputfilename=file.lower().replace('.s3o','.obj')
-				S3OtoOBJ(file,outputfilename)
+				S3OtoOBJ(file,outputfilename,self.optimize_for_wings3d.get()==1)
 	def optimizes3o(self):
 		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)
 		self.s3ofile = string2list(self.s3ofile) 
@@ -220,11 +225,11 @@ def string2list(input_string):
 	input_string = input_string.rstrip('}')
 	output = input_string.split('} {')
 	return output
-def S3OtoOBJ(filename,outputfilename):
+def S3OtoOBJ(filename,outputfilename,optimize_for_wings3d=True):
 	if '.s3o' in filename.lower():
 		data=open(filename,'rb').read()
 		model=S3O(data)
-		model.S3OtoOBJ(outputfilename)
+		model.S3OtoOBJ(outputfilename,optimize_for_wings3d)
 		print "Succesfully converted", filename,'to',outputfilename
 def OBJtoS3O(objfile,transform,outputfilename,a,b,c,d):
 	if '.obj' in objfile.lower():

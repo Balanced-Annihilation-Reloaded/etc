@@ -168,7 +168,14 @@ for line in inputfile:
 				elif'currentSpeed' in inputfile[k].partition('//')[0]:
 					sleep='currentSpeed'
 					try:
-						animspeed=int(inputfile[k].partition('sleep')[2].partition('/')[0])/100
+						animspeed = 30;
+						for value in inputfile[k].partition('sleep')[2].partition('currentSpeed')[0].split(' '):
+							try:
+								animspeed=max(animspeed, int(value))
+								print 'animspeed=', animspeed
+								break
+							except:
+								pass
 						break
 					except ValueError:
 						print 'failed to parse sleep in line',inputfile[k],'skipping'

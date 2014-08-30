@@ -139,7 +139,7 @@ class App:
 		self.severitylevels=[25,50,99,-1]
 		self.piecetree=[]#((piece.name, parentname, piecevol, indices, len(piece.children)), #emptychildren,depth)'name pname vol indices children emptychildren depth'
 		#=====
-		self.loadunit('s:/baremake/ETC/Tools/DrKillinger/units/ajuno.lua')
+		self.loadunit(os.getcwd()+'/units/ajuno.lua')
 	def makeseverityframes(self):
 		self.wreckframe=Frame(self.severitiesframe,bd=3,relief=SUNKEN,width=750)
 		self.wreckframe.pack(side=TOP,fill=X)
@@ -345,11 +345,29 @@ class App:
 			
 		return killtable
 
-	def saveunit(self):
+	def saveunit(self): #wtf should this even do?
 		return
 	def nextunit(self):
+		oldunitname=self.unitname
+		unitlist=sorted(os.listdir(self.modpath+'units'))
+		newunitname=''
+		for unit_index in range(len(unitlist)):
+			unitname=unitlist[unit_index].partition('.')[0]
+			print 'oldunitname', oldunitname, 'unitname',unitname
+			if unitname==oldunitname:
+				newunitname=unitlist[unit_index+1]
+		self.loadunit(self.modpath+'units/'+newunitname)
 		return
 	def prevunit(self):
+		oldunitname=self.unitname
+		unitlist=sorted(os.listdir(self.modpath+'units'))
+		newunitname=''
+		for unit_index in range(len(unitlist)):
+			unitname=unitlist[unit_index].partition('.')[0]
+			print 'oldunitname', oldunitname, 'unitname',unitname
+			if unitname==oldunitname:
+				newunitname=unitlist[unit_index-1]
+		self.loadunit(self.modpath+'units/'+newunitname)
 		return
 	def opens3o(self):
 		self.s3ofile = tkFileDialog.askopenfilename(initialdir= self.initialdir,filetypes = [('Spring Model file (S3O)','*.s3o'),('Any file','*')], multiple = True)

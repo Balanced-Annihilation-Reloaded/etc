@@ -511,14 +511,41 @@ class App:
 		output_file.close()
 		for i in range(len(self.unitdef)):
 			if 'object' in self.unitdef[i] and self.unitname.lower()+'_dead' in self.unitdef[i].lower():
-				self.unitdef[i]= self.unitdef[i].lower().replace('_dead', '_dead.s3o')
+				if '.s3o' not in self.unitdef[i].lower():
+					self.unitdef[i]= self.unitdef[i].lower().replace('_dead', '_dead.s3o')
+			elif 'object' in self.unitdef[i] and 'x' in self.unitdef[i].lower():
+				
+				line=self.unitdef[i].lower()
+				parts=line.split('\"')
+				heapname=parts[1]
+				print 'heapname',heapname
+				xindex=heapname.index('x')
+				try:
+					int(heapname[xindex-1])
+					int(heapname[xindex+1])
+					if 'cor' in heapname: 
+						if 'Arm' in self.s3o.texture_paths[0]:
+							heapname=heapname.replace('cor','arm')
+					else:
+						if 'Arm' in self.s3o.texture_paths[0]:
+							heapname='arm'+heapname+'.s3o'
+						else:
+							heapname='cor'+heapname+'.s3o'
+							
+					print 'newheapname',heapname
+					self.unitdef[i]= '\"'.join([parts[0],heapname,parts[2]])
+				except:
+					print 'this is not a heap!'
+					pass
+					
+
 		luaf=open(self.outputdir+'/'+self.unitname+'.lua','w')
 		luaf.write(''.join(self.unitdef))
 		luaf.close() 
 		print 'Successfully written, validating S30'
 		valid=S3O(open(self.outputdir+'/'+self.unitname+'_dead.s3o','rb').read())
 		#valid.S3OtoOBJ(self.outputdir+'/'+self.unitname+'_dead.obj')
-		#print 'validation OK!'
+		print 'validation OK!'
 		return
 	def destroy(self, twist, shear, deform,shearang): #destroy(0,0.05+random.random()/10,0.5,random.random()*100)
 		#global base

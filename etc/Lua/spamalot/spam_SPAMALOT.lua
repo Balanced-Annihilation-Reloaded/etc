@@ -2,19 +2,9 @@
 --code deliberately not optimized!
 
 --TLDRSPAM:
---Set enabled to true and go
-
---INSTRUCTIONSPAM:
 --Set max units to at least 2000
---Set game-end mode to continue even if all coms/etc are dead
---Make sure you have moduictrl on
 --Remove or turn off all game end gadgetry 
---Remove any unsynced lua that (without any user input) creates keyboard/mouse input, destroys units/features and/or gives orders to units
---(0) Set mode (fight=true/false) below
---(1) Load game, force start with alt+f (no need to ready)
---(2) DONT TOUCH ANYTHINGSPAM!
---(3) Game will run for 3.00 minutes of ingame time
---(4) Once game is over, stats are printed to chat/infolog
+--Set enabled to true and go
 
 function gadget:GetInfo()
 	return {
@@ -25,7 +15,7 @@ function gadget:GetInfo()
 		version   = "v0.1.ham.and.jam.and...",
 		license   = "GPL spam v3.0 or later",
 		layer     = -1, 
-		enabled   = true,
+		enabled   = false,
 		spam 	  = spam,
 	}
 end

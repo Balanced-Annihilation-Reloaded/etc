@@ -100,7 +100,7 @@ function PickSpawn(tID, faction)
         x, z = cx+r*math.sin(theta), cz+r*math.cos(theta)
         y = Spring.GetGroundHeight(x,z)
         unitDefID = PickSpawnType(faction, x,y,z)
-        if unitDefID then 
+        if unitDefID and not cons[units[n]] then 
             local canMove = Spring.TestMoveOrder(unitDefID, cx,cy,cz, 0,1,0, true,true,false)
             if canMove then
                 break 
@@ -231,7 +231,12 @@ function RunAway(cID)
     for uID,_ in ipairs(units) do
         local uDefID = Spring.GetUnitDefID(uID)
         if uDefID and (uDefID==ARM_NANO or uDefID==COR_NANO) then
-            nanos[#nanos+1] = uID
+            local cx,cy,cz = Spring.GetUnitPosition(cID)
+            local x,y,z = Spring.GetUnitPosition(uID)
+            local r = math.sqrt((cx-x)^2+(cy-y)^2+(cz-z)^2)
+            if r<2048 then
+                nanos[#nanos+1] = uID
+            end
         end    
     end
     
@@ -270,7 +275,7 @@ end
 -- PROCRASTINATION --
 
 function Procrastinate(cID)
-    if math.random()<0.5 then
+    if math.random()<0.25 then
         BuildRandomThing(cID)
     else
         GoForAWalk(cID)
@@ -315,7 +320,7 @@ function CreateCons()
                 -- infer faction from on majority vote of spawned units
                 local units = Spring.GetTeamUnits(tID)
                 local arm,core = 0,0
-                for _,uID in pairs(units) do
+                for _,uID in ipairs(units) do
                     local uDefName = UnitDefs[Spring.GetUnitDefID(uID)].name
                     if string.find(uDefName, "arm") then
                         arm = arm + 1

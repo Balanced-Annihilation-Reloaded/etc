@@ -62,7 +62,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="30">Malibu Beach v1</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="31">Balanced Annihilation V7.84</ModName>
+  <ModName z:Id="31">Balanced Annihilation $VERSION</ModName>
   <Name z:Id="32">Reg Test BA 1 (malibu beach)</Name>
   <Players z:Id="33">
     <items z:Id="34" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
@@ -1148,6 +1148,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="296" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="286" i:nil="true" />
@@ -1195,6 +1196,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="307" z:Type="CMissionLib.Actions.StartCountdownAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="308">Start Countdown</Name>
@@ -1251,6 +1253,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
               </_items>
@@ -1334,6 +1337,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
               </_items>
@@ -1417,6 +1421,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
               </_items>

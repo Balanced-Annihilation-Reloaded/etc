@@ -62,7 +62,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="31">Malibu Beach v1</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="32">Balanced Annihilation V7.90</ModName>
+  <ModName z:Id="32">Balanced Annihilation $VERSION</ModName>
   <Name z:Id="33">BA Reg Test 3</Name>
   <Players z:Id="34">
     <items z:Id="35" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
@@ -142,7 +142,7 @@
           </ColorBrush>
           <IsHuman>false</IsHuman>
           <IsRequired>false</IsRequired>
-          <Name z:Id="47">Player 2</Name>
+          <Name z:Id="47">Player_2</Name>
         </Player>
         <Player i:nil="true" />
         <Player i:nil="true" />
@@ -2035,6 +2035,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="458" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="440" i:nil="true" />
@@ -2157,6 +2158,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="479" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="440" i:nil="true" />
@@ -2279,6 +2281,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
               </_items>
               <_size>4</_size>
@@ -2313,7 +2316,7 @@
                   <Countdown z:Id="512" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">end</Countdown>
                   <Display xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Display>
                   <Frames xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">150</Frames>
-                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0.083333333333333329</Minutes>
+                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0.0833333358168602</Minutes>
                   <Seconds xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">5</Seconds>
                   <Time xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">PT5S</Time>
                 </TriggerLogic>
@@ -2438,7 +2441,7 @@
                   <Countdown z:Id="551" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">shutdown</Countdown>
                   <Display xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Display>
                   <Frames xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">300</Frames>
-                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0.16666666666666666</Minutes>
+                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0.1666666716337204</Minutes>
                   <Seconds xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">10</Seconds>
                   <Time xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">PT10S</Time>
                 </TriggerLogic>

@@ -62,7 +62,7 @@
   <ImagePath i:nil="true" />
   <MapName z:Id="30">Malibu Beach v1</MapName>
   <MaxUnits>5000</MaxUnits>
-  <ModName z:Id="31">Balanced Annihilation V7.84</ModName>
+  <ModName z:Id="31">Balanced Annihilation $VERSION</ModName>
   <Name z:Id="32">Reg Test BA 2 (malibu beach)</Name>
   <Players z:Id="33">
     <items z:Id="34" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
@@ -1435,6 +1435,7 @@
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="321" z:Type="CMissionLib.Actions.StartCountdownAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="322">Start Countdown</Name>
@@ -1466,7 +1467,7 @@
                   <Countdown z:Id="330" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">stockpile set</Countdown>
                   <Display xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">true</Display>
                   <Frames xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">150</Frames>
-                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0.083333333333333329</Minutes>
+                  <Minutes xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">0.0833333358168602</Minutes>
                   <Seconds xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">5</Seconds>
                   <Time xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">PT5S</Time>
                 </TriggerLogic>
@@ -1600,6 +1601,7 @@ Spring.SendCommands('globallos')</CodeStr>
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="368" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="310" i:nil="true" />
@@ -1640,6 +1642,7 @@ Spring.SendCommands('globallos')</CodeStr>
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic z:Id="378" z:Type="CMissionLib.Actions.GiveOrdersAction" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Ref="310" i:nil="true" />
@@ -1721,6 +1724,7 @@ Spring.SendCommands('globallos')</CodeStr>
                       <d11p1:_busyCount>0</d11p1:_busyCount>
                     </d10p1:_monitor>
                   </Orders>
+                  <Queue xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Queue>
                 </TriggerLogic>
                 <TriggerLogic i:nil="true" />
                 <TriggerLogic i:nil="true" />

@@ -42,12 +42,15 @@ local white = "\255\255\255\255"
 function gadget:Initialize()
 	gadgetHandler:AddChatAction('saveunits', SaveUnits, "")
 	gadgetHandler:AddChatAction('loadunits', LoadUnits, "")
+	gadgetHandler:AddChatAction('placeunits', PlaceUnits, "")
+	gadgetHandler:AddChatAction('playorders', PlayOrders, "")
 	gadgetHandler:AddChatAction('cleanunits', CleanUnits, "")
 end
 
 function gadget:ShutDown()
 	gadgetHandler:RemoveChatAction('saveunits')
 	gadgetHandler:RemoveChatAction('loadunits')
+	gadgetHandler:RemoveChatAction('placeunits')
 	gadgetHandler:RemoveChatAction('cleanunits')
 end
 
@@ -60,10 +63,6 @@ function LoadUnits()
         Spring.Echo("ERROR: Already in progress")
         return 
     end 
-    if t1ID==t2ID or t2ID==nil then
-        Spring.Echo("ERROR: Need at least two ally teams")
-        return
-    end
 
     local m = #(Spring.GetAllUnits())
     if m>0 then
@@ -74,9 +73,12 @@ function LoadUnits()
     end
 end
 
-function LoadUnitsNow()
-    Spring.Echo(white .. "Loaded units, order queue starts in " .. PFSwait .. " seconds")
-    
+function PlaceUnits()
+    if t1ID==t2ID or t2ID==nil then
+        Spring.Echo("ERROR: Need at least two ally teams")
+        return
+    end
+
     for _,u in ipairs(unit_table) do
         tID = (u.aID==1) and t1ID or t2ID
         local uDID = UnitDefNames[u.name].id
@@ -88,8 +90,27 @@ function LoadUnitsNow()
         Spring.SetUnitMaxHealth(u.uID,u.mh)
         Spring.SetUnitHealth(u.uID,u.h,0,0,u.b)
     end
-    
+end
+
+function LoadUnitsNow()
+    Spring.Echo(white .. "Loaded units, order queue starts in " .. PFSwait .. " seconds")
+    CleanUnits()
+    PlaceUnits()
     return true
+end
+
+function PlayOrders()
+    if playOrders then
+        Spring.Echo(white .. "ERROR: Already in progress")
+        return
+    end
+
+    GiveInitialOrders()
+    Spring.Echo(white .. "Playing order queue")
+    SendToUnsynced("Started")
+    playOrders = true
+    playStartFrame = Spring.GetGameFrame()
+    orderCount = 1
 end
 
 function GiveInitialOrders()
@@ -117,12 +138,7 @@ function gadget:GameFrame(n)
     end
 
     if n-30*PFSwait==startFrame then
-        GiveInitialOrders()
-        Spring.Echo(white .. "Playing order queue")
-        SendToUnsynced("Started")
-        playOrders = true
-        playStartFrame = Spring.GetGameFrame()
-        orderCount = 1
+        PlayOrders()
     end 
 
     if playOrders then

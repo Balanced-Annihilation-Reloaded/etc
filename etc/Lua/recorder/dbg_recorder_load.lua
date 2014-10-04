@@ -43,6 +43,11 @@ function gadget:Initialize()
 	gadgetHandler:AddChatAction('saveunits', SaveUnits, "")
 	gadgetHandler:AddChatAction('loadunits', LoadUnits, "")
 	gadgetHandler:AddChatAction('placeunits', PlaceUnits, "")
+	gadgetHandler:AddChatAction('placemobileunits', PlaceMobileUnits, "")
+	gadgetHandler:AddChatAction('placewaterunits', PlaceWaterUnits, "")
+	gadgetHandler:AddChatAction('placelandunits', PlaceLandUnits, "")
+	gadgetHandler:AddChatAction('placeairunits', PlaceAirUnits, "")
+	gadgetHandler:AddChatAction('placebuildings', PlaceBuildings, "")
 	gadgetHandler:AddChatAction('playorders', PlayOrders, "")
 	gadgetHandler:AddChatAction('cleanunits', CleanUnits, "")
 end
@@ -51,6 +56,12 @@ function gadget:ShutDown()
 	gadgetHandler:RemoveChatAction('saveunits')
 	gadgetHandler:RemoveChatAction('loadunits')
 	gadgetHandler:RemoveChatAction('placeunits')
+	gadgetHandler:RemoveChatAction('placemobileunits')
+	gadgetHandler:RemoveChatAction('placewaterunits')
+	gadgetHandler:RemoveChatAction('placelandunits')
+	gadgetHandler:RemoveChatAction('placeairunits')
+	gadgetHandler:RemoveChatAction('placebuildings')
+	gadgetHandler:RemoveChatAction('playorders', PlayOrders, "")
 	gadgetHandler:RemoveChatAction('cleanunits')
 end
 
@@ -73,7 +84,23 @@ function LoadUnits()
     end
 end
 
-function PlaceUnits()
+function PlaceMobileUnits()
+    PlaceUnits("canMove")
+end
+function PlaceLandUnits()
+    PlaceUnits("land")
+end
+function PlaceAirUnits()
+    PlaceUnits("air")
+end
+function PlaceWaterUnits()
+    PlaceUnits("water")
+end
+function PlaceBuildings()
+    PlaceUnits("isBuilding")
+end
+
+function PlaceUnits(filter)
     if t1ID==t2ID or t2ID==nil then
         Spring.Echo("ERROR: Need at least two ally teams")
         return
@@ -82,19 +109,39 @@ function PlaceUnits()
     for _,u in ipairs(unit_table) do
         tID = (u.aID==1) and t1ID or t2ID
         local uDID = UnitDefNames[u.name].id
-        local unitID = Spring.CreateUnit(uDID,u.x,u.y,u.z,u.f,tID,false,false,u.uID)
-        if unitID ~= u.uID then
-            unitID = unitID or "nil"
-            Spring.Echo("ERROR: Failed to create unit or unitID, likely reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
+        if not filter or CheckAgainstFilter(filter,uDID) then
+            local unitID = Spring.CreateUnit(uDID,u.x,u.y,u.z,u.f,tID,false,false,u.uID)
+            if unitID ~= u.uID then
+                unitID = unitID or "nil"
+                Spring.Echo("ERROR: Failed to create unit or unitID, likely reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
+            end
+            Spring.SetUnitMaxHealth(u.uID,u.mh)
+            Spring.SetUnitHealth(u.uID,u.h,0,0,u.b)
         end
-        Spring.SetUnitMaxHealth(u.uID,u.mh)
-        Spring.SetUnitHealth(u.uID,u.h,0,0,u.b)
     end
+end
+
+function CheckAgainstFilter(filter, uDID)
+    if filter=="canMove" then
+        return UnitDefs[uDID].canMove
+    end
+    if filter=="isBuilding" then
+        return UnitDefs[uDID].isBuilding
+    end
+    if filter=="air" then
+        return UnitDefs[uDID].isAirUnit
+    end
+    if filter=="land" then
+        return UnitDefs[uDID].isGroundUnit
+    end
+    if filter=="water" then
+        return (unitDef.maxWaterDepth and unitDef.maxWaterDepth>25) or (unitDef.minWaterDepth and unitDef.minWaterDepth>0)
+    end
+    return true
 end
 
 function LoadUnitsNow()
     Spring.Echo(white .. "Loaded units, order queue starts in " .. PFSwait .. " seconds")
-    CleanUnits()
     PlaceUnits()
     return true
 end

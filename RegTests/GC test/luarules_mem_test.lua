@@ -1,12 +1,12 @@
 function gadget:GetInfo()
   return {
     name      = "Lua Mem Test",
-    desc      = "",
+    desc      = "test",
     author    = "",
     date      = "",
     license   = "",
-    layer     = 0,
-    enabled   = false
+    layer     = 1,
+    enabled   = true
   }
 end
 
@@ -20,6 +20,7 @@ if (not gadgetHandler:IsSyncedCode()) then
 end
 
 function gadget:GameStart()
+    Spring.Echo("memtest")
     Spring.SendCommands("cheat")
     Spring.SendCommands("debug")
 

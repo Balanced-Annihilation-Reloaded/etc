@@ -1,11 +1,6 @@
 --Gadget for stress/unitscript testing, made by Bluestone
 --code deliberately not optimized!
 
---TLDRSPAM:
---Set max units to at least 2000
---Remove or turn off all game end gadgetry 
---Set enabled to true and go
-
 function gadget:GetInfo()
 	return {
 		name      = "SPAMSPAMSPAM",
@@ -15,7 +10,7 @@ function gadget:GetInfo()
 		version   = "v0.1.ham.and.jam.and...",
 		license   = "GPL spam v3.0 or later",
 		layer     = -1, 
-		enabled   = false,
+		enabled   = true,
 		spam 	  = spam,
 	}
 end
@@ -25,28 +20,34 @@ if gadgetHandler:IsSyncedCode() then
 -------------------------------------
 ----------------SYNCED---------------
 
---mode
---fight=false simulates unit movement only, fight=true simulates a full battle 
-local fight = true
+-- CONFIG --
 
+--mode
+--fight=false simulates unit movement only, fight=true simulates fighting too
+local fight = true
 
 --vars
 --some of these are duplicated in unsynced
 local unitSpamD = 2  --initial unit density (units per map square)
-local uSD = unitSpamD
-local runSteps = 2 
-local testTime = 1 --minutes each step of settings is run for
+local runSteps = 2 --how many steps (at the end of each step, unitSpamD increases by 1)
+local stepTime = 1 --minutes each step of settings is run for
+
+--other
+local orderRate = 20 --average time an order is kept before being replaced
+local pAirUnit = 0.0 --proportion of (extra) aircraft
+
+
+------------
+
 local numX = Game.mapX-1
 local numZ = Game.mapY-1
 local mapX = 512*numX
 local mapZ = 512*numZ
-local orderRate = 20 --average time an order is kept before being replaced
-local pAirUnit = 0.0 --proportion of aircraft
+local uSD = unitSpamD
 local cmdTable = {CMD.MOVE, CMD.FIGHT, CMD.PATROL} 
 local over = false
 local unitDefIDTable = {}
 local maxUnitDefIDs
-
 
 --------------------------------------
 ----------------Funcs-----------------
@@ -217,7 +218,7 @@ local i,j = 0,0
 function gadget:GameFrame(n)
 
 	--end
-	if n==(30*testTime*60*runSteps) then
+	if n==(30*stepTime*60*runSteps) then
 		Over()
 	end
 
@@ -230,7 +231,7 @@ function gadget:GameFrame(n)
 	end
 		
 	--increase spam every minute
-	if n%(30*testTime*60)==0 and n<(30*testTime*60*runSteps) then 
+	if n%(30*stepTime*60)==0 and n<(30*stepTime*60*runSteps) then 
 		if n>0 then
 			uSD = uSD + 1
 			if not fight then 
@@ -244,6 +245,13 @@ function gadget:GameFrame(n)
 	--update
 	--current square is (i,j)
 	local units = Spring.GetUnitsInRectangle(i*512,j*512,(i+1)*512,(j+1)*512)
+	local features = Spring.GetFeaturesInRectangle(i*512,j*512,(i+1)*512,(j+1)*512)
+
+    -- remove features if we are above threshold (we don't spawn)
+	if #features > uSD + 1 and #features>1 then
+        local n = math.random(1,#features)
+        Spring.DestroyFeature(features[n])
+    end
 	
 	--decide how many units to kill
 	local toDestroy
@@ -267,7 +275,7 @@ function gadget:GameFrame(n)
 	end
 	
 	
-		--killing & orders
+    --killing & orders
 	for _,unitID in pairs(units) do
 		--orders
 		if Spring.GetCommandQueue(unitID, -1, false) == 0 then --no queue
@@ -288,7 +296,6 @@ function gadget:GameFrame(n)
 		end
 	end
 	
-
 	--increment square
 	i=i+1
 	if i>numX then 
@@ -296,43 +303,36 @@ function gadget:GameFrame(n)
 		j=j+1
 	end
 	if j>numZ then j=0 end
-	
 end	
 	
-	
-	
+    
 function gadget:UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)
 	if UnitDefs[unitDefID].customParams.iscommander == "1" then 
 		return 0 --coms cant be killed (prevents game end)
 	end
 end	
 	
-	
-	
-	
-	
-	
-	
+    
 else
 -------------------------------------
 --------------UNSYNCED---------------
 
 local camMoveTime = 4 -- in seconds
-local moved = false
+local moved = true
 local prevCamFrame = 0
 local prevFpsFrame = 0
-local sumSpeed = 0
-local numSum = 0
-local sumFPS = 0
+
+local prevSampleFrame
 local over = false
 local fpsSamples = {}
+local simSamples = {}
 
-local runSteps = 3 
-local testTime = 1
 local numX = Game.mapX-1
 local numZ = Game.mapY-1
 local mapX = 512*numX
 local mapZ = 512*numZ
+
+local white = "\255\255\255\255"
 
 function RandomCoord()
 	local x = math.random() * mapX
@@ -344,51 +344,70 @@ function gadget:Initialize()
 	gadgetHandler:AddSyncAction("PrintInfo", PrintInfo)
 end
 
+function round(val, decimal)
+    return decimal and math.floor((val * 10^decimal) + 0.5) / (10^decimal) or math.floor(val+0.5)
+end
+
 function PrintInfo()
 	over = true
 	
-	--gamespeed
-	local avSpeed = sumSpeed / numSum
-	local version = Game.version
-	local buildFlags = Game.buildFlags
-	Spring.Echo("Spam complete")
-	Spring.Echo("Spring version is " .. Game.version .. "(" .. buildFlags .. ")")
-	Spring.Echo("Average running speed was " .. avSpeed)
-	
-	--fps
-	local tot = 0
-	for _,val in pairs(fpsSamples) do
-		tot = tot + val
-	end
-	local avFPS = tot/(testTime*runSteps*60)
-	Spring.Echo("Average FPS was ".. avFPS)
-	
+    local version = Game.version 
+    local buildFlags = Game.buildFlags or ""
+    local gameName = Game.gameName
+    local gameVersion = Game.gameVersion
+    Spring.Echo(white .. "Spring " .. version .. " (" .. buildFlags .. ")")
+    Spring.Echo(white .. gameName .. " " .. gameVersion)
+    
+    local tot = 0
+    local samples = 0
+    local totSqr = 0
+    for _,val in pairs(simSamples) do
+        tot = tot + val
+        totSqr = totSqr + val*val
+        samples = samples + 1
+    end
+	local avSIM = tot/samples
+    local sdvSIM = math.sqrt(totSqr/samples - avSIM*avSIM)
+    Spring.Echo(white .. "Average sim speed was " .. round(avSIM,2) .. ", std dev " .. round(sdvSIM,2))
+    
+    tot = 0
+    samples = 0
+    totSqr = 0
+    for _,val in pairs(fpsSamples) do
+        tot = tot + val
+        totSqr = totSqr + val*val
+        samples = samples + 1
+    end
+    local avFPS = tot/samples
+    local sdvFPS = math.sqrt(totSqr/samples - avFPS*avFPS)
+    Spring.Echo(white .. "Average FPS was ".. round(avFPS,2) .. ", std dev " .. round(sdvFPS,2))
+    Spring.Echo(white .. "Used " .. samples .. " samples")	
 end
 
-
-function gadget:DrawScreen()
-
-	--do camera movement
-	local frame = Spring.GetGameFrame()
-	
-	if not frame or frame < 1 then return end
-	if over then return end
-	
-	--attempt to take one sample per second
-	if frame >= 30 + prevFpsFrame and frame >= 1 then
+function TakeSample()
 		--fps
 		local fps = Spring.GetFPS()
-		fpsSamples[frame] = fps
-		prevFpsFrame = frame
+		fpsSamples[#fpsSamples+1] = fps
 		--gamespeed
 		local _,curSpeed = Spring.GetGameSpeed()
-		sumSpeed = sumSpeed + curSpeed
-		numSum = numSum + 1
-	end
-	
-		
+        simSamples[#simSamples+1] = curSpeed
+end
 
-		
+function gadget:GameStart()
+    prevSampleFrame = 0
+end
+
+function gadget:DrawScreen()
+	if over then return end
+
+    local frame = Spring.GetGameFrame()
+	
+	--attempt to take two samples per second (of game time)
+    if prevSampleFrame and frame >= 15 + prevSampleFrame then --sample approx twice per second (of game time)
+        prevSampleFrame = frame
+        TakeSample()
+	end	
+				
 	--timer for move camera
 	if moved and frame >= prevCamFrame + 30*camMoveTime then
 		moved = false
@@ -413,28 +432,6 @@ function gadget:DrawScreen()
 	end
 
 end
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 end
 

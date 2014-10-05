@@ -61,7 +61,7 @@ function gadget:ShutDown()
 	gadgetHandler:RemoveChatAction('placelandunits')
 	gadgetHandler:RemoveChatAction('placeairunits')
 	gadgetHandler:RemoveChatAction('placebuildings')
-	gadgetHandler:RemoveChatAction('playorders', PlayOrders, "")
+	gadgetHandler:RemoveChatAction('playorders')
 	gadgetHandler:RemoveChatAction('cleanunits')
 end
 
@@ -115,6 +115,7 @@ function PlaceUnits(filter)
                 unitID = unitID or "nil"
                 Spring.Echo("ERROR: Failed to create unit or unitID, likely reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
             end
+            --TODO: set reloadframe to far in future, set can't move
             Spring.SetUnitMaxHealth(u.uID,u.mh)
             Spring.SetUnitHealth(u.uID,u.h,0,0,u.b)
         end
@@ -151,6 +152,8 @@ function PlayOrders()
         Spring.Echo(white .. "ERROR: Already in progress")
         return
     end
+    
+    --TODO: Set reload frame to now, set can move
 
     GiveInitialOrders()
     Spring.Echo(white .. "Playing order queue")
@@ -256,7 +259,7 @@ end
 
 function gadget:DrawScreen()
     local frame = Spring.GetGameFrame()
-    if profile and frame >= 15 + prevSampleFrame and frame >= startedFrame + 30*10 then --sample approx twice per second, give Spring 10 sec to cache at start
+    if profile and frame >= 15 + prevSampleFrame then --sample approx twice per second (of gametime)
         prevSampleFrame = frame
         local fps = Spring.GetFPS()
         fpsSamples[frame] = fps

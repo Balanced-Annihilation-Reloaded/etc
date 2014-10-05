@@ -3,7 +3,8 @@
 -- initial_spawn will count how many allyTeamIDs are going spawn units 
 -- and will randomly assign each allyTeamID to one of the startpoints in ffaStartPoints[numAllyTeamIDs]
 
--- see "Emereld v1" for a map which creates different random startpoints configurations dependent on number of allyTeams & game mode, and makes different lua metal spots to match
+-- see also /luarules/configs/ffa_startpoints for examples of files that produce random configurations
+-- see the map Emereld v1 for a map where the mexes are placed via lua to match a randomized startpoint configs
 
 ffaStartPoints = {
 

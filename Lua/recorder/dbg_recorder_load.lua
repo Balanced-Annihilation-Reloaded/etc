@@ -254,7 +254,6 @@ local startedFrame = 0
 
 function Started()
     profile = true
-    startedFrame = Spring.GetGameFrame()
 end
 
 function gadget:DrawScreen()
@@ -262,9 +261,9 @@ function gadget:DrawScreen()
     if profile and frame >= 15 + prevSampleFrame then --sample approx twice per second (of gametime)
         prevSampleFrame = frame
         local fps = Spring.GetFPS()
-        fpsSamples[frame] = fps
+        fpsSamples[#fpsSamples+1] = fps
         local _,curSpeed = Spring.GetGameSpeed()
-        simSamples[frame] = curSpeed
+        simSamples[#simSamples+1] = curSpeed
     end
 end
 

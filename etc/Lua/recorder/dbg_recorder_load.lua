@@ -1,7 +1,7 @@
 function gadget:GetInfo()
   return {
     name      = "Recorder (Load)",
-    desc      = "Plays back a minute of a game",
+    desc      = "Plays back REC_XXX.lua files",
     author    = "Bluestone",
     date      = "June 2014",
     license   = "GNU GPL, v3 or later",
@@ -24,10 +24,11 @@ local order_q_table = VFS.Include("luarules/configs/" .. ORDER_Q_FILENAME)
 local factory_q_table = VFS.Include("luarules/configs/" .. FACTORY_Q_FILENAME)
 local order_table = VFS.Include("luarules/configs/" .. ORDER_FILENAME)
 
-local t1ID = Spring.GetGaiaTeamID()
 local allyTeamList = Spring.GetAllyTeamList()
-local aTeamList = Spring.GetTeamList(allyTeamList[1])
-local t2ID = aTeamList[1] -- some teamID that isn't Gaia
+local aTeamList1 = Spring.GetTeamList(allyTeamList[1])
+local aTeamList2 = allyTeamList[2] and Spring.GetTeamList(allyTeamList[2]) or {}
+local t1ID = aTeamList1[1]
+local t2ID = aTeamList2[1] or Spring.GetGaiaTeamID()
 
 local startFrame
 local playOrders = false
@@ -301,6 +302,7 @@ function Finished()
     Spring.Echo(white .. "Used " .. samples .. " samples")
     
     CleanSamples()
+    profile = false
 end
 
 function Interrupt()

@@ -10,6 +10,8 @@ function widget:GetInfo()
   }
 end
 
+--TODO: Ignore units in labs or save/load the fact that they are a nanoframe
+
 UNIT_FILENAME = "REC_unit.lua"
 ORDER_Q_FILENAME = "REC_order_q.lua" 
 FACTORY_Q_FILENAME = "REC_factory_q.lua"
@@ -74,7 +76,7 @@ function SaveUnits()
 
         unit_table[#unit_table+1] = entry
         
-        local orderQueue = Spring.GetCommandQueue(uID, 30) 
+        local orderQueue = Spring.GetCommandQueue(uID, 30) or {}
         for _,order in ipairs(orderQueue) do
             order.uID = uID
             order.cmdID = order.id

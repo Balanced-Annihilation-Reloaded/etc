@@ -24,11 +24,10 @@ local order_q_table = VFS.Include("luarules/configs/" .. ORDER_Q_FILENAME)
 local factory_q_table = VFS.Include("luarules/configs/" .. FACTORY_Q_FILENAME)
 local order_table = VFS.Include("luarules/configs/" .. ORDER_FILENAME)
 
+local t1ID = Spring.GetGaiaTeamID()
 local allyTeamList = Spring.GetAllyTeamList()
-local aTeamList1 = Spring.GetTeamList(allyTeamList[1])
-local aTeamList2 = allyTeamList[2] and Spring.GetTeamList(allyTeamList[2]) or {}
-local t1ID = aTeamList1[1]
-local t2ID = aTeamList2[1] or Spring.GetGaiaTeamID()
+local aTeamList = Spring.GetTeamList(allyTeamList[1])
+local t2ID = aTeamList[1] -- some teamID that isn't Gaia
 
 local startFrame
 local playOrders = false
@@ -36,7 +35,9 @@ local orderCount
 local playStartFrame
 local nOrders = #order_table
 
-local PFSwait = 20 --in seconds
+local moveCtrlUnits = {} -- keeps unit frozen while not playing orders
+
+local PFSwait = 90 --in seconds
 
 local white = "\255\255\255\255"
 
@@ -116,9 +117,22 @@ function PlaceUnits(filter)
                 unitID = unitID or "nil"
                 Spring.Echo("ERROR: Failed to create unit or unitID, likely reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
             end
-            --TODO: set reloadframe to far in future, set can't move
-            Spring.SetUnitMaxHealth(u.uID,u.mh)
-            Spring.SetUnitHealth(u.uID,u.h,0,0,u.b)
+            Spring.SetUnitMaxHealth(u.uID,u.mh or 1)
+            Spring.SetUnitHealth(u.uID,u.h or 1,0,0,u.b or 1)
+
+            -- make units unable to fire until the orders are given
+            local weapon = Spring.GetUnitWeaponState(unitID, 1, "reloadTime")
+            local num = 1
+            local frame = Spring.GetGameFrame()
+            while weapon do
+                Spring.SetUnitWeaponState(unitID, num, "reloadState", frame + PFSwait*30 + 300)
+                num = num + 1
+                weapon = Spring.GetUnitWeaponState(unitID, num)
+            end
+	
+            -- make units unable to move until orders are given
+            moveCtrlUnits[unitID] = true
+            Spring.MoveCtrl.Enable(unitID)
         end
     end
 end
@@ -154,8 +168,21 @@ function PlayOrders()
         return
     end
     
-    --TODO: Set reload frame to now, set can move
-
+    for _,u in ipairs(unit_table) do
+        local unitID = u.uID
+        -- allow to fire again
+        local weapon = Spring.GetUnitWeaponState(unitID, 1, "reloadTime")
+        local num = 1
+        while weapon do
+            Spring.SetUnitWeaponState(unitID, num, "reloadState", 0)
+            num = num + 1
+            weapon = Spring.GetUnitWeaponState(unitID, num)
+        end
+        -- allow to move again
+        Spring.MoveCtrl.Disable(unitID)
+        moveCtrlUnits[unitID] = nil
+    end
+    
     GiveInitialOrders()
     Spring.Echo(white .. "Playing order queue")
     SendToUnsynced("Started")

@@ -35,36 +35,38 @@ local orderCount
 local playStartFrame
 local nOrders = #order_table
 
-local moveCtrlUnits = {} -- keeps unit frozen while not playing orders
-
-local PFSwait = 90 --in seconds
+local PFSwait = 5 --in seconds
 
 local white = "\255\255\255\255"
 
 function gadget:Initialize()
 	gadgetHandler:AddChatAction('saveunits', SaveUnits, "")
 	gadgetHandler:AddChatAction('loadunits', LoadUnits, "")
+	gadgetHandler:AddChatAction('cleanunits', CleanUnits, "")
+    
 	gadgetHandler:AddChatAction('placeunits', PlaceUnits, "")
 	gadgetHandler:AddChatAction('placemobileunits', PlaceMobileUnits, "")
 	gadgetHandler:AddChatAction('placewaterunits', PlaceWaterUnits, "")
 	gadgetHandler:AddChatAction('placelandunits', PlaceLandUnits, "")
 	gadgetHandler:AddChatAction('placeairunits', PlaceAirUnits, "")
 	gadgetHandler:AddChatAction('placebuildings', PlaceBuildings, "")
+
 	gadgetHandler:AddChatAction('playorders', PlayOrders, "")
-	gadgetHandler:AddChatAction('cleanunits', CleanUnits, "")
 end
 
 function gadget:ShutDown()
 	gadgetHandler:RemoveChatAction('saveunits')
 	gadgetHandler:RemoveChatAction('loadunits')
+	gadgetHandler:RemoveChatAction('cleanunits')
+    
 	gadgetHandler:RemoveChatAction('placeunits')
 	gadgetHandler:RemoveChatAction('placemobileunits')
 	gadgetHandler:RemoveChatAction('placewaterunits')
 	gadgetHandler:RemoveChatAction('placelandunits')
 	gadgetHandler:RemoveChatAction('placeairunits')
 	gadgetHandler:RemoveChatAction('placebuildings')
+    
 	gadgetHandler:RemoveChatAction('playorders')
-	gadgetHandler:RemoveChatAction('cleanunits')
 end
 
 function SaveUnits()
@@ -115,26 +117,14 @@ function PlaceUnits(filter)
             local unitID = Spring.CreateUnit(uDID,u.x,u.y,u.z,u.f,tID,false,false,u.uID)
             if unitID ~= u.uID then
                 unitID = unitID or "nil"
-                Spring.Echo("ERROR: Failed to create unit or unitID, likely reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
+                Spring.Echo("ERROR: Failed to create unit or unitID, likely unitID was already present or reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
             end
             Spring.SetUnitMaxHealth(u.uID,u.mh or 1)
             Spring.SetUnitHealth(u.uID,u.h or 1,0,0,u.b or 1)
-
-            -- make units unable to fire until the orders are given
-            local weapon = Spring.GetUnitWeaponState(unitID, 1, "reloadTime")
-            local num = 1
-            local frame = Spring.GetGameFrame()
-            while weapon do
-                Spring.SetUnitWeaponState(unitID, num, "reloadState", frame + PFSwait*30 + 300)
-                num = num + 1
-                weapon = Spring.GetUnitWeaponState(unitID, num)
-            end
-	
-            -- make units unable to move until orders are given
-            moveCtrlUnits[unitID] = true
-            Spring.MoveCtrl.Enable(unitID)
         end
     end
+    
+    FreezeUnits()
 end
 
 function CheckAgainstFilter(filter, uDID)
@@ -162,12 +152,25 @@ function LoadUnitsNow()
     return true
 end
 
-function PlayOrders()
-    if playOrders then
-        Spring.Echo(white .. "ERROR: Already in progress")
-        return
+function FreezeUnits()
+    for _,u in ipairs(unit_table) do
+        local unitID = u.uID
+        -- make units unable to fire until the orders are given
+        local weapon = Spring.GetUnitWeaponState(unitID, 1, "reloadTime")
+        local num = 1
+        local frame = Spring.GetGameFrame()
+        while weapon do
+            Spring.SetUnitWeaponState(unitID, num, "reloadState", frame + PFSwait*30 + 300)
+            num = num + 1
+            weapon = Spring.GetUnitWeaponState(unitID, num)
+        end
+	
+        -- make units unable to move until orders are given
+        Spring.MoveCtrl.Enable(unitID)
     end
-    
+end
+
+function UnFreezeUnits()
     for _,u in ipairs(unit_table) do
         local unitID = u.uID
         -- allow to fire again
@@ -180,10 +183,19 @@ function PlayOrders()
         end
         -- allow to move again
         Spring.MoveCtrl.Disable(unitID)
-        moveCtrlUnits[unitID] = nil
+    end
+end
+
+
+function PlayOrders()
+    if playOrders then
+        Spring.Echo(white .. "ERROR: Already in progress")
+        return
     end
     
+    UnFreezeUnits()
     GiveInitialOrders()
+    
     Spring.Echo(white .. "Playing order queue")
     SendToUnsynced("Started")
     playOrders = true
@@ -199,7 +211,7 @@ function GiveInitialOrders()
             Spring.GiveOrderToUnit(o.uID,o.cmdID,o.params,o.options.coded)
         end
     end
-    
+
     for _,o in ipairs(factory_q_table) do
         o.options.shift = true 
         o.params = {o.params[1],o.params[2],o.params[3],o.params[4],o.params[5],o.params[6]} 

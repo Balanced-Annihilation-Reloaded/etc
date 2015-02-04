@@ -16,7 +16,7 @@ include('keysym.h.lua')
 function widget:KeyPress(key,_,_)
     if key==KEYSYMS.M then
         local mx,my,_,_,_ = Spring.GetMouseState()
-        local t,l = Spring.TraceScreenRay(mx,my)
+        local t,l = Spring.TraceScreenRay(mx,my,false,false,false,true)
         if t=="ground" then
             Spring.MarkerAddPoint(l[1],l[2],l[3],tostring(math.floor(l[1]))..", "..tostring(math.floor(l[3])))
         end

@@ -24,18 +24,13 @@ local order_q_table = VFS.Include("luarules/configs/" .. ORDER_Q_FILENAME)
 local factory_q_table = VFS.Include("luarules/configs/" .. FACTORY_Q_FILENAME)
 local order_table = VFS.Include("luarules/configs/" .. ORDER_FILENAME)
 
-local t1ID = Spring.GetGaiaTeamID()
-local allyTeamList = Spring.GetAllyTeamList()
-local aTeamList = Spring.GetTeamList(allyTeamList[1])
-local t2ID = aTeamList[1] -- some teamID that isn't Gaia
-
 local startFrame
 local playOrders = false
 local orderCount 
 local playStartFrame
 local nOrders = #order_table
 
-local PFSwait = 5 --in seconds
+local PFSwait = 10 --in seconds
 
 local white = "\255\255\255\255"
 
@@ -104,20 +99,28 @@ function PlaceBuildings()
     PlaceUnits("isBuilding")
 end
 
-function PlaceUnits(filter)
-    if t1ID==t2ID or t2ID==nil then
-        Spring.Echo("ERROR: Need at least two ally teams")
-        return
-    end
+local gaiaTeamID = Spring.GetGaiaTeamID()
+local allyTeamList = Spring.GetAllyTeamList()
+local teamLists = {}
+for _,aID in ipairs(allyTeamList) do
+    teamLists[aID] = Spring.GetTeamList(aID)
+end
+function NewTeam(aID, tID)
+    if not teamLists[aID] then return gaiaTeamID end
+    if not tID or #teamLists[aID]==1 then return teamLists[aID][1] end
+    local i = 1 + (tID % (#teamLists[aID]))
+    return teamLists[aID][i]
+end
 
+function PlaceUnits(filter)
     for _,u in ipairs(unit_table) do
-        tID = (u.aID==1) and t1ID or t2ID
+        tID = NewTeam(u.aID, u.tID)
         local uDID = UnitDefNames[u.name].id
         if not filter or CheckAgainstFilter(filter,uDID) then
             local unitID = Spring.CreateUnit(uDID,u.x,u.y,u.z,u.f,tID,false,false,u.uID)
             if unitID ~= u.uID then
                 unitID = unitID or "nil"
-                Spring.Echo("ERROR: Failed to create unit or unitID, likely unitID was already present or reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
+                Spring.Echo("ERROR: Failed to create unit or unitID, likely reached unit limit (" .. unitID .. "," .. u.uID .. ")") 
             end
             Spring.SetUnitMaxHealth(u.uID,u.mh or 1)
             Spring.SetUnitHealth(u.uID,u.h or 1,0,0,u.b or 1)

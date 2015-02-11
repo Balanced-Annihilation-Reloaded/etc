@@ -71,8 +71,9 @@ function SaveUnits()
         local name = UnitDefs[uDID].name
         local f = Spring.GetUnitBuildFacing(uID)
         local aID = Spring.GetUnitAllyTeam(uID)
+        local tID = Spring.GetUnitTeam(uID)
         local h,mh,_,_,b = Spring.GetUnitHealth(uID)
-        local entry = {x=x,y=y,z=z,name=name,f=f,uID=uID,aID=aID,h=h,mh=mh,b=b}
+        local entry = {x=x,y=y,z=z,name=name,f=f,uID=uID,tID=tID,aID=aID,h=h,mh=mh,b=b}
 
         unit_table[#unit_table+1] = entry
         

@@ -312,17 +312,17 @@ function widget:Initialize()
   -- TEH INTERFACE
 fullscreen = true
   WG['guishader_api'] = {}
-  WG['guishader_api'].InsertRect = function(left,top,right,bottom,idx)
-      if not idx then
-         idx      = math.random(1024);
-      end
-      guishaderRects[idx] = {left,top,right,bottom};
+  WG['guishader_api'].InsertRect = function(left,top,right,bottom,name)
+      --if not name then
+      --   name      = math.random(1024);
+      --end
+      guishaderRects[name] = {left,top,right,bottom};
       updateStencilTexture = true;
-      return idx;
+      --return name;
     end
 
-  WG['guishader_api'].RemoveRect = function(idx)
-      guishaderRects[idx] = nil;
+  WG['guishader_api'].RemoveRect = function(name)
+      guishaderRects[name] = nil;
       updateStencilTexture = true;
     end
 

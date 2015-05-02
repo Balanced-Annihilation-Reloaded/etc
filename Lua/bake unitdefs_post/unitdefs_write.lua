@@ -26,7 +26,7 @@ function widget:Initialize()
         local f = loadstring(ud_string)
         if f then
             local ud_table = f()
-            table.save2(ud_table, v.name .. ".lua","")
+            table.save2(ud_table, v.name .. ".lua")
         else
             had_failed = true
             Spring.Echo("FAILED: " .. v.name, ud_string)

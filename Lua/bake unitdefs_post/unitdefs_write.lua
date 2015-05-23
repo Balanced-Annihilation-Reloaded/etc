@@ -26,6 +26,9 @@ function widget:Initialize()
         local f = loadstring(ud_string)
         if f then
             local ud_table = f()
+            for k,_ in pairs(ud_table) do
+                if #ud_table[k].customparams==0 then ud_table[k].customparams=nil end
+            end
             table.save2(ud_table, v.name .. ".lua")
         else
             had_failed = true

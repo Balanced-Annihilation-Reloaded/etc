@@ -1,5 +1,9 @@
+#!/usr/bin/python
+
 import os
 import sys
+import shutil
+
 only=''
 if len(sys.argv)>1:
 	only=sys.argv[1]
@@ -102,12 +106,16 @@ for filename in os.listdir(os.getcwd()+'/weapons/'):
 	else:
 		weapon,z=parselua(fln,2,0)
 	explosions[filename.partition('.')[0]]=weapon
-		
-# for filename in os.listdir(os.getcwd()+'/unitpics/'):
-	# if '.dds' in filename:
-		# cmd='convert unitpics/'+filename+' '+filename.partition('.')[0]+'.png'
-		# print cmd
-		# os.system(cmd)
+
+unitpics = os.path.join(os.getcwd(), "unitpics")
+for filename in os.listdir(unitpics):
+	outputfile = filename.partition('.')[0]+'.png'
+	if '.dds' in filename:
+		cmd='convert ' + os.path.join(unitpics, filename) + ' ' + outputfile
+		print cmd
+		os.system(cmd)
+	else:
+		shutil.copy(os.path.join(unitpics, filename), outputfile)
 		
 		
 #read units:
@@ -335,6 +343,7 @@ def unitpage(id):
 	
 	outf.write('<td align=\"left\" valign=\"top\"><table border=\"0\" cellspacing="0">') ## TABLE 4 START
 	outf.write('<tr><th colspan=\"2\">'+'Weapon Definitions'+'</th><tr>')
+
 	if 'weapondefs' in units[id]:
 		for k,v in units[id]['weapondefs'].iteritems():
 			writeweapon(outf,k,v)
@@ -393,3 +402,4 @@ for u in units.iterkeys():
 #Built by:	|...			|				|
 #			|				|				|
 #--------------------------------------------
+

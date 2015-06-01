@@ -107,15 +107,15 @@ for filename in os.listdir(os.getcwd()+'/weapons/'):
 		weapon,z=parselua(fln,2,0)
 	explosions[filename.partition('.')[0]]=weapon
 
-unitpics = os.path.join(os.getcwd(), "unitpics")
-for filename in os.listdir(unitpics):
+unitpicsdir = os.path.join(os.getcwd(), "unitpics")
+for filename in os.listdir(unitpicsdir):
 	outputfile = filename.partition('.')[0]+'.png'
-	if '.dds' in filename:
-		cmd='convert ' + os.path.join(unitpics, filename) + ' ' + outputfile
+	if filename.endswith('.dds'):
+		cmd='convert ' + os.path.join(unitpicsdir, filename) + ' ' + outputfile
 		print cmd
 		os.system(cmd)
 	else:
-		shutil.copy(os.path.join(unitpics, filename), outputfile)
+		shutil.copy(os.path.join(unitpicsdir, filename), outputfile)
 		
 		
 #read units:

@@ -104,18 +104,21 @@ for filename in os.listdir(os.getcwd()+'/weapons/'):
 	if '.lua' in filename:
 		weapon,z=parselua(fln,2,0)
 	else:
-		weapon,z=parselua(fln,2,0)
+		weapon,z=parsetdf(fln,2,0)
 	explosions[filename.partition('.')[0]]=weapon
 
 unitpicsdir = os.path.join(os.getcwd(), "unitpics")
 for filename in os.listdir(unitpicsdir):
 	outputfile = filename.partition('.')[0]+'.png'
+	inputfile = os.path.join(unitpicsdir, filename)
+	if os.path.isfile(outputfile) and (os.path.getctime(outputfile) > os.path.getctime(inputfile)): # outputfile is newer than input, don't copy/convert
+		continue
 	if filename.endswith('.dds'):
-		cmd='convert ' + os.path.join(unitpicsdir, filename) + ' ' + outputfile
+		cmd='convert ' + inputfile + ' ' + outputfile
 		print cmd
 		os.system(cmd)
 	else:
-		shutil.copy(os.path.join(unitpicsdir, filename), outputfile)
+		shutil.copy(inputfile, outputfile)
 		
 		
 #read units:

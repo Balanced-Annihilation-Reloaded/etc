@@ -49,7 +49,7 @@ function widget:Initialize()
 end
 
 
--- Modified version of table.save, which rounds numbers to avoid lua stupidity 0=0.00000000234876
+-- Modified version of table.save, which rounds numbers to avoid lua stupidity 0=0.00000000234876 & various similar stuff
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -175,16 +175,21 @@ local function SaveTable(t, file, indent)
       elseif (v == -math.huge) then
         file:write('-math.huge,\n')
       else
-        -- round to 5dp, convert to string, then remove trailing 0s after decimal point        
-        v = string.format("%.5f", v) 
-        local a,b = string.find(v,".")
-        if a~= nil then
-            v = string.reverse(v)
-            while (string.sub(v,1,1)=="0") do
-                v = string.sub(v,2)
-            end
-            if string.sub(v,1,1)=="." then v = string.sub(v,2) end --remove the decimal point, if needed
-            v = string.reverse(v)
+        if k=="buildcostmetal" or k=="buildcostenergy" or k=="metalpershot" or k=="energypershot" then
+          -- round to integer
+          v = string.format("%.0f", v)
+        else
+          -- round to 5dp, convert to string, then remove trailing 0s after decimal point        
+          v = string.format("%.5f", v) 
+          local a,b = string.find(v,".")
+          if a~= nil then
+              v = string.reverse(v)
+              while (string.sub(v,1,1)=="0") do
+                  v = string.sub(v,2)
+              end
+              if string.sub(v,1,1)=="." then v = string.sub(v,2) end --remove the decimal point, if needed
+              v = string.reverse(v)
+          end
         end
         file:write(tostring(v)..',\n')
       end

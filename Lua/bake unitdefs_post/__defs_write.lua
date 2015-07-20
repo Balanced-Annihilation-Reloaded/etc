@@ -1,6 +1,6 @@
 function widget:GetInfo()
 	return {
-		name      = "Write ud.customparam.__ud to files",
+		name      = "Write customparam.__def to files",
 		desc      = "Bluestone",
 		author    = "Robert De Bruce",
 		date      = "-1",
@@ -12,39 +12,65 @@ end
 
 -- second half of a tool for baking unitdefs_post into unitdef files, see readme.txt
 
-function widget:Initialize()
-    local had_failed = false
-    for k,v in pairs(UnitDefs) do
-        if not v.customParams or not v.customParams.__ud then
-            Spring.Echo("Could not find ud.customparams.__ud, check that you ran unitdefs_post_save_to_customparams")
-            had_failed = nil
-            widgetHandler:RemoveWidget(self)
+function WriteDefToFile (folder, v)
+    if not v.customParams or not v.customParams.__def then
+        Spring.Echo("Could not find customparams.__def for " .. v.name)
+        return false
+    end
+
+    local def_string = v.customParams.__def --from table.tostring in post_save_to_customparams
+    def_string = "return { " .. v.name .. " = " .. def_string .. "}" 
+    local f = loadstring(def_string)
+    if not f then
+        Spring.Echo("Failed to load __def string as table: " .. v.name, def_string)
+        return false
+    end
+    
+    local ud_table = f()
+    for k,_ in pairs(ud_table) do -- remove the customParams table if it is empty (note: lower case here!)
+        local isEmpty = true
+        for k2,_ in pairs(ud_table[k].customparams) do
+            isEmpty = false
             break
         end
-        local ud_string = v.customParams.__ud --from table.tostring in unitdefs_post 
-        ud_string = "return { " .. v.name .. " = " .. ud_string .. "}" 
-        local f = loadstring(ud_string)
-        if f then
-            local ud_table = f()
-            for k,_ in pairs(ud_table) do -- remove the customParams table if it is empty
-                local isEmpty = true
-                for k2,_ in pairs(ud_table[k].customparams) do
-                    isEmpty = false
-                    break
-                end
-                if isEmpty then ud_table[k].customparams=nil end
-            end
-            table.save2(ud_table, v.name .. ".lua")
-        else
-            had_failed = true
-            Spring.Echo("FAILED: " .. v.name, ud_string)
+        if isEmpty then ud_table[k].customparams=nil end
+    end
+    table.save2(ud_table, folder .. "/" .. v.name .. ".lua")
+    return true
+end
+
+function widget:Initialize()
+    local had_failed = false
+    
+    -- make folder if does not already exist
+    -- FIXME, no access to execute
+    Spring.CreateDir("baked_defs/units")
+    Spring.CreateDir("baked_defs/weapons")
+        
+    -- handle unitdefs
+    for _,v in pairs(UnitDefs) do
+        local success = WriteDefToFile("baked_defs/units", v)
+        had_failed = had_failed or (not success)
+    end
+    
+    -- handle weapondefs
+    for _,v in pairs(WeaponDefs) do
+        if v.customParams and v.customParams.__def then -- only write weapondefs that are not part of unitdefs (only those will have __defs)
+            local success = WriteDefToFile("baked_defs/weapons", v)
+            had_failed = had_failed or (not success)
         end
     end
+    
+    -- warn on failure
     if had_failed==true then
-        Spring.Echo("Some ud_string failed to convert to table. Maybe check that your table keys do not contain lua keywords?")
+        Spring.Echo("Some unit/weapon __defs failed to be written to file, see errors above")
     elseif had_failed==false then
-        Spring.Echo("Wrote all ud_string to files")
+        Spring.Echo("Wrote all unit/weapon __defs to files")
     end
+    
+    -- handle standalone weapondefs
+    -- TODO
+    
     widgetHandler:RemoveWidget(self)
 end
 

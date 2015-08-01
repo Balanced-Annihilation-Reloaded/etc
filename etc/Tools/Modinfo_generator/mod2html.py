@@ -349,7 +349,8 @@ def unitpage(id):
 
 	if 'weapondefs' in units[id]:
 		for k,v in units[id]['weapondefs'].iteritems():
-			writeweapon(outf,k,v)
+			if k.lower() != 'repulsor':
+				writeweapon(outf,k,v)
 	if 'explodeas' in units[id]:
 		try:
 			writeweapon(outf,units[id]['explodeas'],explosions[units[id]['explodeas'].lower()])
@@ -405,4 +406,3 @@ for u in units.iterkeys():
 #Built by:	|...			|				|
 #			|				|				|
 #--------------------------------------------
-

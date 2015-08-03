@@ -74,10 +74,17 @@ def srow(file,params=''):
 
 def erow(file):
 	file.write('</tr>\n')
+    
+def startthead(file, params=''):
+    file.write('<thead '+params+'>')
+
+def endthead(file):
+    file.write('<thead>')
+    
 def starthtml(file,t):
-	file.write('<html>\n<title>'+t+'</title>\n<body>\n')
+	file.write('<html>\n<title>'+t+'</title>\n<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script><script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>\n<link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css"/><body>\n')
 def endhtml(file):
-	file.write('</body></html>\n')
+	file.write('<script>$(document).ready(function(){$("#list").DataTable({paging: false});});</script></body></html>\n')
 def link(file,url,text):
 	file.write('<a href='+url+'>'+text+'</a>')
 def tdlink(file,url,text):
@@ -162,20 +169,23 @@ def makelist(fname,filter):
 	outf.write('<table border=\"0\">')
 	srow(outf)
 	
-	outf.write('<td><table border=\"0\">')
-	srow(outf)
+	outf.write('<td valign="top">')
+#	srow(outf)
 	cnt=0
 	for key in sorted (units.iterkeys()):
 		if filter in key:
 			cnt+=1
-	td(outf,str(cnt)+' units in list')
-	erow(outf)
+	outf.write(str(cnt)+' units in list')
+#	td(outf,str(cnt)+' units in list')
+#	erow(outf)
+	outf.write('<table id="list" border=\"0\">')
 
-	srow(outf, 'bgcolor=#aaaaff')
+	startthead(outf, 'bgcolor=#aaaaff')
 	td(outf,'Name')
 	td(outf,'Unitname')
 	td(outf,'Description')
-	erow(outf)
+	endthead(outf)
+	outf.write('<tbody>')
 	i=0
 	for key in sorted (units.iterkeys()):
 		if filter not in key:
@@ -190,6 +200,7 @@ def makelist(fname,filter):
 		td(outf,units[key]['name'])
 		td(outf,units[key]['description'])
 		erow(outf)
+	outf.write('</tbody>')
 	outf.write('</table></td><td valign=\"top\"><table border=\"0\"><tr><td>')
 	#plants
 	outf.write('Plants:</td></tr>')

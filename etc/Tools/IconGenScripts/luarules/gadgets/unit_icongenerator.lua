@@ -79,7 +79,7 @@ if (gadgetHandler:IsSyncedCode()) then
         Spring.SetUnitNeutral(uid,true);
         Spring.GiveOrderToUnit(uid,CMD.FIRE_STATE,{0},{});
         Spring.GiveOrderToUnit(uid,CMD.STOP,{},{});
-
+		Spring.SetUnitCloak(uid,false);
 		local env = Spring.UnitScript.GetScriptEnv(uid)
 		if env then lus = true end
 		

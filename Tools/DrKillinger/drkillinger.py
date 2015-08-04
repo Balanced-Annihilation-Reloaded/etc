@@ -98,6 +98,7 @@ class App:
 		Button(self.menuframe, text="Next unit", command=self.nextunit).pack(side=TOP)
 		Button(self.menuframe, text="Prev unit", command=self.prevunit).pack(side=TOP)
 		Button(self.menuframe, text="Wreck unit", command=self.wreckunit).pack(side=TOP)
+		Button(self.menuframe, text="Wreck unit S3O only", command=self.wreckunits3o).pack(side=TOP)
 		Button(self.menuframe, text="AUTO CONFIG", command=self.autoconf).pack(side=TOP)
 		self.tex1=StringVar()
 		self.tex2=StringVar()
@@ -353,7 +354,7 @@ class App:
 		newunitname=''
 		for unit_index in range(len(unitlist)):
 			unitname=unitlist[unit_index].partition('.')[0]
-			print 'oldunitname', oldunitname, 'unitname',unitname
+			#print 'oldunitname', oldunitname, 'unitname',unitname
 			if unitname==oldunitname:
 				newunitname=unitlist[unit_index+1]
 		self.loadunit(self.modpath+'units/'+newunitname)
@@ -544,6 +545,18 @@ class App:
 		luaf.close() 
 		print 'Successfully written, validating S30'
 		valid=S3O(open(self.outputdir+'/'+self.unitname+'_dead.s3o','rb').read())
+		#valid.S3OtoOBJ(self.outputdir+'/'+self.unitname+'_dead.obj')
+		print 'validation OK!'
+		return
+	def wreckunits3o(self):
+		self.destroy(0,0.05+random.random()/10,0.5,random.random()*100)
+		self.wreckeds3o.texture_paths=(self.tex1.get(),self.tex2.get())
+		optimized_data = self.wreckeds3o.serialize()
+		output_file=open(self.modpath+'objects3d/'+self.unitname+'_dead.s3o','wb')
+		output_file.write(optimized_data)
+		output_file.close()
+		print 'Successfully written, validating S30'
+		valid=S3O(open(self.modpath+'objects3d/'+self.unitname+'_dead.s3o','rb').read())
 		#valid.S3OtoOBJ(self.outputdir+'/'+self.unitname+'_dead.obj')
 		print 'validation OK!'
 		return

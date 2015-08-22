@@ -421,7 +421,7 @@ function gadget:GameFrame(n)
     CheckActions()
    
     -- give idle cons that are close to enemies los something to do
-    -- only rarely give the others something to do very rarely
+    -- only rarely give the others something to do 
     for cID,_ in pairs(cons) do
         if  Spring.GetCommandQueue(cID,-1,false)==0 then
         local eID = Spring.GetUnitNearestEnemy(cID, 1024, true)

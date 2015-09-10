@@ -5,19 +5,20 @@
 	GameType=Glacier;
 	IsHost=1;
 	OnlyLocal=1;
-	MyPlayerName=Player_1;
+	MyPlayerName=PLAYER_NAME;
 	[MODOPTIONS]
 	{
-
+		mo_beta_release=in use;		
+deathmode=killall;
 	}
 	[PLAYER0]
 	{
-		Name=Player_1;
+		Name=PLAYER_NAME;
 		Team=0;
 	}
 	[AI0]
 	{
-		Name=Player_2;
+		Name=Enemy;
 		ShortName=NullAI;
 		Team=1;
 		Host=0;

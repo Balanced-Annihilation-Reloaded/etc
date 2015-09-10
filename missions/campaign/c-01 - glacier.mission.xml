@@ -12,19 +12,20 @@
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </d2p1:_monitor>
   </Counters>
-  <CustomModOptions z:Id="8"></CustomModOptions>
-  <Description z:Ref="8" i:nil="true" />
-  <DescriptionStory z:Ref="8" i:nil="true" />
-  <DisabledGadgets xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="9">
-    <d2p1:items z:Id="10" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
-      <d2p1:_items z:Id="11" z:Size="4">
-        <d2p1:string z:Id="12">game_over.lua</d2p1:string>
-        <d2p1:string z:Id="13">awards.lua</d2p1:string>
-        <d2p1:string z:Id="14">game_initial_spawn.lua</d2p1:string>
-        <d2p1:string z:Id="15">game_end.lua</d2p1:string>
+  <CustomModOptions z:Id="8">mo_beta_release=in use;
+deathmode=killall;</CustomModOptions>
+  <Description z:Id="9"></Description>
+  <DescriptionStory z:Ref="9" i:nil="true" />
+  <DisabledGadgets xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" z:Id="10">
+    <d2p1:items z:Id="11" z:Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0">
+      <d2p1:_items z:Id="12" z:Size="4">
+        <d2p1:string z:Id="13">game_over.lua</d2p1:string>
+        <d2p1:string z:Id="14">awards.lua</d2p1:string>
+        <d2p1:string z:Id="15">game_initial_spawn.lua</d2p1:string>
+        <d2p1:string i:nil="true" />
       </d2p1:_items>
-      <d2p1:_size>4</d2p1:_size>
-      <d2p1:_version>6</d2p1:_version>
+      <d2p1:_size>3</d2p1:_size>
+      <d2p1:_version>7</d2p1:_version>
     </d2p1:items>
     <d2p1:_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="16">
       <d3p1:_busyCount>0</d3p1:_busyCount>
@@ -109,7 +110,7 @@
           </ColorBrush>
           <IsHuman>true</IsHuman>
           <IsRequired>true</IsRequired>
-          <Name z:Id="43">Player 1</Name>
+          <Name z:Id="43">PLAYER_NAME</Name>
         </Player>
         <Player z:Id="44">
           <AIDll z:Ref="38" i:nil="true" />
@@ -142,19 +143,19 @@
           </ColorBrush>
           <IsHuman>false</IsHuman>
           <IsRequired>false</IsRequired>
-          <Name z:Id="47">Player_2</Name>
+          <Name z:Id="47">Enemy</Name>
         </Player>
         <Player i:nil="true" />
         <Player i:nil="true" />
       </_items>
       <_size>2</_size>
-      <_version>2</_version>
+      <_version>4</_version>
     </items>
     <_monitor xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.Collections.ObjectModel" z:Id="48">
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </_monitor>
   </Players>
-  <RapidTag z:Ref="8" i:nil="true" />
+  <RapidTag z:Ref="9" i:nil="true" />
   <Regions z:Id="49">
     <items z:Id="50" z:Type="System.Collections.Generic.List`1[[CMissionLib.Region, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
       <_items z:Id="51" z:Size="8">
@@ -174,7 +175,7 @@
       <d3p1:_busyCount>0</d3p1:_busyCount>
     </_monitor>
   </Regions>
-  <ScoringMethod z:Ref="8" i:nil="true" />
+  <ScoringMethod z:Ref="9" i:nil="true" />
   <StartingEnergy>1000</StartingEnergy>
   <StartingMetal>1000</StartingMetal>
   <StartingPlayer z:Ref="37" i:nil="true" />

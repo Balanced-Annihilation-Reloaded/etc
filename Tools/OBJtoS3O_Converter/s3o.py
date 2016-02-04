@@ -14,6 +14,27 @@ _S3OVertex_struct = struct.Struct("< 3f 3f 2f")
 _S3OChildOffset_struct = struct.Struct("< i")
 _S3OIndex_struct = struct.Struct("< i")
 
+def vectorlength(v):
+	length = 0
+	for p in v:
+		length+=p*p
+	return math.sqrt(length)
+
+def vectorcross(a,b):
+    c = (a[1]*b[2] - a[2]*b[1],
+         a[2]*b[0] - a[0]*b[2],
+         a[0]*b[1] - a[1]*b[0])
+
+    return c
+
+def vectoradd(a,b):
+	return (a[0]+b[0],a[1]+b[1],a[2]+b[2])
+def vectorminus(a,b):
+	return (a[0]-b[0],a[1]-b[1],a[2]-b[2])
+	
+def normalize(a):
+	l=vectorlength(a)
+	return (a[0]/l,a[1]/l,a[2]/l)
 
 def _get_null_terminated_string(data, offset):
 	if offset == 0:

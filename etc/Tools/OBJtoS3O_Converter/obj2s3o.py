@@ -34,13 +34,6 @@ howtoemit=('''const unsigned int count = piece->GetVertexCount();
 ##if there are zero vertices, the emit direction is 0,0,1, the emit position is the origin of the piece
 ##if there is 1 vertex, the emit dir is the vector from the origin to the the position of the first vertex the emit position is the origin of the piece
 ## if there is more than one, then the emit vector is the vector pointing from v[0] to v[1], and the emit position is v[0]
-
-def recursively_optimize_pieces(piece):
-    if type(piece.indices) == type ([]) and len(piece.indices)>4:
-		optimize_piece(piece)
-    for child in piece.children:
-        recursively_optimize_pieces(child)
-
 def fix_zero_normals_piece(piece):
 	badnormals=0
 	fixednormals=0
@@ -69,8 +62,16 @@ def fix_zero_normals_piece(piece):
 		print 'Bad normals:',badnormals,'Fixed:',fixednormals
 		if badnormals!=fixednormals:
 			print 'WARNING: NOT ALL ZERO NORMALS fixed!!!!!' #this isnt possible with above code anyway :/
-	for child in piece.children:
-		fix_zero_normals_piece(child)
+	# for child in piece.children:
+		# fix_zero_normals_piece(child)
+
+def recursively_optimize_pieces(piece):
+    if type(piece.indices) == type ([]) and len(piece.indices)>4:
+		optimize_piece(piece)
+		fix_zero_normals_piece(piece)
+    for child in piece.children:
+        recursively_optimize_pieces(child)
+
 def chunks(l, n):	
     """ Yield successive n-sized chunks from l.
     """
@@ -250,6 +251,8 @@ class App:
 				self.initialdir=file.rpartition('/')[0]
 				swaptex(file,self.tex1.get(),self.tex2.get())
 def string2list(input_string):
+	if '{' not in input_string:# and input_string.count(':')>1:
+		return input_string.split(' ')
 	input_string = input_string.lstrip('{')
 	input_string = input_string.rstrip('}')
 	output = input_string.split('} {')
@@ -296,7 +299,6 @@ def optimizeS3O(filename):
 	model=S3O(data)
 	pre_vertex_count=countvertices(model.root_piece)
 	recursively_optimize_pieces(model.root_piece)
-	fix_zero_normals_piece(model.root_piece)
 	optimized_data = model.serialize()
 	datafile.close()
 	print 'Number of vertices before optimization:',pre_vertex_count,' after optimization:',countvertices(model.root_piece)

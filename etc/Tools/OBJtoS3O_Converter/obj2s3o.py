@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from s3o import S3O
+from s3o import *
 import vertex_cache
 import sys
 from Tkinter import *
@@ -41,8 +41,37 @@ def recursively_optimize_pieces(piece):
     for child in piece.children:
         recursively_optimize_pieces(child)
 
-
-def chunks(l, n):
+def fix_zero_normals_piece(piece):
+	badnormals=0
+	fixednormals=0
+	if len(piece.indices)>0:
+		
+		for v_i in range(len(piece.vertices)):
+			vertex=piece.vertices[v_i] 
+			#print (vertex[1])
+			if vectorlength(vertex[1])<0.01: #nearly 0 normal
+				badnormals+=1
+				if v_i not in piece.indices:
+					#this is some sort of degenerate vertex, just replace it's normal with [0,1,0]
+					piece.vertices[v_i]=(vertex[0],(0.0,1.0,0.0),vertex[2])
+					fixednormals+=1
+				else:
+					for f_i in range(0,len(piece.indices) ,3):
+						if v_i in piece.indices[f_i:min(len(piece.indices),f_i+3)]:
+							newnormal = vectorcross(vectorminus(piece.vertices[piece.indices[f_i+1]][0],piece.vertices[piece.indices[f_i]][0]),vectorminus(piece.vertices[piece.indices[f_i+2]][0],piece.vertices[piece.indices[f_i]][0]))
+							if vectorlength(newnormal)<0.001:
+								piece.vertices[v_i]=(vertex[0],(0.0,1.0,0.0),vertex[2])
+							else:
+								piece.vertices[v_i]=(vertex[0],normalize(newnormal),vertex[2])
+							fixednormals+=1
+							break
+	if badnormals>0:
+		print 'Bad normals:',badnormals,'Fixed:',fixednormals
+		if badnormals!=fixednormals:
+			print 'WARNING: NOT ALL ZERO NORMALS fixed!!!!!' #this isnt possible with above code anyway :/
+	for child in piece.children:
+		fix_zero_normals_piece(child)
+def chunks(l, n):	
     """ Yield successive n-sized chunks from l.
     """
     for i in range(0, len(l), n):
@@ -267,6 +296,7 @@ def optimizeS3O(filename):
 	model=S3O(data)
 	pre_vertex_count=countvertices(model.root_piece)
 	recursively_optimize_pieces(model.root_piece)
+	fix_zero_normals_piece(model.root_piece)
 	optimized_data = model.serialize()
 	datafile.close()
 	print 'Number of vertices before optimization:',pre_vertex_count,' after optimization:',countvertices(model.root_piece)

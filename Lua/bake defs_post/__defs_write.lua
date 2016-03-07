@@ -11,13 +11,17 @@ function widget:GetInfo()
 end
 
 -- second half of a tool for baking unitdefs_post into unitdef files, see readme.txt
+local had_failed = false
 
 function WriteDefToFile (folder, v)
     if not v.customParams or not v.customParams.__def then
-        Spring.Echo("Could not find customparams.__def for " .. v.name)
+        Spring.Echo("Warning: Could not find customparams.__def for " .. v.name)
         return false
     end
-
+    if v.customParams.__def=="omitted" then
+        return true -- for omitting weapondefs that are inside the units file, so don't need to be witten into their own file
+    end
+    
     local def_string = v.customParams.__def --from table.tostring in post_save_to_customparams
     def_string = "return { " .. v.name .. " = " .. def_string .. "}" 
     local f = loadstring(def_string)
@@ -39,28 +43,40 @@ function WriteDefToFile (folder, v)
     return true
 end
 
+function HandleDefs(Defs, folder)
+    local failures = 0
+    Spring.Echo("Processing Defs for " .. folder)
+    for _,v in pairs(Defs) do
+        if failures >=3 then break end
+        local success = WriteDefToFile("baked_defs/" .. folder, v)
+        if (not success) then failures = failures + 1 end
+    end
+
+    if failures>0 then 
+        had_failed = true
+        Spring.Echo("Skipping remaining " .. folder .. " defs - too many errors")
+    end  
+    return (failures>0)
+end
+
 function widget:Initialize()
-    local had_failed = false
-    
+        
     -- make folder if does not already exist
-    -- FIXME, no access to execute
     Spring.CreateDir("baked_defs/units")
     Spring.CreateDir("baked_defs/weapons")
+    --Spring.CreateDir("baked_defs/features")
+    --Spring.CreateDir("baked_defs/armordefs")
+    --Spring.CreateDir("baked_defs/movedefs")
+    --Spring.CreateDir("baked_defs/effects")
         
-    -- handle unitdefs
-    for _,v in pairs(UnitDefs) do
-        local success = WriteDefToFile("baked_defs/units", v)
-        had_failed = had_failed or (not success)
-    end
-    
-    -- handle weapondefs
-    for _,v in pairs(WeaponDefs) do
-        if v.customParams and v.customParams.__def then -- only write weapondefs that are not part of unitdefs (only those will have __defs)
-            local success = WriteDefToFile("baked_defs/weapons", v)
-            had_failed = had_failed or (not success)
-        end
-    end
-    
+    -- handle the def tables
+    HandleDefs(UnitDefs, "units")
+    HandleDefs(WeaponDefs, "weapons")
+    --HandleDefs(UnitDefs, units)
+    --HandleDefs(UnitDefs, units)
+    --HandleDefs(UnitDefs, units)
+    --HandleDefs(ExplosionDefs, "effects")
+      
     -- warn on failure
     if had_failed==true then
         Spring.Echo("Some unit/weapon __defs failed to be written to file, see errors above")

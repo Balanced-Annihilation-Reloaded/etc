@@ -1,33 +1,31 @@
-description='This script uses the Very Sleepy profilers .CSV output and the Spring stack trace translator at http://springrts.com:8000 to make a readable output. Its not perfect'
+description='HOW TO USE: \nCapture spring  with very sleepy CS, save .sleepy file\nDownload and unzip next to script the debug symbols from\n http://springrts.com/dl/buildbot/default/develop/101.0.1-63-g5ebf047/win32/ \nDownload engine source files from github\nRun script with -i [inputfile].sleepy -s C:/spring_source/spring/ \nOpen [inputfile_translated].sleepy in very sleepy CS'
+
+print description
 
 
 from optparse import OptionParser
 import traceback
 # import datetime, os, re, xmlrpclib
-from xmlrpclib import ServerProxy, Error
+# from xmlrpclib import ServerProxy, Error
 import zipfile
 import os
 import sys
+import shlex
+from subprocess import Popen, PIPE
 
 parser=OptionParser(usage="usage: python sleepy_tranlator.py -i capture.csv", version= "0.1")
 parser.add_option('-i', '--input',action='store',dest='input', default='capture.csv',help='input csv file from Very Sleepy')
-parser.add_option('-o', '--output',action='store',dest='output', default='capture_translated.xls',help='translated output file name')
-parser.add_option('-v', '--spring_version',action='store',dest='springversion', default='Spring 95.0.',help='Spring engine version')
-parser.add_option('-t', '--threshold',action='store',dest='threshold', default='0.01',help='Minimum % inclusive time for translation')
-parser.add_option('-s', '--sourcepath',action='store',dest='sourcepath',help='Source path for spring source')
+parser.add_option('-s', '--sourcepath',action='store',dest='sourcepath',help='Source path for spring source e.g. D:/springsource/')
+parser.add_option('-d', '--dbgfile',action='store',dest='dbgfile',help='debug file to use',default ='spring.dbg')
 
 options, args=parser.parse_args()
 sleepytype='csv'
 print options
 
-dbgmax=1000000
+dbgmax=100000000
 cnt=0
 
-if '.csv' in options.input:
-	sleepyfile=open(options.input).readlines()
-	print 
-elif '.sleepy' in options.input:
-	sleepytype='sleepy'
+if '.sleepy' in options.input:
 	fh=open(options.input, 'rb') 
 	z=zipfile.ZipFile(fh)
 	for name in z.namelist():
@@ -42,67 +40,62 @@ else:
 
 
 
-infolog=[] #a list of lines in our fake infolog
-infolog.append('[f=0055926] Error: Error handler invoked for %s\n'%(options.springversion))
-infolog.append('[f=0055926] Error: DLL information:\n')
-infolog.append('[f=0055926] Error: Stacktrace:\n')
+
 address_count=0
 to_translate=[]
 for sleepyline in sleepyfile:
 	#print sleepyline
 	try:
-		if sleepytype == 'sleepy':
-			(sym, module, address, sourcefile, sourceline)=sleepyline.strip().split(' ')#sym1473 "nvoglv32" "[687BAD05]" "" 0
-			#print name, module,inpercent
-			print module, address
-			if module=='"spring"' and '[' in address:
-				if cnt<dbgmax:
-					cnt+=1
-					to_translate.append(address)
-					infolog.append("[f=0055926] Error: (%i) C:\\fake_path\\spring.exe [0x%s]\n"%(address_count,address.strip('\"[]')))
-					address_count+=1		
-		else:
-			(name, extime, intime, expercent, inpercent, module, sourcefile, sourceline)=sleepyline.strip().split(',')
-			#print name, module,inpercent
-			if module=='spring' and float(inpercent)>float(options.threshold) and '[' in name:
-				to_translate.append(name)
-				infolog.append("[f=0055926] Error: (%i) C:\\fake_path\\spring.exe [0x%s]\n"%(address_count,name.strip('[]')))
-				address_count+=1
+		(sym, module, address, sourcefile, sourceline)=shlex.split(sleepyline.strip())#sym1473 "nvoglv32" "[687BAD05]" "" 0
+		#print name, module,inpercent
+		# print "module, address",module, address
+		if module=='spring' and '[' in address:
+			if cnt<dbgmax:
+				cnt+=1
+				oldaddr=address
+				# print address
+				# print address.strip('\"[]')
+				to_translate.append(address.strip('\"[]'))
+				address_count+=1		
+
 	except:
 		print 'Failed to parse line',sleepyline,'in',options.input,sleepyline.strip().split(' ')
 		traceback.print_exc()
-
 		pass
-print 'querying',address_count,'lines with fakeinfolog.txt',len(infolog)
-fakeinfolog=open('fakeinfolog.txt','w')
-fakeinfolog.write(''.join(infolog))
-fakeinfolog.close()
+		
+# print 'addresses:',to_translate
+cmd = ['addr2line.exe', '-e', options.dbgfile]
+print 'Command line: ' + ' '.join(cmd)
+addr2line = Popen(cmd, stdin = PIPE, stdout = PIPE, stderr = PIPE)
+if addr2line.poll() == None:
+	stdout, stderr = addr2line.communicate('\n'.join(to_translate))
+else:
+	stdout, stderr = addr2line.communicate()
+if stderr:
+	print '%s stderr: %s' % (ADDR2LINE, stderr)
+if addr2line.returncode != 0:
+	print ' fatal : %s exited with status %s' % (ADDR2LINE, addr2line.returncode)
+print ('\t\t[OK]')
+# print stdout
+translated = stdout.split('\n')
+result = {}
+if len(to_translate) <= len(translated):
+	for i in range(len(to_translate)):
+		result[to_translate[i]] = translated[i]
+else:
+	print 'Unmatched to_translate and tranlated lengths!',len(to_translate) , len(translated)
 
-buildbot=ServerProxy('http://springrts.com:8000')
-try:
-	translated = buildbot.translate_stacktrace (''.join(infolog))
-except Error as v:
-	print v
-	if False and Error.faultString.index ('Unable to parse detailed version string') != -1:
-		print 'UNKNOWN SPRING VERSION'
-	else:
-		print 'UNKNOWN ERROR'
-		print "A fault occurred"
-		print "Fault code: %d" % err.faultCode
-		print "Fault string: %s" % err.faultString
-		print err
-		exit(1)
+print 'Query successful, stacktrace results', len(result)
 
-print 'Query successful, stacktrace results',len(translated)
-# this will return a 2d list: [['C:\\fake_path\\spring.exe', '0x0062AAB5', 'build/default/../../rts/Map/SMF/SMFReadMap.cpp', 820], ['C:\\fake_path\\spring.exe', '0x00622D4A', 'build/default/../../rts/Map/SMF/SMFGroundDrawer.cpp', 372], ['C:\\fake_path\\spring.exe', '0x00881864', '/slave/mingwlibs/include/boost/optional/optional.hpp', 438], ['C:\\fake_path\\spring.exe', '0x00870AA6', 'build/default/../../rts/System/Misc/SpringTime.cpp', 145], ['C:\\fake_path\\spring.exe','0x0086E146', 'build/default/../../rts/System/Main.cpp', 132], ['C:\\fake_path\\spring.exe', '0x0086D556', 'build/default/../../rts/System/Main.cpp', 64],['C:\\fake_path\\spring.exe', '0x008550CD', 'build/default/../../rts/System/EventHandler.cpp', 280], ['C:\\fake_path\\spring.exe', '0x0079AC66', 'build/def .....
-giturl="http://github.com/spring/spring/tree/master/%s#L%i"
+
 def getcodeline(path, i): #fetches line i of the code, removes double quotes, replace with singles, max length of 80 chars
-	
 	try:
 		codef=open(path)
 		codelines=codef.readlines()
 		line=codelines[i-1] #because lines are indexed from 1!
-		line=line.strip().replace('\"','\'')
+		line=line.strip().replace('\"','')
+		line=line.replace('	','')
+		line=line.replace('\\','')
 		if len(line)>75:
 			line=line[0:74]+'...'
 		#print 'got code line:',line
@@ -110,87 +103,61 @@ def getcodeline(path, i): #fetches line i of the code, removes double quotes, re
 			print 'got suspiciosly short line',path,i,line
 		return line
 	except:
-		#print 'warning, cant fine code line',path,line
+		print 'warning, cant fine code line',path,line
 		pass
 		return ''
 	
-if sleepytype=='csv':
-
-	outf=open(options.output,'w')
-	outf.write('Name(address)	Exclusive_time	Inclusive_time	Exclusive%	Inclusive%	module	source_file	source_line	source_link\n')
-else:
-	outf=open('Symbols.txt','w')
+outf=open('Symbols.txt','w')
+goodline=0
 for sleepyline in sleepyfile:
 	#print sleepyline
 	try:
-		if sleepytype=='csv':
-			(name, extime, intime, expercent, inpercent, module, sourcefile, sourceline)=sleepyline.strip().split(',')
-			if name in to_translate:
-				found=False
-				for entry in translated:
-					if name.strip('[]') in entry[1]:
-						link=giturl%(entry[2].replace('build/default/../../',''),entry[3])
-						outf.write('	'.join([entry[2].rpartition('/')[2],extime,intime,expercent,inpercent,module,entry[2],str(entry[3]),link])+'\n')
-						found=True
-						break
-				if not found:
-					print sleepyline,'not found in tranlated trace!'
+		(sym, module, address, sourcefile, sourceline)=shlex.split(sleepyline.strip())
+		shortaddr=address.strip('[]\"') 
+		if shortaddr in result:
+			goodline+=1
+			newsourcefile=result[shortaddr].partition(':')[0]
+			newsourceline=result[shortaddr].partition(':')[2]
+			if options.sourcepath and 'build/default/../../' in newsourcefile:
 				
-					outf.write(sleepyline.replace(',','	'))
+				rawsourcefile = newsourcefile.partition('build/default/../../')[2]
+				print 'rawsourcefile',rawsourcefile
+				path=options.sourcepath+rawsourcefile
+				shortname='<'+rawsourcefile.rpartition('/')[2]+'> ' # so we only have the filename like Unit.cpp
+				codeline=getcodeline(path, int(newsourceline))
+				if codeline !='':
+					if '/' in rawsourcefile:
+						shortname=shortname+codeline
+				shortname.replace('"','')
+				#shortname= 'dunno'
+				outf.write(' '.join([sym,'"'+module+'"','"'+shortname+'"','"'+path+'"',str(newsourceline)]))
 			else:
-				outf.write(sleepyline.replace(',','	'))
+				if 'build/default/../../' in newsourcefile:
+					address = newsourcefile.partition('build/default/../../')[2]
+				outf.write(' '.join([sym,'"'+module+'"','"'+address+'"','"'+newsourcefile+'"', newsourceline]))
 		else:
-			(sym, module, address, sourcefile, sourceline)=sleepyline.strip().split(' ')
-
-			if address in to_translate:
-				found=False
-				for entry in translated:
-					if address.strip('[]\"') in entry[1]:
-					
-						#shortname='\"['+entry[2].replace('build/default/../../','')+':'+str(entry[3])+']\"'
-						shortname=entry[2].replace('build/default/../../','')+'_'+str(entry[3])
-						if options.sourcepath and 'build/default/../../' in entry[2]:
-							path=options.sourcepath+entry[2].replace('build/default/../../','')
-							codeline=getcodeline(path, entry[3])
-							if codeline !='':
-								if '/' in shortname:
-									shortname=shortname.rpartition('/')[2] # so we only have the filename like Unit.cpp
-									shortname='<'+shortname+'> '+codeline
-							shortname= '\"'+shortname+'\"'
-							outf.write(' '.join([sym,module,shortname,'\"'+path+'\" '+str(entry[3])+'\n']))
-						else:
-							shortname= '\"'+shortname+'\"'
-							outf.write(' '.join([sym,module,shortname,'\"" 0\n']))
-						found=True
-						break
-				if not found:
-					print sleepyline,'not found in tranlated trace!'
-				
-					outf.write(sleepyline)
-			else:
-				outf.write(sleepyline)
+			outf.write(sleepyline)
 	except:
 		print 'Failed to translate line',sleepyline,'in',options.input
 		traceback.print_exc()
 		outf.write(sleepyline)
 		pass
-
+print 'Good lines=',goodline,' out of ', len (result)
 outf.close() # GOD FUCKING DAMMIT!
-if sleepytype == 'sleepy':
-	outfname=options.input.partition('.sleepy')[0]+'_translated.sleepy'
-	cmd='zip -1 '+outfname+' Stats.txt IPCounts.txt Symbols.txt Callstacks.txt "Version 0.82 required"'
-	print cmd
-	os.system(cmd)
-	print 'Done zipping'
-#zip -1 ziptest.sleepy Stats.txt IPCounts.txt Symbols.txt Callstacks.txt "Version 0.82 required"
 
 
+outfname=options.input.partition('.sleepy')[0]+'_translated.sleepy'
 
-#The most basic infolog that works:
-# [f=0055926] Error: Error handler invoked for Spring 95.0.\n
-# [f=0055926] Error: DLL information:
-# [f=0055926] Error: Stacktrace:
-# [f=0055926] Error: (0) C:\\Programs\\spring.exe [0x008CBD39]
+cmd = 'del '+outfname
+print cmd
+os.system(cmd)
+# THE ORDER IN WHICH THESE FILES ARE ZIPPED DECIDES EVERYTHING!!!!!!!!!!!!!!!!!!
+cmd='zip -1 '+outfname+' Stats.txt Symbols.txt IPCounts.txt Callstacks.txt "Version 0.90 required"'
+print cmd
+os.system(cmd)
+print 'Done zipping'
+
+
 
 #Sleepy line format:
 #0. Name (or address, if unable to resolve)

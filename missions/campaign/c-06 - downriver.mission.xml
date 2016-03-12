@@ -239,7 +239,7 @@ WG.MissionName = "Down River"</CodeStr>
                 </TriggerLogic>
                 <TriggerLogic z:Id="71" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="72">obj</Name>
-                  <CodeStr z:Id="73" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">local text = "One of our allies has resource production to the west of a wide river delta. They are well defended in the north but unprotected from attacks across the delta. \n\nYour mission is to build a flagship and use its long range guns to destory the core control tower in the north east, but you must also patrol the waterways and protect our ally's control towers. In return, our ally will share you resources."
+                  <CodeStr z:Id="73" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">local text = "One of our allies has built resource production on the west of a wide river delta. They are well defended in the north but unprotected from attacks across the delta. \n\nYour mission is to build a flagship and use its long range guns to destory the core control tower in the north east, but you must also patrol the waterways and protect our ally's control towers. In return, our ally will share you resources."
 
 WG.MissionObjective = text</CodeStr>
                   <Synced xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Synced>

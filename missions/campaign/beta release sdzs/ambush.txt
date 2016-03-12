@@ -1,0 +1,47 @@
+[GAME]
+{
+	MapName=Grts_RiverValley_013;
+	StartposType=2;
+	GameType=Ambush;
+	IsHost=1;
+	OnlyLocal=1;
+	MyPlayerName=PLAYER_NAME;
+	[MODOPTIONS]
+	{
+		mo_beta_release=in use;		    
+deathmode=killall;		
+;
+	}
+	[PLAYER0]
+	{
+		Name=PLAYER_NAME;
+		Team=0;
+	}
+	[AI0]
+	{
+		Name=Enemy;
+		ShortName=NullAI;
+		Team=1;
+		Host=0;
+	}
+	[TEAM0]
+	{
+		TeamLeader=0;
+		AllyTeam=0;
+		RGBColor=0 0 1;
+	}
+	[TEAM1]
+	{
+		TeamLeader=0;
+		AllyTeam=1;
+		RGBColor=1 0 0;
+	}
+	[ALLYTEAM0]
+	{
+		NumAllies=0;
+		StartRectTop=0;		StartRectBottom=0;		StartRectLeft=1;		StartRectRight=1;	}
+	[ALLYTEAM1]
+	{
+		NumAllies=0;
+		StartRectTop=0;		StartRectBottom=0;		StartRectLeft=1;		StartRectRight=1;	}
+}

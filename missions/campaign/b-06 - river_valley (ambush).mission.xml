@@ -209,7 +209,7 @@ WG.MissionName = "Ambush"</CodeStr>
                 </TriggerLogic>
                 <TriggerLogic z:Id="68" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="69">obj</Name>
-                  <CodeStr z:Id="70" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">local text = "Two prototype models of the new core battle mech are being transported under armed guard across the mountains. We've established a base near their path - you must set up an ambush and destroy them on the central plateau. We believe they'll try to cross in around 10 minutes time."
+                  <CodeStr z:Id="70" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">local text = "A prototype model of the new core battle mech is being transported under armed guard across the mountains. We've established a base near their path - you must set up an ambush and destroy them on the central plateau. We believe they'll try to cross in around 10 minutes time."
 
 WG.MissionObjective = text</CodeStr>
                   <Synced xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Synced>
@@ -1680,7 +1680,7 @@ WG.MissionObjective = text</CodeStr>
         <Trigger z:Id="374">
           <Enabled>true</Enabled>
           <Folder i:nil="true" />
-          <IsExpanded>true</IsExpanded>
+          <IsExpanded>false</IsExpanded>
           <Logic z:Id="375">
             <items z:Id="376" z:Type="System.Collections.Generic.List`1[[CMissionLib.TriggerLogic, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
               <_items z:Id="377" z:Size="32">

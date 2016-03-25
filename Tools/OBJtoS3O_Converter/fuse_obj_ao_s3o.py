@@ -20,9 +20,10 @@ parser.add_option('--scriptdir', help='working directory for s3o files', default
 parser.add_option('-s', '--s3o', help='s3o key', default='')
 # parser.add_option('-b', '--ovb', help='ovb file name', default="S:\\SVN\\branches\\BAR\\objects3d")
 parser.add_option('-f', '--fuse', help='fuse ovb and s3o', default=False, action='store_true')
-parser.add_option('--groundplate', help='add a ground plate to the obj', default=False, action='store_true')
+parser.add_option('--groundplate', help='add a ground plate to the obj', default=True, action='store_true')
 parser.add_option('--separate', help='separate the object so that pieces are occluded separately', default=False, action='store_true')
 parser.add_option('-p', '--ignorepieces', help='ignore these piece names and set them to 0.8, comma separated list of piece names', default = '')
+parser.add_option('--forceall', help = 'Forces all .s3o in indir to be processed, even if their unitdefs cant be parsed. In which case they are counted as non-buildings and non-flying units.', default = False, action = 'store_true')
 separatelist=(['armacsub','armacv','armemp','armmship','armmmkr','armmls','armuwmmm','armvader','armcv','armbeaver','armcroc','armst',
 				'armplat','armmh','armmerl','armsolar','armtship','armthovr','armgeo','armamb','armfatf','armfmkr','armck',
 				'corsolar','corcs','cormls','cortoast','packo','armpb','armrecl','corvroc','cormship','coracsub','corgant','corlab','cormh','cormoho','cormexp','corvp'])
@@ -66,7 +67,12 @@ if not opts.fuse:
 					except:
 						print '========================Failed to parse unitdef for',file
 						pass
-						continue
+						if opts.forceall:
+							print 'Forceall is enabled, will count this as nonflying building'
+							building= False
+							flying = False
+						else:
+							continue
 				mys3o=S3O(open(opts.indir+'\\'+file,'rb').read())
 				objfile=opts.indir+'\\'+basename+'.obj'
 				mys3o.S3OtoOBJ(objfile,False)

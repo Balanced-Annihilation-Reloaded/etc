@@ -273,13 +273,14 @@ local function CreateResources()
       varying vec3 normal;
       varying vec4 pos;
       varying float clamp;
+      varying float aoTerm;
 
       void main(void) {
         gl_FrontColor = gl_Color;
         gl_TexCoord[0] = gl_MultiTexCoord0;
         clamp = gl_MultiTexCoord1.x;
         normal = gl_Normal;
-
+        aoTerm= max(0.4,fract(gl_MultiTexCoord0.s*16384.0)*1.3); // great
         pos = gl_ModelViewMatrix * gl_Vertex;
 
         gl_Position = gl_ProjectionMatrix * (gl_TextureMatrix[0] * pos);
@@ -291,11 +292,12 @@ local function CreateResources()
       varying vec3 normal;
       varying vec4 pos;
       varying float clamp;
+	  varying float aoTerm;
 
       void main(void) {
         if (pos.y<clamp) discard;
 
-        gl_FragData[0]     = texture2D(unitTex,gl_TexCoord[0].st);
+        gl_FragData[0]     = texture2D(unitTex,gl_TexCoord[0].st)*aoTerm;
         gl_FragData[0].rgb = mix(gl_FragData[0].rgb, gl_Color.rgb, gl_FragData[0].a);
         gl_FragData[0].a   = gl_FragCoord.z; //we save and read t from here cuz of the higher precision (the depthtex uses just bytes)
         gl_FragData[1]     = vec4(normal,1.0);

@@ -236,7 +236,7 @@ deathmode=killall;
                 <TriggerLogic z:Id="73" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="74">announce</Name>
                   <CodeStr z:Id="75" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">WG.isMission = true
-WG.MissionName = "Evactuate!"</CodeStr>
+WG.MissionName = "Evacuate!"</CodeStr>
                   <Synced xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Synced>
                 </TriggerLogic>
                 <TriggerLogic z:Id="76" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">

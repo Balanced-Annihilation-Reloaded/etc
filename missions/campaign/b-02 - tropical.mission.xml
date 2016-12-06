@@ -64,7 +64,7 @@ deathmode=killall;</CustomModOptions>
   <MapName z:Id="28">Tropical-v2</MapName>
   <MaxUnits>5000</MaxUnits>
   <ModName z:Id="29">Balanced Annihilation Reloaded $VERSION</ModName>
-  <Name z:Id="30">Tropical Archepelago</Name>
+  <Name z:Id="30">Tropical Archipelago</Name>
   <Players z:Id="31">
     <items z:Id="32" z:Type="System.Collections.Generic.List`1[[CMissionLib.Player, CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0">
       <_items z:Id="33" z:Size="4">
@@ -272,7 +272,7 @@ WG.MissionName = "Tropical Archepelago"</CodeStr>
                 </TriggerLogic>
                 <TriggerLogic z:Id="80" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
                   <Name z:Id="81">obj</Name>
-                  <CodeStr z:Id="82" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">WG.MissionObjective = "Enemy units are scattered across a tropical achepelago, in the midst of a battle between two rival factions. They will be preoccupied fighting each other and you will be able to mine plenty of metal from the central islands before they notice you. We hope it will be safe for you to make a base in the east of the southern island. \n\nEstablish our camp and await further orders."</CodeStr>
+                  <CodeStr z:Id="82" xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">WG.MissionObjective = "Enemy units are scattered across a tropical archipelago, in the midst of a battle between two rival factions. They will be preoccupied fighting each other and you will be able to mine plenty of metal from the central islands before they notice you. We hope it will be safe for you to make a base in the east of the southern island. \n\nEstablish our camp and await further orders."</CodeStr>
                   <Synced xmlns="http://schemas.datacontract.org/2004/07/CMissionLib.Actions">false</Synced>
                 </TriggerLogic>
                 <TriggerLogic z:Id="83" z:Type="CMissionLib.Actions.CustomAction2" z:Assembly="CMissionLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
